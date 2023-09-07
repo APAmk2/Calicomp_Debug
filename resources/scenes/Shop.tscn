@@ -1,0 +1,452 @@
+[gd_scene load_steps=27 format=3 uid="uid://8flh47o8aaev"]
+
+[ext_resource type="Texture2D" uid="uid://dphc8x3qhmt13" path="res://resources/Export_Sprites/black_screen_0.png" id="1_618pt"]
+[ext_resource type="Script" path="res://resources/scenes/Shop.gd" id="1_o4u1l"]
+[ext_resource type="Texture2D" uid="uid://bnnj73wxgin8q" path="res://resources/Export_Sprites/shop_bg_spr_0.png" id="2_8axce"]
+[ext_resource type="Texture2D" uid="uid://bwrmai3cqxfx2" path="res://resources/Export_Sprites/shop_bg_spr_1.png" id="3_fe2ms"]
+[ext_resource type="Texture2D" uid="uid://qdjhbfow8j3y" path="res://resources/Export_Sprites/shoptext_spr_0.png" id="4_6erej"]
+[ext_resource type="Texture2D" uid="uid://e3ahe5mpi524" path="res://resources/Export_Sprites/shopwindow_spr_0.png" id="5_jjj2d"]
+[ext_resource type="AudioStream" uid="uid://cwjqyogydwk3o" path="res://resources/Exported_Sounds/audiogroup_default/jc_eltons.ogg" id="6_cstyu"]
+[ext_resource type="FontFile" uid="uid://dn502a8gblt4i" path="res://resources/fonts/VA-11 Hall-A 10px.ttf" id="6_dqlm8"]
+[ext_resource type="Texture2D" uid="uid://i03srkloc7ry" path="res://resources/Export_Sprites/shop_arrow_spr_0.png" id="7_uelqj"]
+[ext_resource type="Texture2D" uid="uid://bc78bbubwktrv" path="res://resources/Export_Sprites/main_button_spr_0.png" id="9_vh0qn"]
+[ext_resource type="Texture2D" uid="uid://bsss8mgq3c761" path="res://resources/Export_Sprites/scanlinebutton_spr_0.png" id="10_ua6oq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uxdq5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8axce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fe2ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fe2ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8axce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fe2ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8axce")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1kip7"]
+texture = ExtResource("7_uelqj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mfj85"]
+texture = ExtResource("7_uelqj")
+modulate_color = Color(0.4, 0.4, 0.4, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pw6cc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hfvm7"]
+texture = ExtResource("7_uelqj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5yxqg"]
+texture = ExtResource("7_uelqj")
+modulate_color = Color(0.4, 0.4, 0.4, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cyxv7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qnr7m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_our1h"]
+texture = ExtResource("9_vh0qn")
+region_rect = Rect2(-10, 0, 0, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdsl4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ccdap"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7x3h4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m55g6"]
+texture = ExtResource("10_ua6oq")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vj5lv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_37p2f"]
+
+[node name="Shop" type="Node"]
+script = ExtResource("1_o4u1l")
+
+[node name="2D" type="Node2D" parent="."]
+
+[node name="Black_bg" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(640, 360)
+scale = Vector2(2, 2)
+texture = ExtResource("1_618pt")
+
+[node name="shop_bg" type="AnimatedSprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(376, 226)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_uxdq5")
+autoplay = "default"
+
+[node name="text" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(376, 533)
+scale = Vector2(2, 2)
+texture = ExtResource("4_6erej")
+
+[node name="item_table" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(980, 353)
+scale = Vector2(2, 2)
+texture = ExtResource("5_jjj2d")
+
+[node name="Hud" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="name" type="Label" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 116.0
+offset_top = 438.0
+offset_right = 612.0
+offset_bottom = 471.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "Hover on an item to examine it."
+
+[node name="description" type="Label" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 116.0
+offset_top = 488.0
+offset_right = 628.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "Double-click on it to buy it."
+clip_text = true
+
+[node name="page" type="Label" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 960.0
+offset_top = 590.0
+offset_right = 1008.0
+offset_bottom = 623.0
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "1/2"
+
+[node name="funds" type="Label" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 100.0
+offset_top = 660.0
+offset_right = 320.0
+offset_bottom = 693.0
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "Funds: $"
+
+[node name="page_forward" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1132.0
+offset_top = 580.0
+offset_right = 1155.0
+offset_bottom = 604.0
+scale = Vector2(2, 2)
+theme_override_colors/icon_disabled_color = Color(0.4, 0.4, 0.4, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_1kip7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1kip7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1kip7")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mfj85")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pw6cc")
+
+[node name="page_backward" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 828.0
+offset_top = 628.0
+offset_right = 851.0
+offset_bottom = 652.0
+rotation = 3.14159
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_hfvm7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hfvm7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hfvm7")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_5yxqg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cyxv7")
+
+[node name="return" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 454.0
+offset_top = 658.0
+offset_right = 652.0
+offset_bottom = 696.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qnr7m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_our1h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_our1h")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qdsl4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ccdap")
+text = "Return"
+alignment = 0
+
+[node name="items_btns" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="item1" type="Button" parent="Hud/items_btns"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 80.0
+offset_right = 1180.0
+offset_bottom = 120.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7x3h4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
+text = "Cute Clay Houses"
+alignment = 0
+clip_text = true
+
+[node name="item2" type="Button" parent="Hud/items_btns"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 130.0
+offset_right = 1180.0
+offset_bottom = 170.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7x3h4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
+text = "Maneki Neko"
+alignment = 0
+clip_text = true
+
+[node name="item3" type="Button" parent="Hud/items_btns"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 180.0
+offset_right = 1180.0
+offset_bottom = 220.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7x3h4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
+text = "*Kira* Miki Poster"
+alignment = 0
+clip_text = true
+
+[node name="item4" type="Button" parent="Hud/items_btns"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 230.0
+offset_right = 1180.0
+offset_bottom = 270.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7x3h4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
+text = "Cutesy Game Poster"
+alignment = 0
+clip_text = true
+
+[node name="item5" type="Button" parent="Hud/items_btns"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 280.0
+offset_right = 1180.0
+offset_bottom = 320.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7x3h4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
+text = "Assorted Cartridges"
+alignment = 0
+clip_text = true
+
+[node name="item6" type="Button" parent="Hud/items_btns"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 330.0
+offset_right = 1180.0
+offset_bottom = 370.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7x3h4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
+text = "Cracked Daruma"
+alignment = 0
+clip_text = true
+
+[node name="item7" type="Button" parent="Hud/items_btns"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 380.0
+offset_right = 1180.0
+offset_bottom = 420.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7x3h4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
+text = "Alex Figurine"
+alignment = 0
+clip_text = true
+
+[node name="item8" type="Button" parent="Hud/items_btns"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 430.0
+offset_right = 1180.0
+offset_bottom = 470.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7x3h4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
+text = "Movie poster"
+alignment = 0
+clip_text = true
+
+[node name="item9" type="Button" parent="Hud/items_btns"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 480.0
+offset_right = 1180.0
+offset_bottom = 520.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7x3h4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
+text = "Megachristmas tree"
+alignment = 0
+clip_text = true
+
+[node name="item10" type="Button" parent="Hud/items_btns"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 40)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 530.0
+offset_right = 1180.0
+offset_bottom = 570.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7x3h4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
+text = "Replica Toy Turing"
+alignment = 0
+clip_text = true
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_cstyu")
+autoplay = true
+bus = &"BGM"
+
+[connection signal="pressed" from="Hud/page_forward" to="." method="_on_page_forward_pressed"]
+[connection signal="pressed" from="Hud/page_backward" to="." method="_on_page_backward_pressed"]
+[connection signal="pressed" from="Hud/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Hud/items_btns/item1" to="." method="btn" binds= [1]]
+[connection signal="pressed" from="Hud/items_btns/item2" to="." method="btn" binds= [2]]
+[connection signal="pressed" from="Hud/items_btns/item3" to="." method="btn" binds= [3]]
+[connection signal="pressed" from="Hud/items_btns/item4" to="." method="btn" binds= [4]]
+[connection signal="pressed" from="Hud/items_btns/item5" to="." method="btn" binds= [5]]
+[connection signal="pressed" from="Hud/items_btns/item6" to="." method="btn" binds= [6]]
+[connection signal="pressed" from="Hud/items_btns/item7" to="." method="btn" binds= [7]]
+[connection signal="pressed" from="Hud/items_btns/item8" to="." method="btn" binds= [8]]
+[connection signal="pressed" from="Hud/items_btns/item9" to="." method="btn" binds= [9]]
+[connection signal="pressed" from="Hud/items_btns/item10" to="." method="btn" binds= [10]]

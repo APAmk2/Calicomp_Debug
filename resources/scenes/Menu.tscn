@@ -1,0 +1,265 @@
+[gd_scene load_steps=30 format=3 uid="uid://bk6fuogykdbnt"]
+
+[ext_resource type="Script" path="res://resources/scenes/Menu.gd" id="1_5u51q"]
+[ext_resource type="Texture2D" uid="uid://72xtjijcs0rk" path="res://resources/Export_Sprites/jilltitle_spr_0.png" id="2_wf7k6"]
+[ext_resource type="Texture2D" uid="uid://bf2510i3qejc0" path="res://resources/Export_Sprites/jilltitle_spr_1.png" id="3_vf7vh"]
+[ext_resource type="Texture2D" uid="uid://7guhq73pv6ao" path="res://resources/Export_Sprites/jilltitle_spr_2.png" id="4_ujmjb"]
+[ext_resource type="Texture2D" uid="uid://bxf7ld0h5vjx0" path="res://resources/Export_Sprites/jilltitle_spr_3.png" id="5_y62ne"]
+[ext_resource type="Texture2D" uid="uid://1ysgped02y6m" path="res://resources/Export_Sprites/jilltitle_ngplus_spr_0.png" id="6_ls7so"]
+[ext_resource type="Texture2D" uid="uid://bu2wxtva5bh8m" path="res://resources/Export_Sprites/jilltitle_ngplus_spr_1.png" id="7_hd0br"]
+[ext_resource type="Texture2D" uid="uid://bqe31mjjwjpiq" path="res://resources/Export_Sprites/jilltitle_ngplus_spr_2.png" id="8_bh7h2"]
+[ext_resource type="Texture2D" uid="uid://yr62qnka61rj" path="res://resources/Export_Sprites/jilltitle_ngplus_spr_3.png" id="9_el7fp"]
+[ext_resource type="Texture2D" uid="uid://bcurrij1u6c0q" path="res://resources/Export_Sprites/intrologo2_0.png" id="10_5ijj7"]
+[ext_resource type="FontFile" uid="uid://bwo5ictu5m6hn" path="res://resources/fonts/VA-11 Hall-A 6px.ttf" id="11_24a6p"]
+[ext_resource type="FontFile" uid="uid://dn502a8gblt4i" path="res://resources/fonts/VA-11 Hall-A 10px.ttf" id="12_lil77"]
+[ext_resource type="AudioStream" uid="uid://cg8xq5vuhq486" path="res://resources/Exported_Sounds/audiogroup_default/hopes_and_dreams_city_ed.ogg" id="13_0ktdx"]
+[ext_resource type="Texture2D" uid="uid://c1cwdehgtmuj3" path="res://resources/Export_Sprites/scanrines_0.png" id="13_2sjme"]
+[ext_resource type="AudioStream" uid="uid://vcs2sax6i7ns" path="res://resources/Exported_Sounds/audiogroup_default/click_to_start.ogg" id="14_dig1k"]
+[ext_resource type="PackedScene" uid="uid://cgal16kb1tkke" path="res://resources/scenes/Settings.tscn" id="15_vd4lh"]
+[ext_resource type="PackedScene" uid="uid://y6ta8woadhk7" path="res://resources/scenes/Exit.tscn" id="16_gjxud"]
+[ext_resource type="PackedScene" uid="uid://ml2u71ysitsu" path="res://resources/scenes/SaveLoad.tscn" id="17_ixynj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nr788"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wf7k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vf7vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ujmjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_y62ne")
+}],
+"loop": true,
+"name": &"ng",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ls7so")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hd0br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bh7h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_el7fp")
+}],
+"loop": true,
+"name": &"ngplus",
+"speed": 8.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sqnlp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gngjx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wsvdk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yaef"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bcqrh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cl4vr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iegbg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d54dg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q61cm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25icw"]
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_5u51q")
+
+[node name="2D" type="Node2D" parent="."]
+
+[node name="Background" type="AnimatedSprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(640, 360)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_nr788")
+animation = &"ng"
+autoplay = "ng"
+
+[node name="Logo" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(641, 404)
+scale = Vector2(2, 2)
+texture = ExtResource("10_5ijj7")
+
+[node name="Hud" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TM" type="Label" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 370.0
+offset_top = 658.0
+offset_right = 922.0
+offset_bottom = 687.0
+theme_override_fonts/font = ExtResource("11_24a6p")
+theme_override_font_sizes/font_size = 20
+text = "2016 Sukeban Games - Published by Ysbryd Games"
+
+[node name="quit_but" type="Button" parent="Hud"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 646.0
+offset_top = 559.0
+offset_right = 718.0
+offset_bottom = 597.0
+theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_fonts/font = ExtResource("12_lil77")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sqnlp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gngjx")
+text = "Quit"
+flat = true
+
+[node name="sett_but" type="Button" parent="Hud"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 632.0
+offset_top = 557.0
+offset_right = 768.0
+offset_bottom = 595.0
+theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_fonts/font = ExtResource("12_lil77")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wsvdk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2yaef")
+text = "Settings"
+flat = true
+
+[node name="load_but" type="Button" parent="Hud"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 514.0
+offset_top = 557.0
+offset_right = 586.0
+offset_bottom = 595.0
+theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_fonts/font = ExtResource("12_lil77")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bcqrh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cl4vr")
+text = "Load"
+flat = true
+
+[node name="ng_but" type="Button" parent="Hud"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 539.0
+offset_top = 557.0
+offset_right = 675.0
+offset_bottom = 595.0
+theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_fonts/font = ExtResource("12_lil77")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iegbg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d54dg")
+text = "New Game"
+flat = true
+
+[node name="pressany_fullbut" type="Button" parent="Hud"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q61cm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_25icw")
+flat = true
+
+[node name="pressany" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 542.0
+offset_top = 562.0
+offset_right = 766.0
+offset_bottom = 595.0
+theme_override_fonts/font = ExtResource("12_lil77")
+theme_override_font_sizes/font_size = 28
+text = "Click to start"
+
+[node name="random_text" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 454.0
+offset_top = 10.0
+offset_right = 494.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("11_24a6p")
+theme_override_font_sizes/font_size = 20
+
+[node name="engine_ver" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 19.0
+offset_top = 673.0
+offset_right = 175.0
+offset_bottom = 702.0
+theme_override_fonts/font = ExtResource("11_24a6p")
+theme_override_font_sizes/font_size = 20
+
+[node name="menu_theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_0ktdx")
+autoplay = true
+bus = &"BGM"
+
+[node name="click_to_start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_dig1k")
+bus = &"SFX"
+
+[node name="settings" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="Settings" parent="." instance=ExtResource("15_vd4lh")]
+visible = false
+position = Vector2(386, 48)
+scale = Vector2(0.1, 1)
+
+[node name="Exit" parent="." instance=ExtResource("16_gjxud")]
+visible = false
+
+[node name="SaveLoad" parent="." instance=ExtResource("17_ixynj")]
+visible = false
+
+[node name="scanlines" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("13_2sjme")
+
+[connection signal="pressed" from="Hud/quit_but" to="Exit" method="_on_menu_but_pressed"]
+[connection signal="pressed" from="Hud/sett_but" to="." method="_on_sett_but_pressed"]
+[connection signal="pressed" from="Hud/sett_but" to="Settings" method="_on_sett_but_pressed"]
+[connection signal="pressed" from="Hud/load_but" to="SaveLoad" method="_on_menu_but_pressed"]
+[connection signal="button_up" from="Hud/ng_but" to="." method="_on_ng_but_button_up"]
+[connection signal="pressed" from="Hud/pressany_fullbut" to="." method="_on_pressany_fullbut_pressed"]
+[connection signal="visibility_changed" from="Settings" to="Settings" method="_on_visibility_changed"]

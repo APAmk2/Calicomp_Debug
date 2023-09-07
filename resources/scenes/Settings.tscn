@@ -1,0 +1,259 @@
+[gd_scene load_steps=37 format=3 uid="uid://cgal16kb1tkke"]
+
+[ext_resource type="Script" path="res://resources/scenes/Settings.gd" id="1_dqmuc"]
+[ext_resource type="Texture2D" uid="uid://bja1qogqmt3yd" path="res://resources/Export_Sprites/configframe_spr_0.png" id="2_iynv0"]
+[ext_resource type="Texture2D" uid="uid://8pxm8w884ja8" path="res://resources/Export_Sprites/sfx_slide_spr_0.png" id="3_6lbig"]
+[ext_resource type="Texture2D" uid="uid://cvbpaiskhsw2v" path="res://resources/Export_Sprites/sfx_txt_spr_0.png" id="4_oycnp"]
+[ext_resource type="Texture2D" uid="uid://48204moi8xey" path="res://resources/Export_Sprites/bgm_slide_spr_0.png" id="5_xuvgv"]
+[ext_resource type="Texture2D" uid="uid://bmlq28crthxji" path="res://resources/Export_Sprites/bgm_txt_spr_0.png" id="6_6c05k"]
+[ext_resource type="Texture2D" uid="uid://kgw8ot0oee7b" path="res://resources/Export_Sprites/fullscreenbutton_spr_0.png" id="7_o8krd"]
+[ext_resource type="Texture2D" uid="uid://dxvp6ubettgot" path="res://resources/Export_Sprites/fullscreentxt_0.png" id="8_7wh0d"]
+[ext_resource type="Texture2D" uid="uid://qt2q1upbfqme" path="res://resources/Export_Sprites/windowedtxt_0.png" id="9_osg1m"]
+[ext_resource type="Texture2D" uid="uid://b73jkotpv2yd2" path="res://resources/Export_Sprites/slide_slider_spr_0.png" id="9_xssew"]
+[ext_resource type="Script" path="res://resources/scenes/sfx.gd" id="10_nuk73"]
+[ext_resource type="Texture2D" uid="uid://bsss8mgq3c761" path="res://resources/Export_Sprites/scanlinebutton_spr_0.png" id="10_piaad"]
+[ext_resource type="Texture2D" uid="uid://3d7slgtwh4c6" path="res://resources/Export_Sprites/filteron_hovertxt_0.png" id="11_fj151"]
+[ext_resource type="Script" path="res://resources/scenes/bgm.gd" id="11_qh1ad"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_3t10i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5mw1a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mi3vn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0y5mk"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_igv31"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0hycr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c0c04"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55rq1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hkikx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjg70"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4sdg5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0q18p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dgs2a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wk327"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ocq4y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0jv8g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_trk2d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j0po0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cn3ab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dwcvc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hae8f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ys54h"]
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_dqmuc")
+
+[node name="2D" type="Node2D" parent="."]
+
+[node name="bg" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(258, 250)
+scale = Vector2(2, 2)
+texture = ExtResource("2_iynv0")
+
+[node name="sfx_bg" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(218, 233)
+scale = Vector2(2, 2)
+texture = ExtResource("3_6lbig")
+
+[node name="sfx_label" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(110, 188)
+scale = Vector2(2, 2)
+texture = ExtResource("4_oycnp")
+
+[node name="bgm_bg" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(218, 141)
+scale = Vector2(2, 2)
+texture = ExtResource("5_xuvgv")
+
+[node name="bgm_label" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(109, 96)
+scale = Vector2(2, 2)
+texture = ExtResource("6_6c05k")
+
+[node name="fullscreen_on" type="Node2D" parent="2D"]
+visible = false
+position = Vector2(169, 340)
+scale = Vector2(2, 2)
+
+[node name="but" type="Sprite2D" parent="2D/fullscreen_on"]
+texture_filter = 1
+position = Vector2(33.5, 0)
+texture = ExtResource("7_o8krd")
+
+[node name="text" type="Sprite2D" parent="2D/fullscreen_on"]
+texture_filter = 1
+texture = ExtResource("8_7wh0d")
+
+[node name="windowed" type="Node2D" parent="2D"]
+visible = false
+
+[node name="but" type="Sprite2D" parent="2D/windowed"]
+texture_filter = 1
+position = Vector2(236, 390)
+scale = Vector2(2, 2)
+texture = ExtResource("7_o8krd")
+
+[node name="text" type="Sprite2D" parent="2D/windowed"]
+texture_filter = 1
+position = Vector2(237, 393)
+scale = Vector2(2, 2)
+texture = ExtResource("9_osg1m")
+
+[node name="filter" type="Node2D" parent="2D"]
+
+[node name="but" type="Sprite2D" parent="2D/filter"]
+visible = false
+texture_filter = 1
+position = Vector2(236, 440)
+scale = Vector2(2, 2)
+texture = ExtResource("10_piaad")
+
+[node name="text" type="Sprite2D" parent="2D/filter"]
+texture_filter = 1
+position = Vector2(204, 440)
+scale = Vector2(2, 2)
+texture = ExtResource("11_fj151")
+
+[node name="Hud" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="sfx" type="HSlider" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 114.0
+offset_top = 212.0
+offset_right = 218.0
+offset_bottom = 231.0
+scale = Vector2(2, 2)
+theme_override_icons/grabber = ExtResource("9_xssew")
+theme_override_icons/grabber_highlight = ExtResource("9_xssew")
+theme_override_icons/grabber_disabled = ExtResource("9_xssew")
+theme_override_icons/tick = SubResource("ImageTexture_3t10i")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_5mw1a")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_mi3vn")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_0y5mk")
+max_value = 1.0
+step = 0.05
+script = ExtResource("10_nuk73")
+
+[node name="bgm" type="HSlider" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 114.0
+offset_top = 120.0
+offset_right = 218.0
+offset_bottom = 139.0
+scale = Vector2(2, 2)
+theme_override_icons/grabber = ExtResource("9_xssew")
+theme_override_icons/grabber_highlight = ExtResource("9_xssew")
+theme_override_icons/grabber_disabled = ExtResource("9_xssew")
+theme_override_icons/tick = SubResource("ImageTexture_igv31")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_0hycr")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_c0c04")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_55rq1")
+max_value = 1.0
+step = 0.05
+script = ExtResource("11_qh1ad")
+
+[node name="bgm_minus" type="Button" parent="Hud"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 124.0
+offset_right = 108.0
+offset_bottom = 158.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hkikx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jjg70")
+flat = true
+
+[node name="bgm_plus" type="Button" parent="Hud"]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 124.0
+offset_right = 358.0
+offset_bottom = 158.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4sdg5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0q18p")
+flat = true
+
+[node name="sfx_plus" type="Button" parent="Hud"]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 216.0
+offset_right = 358.0
+offset_bottom = 250.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dgs2a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wk327")
+flat = true
+
+[node name="sfx_minus" type="Button" parent="Hud"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 216.0
+offset_right = 108.0
+offset_bottom = 250.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ocq4y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0jv8g")
+flat = true
+
+[node name="fullscreen_but" type="Button" parent="Hud"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 326.0
+offset_right = 264.0
+offset_bottom = 354.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_trk2d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j0po0")
+flat = true
+
+[node name="window_but" type="Button" parent="Hud"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 368.0
+offset_right = 410.0
+offset_bottom = 412.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cn3ab")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dwcvc")
+flat = true
+
+[node name="filter_but" type="Button" parent="Hud"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 418.0
+offset_right = 410.0
+offset_bottom = 462.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hae8f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ys54h")
+flat = true
+
+[connection signal="pressed" from="Hud/bgm_minus" to="Hud/bgm" method="_on_bgm_minus_pressed"]
+[connection signal="pressed" from="Hud/bgm_plus" to="Hud/bgm" method="_on_bgm_plus_pressed"]
+[connection signal="pressed" from="Hud/sfx_plus" to="Hud/sfx" method="_on_sfx_plus_pressed"]
+[connection signal="pressed" from="Hud/sfx_minus" to="Hud/sfx" method="_on_sfx_minus_pressed"]
+[connection signal="pressed" from="Hud/fullscreen_but" to="." method="_on_fullscreen_but_pressed"]
+[connection signal="pressed" from="Hud/window_but" to="." method="_on_window_but_pressed"]
+[connection signal="pressed" from="Hud/filter_but" to="." method="_on_filter_but_pressed"]
