@@ -1,2 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
+*.translation
+resources/Exported_Sounds/
+resources/Export_Sprites/
+resources/sprites/
+addons/godot-git-plugin/
+addons/discord-sdk-gd/
+addons/dialogic/
