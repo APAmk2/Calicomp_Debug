@@ -11,10 +11,10 @@ func _on_no_pressed():
 
 func _on_menu_but_pressed():
 	in_menu = true
-	$"2D/Hud/text".text = "Quit the game?"
+	$"2D/Hud/text".text = tr("QUITANSW")
 	show()
 
 func _on_quit_but_pressed():
 	in_menu = false
-	$"2D/Hud/text".text = "Go back to the title screen?"
+	$"2D/Hud/text".text = tr("MENUANSW")
 	show()

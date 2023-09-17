@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cgal16kb1tkke"]
+[gd_scene load_steps=45 format=3 uid="uid://cgal16kb1tkke"]
 
 [ext_resource type="Script" path="res://resources/scenes/Settings.gd" id="1_dqmuc"]
 [ext_resource type="Texture2D" uid="uid://bja1qogqmt3yd" path="res://resources/Export_Sprites/configframe_spr_0.png" id="2_iynv0"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bsss8mgq3c761" path="res://resources/Export_Sprites/scanlinebutton_spr_0.png" id="10_piaad"]
 [ext_resource type="Texture2D" uid="uid://3d7slgtwh4c6" path="res://resources/Export_Sprites/filteron_hovertxt_0.png" id="11_fj151"]
 [ext_resource type="Script" path="res://resources/scenes/bgm.gd" id="11_qh1ad"]
+[ext_resource type="FontFile" uid="uid://dn502a8gblt4i" path="res://resources/fonts/VA-11 Hall-A 10px.ttf" id="15_cvnum"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_3t10i"]
 
@@ -58,6 +59,20 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hae8f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ys54h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3eo4d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bit5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1b6ty"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m8qrx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pmo7o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tgd37"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t7p12"]
 
 [node name="Settings" type="Node2D"]
 script = ExtResource("1_dqmuc")
@@ -250,6 +265,43 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_hae8f")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ys54h")
 flat = true
 
+[node name="LangSel" type="OptionButton" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 414.0
+offset_top = 41.0
+offset_right = 505.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("15_cvnum")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3eo4d")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1bit5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1b6ty")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m8qrx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pmo7o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_tgd37")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_t7p12")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t7p12")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_t7p12")
+flat = true
+item_count = 2
+selected = 0
+popup/item_0/text = "en"
+popup/item_0/id = 0
+popup/item_1/text = "ru"
+popup/item_1/id = 1
+
+[node name="LangLbl" type="Label" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 336.0
+offset_top = 45.0
+offset_right = 428.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("15_cvnum")
+theme_override_font_sizes/font_size = 28
+text = "Lang: "
+
 [connection signal="pressed" from="Hud/bgm_minus" to="Hud/bgm" method="_on_bgm_minus_pressed"]
 [connection signal="pressed" from="Hud/bgm_plus" to="Hud/bgm" method="_on_bgm_plus_pressed"]
 [connection signal="pressed" from="Hud/sfx_plus" to="Hud/sfx" method="_on_sfx_plus_pressed"]
@@ -257,3 +309,4 @@ flat = true
 [connection signal="pressed" from="Hud/fullscreen_but" to="." method="_on_fullscreen_but_pressed"]
 [connection signal="pressed" from="Hud/window_but" to="." method="_on_window_but_pressed"]
 [connection signal="pressed" from="Hud/filter_but" to="." method="_on_filter_but_pressed"]
+[connection signal="item_selected" from="Hud/LangSel" to="." method="_on_lang_sel_item_selected"]

@@ -61,6 +61,7 @@ func _ready():
 		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteroff_idletxt_0.png")
 		$"2D/filter/but".hide()
 		$"2D/filter/text".position = Vector2(209, 440)
+	$Hud/LangSel.selected = LoadSingleton.lang
 func _on_fullscreen_but_pressed():
 	fullscr = true
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
@@ -91,3 +92,9 @@ func _on_filter_but_pressed():
 		$"2D/filter/text".position = Vector2(209, 440)
 		$"../scanlines".hide()
 	print(LoadSingleton.scanlines)
+
+
+func _on_lang_sel_item_selected(index):
+	var locale : String = $Hud/LangSel.get_item_text(index)
+	LoadSingleton.lang = $Hud/LangSel.selected
+	TranslationServer.set_locale(locale)

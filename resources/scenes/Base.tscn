@@ -530,7 +530,7 @@ theme_override_fonts/font = ExtResource("36_wd7kb")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ciq7g")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_uakrq")
-text = "Settings"
+text = "TITLESETTINGS"
 flat = true
 
 [node name="quit_but" type="Button" parent="Hud"]

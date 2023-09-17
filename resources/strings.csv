@@ -1,7 +1,18 @@
 keys,en,ru
+TITLEEXIT,Quit,Выйти
+TITLENEW,New Game,Новая Игра
+TITLESETTINGS,Settings,Настройки
+TITLELOAD,Load,Загрузить
+DEMONAME1,Good Bye Miss Bartender,"До встречи, госпожа бармен"
+DEMONAME2,The Ballad of a Gay Ghost,Баллада о лесбопризраке
+CLICKTOSTART,Click to start,"Кликните, чтобы продолжить"
+SHOPINSTRUCTION1,Hover on an item to examine it.,Наведите на желаемый предмет.
+SHOPINSTRUCTION2,Double-click on it to buy it.,"Кликните по нему дважды, чтобы купить."
+QUITANSW,Quit the game?,Уже уходите?
+MENUANSW,Go back to the title screen?,Выйти в главное меню?
+YES,Yes,Да
+NO,No,Нет
 WELCOMEBACK,"Welcome, Jill!","Привет, Джилл!"
-TITLEEXIT,Quit,
-TITLENEW,New Game,
 SHOPNAME1,Cute Clay Houses,Глиняные домики
 SHOPNAME2,Maneki Neko,Манэки-нэко
 SHOPNAME3,*Kira* Miki Poster,Плакат *Киры* Мики

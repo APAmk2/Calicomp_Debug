@@ -2,7 +2,6 @@ extends Node
 
 var hide_all = false
 var ngplus = false
-var phrases = ["Good Bye Miss Bartender", "The Ballad of a Gay Ghost"]
 var move = false
 var settings_anim = false
 @onready var pressany = $"Hud/pressany"
@@ -30,6 +29,9 @@ func _process(delta):
 	
 
 func _ready():
+	var random = RandomNumberGenerator.new()
+	random.randomize()
+	$"Hud/random_text".text = tr("DEMONAME" + str(random.randi_range(1, 2))) + " " + ProjectSettings.get_setting("application/config/version")
 	if(LoadSingleton.scanlines == 1):
 		$scanlines.show()
 	else:
@@ -56,8 +58,6 @@ func _on_pressany_fullbut_pressed():
 	$"Hud/load_but".show()
 	$"Hud/ng_but".show()
 	move = true
-	var roll = randi() % 2
-	$"Hud/random_text".text = phrases[roll] + " " + ProjectSettings.get_setting("application/config/version")
 	$"Hud/random_text".show()
 	$"Hud/engine_ver".show()
 

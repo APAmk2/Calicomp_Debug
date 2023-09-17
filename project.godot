@@ -89,7 +89,7 @@ dialogic_default_action={
 
 locale/translation_remaps={}
 locale/translations=PackedStringArray("res://resources/strings.en.translation", "res://resources/strings.ru.translation")
-locale/test="ru"
+locale/test="en"
 
 [physics]
 

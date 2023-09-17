@@ -55,7 +55,7 @@ func _ready():
 		$scanlines.show()
 	else:
 		$scanlines.hide()
-	$"Hud/funds".text += str(money)
+	$"Hud/funds".text = tr("FUNDS") + str(money)
 
 func _on_to_work_button_up():
 	get_tree().change_scene_to_file("res://resources/scenes/Main.tscn")

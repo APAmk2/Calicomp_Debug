@@ -143,7 +143,7 @@ theme_override_fonts/font = ExtResource("12_lil77")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/hover = SubResource("StyleBoxEmpty_wsvdk")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2yaef")
-text = "Settings"
+text = "TITLESETTINGS"
 flat = true
 
 [node name="load_but" type="Button" parent="Hud"]
@@ -160,7 +160,7 @@ theme_override_fonts/font = ExtResource("12_lil77")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/hover = SubResource("StyleBoxEmpty_bcqrh")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cl4vr")
-text = "Load"
+text = "TITLELOAD"
 flat = true
 
 [node name="ng_but" type="Button" parent="Hud"]
@@ -189,16 +189,16 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_25icw")
 flat = true
 
 [node name="pressany" type="Label" parent="Hud"]
-visible = false
 texture_filter = 1
 layout_mode = 0
-offset_left = 542.0
+offset_left = 418.0
 offset_top = 562.0
-offset_right = 766.0
+offset_right = 866.0
 offset_bottom = 595.0
 theme_override_fonts/font = ExtResource("12_lil77")
 theme_override_font_sizes/font_size = 28
-text = "Click to start"
+text = "CLICKTOSTART"
+horizontal_alignment = 1
 
 [node name="random_text" type="Label" parent="Hud"]
 visible = false
@@ -262,4 +262,3 @@ texture = ExtResource("13_2sjme")
 [connection signal="pressed" from="Hud/load_but" to="SaveLoad" method="_on_menu_but_pressed"]
 [connection signal="button_up" from="Hud/ng_but" to="." method="_on_ng_but_button_up"]
 [connection signal="pressed" from="Hud/pressany_fullbut" to="." method="_on_pressany_fullbut_pressed"]
-[connection signal="visibility_changed" from="Settings" to="Settings" method="_on_visibility_changed"]

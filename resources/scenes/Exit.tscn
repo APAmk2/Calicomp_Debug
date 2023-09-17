@@ -53,7 +53,7 @@ theme_override_fonts/font = ExtResource("4_2ik6c")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/hover = SubResource("StyleBoxEmpty_bw2co")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_1nhx1")
-text = "Yes"
+text = "YES"
 flat = true
 
 [node name="no" type="Button" parent="2D/Hud"]
@@ -67,7 +67,7 @@ theme_override_fonts/font = ExtResource("4_2ik6c")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/hover = SubResource("StyleBoxEmpty_5pj2p")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kbrqw")
-text = "No"
+text = "NO"
 flat = true
 
 [node name="text" type="Label" parent="2D/Hud"]

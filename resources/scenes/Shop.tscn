@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://8flh47o8aaev"]
+[gd_scene load_steps=29 format=3 uid="uid://8flh47o8aaev"]
 
 [ext_resource type="Texture2D" uid="uid://dphc8x3qhmt13" path="res://resources/Export_Sprites/black_screen_0.png" id="1_618pt"]
 [ext_resource type="Script" path="res://resources/scenes/Shop.gd" id="1_o4u1l"]
@@ -37,6 +37,10 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vsxrw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7pc0c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1kip7"]
 texture = ExtResource("7_uelqj")
@@ -121,19 +125,21 @@ offset_bottom = 471.0
 theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
 theme_override_fonts/font = ExtResource("6_dqlm8")
 theme_override_font_sizes/font_size = 28
-text = "Hover on an item to examine it."
+text = "SHOPINSTRUCTION1"
 
-[node name="description" type="Label" parent="Hud"]
+[node name="description" type="RichTextLabel" parent="Hud"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 116.0
 offset_top = 488.0
 offset_right = 628.0
 offset_bottom = 633.0
-theme_override_fonts/font = ExtResource("6_dqlm8")
-theme_override_font_sizes/font_size = 28
-text = "Double-click on it to buy it."
-clip_text = true
+theme_override_fonts/normal_font = ExtResource("6_dqlm8")
+theme_override_font_sizes/normal_font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vsxrw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7pc0c")
+text = "SHOPINSTRUCTION2"
+scroll_active = false
 
 [node name="page" type="Label" parent="Hud"]
 texture_filter = 1
@@ -431,6 +437,11 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
 text = "item10"
 alignment = 0
 clip_text = true
+
+[node name="TextEdit" type="TextEdit" parent="Hud"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_cstyu")

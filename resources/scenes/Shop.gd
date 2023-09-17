@@ -13,11 +13,11 @@ func btn(extra_arg_0):
 	else:
 		LoadSingleton.shop_items[extra_arg_0 + 10 * (page - 1)] = 1
 		LoadSingleton.money -= int(pricelist[extra_arg_0 + 10 * (page - 1)])
-		$"Hud/funds".text = "Funds: $" + str(LoadSingleton.money)
+		$"Hud/funds".text = tr("FUNDS") + str(LoadSingleton.money)
 
 func _ready():
 	page_display.text = str(page) + "/" + str(MAX_PAGES)
-	$"Hud/funds".text = "Funds: $" + str(money)
+	$"Hud/funds".text = tr("FUNDS") + str(money)
 
 func _process(delta):
 	for i in range (1, 11):

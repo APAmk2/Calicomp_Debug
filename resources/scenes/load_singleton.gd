@@ -10,6 +10,7 @@ var day_str: String
 var stage: String
 var scanlines: int
 var shop_items: Array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+var lang: int
 
 func _load(but_num):
 	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(but_num) + "].txt", FileAccess.READ)
