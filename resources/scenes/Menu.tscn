@@ -126,7 +126,7 @@ theme_override_fonts/font = ExtResource("12_lil77")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/hover = SubResource("StyleBoxEmpty_sqnlp")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gngjx")
-text = "Quit"
+text = "TITLEEXIT"
 flat = true
 
 [node name="sett_but" type="Button" parent="Hud"]
@@ -177,7 +177,7 @@ theme_override_fonts/font = ExtResource("12_lil77")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/hover = SubResource("StyleBoxEmpty_iegbg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_d54dg")
-text = "New Game"
+text = "TITLENEW"
 flat = true
 
 [node name="pressany_fullbut" type="Button" parent="Hud"]

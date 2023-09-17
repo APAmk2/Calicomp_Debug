@@ -427,6 +427,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_1hjgt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ssyff")
 text = "1"
 flat = true
+clip_text = true
 
 [node name="app_but2" type="Button" parent="Hud/app_base"]
 visible = false
@@ -442,6 +443,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_lrpsh")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_j43kv")
 text = "2"
 flat = true
+clip_text = true
 
 [node name="app_but3" type="Button" parent="Hud/app_base"]
 visible = false
@@ -457,6 +459,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_c58jl")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yaymw")
 text = "3"
 flat = true
+clip_text = true
 
 [node name="home" type="Control" parent="Hud"]
 anchors_preset = 0
@@ -538,7 +541,7 @@ offset_right = 460.0
 offset_bottom = 167.0
 theme_override_fonts/font = ExtResource("23_j6vhm")
 theme_override_font_sizes/font_size = 28
-text = "Welcome, Jill!"
+text = "WELCOMEBACK"
 
 [node name="day" type="Label" parent="Hud/home"]
 texture_filter = 1

@@ -85,6 +85,12 @@ dialogic_default_action={
 ]
 }
 
+[internationalization]
+
+locale/translation_remaps={}
+locale/translations=PackedStringArray("res://resources/strings.en.translation", "res://resources/strings.ru.translation")
+locale/test="ru"
+
 [physics]
 
 common/enable_pause_aware_picking=true

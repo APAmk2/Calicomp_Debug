@@ -420,7 +420,7 @@ theme_override_fonts/font = ExtResource("59_u6ca0")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/hover = SubResource("StyleBoxEmpty_f8kp2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ifai1")
-text = "Exit"
+text = "TITLEEXIT"
 flat = true
 
 [node name="money" type="Label" parent="Hud"]
