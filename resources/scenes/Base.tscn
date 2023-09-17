@@ -558,7 +558,7 @@ offset_right = 1110.0
 offset_bottom = 679.0
 theme_override_fonts/font = ExtResource("36_wd7kb")
 theme_override_font_sizes/font_size = 28
-text = "Funds: $"
+text = "FUNDS"
 
 [node name="safe_haven" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("39_xxp5a")

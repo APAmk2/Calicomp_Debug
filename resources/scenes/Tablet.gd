@@ -29,6 +29,9 @@ var walls = ["", "", "", "gray", "blue", "cream", "red", "pink", "black", "gray"
 var table = ["leopard", "bullet", "red_lines", "default"]
 
 func _ready():
+	for i in range (1, 4):
+		print(i)
+		get_node("Hud/app_base/app_but" + str(i)).text = "NEWS" + str(1 + 3 * (day - 1) + (i - 1))
 	$"/root/Base/2D/room/room_walls".play(walls[LoadSingleton.walls - 1 + 4])
 	if(!LoadSingleton.day_str.is_empty()):
 		$"Hud/home/day".text = LoadSingleton.day_str
@@ -41,9 +44,6 @@ func _ready():
 	if(LoadSingleton.day >= 5):
 		$"2D/home/nanocamo".play("nanocamo")
 		$"Hud/home/nanocamo_but".disabled = false
-func _process(delta):
-	for i in range (1, 4):
-		get_node("Hud/app_base/app_but" + str(i)).text = "NEWS" + str( 3 * (day - 2) + i )
 func hide_elems():
 	home.hide()
 	home_btns.hide()
