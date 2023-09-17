@@ -20,6 +20,8 @@ func _ready():
 	$"Hud/funds".text = "Funds: $" + str(money)
 
 func _process(delta):
+	for i in range (1, 11):
+		get_node("Hud/items_btns/item" + str(i)).text = "SHOPNAME" + str(i + 10 * (page - 1))
 	if(page == 1):
 		$"Hud/page_backward".disabled = true
 	else:
@@ -41,3 +43,7 @@ func _on_page_backward_pressed():
 
 func _on_return_pressed():
 	get_tree().change_scene_to_file("res://resources/scenes/Base.tscn")
+
+func btn_hov(extra_arg_0):
+	$"Hud/name".text = "SHOPNAME" + str(extra_arg_0 + 10 * (page - 1))
+	$"Hud/description".text = "SHOPDESC" + str(extra_arg_0 + 10 * (page - 1))

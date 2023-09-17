@@ -230,7 +230,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
-text = "Cute Clay Houses"
+text = "item1"
 alignment = 0
 clip_text = true
 
@@ -252,7 +252,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
-text = "Maneki Neko"
+text = "item2"
 alignment = 0
 clip_text = true
 
@@ -274,7 +274,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
-text = "*Kira* Miki Poster"
+text = "item3"
 alignment = 0
 clip_text = true
 
@@ -296,7 +296,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
-text = "Cutesy Game Poster"
+text = "item4"
 alignment = 0
 clip_text = true
 
@@ -318,7 +318,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
-text = "Assorted Cartridges"
+text = "item5"
 alignment = 0
 clip_text = true
 
@@ -340,7 +340,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
-text = "Cracked Daruma"
+text = "item6"
 alignment = 0
 clip_text = true
 
@@ -362,7 +362,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
-text = "Alex Figurine"
+text = "item7"
 alignment = 0
 clip_text = true
 
@@ -384,7 +384,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
-text = "Movie poster"
+text = "item8"
 alignment = 0
 clip_text = true
 
@@ -406,7 +406,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
-text = "Megachristmas tree"
+text = "item9"
 alignment = 0
 clip_text = true
 
@@ -428,7 +428,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_m55g6")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_vj5lv")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_37p2f")
-text = "Replica Toy Turing"
+text = "item10"
 alignment = 0
 clip_text = true
 
@@ -440,13 +440,23 @@ bus = &"BGM"
 [connection signal="pressed" from="Hud/page_forward" to="." method="_on_page_forward_pressed"]
 [connection signal="pressed" from="Hud/page_backward" to="." method="_on_page_backward_pressed"]
 [connection signal="pressed" from="Hud/return" to="." method="_on_return_pressed"]
+[connection signal="mouse_entered" from="Hud/items_btns/item1" to="." method="btn_hov" binds= [1]]
 [connection signal="pressed" from="Hud/items_btns/item1" to="." method="btn" binds= [1]]
+[connection signal="mouse_entered" from="Hud/items_btns/item2" to="." method="btn_hov" binds= [2]]
 [connection signal="pressed" from="Hud/items_btns/item2" to="." method="btn" binds= [2]]
+[connection signal="mouse_entered" from="Hud/items_btns/item3" to="." method="btn_hov" binds= [3]]
 [connection signal="pressed" from="Hud/items_btns/item3" to="." method="btn" binds= [3]]
+[connection signal="mouse_entered" from="Hud/items_btns/item4" to="." method="btn_hov" binds= [4]]
 [connection signal="pressed" from="Hud/items_btns/item4" to="." method="btn" binds= [4]]
+[connection signal="mouse_entered" from="Hud/items_btns/item5" to="." method="btn_hov" binds= [5]]
 [connection signal="pressed" from="Hud/items_btns/item5" to="." method="btn" binds= [5]]
+[connection signal="mouse_entered" from="Hud/items_btns/item6" to="." method="btn_hov" binds= [6]]
 [connection signal="pressed" from="Hud/items_btns/item6" to="." method="btn" binds= [6]]
+[connection signal="mouse_entered" from="Hud/items_btns/item7" to="." method="btn_hov" binds= [7]]
 [connection signal="pressed" from="Hud/items_btns/item7" to="." method="btn" binds= [7]]
+[connection signal="mouse_entered" from="Hud/items_btns/item8" to="." method="btn_hov" binds= [8]]
 [connection signal="pressed" from="Hud/items_btns/item8" to="." method="btn" binds= [8]]
+[connection signal="mouse_entered" from="Hud/items_btns/item9" to="." method="btn_hov" binds= [9]]
 [connection signal="pressed" from="Hud/items_btns/item9" to="." method="btn" binds= [9]]
+[connection signal="mouse_entered" from="Hud/items_btns/item10" to="." method="btn_hov" binds= [10]]
 [connection signal="pressed" from="Hud/items_btns/item10" to="." method="btn" binds= [10]]
