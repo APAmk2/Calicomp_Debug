@@ -24,11 +24,13 @@ var ae_read = 0
 var dange_read = 0
 var miki_read = 0
 var wall_num = 0
+var UnlockTime = 1.5
 var dange_threads = ["", "3", "2", "1", "6", "5", "4", "7", "6", "5", "10", "9", "8", "3", "2", "1", "13", "12", "11", "14", "13", "12", "15", "14", "13", "16", "15", "14", "17", "16", "15", "18", "17", "16", "18", "17", "16", "19", "18", "17", "20", "19", "18", "21", "20", "19", "22", "21", "20", "22", "21", "20", "23", "22", "21"]
 var walls = ["", "", "", "gray", "blue", "cream", "red", "pink", "black", "gray", "white", "green", "orange", "reddish", "red_lines", "leopard", "anime", "miki", "game", "doge"]
 var table = ["leopard", "bullet", "red_lines", "default"]
 
 func _ready():
+	hide_elems()
 	for i in range (1, 4):
 		print(i)
 		get_node("Hud/app_base/app_but" + str(i)).text = "NEWS" + str(1 + 3 * (day - 1) + (i - 1))
@@ -44,6 +46,21 @@ func _ready():
 	if(LoadSingleton.day >= 5):
 		$"2D/home/nanocamo".play("nanocamo")
 		$"Hud/home/nanocamo_but".disabled = false
+func _process(delta):
+	if($"Hud/unlock".button_pressed):
+		print("pressed")
+		if UnlockTime > 0:
+			UnlockTime -= delta
+			print(UnlockTime)
+		else:
+			if UnlockTime <= 0:
+				$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/boot_up.ogg")
+				$"sfx".play()
+				show_elems()
+				$"Hud/unlock".hide()
+				$"2D/lockscrn".hide()
+	if(!$"Hud/unlock".button_pressed):
+		UnlockTime = 1.5
 func hide_elems():
 	home.hide()
 	home_btns.hide()
@@ -111,11 +128,12 @@ func _on_music_but_pressed():
 	homepage.show()
 func _on_home_but_pressed():
 	show_elems()
-	$"home_sound".play()
+	$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/cancel_sound.ogg")
+	$"sfx".play()
 	#a bug from original, but why not?
 	if(layer == 2):
-		$"home_sound".play()
-		$"home_sound".play()	
+		$"sfx".play()
+		$"sfx".play()
 func _on_nanocamo_but_pressed():
 	app = "nanocamo"
 	layer = 1

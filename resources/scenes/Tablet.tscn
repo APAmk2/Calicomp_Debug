@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=3 uid="uid://c8thi515lt4sv"]
+[gd_scene load_steps=110 format=3 uid="uid://c8thi515lt4sv"]
 
 [ext_resource type="Script" path="res://resources/scenes/Tablet.gd" id="1_85dw3"]
 [ext_resource type="Texture2D" uid="uid://c2aa4etsw8rgq" path="res://resources/Export_Sprites/tablet_hitbox_spr_0.png" id="2_gb5g3"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bn4mbchsqasdv" path="res://resources/Export_Sprites/miki_homepage_0.png" id="17_r6rv0"]
 [ext_resource type="Texture2D" uid="uid://brpoxmq2y5ekj" path="res://resources/Export_Sprites/musichome_spr_0.png" id="18_krkkg"]
 [ext_resource type="Texture2D" uid="uid://dfg75an0wk50d" path="res://resources/Export_Sprites/nanobase_spr_0.png" id="19_3cyuo"]
+[ext_resource type="Texture2D" uid="uid://be2byv5st6bc7" path="res://resources/Export_Sprites/tablet_bg1_spr_0.png" id="20_nev2h"]
 [ext_resource type="FontFile" uid="uid://b3egy7pp76quo" path="res://resources/fonts/VA-11 Hall-A 6px Bold.ttf" id="20_yho3p"]
 [ext_resource type="Texture2D" uid="uid://6cogvd4bhscl" path="res://resources/Export_Sprites/musicicon_spr_0.png" id="21_da0ba"]
 [ext_resource type="Script" path="res://resources/scenes/tablet_scroller.gd" id="21_r16kw"]
@@ -36,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://kidbrccti44v" path="res://resources/Export_Sprites/tableselect_spr_0.png" id="32_oug75"]
 [ext_resource type="PackedScene" uid="uid://ml2u71ysitsu" path="res://resources/scenes/SaveLoad.tscn" id="34_m0xtf"]
 [ext_resource type="AudioStream" uid="uid://ddss1behrta8k" path="res://resources/Exported_Sounds/audiogroup_default/cancel_sound.ogg" id="36_4x26x"]
+[ext_resource type="Texture2D" uid="uid://cvjxbilhctfxa" path="res://resources/Export_Sprites/candado_spr_0.png" id="36_x63kr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1rtoh"]
 animations = [{
@@ -312,6 +314,13 @@ texture = ExtResource("32_oug75")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dxbox"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w1qah"]
+texture = ExtResource("36_x63kr")
+modulate_color = Color(0.721569, 0.721569, 0.721569, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0yqhy"]
+texture = ExtResource("36_x63kr")
+
 [node name="Tablet" type="Node"]
 script = ExtResource("1_85dw3")
 
@@ -383,6 +392,12 @@ texture_filter = 1
 position = Vector2(323, 360)
 scale = Vector2(2, 2)
 texture = ExtResource("14_5g7hg")
+
+[node name="lockscrn" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(323, 328)
+scale = Vector2(2, 2)
+texture = ExtResource("20_nev2h")
 
 [node name="Hud" type="Control" parent="."]
 layout_mode = 3
@@ -763,11 +778,22 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_nm4i4")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_23oi4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dxbox")
 
+[node name="unlock" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 291.0
+offset_top = 438.0
+offset_right = 323.0
+offset_bottom = 470.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_w1qah")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0yqhy")
+
 [node name="SaveLoad" parent="." instance=ExtResource("34_m0xtf")]
 visible = false
 position = Vector2(-316, -8)
 
-[node name="home_sound" type="AudioStreamPlayer" parent="."]
+[node name="sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("36_4x26x")
 max_polyphony = 2
 bus = &"SFX"
