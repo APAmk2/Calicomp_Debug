@@ -11,23 +11,6 @@ var in_menu = false
 var saveload_mode = 0
 var read: Array
 
-func _load(but_num):
-	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(but_num) + "].txt", FileAccess.READ)
-	print("user://saves/Record of Waifu Wars[" + str(but_num) + "].txt")
-	if(file.is_open()):
-		print("Everything fine, loading Save.")
-		while(!file.eof_reached()):
-			var check = file.get_line()
-			if(check.length() == 1):
-				break
-			else:
-				read.append(check)
-		for i in read.size():
-			print(read[i])
-		file = null
-	else:
-		print("Something went wrong, can't load Save!")
-
 func _on_save_but_pressed():
 	pages = 0
 	saveload_mode = 0

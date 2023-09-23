@@ -32,7 +32,6 @@ var table = ["leopard", "bullet", "red_lines", "default"]
 func _ready():
 	hide_elems()
 	for i in range (1, 4):
-		print(i)
 		get_node("Hud/app_base/app_but" + str(i)).text = "NEWS" + str(1 + 3 * (day - 1) + (i - 1))
 	$"/root/Base/2D/room/room_walls".play(walls[LoadSingleton.walls - 1 + 4])
 	if(!LoadSingleton.day_str.is_empty()):
@@ -48,10 +47,8 @@ func _ready():
 		$"Hud/home/nanocamo_but".disabled = false
 func _process(delta):
 	if($"Hud/unlock".button_pressed):
-		print("pressed")
 		if UnlockTime > 0:
 			UnlockTime -= delta
-			print(UnlockTime)
 		else:
 			if UnlockTime <= 0:
 				$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/boot_up.ogg")

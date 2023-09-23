@@ -438,11 +438,6 @@ text = "item10"
 alignment = 0
 clip_text = true
 
-[node name="TextEdit" type="TextEdit" parent="Hud"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_cstyu")
 autoplay = true
