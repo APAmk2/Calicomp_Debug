@@ -1,88 +1,88 @@
 extends Node
 
-var read: Array
-var money: float = 1
-var money_in_bar: float
-var walls: int
-var walls_buy: Array
-var day: int = 1
-var day_str: String
-var stage: String
-var scanlines: int
-var shop_items: Array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-var lang: int
+var readData: Array
+var Money: float = 1
+var MoneyInBar: float
+var WPapers: int
+var HaveWalls: Array
+var Day: int = 1
+var DayStr: String
+var Place: String
+var IsScanlines: int
+var ShopItems: Array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+var Lang: int
 
-func _load(but_num):
-	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(but_num) + "].txt", FileAccess.READ)
-	print("user://saves/Record of Waifu Wars[" + str(but_num) + "].txt")
+func Load(butNum):
+	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(butNum) + "].txt", FileAccess.READ)
+	print("user://saves/Record of Waifu Wars[" + str(butNum) + "].txt")
 	if(file != null):
-		read.clear()
+		readData.clear()
 		print("Everything fine, loading Save.")
 		while(!file.eof_reached()):
 			var check = file.get_line()
 #			if(check.length() == 1): Strange bug, seems saves created by CALICOMP DEBUG cant be loaded after, then, idk how i fucking need to check invalid last string to avoid new strs creation
-#				print("Something went wrong, loading was interrupted! Iterations made: " + str(sheeotchyk))
+#				print("Something went wrong, loading was interrupted! Iterations made: " + str(loadCounter))
 #				pass
 #			else: 
-			read.append(check)
-		money = float(read[6])
-		money_in_bar = float(read[5])
-		walls = int(read[206])
-		day = int(read[2])
-		stage = read[8]
-		day_str = read[7]
-		shop_items[1] = read[171]
-		shop_items[2] = read[172]
-		shop_items[3] = read[173]
-		shop_items[4] = read[175]
-		shop_items[5] = read[176]
-		shop_items[6] = read[177]
-		shop_items[7] = read[178]
-		shop_items[8] = read[179]
-		shop_items[9] = read[180]
-		shop_items[10] = read[181]
-		shop_items[11] = read[182]
-		shop_items[12] = read[183]
-		shop_items[13] = read[184]
-		shop_items[14] = read[188]
-		shop_items[15] = read[238]
-		shop_items[16] = read[186]
-		shop_items[17] = read[240]
-		shop_items[18] = read[187]
-		shop_items[19] = read[185]
-		shop_items[20] = read[158]
+			readData.append(check)
+		Money = float(readData[6])
+		MoneyInBar = float(readData[5])
+		WPapers = int(readData[206])
+		Day = int(readData[2])
+		Place = readData[8]
+		DayStr = readData[7]
+		ShopItems[1] = readData[171]
+		ShopItems[2] = readData[172]
+		ShopItems[3] = readData[173]
+		ShopItems[4] = readData[175]
+		ShopItems[5] = readData[176]
+		ShopItems[6] = readData[177]
+		ShopItems[7] = readData[178]
+		ShopItems[8] = readData[179]
+		ShopItems[9] = readData[180]
+		ShopItems[10] = readData[181]
+		ShopItems[11] = readData[182]
+		ShopItems[12] = readData[183]
+		ShopItems[13] = readData[184]
+		ShopItems[14] = readData[188]
+		ShopItems[15] = readData[238]
+		ShopItems[16] = readData[186]
+		ShopItems[17] = readData[240]
+		ShopItems[18] = readData[187]
+		ShopItems[19] = readData[185]
+		ShopItems[20] = readData[158]
 		file = null
 		return true
 	else:
 		print("Something went wrong, can't load Save!")
 		return false
-func _save(but_num):
-	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(but_num) + "].txt", FileAccess.WRITE)
-	read[2] = str(day)
-	read[5] = str(money_in_bar)
-	read[6] = str(money)
-	read[7] = day_str
-	read[8] = stage
-	read[206] = str(walls)
-	read[171] = shop_items[1]
-	read[172] = shop_items[2]
-	read[173] = shop_items[3]
-	read[175] = shop_items[4]
-	read[176] = shop_items[5]
-	read[177] = shop_items[6]
-	read[178] = shop_items[7]
-	read[179] = shop_items[8]
-	read[180] = shop_items[9]
-	read[181] = shop_items[10]
-	read[182] = shop_items[11]
-	read[183] = shop_items[12]
-	read[184] = shop_items[13]
-	read[188] = shop_items[14]
-	read[238] = shop_items[15]
-	read[186] = shop_items[16]
-	read[240] = shop_items[17]
-	read[187] = shop_items[18]
-	read[185] = shop_items[19]
-	read[158] = shop_items[20]
-	var save = PackedStringArray(read)
-	file.store_csv_line(save, "\n")  
+func Save(butNum):
+	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(butNum) + "].txt", FileAccess.WRITE)
+	readData[2] = str(Day)
+	readData[5] = str(MoneyInBar)
+	readData[6] = str(Money)
+	readData[7] = DayStr
+	readData[8] = Place
+	readData[206] = str(WPapers)
+	readData[171] = ShopItems[1]
+	readData[172] = ShopItems[2]
+	readData[173] = ShopItems[3]
+	readData[175] = ShopItems[4]
+	readData[176] = ShopItems[5]
+	readData[177] = ShopItems[6]
+	readData[178] = ShopItems[7]
+	readData[179] = ShopItems[8]
+	readData[180] = ShopItems[9]
+	readData[181] = ShopItems[10]
+	readData[182] = ShopItems[11]
+	readData[183] = ShopItems[12]
+	readData[184] = ShopItems[13]
+	readData[188] = ShopItems[14]
+	readData[238] = ShopItems[15]
+	readData[186] = ShopItems[16]
+	readData[240] = ShopItems[17]
+	readData[187] = ShopItems[18]
+	readData[185] = ShopItems[19]
+	readData[158] = ShopItems[20]
+	var saveData = PackedStringArray(readData)
+	file.store_csv_line(saveData, "\n")  

@@ -589,8 +589,8 @@ mouse_filter = 2
 texture = ExtResource("42_hskho")
 
 [connection signal="animation_finished" from="2D/jill_blink" to="2D/jill_blink" method="_on_animation_finished"]
-[connection signal="button_up" from="Hud/to_work" to="." method="_on_to_work_button_up"]
-[connection signal="button_up" from="Hud/to_shop" to="." method="_on_to_shop_button_up"]
-[connection signal="pressed" from="Hud/sett_but" to="." method="_on_sett_but_pressed"]
+[connection signal="button_up" from="Hud/to_work" to="." method="ToWorkBtnUp"]
+[connection signal="button_up" from="Hud/to_shop" to="." method="ToShopBtnUp"]
+[connection signal="pressed" from="Hud/sett_but" to="." method="SettingsBtnPressed"]
 [connection signal="pressed" from="Hud/sett_but" to="Settings" method="_on_sett_but_pressed"]
 [connection signal="pressed" from="Hud/quit_but" to="Exit" method="_on_quit_but_pressed"]

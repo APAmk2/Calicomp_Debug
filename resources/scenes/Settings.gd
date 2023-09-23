@@ -21,7 +21,7 @@ func _load():
 				fullscr = false
 		$"Hud/bgm".value = (float(read[3]) - 20) / 100
 		$"Hud/sfx".value = (float(read[2]) - 20) / 100
-		LoadSingleton.scanlines = int(read[1])
+		LoadSingleton.IsScanlines = int(read[1])
 		if(read[1] == "1 "):
 			filter = true
 		else:
@@ -37,7 +37,7 @@ func _save():
 		read[0] = "1 "
 	else:
 		read[0] = "0 "
-	if(LoadSingleton.scanlines == 1):
+	if(LoadSingleton.IsScanlines == 1):
 		read[1] = "1 "
 	else:
 		read[1] = "0 "
@@ -53,7 +53,7 @@ func _ready():
 		$"2D/fullscreen_on".visible = false
 		$"2D/windowed".visible = true
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-	if(LoadSingleton.scanlines == 1):
+	if(LoadSingleton.IsScanlines == 1):
 		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteron_hovertxt_0.png")
 		$"2D/filter/but".show()
 		$"2D/filter/text".position = Vector2(204, 440)
@@ -61,7 +61,7 @@ func _ready():
 		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteroff_idletxt_0.png")
 		$"2D/filter/but".hide()
 		$"2D/filter/text".position = Vector2(209, 440)
-	$Hud/LangSel.selected = LoadSingleton.lang
+	$Hud/LangSel.selected = LoadSingleton.Lang
 func _on_fullscreen_but_pressed():
 	fullscr = true
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
@@ -80,21 +80,21 @@ func _on_sett_but_pressed():
 func _on_filter_but_pressed():
 	filter = !filter
 	if(filter):
-		LoadSingleton.scanlines = 1
+		LoadSingleton.IsScanlines = 1
 		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteron_hovertxt_0.png")
 		$"2D/filter/but".show()
 		$"2D/filter/text".position = Vector2(204, 440)
 		$"../scanlines".show()
 	else:
-		LoadSingleton.scanlines = 0
+		LoadSingleton.IsScanlines = 0
 		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteroff_idletxt_0.png")
 		$"2D/filter/but".hide()
 		$"2D/filter/text".position = Vector2(209, 440)
 		$"../scanlines".hide()
-	print(LoadSingleton.scanlines)
+	print(LoadSingleton.IsScanlines)
 
 
 func _on_lang_sel_item_selected(index):
 	var locale : String = $Hud/LangSel.get_item_text(index)
-	LoadSingleton.lang = $Hud/LangSel.selected
+	LoadSingleton.Lang = $Hud/LangSel.selected
 	TranslationServer.set_locale(locale)

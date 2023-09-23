@@ -302,8 +302,9 @@ theme_override_fonts/font = ExtResource("15_cvnum")
 theme_override_font_sizes/font_size = 28
 text = "Lang: "
 
-[connection signal="pressed" from="Hud/bgm_minus" to="Hud/bgm" method="_on_bgm_minus_pressed"]
-[connection signal="pressed" from="Hud/bgm_plus" to="Hud/bgm" method="_on_bgm_plus_pressed"]
+[connection signal="value_changed" from="Hud/bgm" to="Hud/bgm" method="ValueChanged"]
+[connection signal="pressed" from="Hud/bgm_minus" to="Hud/bgm" method="BgmMinusPressed"]
+[connection signal="pressed" from="Hud/bgm_plus" to="Hud/bgm" method="BgmPlusPressed"]
 [connection signal="pressed" from="Hud/sfx_plus" to="Hud/sfx" method="_on_sfx_plus_pressed"]
 [connection signal="pressed" from="Hud/sfx_minus" to="Hud/sfx" method="_on_sfx_minus_pressed"]
 [connection signal="pressed" from="Hud/fullscreen_but" to="." method="_on_fullscreen_but_pressed"]

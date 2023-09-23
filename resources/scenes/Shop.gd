@@ -5,10 +5,10 @@ var MAX_PAGES = 2
 var page = 1
 var choose: int
 var pricelist = [0, 500, 550, 300, 300, 350, 450, 350, 250, 1350, 2350, 1500, 800, 600, 500, 300, 1000, 300, 900, 600, 900]
-var money = LoadSingleton.money
+var money = LoadSingleton.Money
 
 func btn(extra_arg_0):
-	if(money - int(pricelist[extra_arg_0 + 10 * (page - 1)]) < 0 || int(LoadSingleton.shop_items[extra_arg_0 + 10 * (page - 1)]) == 1):
+	if(money - int(pricelist[extra_arg_0 + 10 * (page - 1)]) < 0 || int(LoadSingleton.ShopItems[extra_arg_0 + 10 * (page - 1)]) == 1):
 		pass;
 	else:
 		if(choose != extra_arg_0 + 10 * (page - 1)):
@@ -20,9 +20,9 @@ func btn(extra_arg_0):
 			pass
 		else:
 			$"Hud/description".text = "Good Choice..."
-			LoadSingleton.shop_items[extra_arg_0 + 10 * (page - 1)] = 1
-			LoadSingleton.money -= int(pricelist[extra_arg_0 + 10 * (page - 1)])
-			$"Hud/funds".text = tr("FUNDS") + str(LoadSingleton.money)
+			LoadSingleton.ShopItems[extra_arg_0 + 10 * (page - 1)] = 1
+			LoadSingleton.Money -= int(pricelist[extra_arg_0 + 10 * (page - 1)])
+			$"Hud/funds".text = tr("FUNDS") + str(LoadSingleton.Money)
 			$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/glassserve.ogg")
 			$"sfx".play()
 

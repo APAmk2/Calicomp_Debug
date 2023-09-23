@@ -258,8 +258,8 @@ mouse_filter = 2
 texture = ExtResource("13_2sjme")
 
 [connection signal="pressed" from="Hud/quit_but" to="Exit" method="_on_menu_but_pressed"]
-[connection signal="pressed" from="Hud/sett_but" to="." method="_on_sett_but_pressed"]
+[connection signal="pressed" from="Hud/sett_but" to="." method="SettingsBtnPressed"]
 [connection signal="pressed" from="Hud/sett_but" to="Settings" method="_on_sett_but_pressed"]
-[connection signal="pressed" from="Hud/load_but" to="SaveLoad" method="_on_menu_but_pressed"]
-[connection signal="button_up" from="Hud/ng_but" to="." method="_on_ng_but_button_up"]
+[connection signal="pressed" from="Hud/load_but" to="SaveLoad" method="MenuLoadBtnPressed"]
+[connection signal="button_up" from="Hud/ng_but" to="." method="NgBtnUp"]
 [connection signal="pressed" from="Hud/pressany_fullbut" to="." method="_on_pressany_fullbut_pressed"]

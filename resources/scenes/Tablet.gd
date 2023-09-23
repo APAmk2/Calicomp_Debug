@@ -17,7 +17,7 @@ extends Node
 
 var layer = 0
 var pages = 1
-var day = LoadSingleton.day
+var day = LoadSingleton.Day
 var nano_mode = 0
 var app = "none"
 var ae_read = 0
@@ -33,16 +33,16 @@ func _ready():
 	hide_elems()
 	for i in range (1, 4):
 		get_node("Hud/app_base/app_but" + str(i)).text = "NEWS" + str(1 + 3 * (day - 1) + (i - 1))
-	$"/root/Base/2D/room/room_walls".play(walls[LoadSingleton.walls - 1 + 4])
-	if(!LoadSingleton.day_str.is_empty()):
-		$"Hud/home/day".text = LoadSingleton.day_str
-	if(LoadSingleton.day >= 2):
+	$"/root/Base/2D/room/room_walls".play(walls[LoadSingleton.WPapers - 1 + 4])
+	if(!LoadSingleton.DayStr.is_empty()):
+		$"Hud/home/day".text = LoadSingleton.DayStr
+	if(LoadSingleton.Day >= 2):
 		$"2D/home/dangeru".play("alert")
 		$"Hud/home/dr_but".disabled = false
-	if(LoadSingleton.day >= 3):
+	if(LoadSingleton.Day >= 3):
 		$"2D/home/mikiapp".play("alert")
 		$"Hud/home/miki_but".disabled = false
-	if(LoadSingleton.day >= 5):
+	if(LoadSingleton.Day >= 5):
 		$"2D/home/nanocamo".play("nanocamo")
 		$"Hud/home/nanocamo_but".disabled = false
 func _process(delta):

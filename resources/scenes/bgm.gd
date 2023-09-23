@@ -1,19 +1,18 @@
 extends HSlider
 
 @export
-var bus_name = "BGM"
+var busName = "BGM"
 
-var bus_index: int
+var busIndex: int
 
 func _ready() -> void:
-	bus_index = AudioServer.get_bus_index(bus_name)
-	value_changed.connect(_on_value_changed)
-	value = db_to_linear(AudioServer.get_bus_volume_db(bus_index))
+	busIndex = AudioServer.get_bus_index(busName)
+	value = db_to_linear(AudioServer.get_bus_volume_db(busIndex))
 
-func _on_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
+func ValueChanged(value: float) -> void:
+	AudioServer.set_bus_volume_db(busIndex, linear_to_db(value))
 
-func _on_bgm_plus_pressed():
+func BgmPlusPressed():
 	value += 0.1
-func _on_bgm_minus_pressed():
+func BgmMinusPressed():
 	value -= 0.1
