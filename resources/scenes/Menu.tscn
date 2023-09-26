@@ -56,32 +56,32 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sqnlp"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q61cm"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gngjx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wsvdk"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yaef"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bcqrh"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cl4vr"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25icw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iegbg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d54dg"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q61cm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bcqrh"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25icw"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cl4vr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wsvdk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yaef"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sqnlp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gngjx"]
 
 [node name="Menu" type="Node"]
 script = ExtResource("1_5u51q")
 
 [node name="2D" type="Node2D" parent="."]
 
-[node name="Background" type="AnimatedSprite2D" parent="2D"]
+[node name="bg" type="AnimatedSprite2D" parent="2D"]
 texture_filter = 1
 position = Vector2(640, 360)
 scale = Vector2(2, 2)
@@ -89,7 +89,7 @@ sprite_frames = SubResource("SpriteFrames_nr788")
 animation = &"ng"
 autoplay = "ng"
 
-[node name="Logo" type="Sprite2D" parent="2D"]
+[node name="logo" type="Sprite2D" parent="2D"]
 texture_filter = 1
 position = Vector2(641, 404)
 scale = Vector2(2, 2)
@@ -101,70 +101,15 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TM" type="Label" parent="Hud"]
-texture_filter = 1
+[node name="pressanyBtn" type="Button" parent="Hud"]
 layout_mode = 0
-offset_left = 370.0
-offset_top = 658.0
-offset_right = 922.0
-offset_bottom = 687.0
-theme_override_fonts/font = ExtResource("11_24a6p")
-theme_override_font_sizes/font_size = 20
-text = "COPYRIGHT"
-horizontal_alignment = 1
-
-[node name="quit_but" type="Button" parent="Hud"]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_left = 646.0
-offset_top = 559.0
-offset_right = 718.0
-offset_bottom = 597.0
-theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
-theme_override_colors/font_hover_color = Color(1, 0.733333, 0.192157, 1)
-theme_override_fonts/font = ExtResource("12_lil77")
-theme_override_font_sizes/font_size = 28
-theme_override_styles/hover = SubResource("StyleBoxEmpty_sqnlp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_gngjx")
-text = "TITLEEXIT"
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q61cm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_25icw")
 flat = true
 
-[node name="sett_but" type="Button" parent="Hud"]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_left = 632.0
-offset_top = 557.0
-offset_right = 768.0
-offset_bottom = 595.0
-theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
-theme_override_colors/font_hover_color = Color(1, 0.733333, 0.192157, 1)
-theme_override_fonts/font = ExtResource("12_lil77")
-theme_override_font_sizes/font_size = 28
-theme_override_styles/hover = SubResource("StyleBoxEmpty_wsvdk")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_2yaef")
-text = "TITLESETTINGS"
-flat = true
-
-[node name="load_but" type="Button" parent="Hud"]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_left = 514.0
-offset_top = 557.0
-offset_right = 586.0
-offset_bottom = 595.0
-theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
-theme_override_colors/font_hover_color = Color(1, 0.733333, 0.192157, 1)
-theme_override_fonts/font = ExtResource("12_lil77")
-theme_override_font_sizes/font_size = 28
-theme_override_styles/hover = SubResource("StyleBoxEmpty_bcqrh")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cl4vr")
-text = "TITLELOAD"
-flat = true
-
-[node name="ng_but" type="Button" parent="Hud"]
+[node name="ngBtn" type="Button" parent="Hud"]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -181,15 +126,70 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_d54dg")
 text = "TITLENEW"
 flat = true
 
-[node name="pressany_fullbut" type="Button" parent="Hud"]
+[node name="loadBtn" type="Button" parent="Hud"]
+visible = false
+texture_filter = 1
 layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
-theme_override_styles/hover = SubResource("StyleBoxEmpty_q61cm")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_25icw")
+offset_left = 514.0
+offset_top = 557.0
+offset_right = 666.0
+offset_bottom = 595.0
+theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_fonts/font = ExtResource("12_lil77")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bcqrh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cl4vr")
+text = "TITLELOAD"
 flat = true
 
-[node name="pressany" type="Label" parent="Hud"]
+[node name="settingsBtn" type="Button" parent="Hud"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 632.0
+offset_top = 557.0
+offset_right = 848.0
+offset_bottom = 595.0
+theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_fonts/font = ExtResource("12_lil77")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wsvdk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2yaef")
+text = "TITLESETTINGS"
+flat = true
+
+[node name="quitBtn" type="Button" parent="Hud"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 646.0
+offset_top = 559.0
+offset_right = 718.0
+offset_bottom = 597.0
+theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_colors/font_hover_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_fonts/font = ExtResource("12_lil77")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sqnlp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gngjx")
+text = "TITLEEXIT"
+flat = true
+
+[node name="copyright" type="Label" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 370.0
+offset_top = 658.0
+offset_right = 922.0
+offset_bottom = 687.0
+theme_override_fonts/font = ExtResource("11_24a6p")
+theme_override_font_sizes/font_size = 20
+text = "COPYRIGHT"
+horizontal_alignment = 1
+
+[node name="pressanyTxt" type="Label" parent="Hud"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 418.0
@@ -201,7 +201,7 @@ theme_override_font_sizes/font_size = 28
 text = "CLICKTOSTART"
 horizontal_alignment = 1
 
-[node name="random_text" type="Label" parent="Hud"]
+[node name="demonameTxt" type="Label" parent="Hud"]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -212,7 +212,7 @@ offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("11_24a6p")
 theme_override_font_sizes/font_size = 20
 
-[node name="engine_ver" type="Label" parent="Hud"]
+[node name="engineVer" type="Label" parent="Hud"]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -223,16 +223,13 @@ offset_bottom = 702.0
 theme_override_fonts/font = ExtResource("11_24a6p")
 theme_override_font_sizes/font_size = 20
 
-[node name="menu_theme" type="AudioStreamPlayer" parent="."]
+[node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_0ktdx")
 autoplay = true
 bus = &"BGM"
 
-[node name="click_to_start" type="AudioStreamPlayer" parent="."]
+[node name="sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_dig1k")
-bus = &"SFX"
-
-[node name="settings" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"
 
 [node name="Settings" parent="." instance=ExtResource("15_vd4lh")]
@@ -257,9 +254,9 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("13_2sjme")
 
-[connection signal="pressed" from="Hud/quit_but" to="Exit" method="_on_menu_but_pressed"]
-[connection signal="pressed" from="Hud/sett_but" to="." method="SettingsBtnPressed"]
-[connection signal="pressed" from="Hud/sett_but" to="Settings" method="SettingsBtnPressed"]
-[connection signal="pressed" from="Hud/load_but" to="SaveLoad" method="MenuLoadBtnPressed"]
-[connection signal="button_up" from="Hud/ng_but" to="." method="NgBtnUp"]
-[connection signal="pressed" from="Hud/pressany_fullbut" to="." method="_on_pressany_fullbut_pressed"]
+[connection signal="pressed" from="Hud/pressanyBtn" to="." method="PressanyBtnPressed"]
+[connection signal="button_up" from="Hud/ngBtn" to="." method="NgBtnUp"]
+[connection signal="pressed" from="Hud/loadBtn" to="SaveLoad" method="MenuLoadBtnPressed"]
+[connection signal="pressed" from="Hud/settingsBtn" to="." method="SettingsBtnPressed"]
+[connection signal="pressed" from="Hud/settingsBtn" to="Settings" method="SettingsBtnPressed"]
+[connection signal="pressed" from="Hud/quitBtn" to="Exit" method="_on_menu_but_pressed"]

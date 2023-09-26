@@ -16,8 +16,7 @@ func _ready():
 	if(betaHud):
 		$"2D/calihack".show()
 	else:
-		if(!betaHud):
-			$"2D/calihack".hide()
+		$"2D/calihack".hide()
 
 func _process(delta):
 	$"2D/fan".rotation_degrees -= 0.95
@@ -29,8 +28,7 @@ func _process(delta):
 	if(settingsAnim):
 		$Settings.scale = lerp($Settings.scale, Vector2(1, 1), t)
 	else:
-		if(!settingsAnim):
-			$Settings.scale = lerp($Settings.scale, Vector2(1, 0.1), t)
+		$Settings.scale = lerp($Settings.scale, Vector2(1, 0.1), t)
 
 func SettingsBtnPressed():
 	if($Settings.visible):

@@ -1,6 +1,16 @@
 extends Node
 
-@onready var pressanyText = $"Hud/pressany"
+@onready var sfx = $"sfx"
+@onready var pressanyText = $"Hud/pressanyTxt"
+@onready var scanlines = $scanlines
+@onready var bg = $"2D/bg"
+@onready var engineVer = $"Hud/engineVer"
+@onready var pressanyBtn = $"Hud/pressanyBtn"
+@onready var ngBtn = $"Hud/ngBtn"
+@onready var loadBtn = $"Hud/loadBtn"
+@onready var settingsBtn = $"Hud/settingsBtn"
+@onready var quitBtn = $"Hud/quitBtn"
+@onready var settingsWin = $"Settings"
 
 var ngplus: bool = false
 var btnsAnim: bool = false
@@ -13,64 +23,63 @@ var moveDuration = 0.25
 func _ready():
 	var random = RandomNumberGenerator.new()
 	random.randomize()
-	$"Hud/random_text".text = tr("DEMONAME" + str(random.randi_range(1, 2))) + " " + ProjectSettings.get_setting("application/config/version")
+	$"Hud/demonameTxt".text = tr("DEMONAME" + str(random.randi_range(1, 2))) + " " + ProjectSettings.get_setting("application/config/version")
 	if(LoadSingleton.ScanlinesEnabled):
-		$scanlines.show()
+		scanlines.show()
 	else:
-		$scanlines.hide()
+		scanlines.hide()
 	if(ngplus):
-		$"2D/Background".play("ngplus")
+		bg.play("ngplus")
 	else:
-		if(!ngplus):
-			$"2D/Background".play("ng")
-	$"Hud/engine_ver".text = str(Engine.get_version_info().string)
-	while($"Hud/pressany_fullbut".visible):
+		bg.play("ng")
+	engineVer.text = str(Engine.get_version_info().string)
+	while(pressanyBtn.visible):
 		pressanyText.show()
 		await get_tree().create_timer(3.0).timeout
 		pressanyText.hide()
 		await get_tree().create_timer(0.5).timeout
-func _on_pressany_fullbut_pressed():
-	$click_to_start.playing = true
-	$"Hud/TM".show()
-	pressanyText.hide()
-	$"Hud/pressany_fullbut".hide()
-	$"Hud/quit_but".show()
-	$"Hud/sett_but".show()
-	$"Hud/load_but".show()
-	$"Hud/ng_but".show()
-	btnsAnim = true
-	$"Hud/random_text".show()
-	$"Hud/engine_ver".show()
 
 func _process(delta):
 	if (time > moveDuration or time < 0):
 		timeDirection *= -1
-
 	time += delta * timeDirection
 	var t = time / moveDuration
 	if(btnsAnim):
-		$"Hud/quit_but".position = lerp($"Hud/quit_but".position, Vector2(904,559), t)
-		$"Hud/sett_but".position = lerp($"Hud/sett_but".position, Vector2(702,557), t)
-		$"Hud/load_but".position =  lerp($"Hud/load_but".position, Vector2(506,557), t)
-		$"Hud/ng_but".position =  lerp($"Hud/ng_but".position, Vector2(302,557), t)
+		ngBtn.position =  lerp(ngBtn.position, Vector2(302,557), t)
+		quitBtn.position = lerp(quitBtn.position, Vector2(904,559), t)
+		settingsBtn.position = lerp(settingsBtn.position, Vector2(702,557), t)
+		loadBtn.position =  lerp(loadBtn.position, Vector2(506,557), t)
 	if(settingsAnim):
-		$Settings.scale = lerp($Settings.scale, Vector2(1, 1), t)
+		settingsWin.scale = lerp(settingsWin.scale, Vector2(1, 1), t)
 	else:
-		if(!settingsAnim):
-			$Settings.scale = lerp($Settings.scale, Vector2(1, 0.1), t)
-	
+		settingsWin.scale = lerp(settingsWin.scale, Vector2(1, 0.1), t)
+
+func PressanyBtnPressed():
+	sfx.stream = load("res://resources/Exported_Sounds/audiogroup_default/click_to_start.ogg")
+	sfx.play()
+	$"Hud/copyright".show()
+	pressanyText.hide()
+	pressanyBtn.hide()
+	ngBtn.show()
+	settingsBtn.show()
+	loadBtn.show()
+	quitBtn.show()
+	btnsAnim = true
+	$"Hud/demonameTxt".show()
+	engineVer.show()
 
 func NgBtnUp():
 	get_tree().change_scene_to_file("res://resources/scenes/Base.tscn")
+
 func SettingsBtnPressed():
-	if($Settings.visible):
+	if(settingsWin.visible):
 		settingsAnim = false
-		$settings.stream = load("res://resources/Exported_Sounds/audiogroup_default/loghide.ogg")
-		$settings.play()
+		sfx.stream = load("res://resources/Exported_Sounds/audiogroup_default/loghide.ogg")
+		sfx.play()
 		await get_tree().create_timer(0.08).timeout
 	else:
-		$Settings.scale = Vector2(0.1, 1)
+		settingsWin.scale = Vector2(0.1, 1)
 		settingsAnim = true
-		$settings.stream = load("res://resources/Exported_Sounds/audiogroup_default/logshow.ogg")
-		$settings.play()
-	$Settings.visible = !$Settings.visible
+		sfx.stream = load("res://resources/Exported_Sounds/audiogroup_default/logshow.ogg")
+		sfx.play()
+	settingsWin.visible = !settingsWin.visible

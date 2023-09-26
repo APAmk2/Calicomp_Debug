@@ -54,8 +54,7 @@ func _process(delta):
 	if(settingsAnim):
 		$Settings.scale = lerp($Settings.scale, Vector2(1, 1), t)
 	else:
-		if(!settingsAnim):
-			$Settings.scale = lerp($Settings.scale, Vector2(1, 0.1), t)
+		$Settings.scale = lerp($Settings.scale, Vector2(1, 0.1), t)
 
 func ToWorkBtnUp():
 	get_tree().change_scene_to_file("res://resources/scenes/Main.tscn")

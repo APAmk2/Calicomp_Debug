@@ -808,7 +808,7 @@ bus = &"SFX"
 [connection signal="pressed" from="Hud/home/ae_but" to="." method="_on_ae_but_pressed"]
 [connection signal="pressed" from="Hud/home/nanocamo_but" to="." method="_on_nanocamo_but_pressed"]
 [connection signal="pressed" from="Hud/home/saveload_but" to="." method="_on_saveload_but_pressed"]
-[connection signal="pressed" from="Hud/home/saveload_but" to="SaveLoad" method="_on_saveload_but_pressed"]
+[connection signal="pressed" from="Hud/home/saveload_but" to="SaveLoad" method="SaveloadBtnPressed"]
 [connection signal="pressed" from="Hud/home_but" to="." method="_on_home_but_pressed"]
 [connection signal="pressed" from="Hud/back_but" to="." method="_on_back_but_pressed"]
 [connection signal="pressed" from="Hud/nanocamo/homescreen/nano_cust_but" to="." method="_on_nano_cust_but_pressed"]

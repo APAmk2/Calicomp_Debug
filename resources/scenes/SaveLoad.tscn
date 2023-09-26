@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://ml2u71ysitsu"]
+[gd_scene load_steps=54 format=3 uid="uid://ml2u71ysitsu"]
 
 [ext_resource type="Script" path="res://resources/scenes/SaveLoad.gd" id="1_1v0k1"]
 [ext_resource type="Texture2D" uid="uid://cos1gao2maa7k" path="res://resources/Export_Sprites/saveintro_spr_0.png" id="2_is4e3"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://hhwr2asm8gdc" path="res://resources/Export_Sprites/hover_5_0.png" id="21_uoskt"]
 [ext_resource type="Texture2D" uid="uid://c8lm1n2ulm6um" path="res://resources/Export_Sprites/idle_6_0.png" id="22_vb2ly"]
 [ext_resource type="Texture2D" uid="uid://dy2qwmlxssib1" path="res://resources/Export_Sprites/hover_6_0.png" id="23_b3ivy"]
+[ext_resource type="FontFile" uid="uid://dn502a8gblt4i" path="res://resources/fonts/VA-11 Hall-A 10px.ttf" id="24_eiolj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vy6yy"]
 animations = [{
@@ -224,6 +225,7 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_lrvfu")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2faqb")
 
 [node name="back_but" type="Button" parent="Hud/base_btns"]
+visible = false
 texture_filter = 1
 layout_mode = 0
 offset_left = 440.0
@@ -372,10 +374,94 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_8fo5h")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_2kmwb")
 theme_override_styles/focus = SubResource("StyleBoxTexture_8fo5h")
 
+[node name="saveDate1" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+offset_left = 522.0
+offset_top = 200.0
+offset_right = 818.0
+offset_bottom = 233.0
+theme_override_fonts/font = ExtResource("24_eiolj")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 2
+
+[node name="saveDate2" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+offset_left = 522.0
+offset_top = 298.0
+offset_right = 818.0
+offset_bottom = 331.0
+theme_override_fonts/font = ExtResource("24_eiolj")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 2
+
+[node name="saveDate3" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+offset_left = 522.0
+offset_top = 396.0
+offset_right = 818.0
+offset_bottom = 429.0
+theme_override_fonts/font = ExtResource("24_eiolj")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 2
+
+[node name="saveDate4" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+offset_left = 522.0
+offset_top = 494.0
+offset_right = 818.0
+offset_bottom = 527.0
+theme_override_fonts/font = ExtResource("24_eiolj")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 2
+
+[node name="saveDay1" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+offset_left = 458.0
+offset_top = 160.0
+offset_right = 754.0
+offset_bottom = 193.0
+theme_override_fonts/font = ExtResource("24_eiolj")
+theme_override_font_sizes/font_size = 28
+
+[node name="saveDay2" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+offset_left = 458.0
+offset_top = 258.0
+offset_right = 754.0
+offset_bottom = 291.0
+theme_override_fonts/font = ExtResource("24_eiolj")
+theme_override_font_sizes/font_size = 28
+
+[node name="saveDay3" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+offset_left = 458.0
+offset_top = 356.0
+offset_right = 754.0
+offset_bottom = 389.0
+theme_override_fonts/font = ExtResource("24_eiolj")
+theme_override_font_sizes/font_size = 28
+
+[node name="saveDay4" type="Label" parent="Hud"]
+visible = false
+texture_filter = 1
+offset_left = 458.0
+offset_top = 454.0
+offset_right = 754.0
+offset_bottom = 487.0
+theme_override_fonts/font = ExtResource("24_eiolj")
+theme_override_font_sizes/font_size = 28
+
 [connection signal="pressed" from="Hud/home/Save_but" to="." method="SaveBtnPressed"]
 [connection signal="pressed" from="Hud/home/Load_but" to="." method="LoadBtnPressed"]
-[connection signal="pressed" from="Hud/base_btns/home_but" to="." method="_on_home_but_pressed"]
-[connection signal="pressed" from="Hud/base_btns/back_but" to="." method="_on_back_but_pressed"]
+[connection signal="pressed" from="Hud/base_btns/home_but" to="." method="HomeBtnPressed"]
+[connection signal="pressed" from="Hud/base_btns/back_but" to="." method="BackBtnPressed"]
 [connection signal="pressed" from="Hud/slot_btns/slot1" to="." method="SlotPressed" binds= [1]]
 [connection signal="pressed" from="Hud/slot_btns/slot2" to="." method="SlotPressed" binds= [2]]
 [connection signal="pressed" from="Hud/slot_btns/slot3" to="." method="SlotPressed" binds= [3]]

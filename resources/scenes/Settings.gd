@@ -17,8 +17,7 @@ func Load():
 		if(int(readData[0]) == 1):
 			fullscr = true
 		else:
-			if(int(readData[0]) == 0):
-				fullscr = false
+			fullscr = false
 		$"Hud/bgm".value = (float(readData[3]) - 20) / 100
 		$"Hud/sfx".value = (float(readData[2]) - 20) / 100
 		if(int(readData[1]) == 1):

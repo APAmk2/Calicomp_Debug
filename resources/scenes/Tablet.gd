@@ -30,8 +30,6 @@ var tableNames: Array = ["leopard", "bullet", "red_lines", "default"]
 
 func _ready():
 	hide_elems()
-	for i in range (1, 4):
-		get_node("Hud/app_base/app_but" + str(i)).text = "NEWS" + str(1 + 3 * (LoadSingleton.Day - 1) + (i - 1))
 	$"/root/Base/2D/room/room_walls".play(wPaperNames[LoadSingleton.WPapers - 1 + 4])
 	if(!LoadSingleton.DayStr.is_empty()):
 		$"Hud/home/day".text = LoadSingleton.DayStr
@@ -56,12 +54,11 @@ func _process(delta):
 		if TabletUnlockTime > 0:
 			TabletUnlockTime -= delta
 		else:
-			if TabletUnlockTime <= 0:
-				$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/boot_up.ogg")
-				$"sfx".play()
-				show_elems()
-				$"Hud/unlock".hide()
-				$"2D/lockscrn".hide()
+			$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/boot_up.ogg")
+			$"sfx".play()
+			show_elems()
+			$"Hud/unlock".hide()
+			$"2D/lockscrn".hide()
 	if(!$"Hud/unlock".button_pressed):
 		TabletUnlockTime = 1.5
 
@@ -95,12 +92,14 @@ func _on_ae_but_pressed():
 	homepage.play(app)
 	hide_elems()
 	homepage.show()
-	app_but1.set("theme_override_colors/font_color",Color(0,0,0))
-	app_but1.show()
-	app_but2.set("theme_override_colors/font_color",Color(0,0,0))
-	app_but2.show()
-	app_but3.set("theme_override_colors/font_color",Color(0,0,0))
-	app_but3.show()
+	for i in range (1, 4):
+		var btn = get_node("Hud/app_base/app_but" + str(i))
+		if(i + 3 * (LoadSingleton.Day - 1) <= 15):
+			btn.text = "NEWS" + str(i + 3 * (LoadSingleton.Day - 1))
+		if(i + 3 * (LoadSingleton.Day - 1) > 15):
+			btn.text = "NEWS" + str(i + 3 * (LoadSingleton.Day - 1) + 3)
+		btn.set("theme_override_colors/font_color",Color(0,0,0))
+		btn.show()
 
 func _on_dr_but_pressed():
 	app = "dange"
@@ -110,12 +109,11 @@ func _on_dr_but_pressed():
 	homepage.play(app)
 	hide_elems()
 	homepage.show()
-	app_but1.set("theme_override_colors/font_color",Color(255,255,255))
-	app_but1.show()
-	app_but2.set("theme_override_colors/font_color",Color(255,255,255))
-	app_but2.show()
-	app_but3.set("theme_override_colors/font_color",Color(255,255,255))
-	app_but3.show()
+	for i in range (1, 4):
+		var btn = get_node("Hud/app_base/app_but" + str(i))
+		btn.text = "THREADNAME" + dangeThreadsIndex[3 * (LoadSingleton.Day - 2) + i]
+		btn.set("theme_override_colors/font_color",Color(255,255,255))
+		btn.show()
 
 func _on_miki_but_pressed():
 	app = "miki"
@@ -125,12 +123,11 @@ func _on_miki_but_pressed():
 	homepage.play(app)
 	hide_elems()
 	homepage.show()
-	app_but1.set("theme_override_colors/font_color",Color(0,0,0))
-	app_but1.show()
-	app_but2.set("theme_override_colors/font_color",Color(0,0,0))
-	app_but2.show()
-	app_but3.set("theme_override_colors/font_color",Color(0,0,0))
-	app_but3.show()
+	for i in range (1, 4):
+		var btn = get_node("Hud/app_base/app_but" + str(i))
+#		btn.text = "NEWS" + str(1 + 3 * (LoadSingleton.Day - 1) + (i - 1))
+		btn.set("theme_override_colors/font_color",Color(0,0,0))
+		btn.show()
 
 func _on_music_but_pressed():
 	app = "music"
@@ -159,34 +156,36 @@ func _on_nanocamo_but_pressed():
 func _on_back_but_pressed():
 	if(layer == 1):
 		show_elems()
-	if(layer == 2):
-		if(app == "ae" || app == "dange" || app == "miki"):
-			tablet_scroller.value = 0
-			page.hide()
-			tablet_scroller.hide()
-			homepage.show()
-			app_but1.show()
-			app_but2.show()
-			app_but3.show()
-		if(app == "nanocamo"):
-			pages = 1
-			nanoTableMode = false
-			page.hide()
-			nano_choice.hide()
-			nano_walls.hide()
-			nano_table.hide()
-			nano_page.hide()
-			nano_1page.hide()
-			homepage.show()
-			nano_home_btns.show()
+	else:
+		if(layer == 2):
+			if(app == "ae" || app == "dange" || app == "miki"):
+				tablet_scroller.value = 0
+				page.hide()
+				tablet_scroller.hide()
+				homepage.show()
+				app_but1.show()
+				app_but2.show()
+				app_but3.show()
+			else:
+				if(app == "nanocamo"):
+					pages = 1
+					nanoTableMode = false
+					page.hide()
+					nano_choice.hide()
+					nano_walls.hide()
+					nano_table.hide()
+					nano_page.hide()
+					nano_1page.hide()
+					homepage.show()
+					nano_home_btns.show()
 	layer -= 1
 
 func app_btns(extra_arg_0):
-	if(app == "ae" && (3 * LoadSingleton.Day + extra_arg_0) < 15):
-		page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(3 * (LoadSingleton.Day - 1) + extra_arg_0) + ".png")
+	if(app == "ae" && (extra_arg_0 + 3 * (LoadSingleton.Day - 1)) <= 15):
+		page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(extra_arg_0 + 3 * (LoadSingleton.Day - 1)) + ".png")
 	else:
-		if(app == "ae" && (3 * LoadSingleton.Day + extra_arg_0) > 15):
-			page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(3 * (LoadSingleton.Day - 1) + extra_arg_0 + 3) + ".png")
+		if(app == "ae" && (extra_arg_0 + 3 * (LoadSingleton.Day - 1)) > 15):
+			page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(extra_arg_0 + 3 * (LoadSingleton.Day - 1) + 3) + ".png")
 	if(app == "dange"):
 		page.texture = load("res://resources/Export_Sprites/dange_thread1_" + dangeThreadsIndex[3 * (LoadSingleton.Day - 2) + extra_arg_0 ] + ".png")
 	if(app == "miki"):
@@ -206,11 +205,11 @@ func nano_btns(extra_arg_0):
 	pages = extra_arg_0
 
 func nano_setwall(extra_arg_0):
-	if(!nanoTableMode):
-		$"/root/Base/2D/room/room_walls".play(wPaperNames[extra_arg_0 + 4 * pages])
-		wPaperIndex = extra_arg_0 + 4 * pages
 	if(nanoTableMode):
 		$"/root/Base/2D/room/interior/kotatsu".play(tableNames[extra_arg_0])
+	else:
+		$"/root/Base/2D/room/room_walls".play(wPaperNames[extra_arg_0 + 4 * pages])
+		wPaperIndex = extra_arg_0 + 4 * pages
 
 func _on_nano_about_but_pressed():
 	page.texture = load("res://resources/Export_Sprites/nanobase_walls_spr_5.png")

@@ -1,5 +1,9 @@
 extends Node
 
+var SaveDate: Array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+var SaveDay: Array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+var SavePlace: Array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+
 var readData: Array
 var Money: float = 1
 var MoneyInBar: float
@@ -12,7 +16,7 @@ var ScanlinesEnabled: bool
 var ShopItems: Array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 var Lang: int
 
-func Load(butNum):
+func Load(butNum, LoadAll):
 	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(butNum) + "].txt", FileAccess.READ)
 	print("user://saves/Record of Waifu Wars[" + str(butNum) + "].txt")
 	if(file != null):
@@ -25,6 +29,18 @@ func Load(butNum):
 #				pass
 #			else: 
 			readData.append(check)
+		SaveDate[butNum - 1] = readData[0]
+		SaveDay[butNum - 1] = readData[2]
+		SavePlace[butNum - 1] = readData[8]
+		if(LoadAll):
+			LoadVars()
+		file = null
+		return true
+	else:
+		print("Something went wrong, can't load Save!")
+		return false
+
+func LoadVars():
 		Money = float(readData[6])
 		MoneyInBar = float(readData[5])
 		WPapers = int(readData[206])
@@ -51,11 +67,7 @@ func Load(butNum):
 		ShopItems[18] = readData[187]
 		ShopItems[19] = readData[185]
 		ShopItems[20] = readData[158]
-		file = null
-		return true
-	else:
-		print("Something went wrong, can't load Save!")
-		return false
+
 func Save(butNum):
 	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(butNum) + "].txt", FileAccess.WRITE)
 	readData[2] = str(Day)
