@@ -1,17 +1,15 @@
 extends HSlider
 
-@export
-var bus_name = "SFX"
-
-var bus_index: int
+var busName: String = "SFX"
+var busIndex: int
 
 func _ready() -> void:
-	bus_index = AudioServer.get_bus_index(bus_name)
+	busIndex = AudioServer.get_bus_index(busName)
 	value_changed.connect(_on_value_changed)
-	value = db_to_linear(AudioServer.get_bus_volume_db(bus_index))
+	value = db_to_linear(AudioServer.get_bus_volume_db(busIndex))
 
 func _on_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
+	AudioServer.set_bus_volume_db(busIndex, linear_to_db(value))
 
 func _on_sfx_plus_pressed():
 	value += 0.1

@@ -1,16 +1,15 @@
 extends Node
 
-var betaHud = true
-var moneyInBar = LoadSingleton.MoneyInBar
-var settingsAnim = false
+var betaHud: bool = true
+var settingsAnim: bool = false
 
 var time = 0
 var timeDirection = 1
 var moveDuration = 0.25
 
 func _ready():
-	$"Hud/money".text = "$" + str(moneyInBar)
-	if(LoadSingleton.IsScanlines == 1):
+	$"Hud/money".text = "$" + str(LoadSingleton.MoneyInBar)
+	if(LoadSingleton.ScanlinesEnabled):
 		$scanlines.show()
 	else:
 		$scanlines.hide()

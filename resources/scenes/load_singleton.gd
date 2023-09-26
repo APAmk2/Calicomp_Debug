@@ -8,7 +8,7 @@ var HaveWalls: Array
 var Day: int = 1
 var DayStr: String
 var Place: String
-var IsScanlines: int
+var ScanlinesEnabled: bool
 var ShopItems: Array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 var Lang: int
 

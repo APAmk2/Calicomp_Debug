@@ -15,52 +15,60 @@ extends Node
 @onready var nano_walls = $"Hud/nanocamo/walls_but"
 @onready var nano_table = $"Hud/nanocamo/table_but"
 
-var layer = 0
-var pages = 1
-var day = LoadSingleton.Day
-var nano_mode = 0
-var app = "none"
-var ae_read = 0
-var dange_read = 0
-var miki_read = 0
-var wall_num = 0
-var UnlockTime = 1.5
-var dange_threads = ["", "3", "2", "1", "6", "5", "4", "7", "6", "5", "10", "9", "8", "3", "2", "1", "13", "12", "11", "14", "13", "12", "15", "14", "13", "16", "15", "14", "17", "16", "15", "18", "17", "16", "18", "17", "16", "19", "18", "17", "20", "19", "18", "21", "20", "19", "22", "21", "20", "22", "21", "20", "23", "22", "21"]
-var walls = ["", "", "", "gray", "blue", "cream", "red", "pink", "black", "gray", "white", "green", "orange", "reddish", "red_lines", "leopard", "anime", "miki", "game", "doge"]
-var table = ["leopard", "bullet", "red_lines", "default"]
+var layer: int = 0
+var pages: int = 1
+var nanoTableMode: bool = false
+var app: String = "none"
+var aeReaded: bool = 0
+var dangeReaded: bool = 0
+var mikiReaded: bool = 0
+var wPaperIndex: int = 0
+var TabletUnlockTime: int = 1.5
+var dangeThreadsIndex: Array = ["", "3", "2", "1", "6", "5", "4", "7", "6", "5", "10", "9", "8", "3", "2", "1", "13", "12", "11", "14", "13", "12", "15", "14", "13", "16", "15", "14", "17", "16", "15", "18", "17", "16", "18", "17", "16", "19", "18", "17", "20", "19", "18", "21", "20", "19", "22", "21", "20", "22", "21", "20", "23", "22", "21"]
+var wPaperNames: Array = ["", "", "", "gray", "blue", "cream", "red", "pink", "black", "gray", "white", "green", "orange", "reddish", "red_lines", "leopard", "anime", "miki", "game", "doge"]
+var tableNames: Array = ["leopard", "bullet", "red_lines", "default"]
 
 func _ready():
 	hide_elems()
 	for i in range (1, 4):
-		get_node("Hud/app_base/app_but" + str(i)).text = "NEWS" + str(1 + 3 * (day - 1) + (i - 1))
-	$"/root/Base/2D/room/room_walls".play(walls[LoadSingleton.WPapers - 1 + 4])
+		get_node("Hud/app_base/app_but" + str(i)).text = "NEWS" + str(1 + 3 * (LoadSingleton.Day - 1) + (i - 1))
+	$"/root/Base/2D/room/room_walls".play(wPaperNames[LoadSingleton.WPapers - 1 + 4])
 	if(!LoadSingleton.DayStr.is_empty()):
 		$"Hud/home/day".text = LoadSingleton.DayStr
 	if(LoadSingleton.Day >= 2):
-		$"2D/home/dangeru".play("alert")
+		if(!dangeReaded):
+			$"2D/home/dangeru".play("alert")
+		else:
+			$"2D/home/dangeru".play("installed")
 		$"Hud/home/dr_but".disabled = false
 	if(LoadSingleton.Day >= 3):
-		$"2D/home/mikiapp".play("alert")
+		if(!mikiReaded):
+			$"2D/home/mikiapp".play("alert")
+		else:
+			$"2D/home/mikiapp".play("installed")
 		$"Hud/home/miki_but".disabled = false
 	if(LoadSingleton.Day >= 5):
 		$"2D/home/nanocamo".play("nanocamo")
 		$"Hud/home/nanocamo_but".disabled = false
+
 func _process(delta):
 	if($"Hud/unlock".button_pressed):
-		if UnlockTime > 0:
-			UnlockTime -= delta
+		if TabletUnlockTime > 0:
+			TabletUnlockTime -= delta
 		else:
-			if UnlockTime <= 0:
+			if TabletUnlockTime <= 0:
 				$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/boot_up.ogg")
 				$"sfx".play()
 				show_elems()
 				$"Hud/unlock".hide()
 				$"2D/lockscrn".hide()
 	if(!$"Hud/unlock".button_pressed):
-		UnlockTime = 1.5
+		TabletUnlockTime = 1.5
+
 func hide_elems():
 	home.hide()
 	home_btns.hide()
+
 func show_elems():
 	tablet_scroller.value = 0
 	pages = 1
@@ -78,9 +86,11 @@ func show_elems():
 	nano_walls.hide()
 	nano_table.hide()
 	$"SaveLoad".hide()
+
 func _on_ae_but_pressed():
 	app = "ae"
-	ae_read = 1
+	aeReaded = true
+	$"2D/home/aug_eye".play("default")
 	layer = 1
 	homepage.play(app)
 	hide_elems()
@@ -91,9 +101,11 @@ func _on_ae_but_pressed():
 	app_but2.show()
 	app_but3.set("theme_override_colors/font_color",Color(0,0,0))
 	app_but3.show()
+
 func _on_dr_but_pressed():
 	app = "dange"
-	dange_read = 1
+	dangeReaded = true
+	$"2D/home/dangeru".play("installed")
 	layer = 1
 	homepage.play(app)
 	hide_elems()
@@ -104,9 +116,11 @@ func _on_dr_but_pressed():
 	app_but2.show()
 	app_but3.set("theme_override_colors/font_color",Color(255,255,255))
 	app_but3.show()
+
 func _on_miki_but_pressed():
 	app = "miki"
-	miki_read = 1
+	mikiReaded = true
+	$"2D/home/mikiapp".play("installed")
 	layer = 1
 	homepage.play(app)
 	hide_elems()
@@ -117,12 +131,14 @@ func _on_miki_but_pressed():
 	app_but2.show()
 	app_but3.set("theme_override_colors/font_color",Color(0,0,0))
 	app_but3.show()
+
 func _on_music_but_pressed():
 	app = "music"
 	layer = 1
 	homepage.play(app)
 	hide_elems()
 	homepage.show()
+
 func _on_home_but_pressed():
 	show_elems()
 	$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/cancel_sound.ogg")
@@ -131,6 +147,7 @@ func _on_home_but_pressed():
 	if(layer == 2):
 		$"sfx".play()
 		$"sfx".play()
+
 func _on_nanocamo_but_pressed():
 	app = "nanocamo"
 	layer = 1
@@ -138,6 +155,7 @@ func _on_nanocamo_but_pressed():
 	hide_elems()
 	homepage.show()
 	nano_home_btns.show()
+
 func _on_back_but_pressed():
 	if(layer == 1):
 		show_elems()
@@ -152,7 +170,7 @@ func _on_back_but_pressed():
 			app_but3.show()
 		if(app == "nanocamo"):
 			pages = 1
-			nano_mode = 0
+			nanoTableMode = false
 			page.hide()
 			nano_choice.hide()
 			nano_walls.hide()
@@ -162,16 +180,17 @@ func _on_back_but_pressed():
 			homepage.show()
 			nano_home_btns.show()
 	layer -= 1
+
 func app_btns(extra_arg_0):
-	if(app == "ae" && (3 * day + extra_arg_0) < 15):
-		page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(3 * (day - 1) + extra_arg_0) + ".png")
+	if(app == "ae" && (3 * LoadSingleton.Day + extra_arg_0) < 15):
+		page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(3 * (LoadSingleton.Day - 1) + extra_arg_0) + ".png")
 	else:
-		if(app == "ae" && (3 * day + extra_arg_0) > 15):
-			page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(3 * (day - 1) + extra_arg_0 + 3) + ".png")
+		if(app == "ae" && (3 * LoadSingleton.Day + extra_arg_0) > 15):
+			page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(3 * (LoadSingleton.Day - 1) + extra_arg_0 + 3) + ".png")
 	if(app == "dange"):
-		page.texture = load("res://resources/Export_Sprites/dange_thread1_" + dange_threads[3 * (day - 2) + extra_arg_0 ] + ".png")
+		page.texture = load("res://resources/Export_Sprites/dange_thread1_" + dangeThreadsIndex[3 * (LoadSingleton.Day - 2) + extra_arg_0 ] + ".png")
 	if(app == "miki"):
-		page.texture = load("res://resources/Export_Sprites/miki_entry_" + str(1 + day + extra_arg_0 ) + ".png")
+		page.texture = load("res://resources/Export_Sprites/miki_entry_" + str(1 + LoadSingleton.Day + extra_arg_0 ) + ".png")
 	layer = 2
 	tablet_scroller.max_value = page.texture.get_height() - 260
 	homepage.hide()
@@ -180,28 +199,33 @@ func app_btns(extra_arg_0):
 	app_but3.hide()
 	page.show()
 	tablet_scroller.show()
+
 func nano_btns(extra_arg_0):
-	if(nano_mode == 0):
+	if(!nanoTableMode):
 		page.texture = load("res://resources/Export_Sprites/nanobase_walls_spr_" + str( extra_arg_0 ) + ".png")
 	pages = extra_arg_0
+
 func nano_setwall(extra_arg_0):
-	if(nano_mode == 0):
-		$"/root/Base/2D/room/room_walls".play(walls[extra_arg_0 + 4 * pages])
-		wall_num = extra_arg_0 + 4 * pages
-	if(nano_mode == 1):
-		$"/root/Base/2D/room/interior/kotatsu".play(table[extra_arg_0])
+	if(!nanoTableMode):
+		$"/root/Base/2D/room/room_walls".play(wPaperNames[extra_arg_0 + 4 * pages])
+		wPaperIndex = extra_arg_0 + 4 * pages
+	if(nanoTableMode):
+		$"/root/Base/2D/room/interior/kotatsu".play(tableNames[extra_arg_0])
+
 func _on_nano_about_but_pressed():
 	page.texture = load("res://resources/Export_Sprites/nanobase_walls_spr_5.png")
 	layer = 2
 	homepage.hide()
 	nano_home_btns.hide()
 	page.show()
+
 func _on_nano_mask_but_pressed():
 	page.texture = load("res://resources/Export_Sprites/nanobase_walls_spr_6.png")
 	layer = 2
 	homepage.hide()
 	nano_home_btns.hide()
 	page.show()
+
 func _on_nano_cust_but_pressed():
 	page.texture = load("res://resources/Export_Sprites/nanobase_walls_spr_1.png")
 	layer = 2
@@ -213,15 +237,18 @@ func _on_nano_cust_but_pressed():
 	nano_choice.show()
 	nano_walls.show()
 	nano_table.show()
+
 func _on_walls_but_pressed():
 	page.texture = load("res://resources/Export_Sprites/nanobase_walls_spr_1.png")
-	nano_mode = 0
+	nanoTableMode = false
 	pages = 1
 	nano_page.show()
+
 func _on_table_but_pressed():
 	page.texture = load("res://resources/Export_Sprites/nanobase_table_spr_0.png")
-	nano_mode = 1
+	nanoTableMode = true
 	nano_page.hide()
+
 func _on_saveload_but_pressed():
 	app = "saveload"
 	layer = 1

@@ -1,6 +1,7 @@
 extends Node2D
 
-var inMenu = false
+var inMenu: bool = false
+
 func _on_yes_pressed():
 	if(inMenu):
 		get_tree().quit()

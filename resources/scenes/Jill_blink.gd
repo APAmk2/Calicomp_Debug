@@ -1,6 +1,6 @@
 extends AnimatedSprite2D
 
-var stopAnim = false
+var stopAnim: bool = false
 
 func _ready():
 	while(!stopAnim):

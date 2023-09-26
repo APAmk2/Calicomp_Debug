@@ -6,10 +6,10 @@ extends Node2D
 @onready var slots = $"2D/slots"
 @onready var slot_btns = $"Hud/slot_btns"
 @onready var page_btns = $"Hud/page_btns"
-var pages = 0
-var inMenu = false
-var saveLoadMode = 0
-var read: Array
+
+var pages: int = 0
+var inMenu: bool = false
+var saveLoadMode: int = 0
 
 func SaveBtnPressed():
 	pages = 0

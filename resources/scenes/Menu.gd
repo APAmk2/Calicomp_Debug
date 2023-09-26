@@ -1,9 +1,10 @@
 extends Node
 
-var ngplus = false
-var btnsAnim = false
-var settingsAnim = false
 @onready var pressanyText = $"Hud/pressany"
+
+var ngplus: bool = false
+var btnsAnim: bool = false
+var settingsAnim: bool = false
 
 var time = 0
 var timeDirection = 1
@@ -13,7 +14,7 @@ func _ready():
 	var random = RandomNumberGenerator.new()
 	random.randomize()
 	$"Hud/random_text".text = tr("DEMONAME" + str(random.randi_range(1, 2))) + " " + ProjectSettings.get_setting("application/config/version")
-	if(LoadSingleton.IsScanlines == 1):
+	if(LoadSingleton.ScanlinesEnabled):
 		$scanlines.show()
 	else:
 		$scanlines.hide()

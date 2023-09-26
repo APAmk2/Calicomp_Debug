@@ -1,7 +1,6 @@
 extends Node
 
-var money = LoadSingleton.Money
-var settingsAnim = false
+var settingsAnim: bool = false
 
 var time = 0
 var timeDirection = 1
@@ -40,11 +39,11 @@ func _ready():
 		$"2D/room/interior/banner".show()
 	if(int(LoadSingleton.ShopItems[14]) == 1):
 		$"2D/room/interior/lamp".show()
-	if(LoadSingleton.IsScanlines == 1):
+	if(LoadSingleton.ScanlinesEnabled):
 		$scanlines.show()
 	else:
 		$scanlines.hide()
-	$"Hud/funds".text = tr("FUNDS") + str(money)
+	$"Hud/funds".text = tr("FUNDS") + str(LoadSingleton.Money)
 
 func _process(delta):
 	if (time > moveDuration or time < 0):

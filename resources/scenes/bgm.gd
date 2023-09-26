@@ -1,8 +1,6 @@
 extends HSlider
 
-@export
-var busName = "BGM"
-
+var busName: String = "BGM"
 var busIndex: int
 
 func _ready() -> void:
