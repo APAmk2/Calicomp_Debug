@@ -11,6 +11,28 @@ var pages: int = 0
 var inMenu: bool = false
 var saveLoadMode: int = 0
 
+func LoadText():
+	for i in range (1, 25):
+		LoadSingleton.Load(i, false)
+
+func LoadSavesInfo():
+	for i in range (1, 5):
+		var dateText = get_node("Hud/saveDate" + str(i))
+		var dayNum = get_node("Hud/saveDay" + str(i))
+		if(str(LoadSingleton.SaveDate[i + (4 * pages) - 1]).length() > 1):
+			dateText.text = str(LoadSingleton.SaveDate[i + (4 * pages) - 1])
+			dayNum.text = "Day " + str(int(LoadSingleton.SaveDay[i + (4 * pages) - 1])) + "- "
+			if(LoadSingleton.SavePlace[i + (4 * pages) - 1] == "apt"):
+				dayNum.text += "Room"
+			else: 
+				if(LoadSingleton.SavePlace[i + (4 * pages) - 1] == "break"):
+					dayNum.text += "Break"
+			dateText.show()
+			dayNum.show()
+		else:
+			dateText.hide()
+			dayNum.hide()
+
 func SaveBtnPressed():
 	pages = 0
 	saveLoadMode = 0
@@ -22,18 +44,7 @@ func SaveBtnPressed():
 	page_btns.show()
 	page.show()
 	$"Hud/base_btns/back_but".show()
-	for i in range (1, 5):
-		var dateText = get_node("Hud/saveDate" + str(i))
-		var dayNum = get_node("Hud/saveDay" + str(i))
-		dateText.text = str(LoadSingleton.SaveDate[i + (4 * pages) - 1])
-		dayNum.text = "Day " + str(LoadSingleton.SaveDay[i + (4 * pages) - 1]) + "- "
-		if(LoadSingleton.SavePlace[i + (4 * pages) - 1] == "apt"):
-				dayNum.text += "Room"
-		else: 
-			if(LoadSingleton.SavePlace[i + (4 * pages) - 1] == "break"):
-				dayNum.text += "Break"
-		dateText.show()
-		dayNum.show()
+	LoadSavesInfo()
 
 func LoadBtnPressed():
 	pages = 0
@@ -46,18 +57,7 @@ func LoadBtnPressed():
 	page_btns.show()
 	page.show()
 	$"Hud/base_btns/back_but".show()
-	for i in range (1, 5):
-		var dateText = get_node("Hud/saveDate" + str(i))
-		var dayNum = get_node("Hud/saveDay" + str(i))
-		dateText.text = str(LoadSingleton.SaveDate[i + (4 * pages) - 1])
-		dayNum.text = "Day " + str(LoadSingleton.SaveDay[i + (4 * pages) - 1]) + "- "
-		if(LoadSingleton.SavePlace[i + (4 * pages) - 1] == "apt"):
-				dayNum.text += "Room"
-		else: 
-			if(LoadSingleton.SavePlace[i + (4 * pages) - 1] == "break"):
-				dayNum.text += "Break"
-		dateText.show()
-		dayNum.show()
+	LoadSavesInfo()
 
 func HomeBtnPressed():
 	pages = 0
@@ -90,10 +90,6 @@ func BackBtnPressed():
 	if(!inMenu):
 		$"Hud/base_btns/back_but".hide()
 
-func LoadText():
-	for i in range (1, 25):
-		LoadSingleton.Load(i, false)
-
 func MenuLoadBtnPressed():
 	show()
 	LoadText()
@@ -119,15 +115,4 @@ func SlotPressed(extra_arg_0):
 
 func PageBtnPressed(extra_arg_0):
 	pages = extra_arg_0 - 1
-	for i in range (1, 5):
-		var dateText = get_node("Hud/saveDate" + str(i))
-		var dayNum = get_node("Hud/saveDay" + str(i))
-		dateText.text = str(LoadSingleton.SaveDate[i + (4 * pages) - 1])
-		dayNum.text = "Day " + str(LoadSingleton.SaveDay[i + (4 * pages) - 1]) + "- "
-		if(LoadSingleton.SavePlace[i + (4 * pages) - 1] == "apt"):
-				dayNum.text += "Room"
-		else: 
-			if(LoadSingleton.SavePlace[i + (4 * pages) - 1] == "break"):
-				dayNum.text += "Break"
-		dateText.show()
-		dayNum.show()
+	LoadSavesInfo()

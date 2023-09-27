@@ -377,6 +377,7 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_8fo5h")
 [node name="saveDate1" type="Label" parent="Hud"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 522.0
 offset_top = 200.0
 offset_right = 818.0
@@ -388,6 +389,7 @@ horizontal_alignment = 2
 [node name="saveDate2" type="Label" parent="Hud"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 522.0
 offset_top = 298.0
 offset_right = 818.0
@@ -399,6 +401,7 @@ horizontal_alignment = 2
 [node name="saveDate3" type="Label" parent="Hud"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 522.0
 offset_top = 396.0
 offset_right = 818.0
@@ -410,6 +413,7 @@ horizontal_alignment = 2
 [node name="saveDate4" type="Label" parent="Hud"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 522.0
 offset_top = 494.0
 offset_right = 818.0
@@ -421,6 +425,7 @@ horizontal_alignment = 2
 [node name="saveDay1" type="Label" parent="Hud"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 458.0
 offset_top = 160.0
 offset_right = 754.0
@@ -431,6 +436,7 @@ theme_override_font_sizes/font_size = 28
 [node name="saveDay2" type="Label" parent="Hud"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 458.0
 offset_top = 258.0
 offset_right = 754.0
@@ -441,6 +447,7 @@ theme_override_font_sizes/font_size = 28
 [node name="saveDay3" type="Label" parent="Hud"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 458.0
 offset_top = 356.0
 offset_right = 754.0
@@ -451,6 +458,7 @@ theme_override_font_sizes/font_size = 28
 [node name="saveDay4" type="Label" parent="Hud"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 458.0
 offset_top = 454.0
 offset_right = 754.0
