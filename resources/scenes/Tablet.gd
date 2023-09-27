@@ -187,7 +187,7 @@ func app_btns(extra_arg_0):
 		if(app == "ae" && (extra_arg_0 + 3 * (LoadSingleton.Day - 1)) > 15):
 			page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(extra_arg_0 + 3 * (LoadSingleton.Day - 1) + 3) + ".png")
 	if(app == "dange"):
-		page.texture = load("res://resources/Export_Sprites/dange_thread1_" + dangeThreadsIndex[3 * (LoadSingleton.Day - 2) + extra_arg_0 ] + ".png")
+		page.texture = load("res://resources/Export_Sprites/" + tr("DANGERU") + dangeThreadsIndex[3 * (LoadSingleton.Day - 2) + extra_arg_0 ] + ".png")
 	if(app == "miki"):
 		page.texture = load("res://resources/Export_Sprites/miki_entry_" + str(1 + LoadSingleton.Day + extra_arg_0 ) + ".png")
 	layer = 2

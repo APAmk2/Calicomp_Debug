@@ -11,11 +11,12 @@ var pages: int = 0
 var inMenu: bool = false
 var saveLoadMode: int = 0
 
-func LoadText():
+func LoadSavesText():
 	for i in range (1, 25):
 		LoadSingleton.Load(i, false)
 
 func LoadSavesInfo():
+	LoadSavesText()
 	for i in range (1, 5):
 		var dateText = get_node("Hud/saveDate" + str(i))
 		var dayNum = get_node("Hud/saveDay" + str(i))
@@ -92,7 +93,7 @@ func BackBtnPressed():
 
 func MenuLoadBtnPressed():
 	show()
-	LoadText()
+	LoadSavesText()
 	inMenu = true
 	$"Hud/home/Save_but".disabled = true
 
@@ -112,6 +113,7 @@ func SlotPressed(extra_arg_0):
 					get_tree().change_scene_to_file("res://resources/scenes/Main.tscn")
 	else:
 		LoadSingleton.Save(extra_arg_0 + 4 * pages)
+		LoadSavesInfo()
 
 func PageBtnPressed(extra_arg_0):
 	pages = extra_arg_0 - 1

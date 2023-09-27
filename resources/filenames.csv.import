@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://duo6buglcdimp"
+
+[deps]
+
+files=["res://resources/filenames.en.translation", "res://resources/filenames.ru.translation", "res://resources/filenames.jp.translation", "res://resources/filenames.cn.translation"]
+
+source_file="res://resources/filenames.csv"
+dest_files=["res://resources/filenames.en.translation", "res://resources/filenames.ru.translation", "res://resources/filenames.jp.translation", "res://resources/filenames.cn.translation"]
+
+[params]
+
+compress=true
+delimiter=0

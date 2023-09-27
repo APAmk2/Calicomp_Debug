@@ -426,6 +426,7 @@ theme_override_styles/slider = SubResource("StyleBoxEmpty_l7dmh")
 theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_k5ob2")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_f300q")
 max_value = 315.0
+step = 40.0
 script = ExtResource("21_r16kw")
 
 [node name="app_but1" type="Button" parent="Hud/app_base"]
