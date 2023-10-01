@@ -43,8 +43,22 @@ func Save():
 		readData[1] = "0 "
 	var saveData = PackedStringArray(readData)
 	file.store_csv_line(saveData, "\n")
+
+func LoadTranslationGraphics():
+	$"2D/bgm_label".texture = load("res://resources/Export_Sprites/" + tr("BGM"))
+	$"2D/sfx_label".texture = load("res://resources/Export_Sprites/" + tr("SFX"))
+	$"2D/bg".texture = load("res://resources/Export_Sprites/" + tr("SETTINGSBG"))
+	$"2D/windowed/text".texture = load("res://resources/Export_Sprites/" + tr("WINDOW"))
+	if(scanlines):
+		$"2D/filter/text".texture =  load("res://resources/Export_Sprites/" + tr("SCANLINESON"))
+	else:
+		$"2D/filter/text".texture =  load("res://resources/Export_Sprites/" + tr("SCANLINESOFF"))
+	$"2D/filter/text".offset = Vector2(0, int("-" + str($"2D/filter/text".texture.get_height())))
+	$"2D/fullscreen_on/text".texture =  load("res://resources/Export_Sprites/" + tr("FULLSCR"))
+
 func _ready():
 	Load()
+	LoadTranslationGraphics()
 	if(fullscr):
 		$"2D/fullscreen_on".visible = true
 		$"2D/windowed".visible = false
@@ -56,11 +70,11 @@ func _ready():
 	if(LoadSingleton.ScanlinesEnabled):
 		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteron_hovertxt_0.png")
 		$"2D/filter/but".show()
-		$"2D/filter/text".position = Vector2(204, 440)
+#		$"2D/filter/text".position = Vector2(204, 440)
 	else:
 		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteroff_idletxt_0.png")
 		$"2D/filter/but".hide()
-		$"2D/filter/text".position = Vector2(209, 440)
+#		$"2D/filter/text".position = Vector2(209, 440)
 	$Hud/LangSel.selected = LoadSingleton.Lang
 func FullscrBtnPressed():
 	fullscr = true
@@ -81,19 +95,19 @@ func ScanlinesBtnPressed():
 	scanlines = !scanlines
 	if(scanlines):
 		LoadSingleton.ScanlinesEnabled = true
-		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteron_hovertxt_0.png")
+		$"2D/filter/text".texture =  load("res://resources/Export_Sprites/" + tr("SCANLINESON"))
 		$"2D/filter/but".show()
-		$"2D/filter/text".position = Vector2(204, 440)
+#		$"2D/filter/text".position = Vector2(204, 440)
 		$"../scanlines".show()
 	else:
 		LoadSingleton.ScanlinesEnabled = false
-		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteroff_idletxt_0.png")
+		$"2D/filter/text".texture =  load("res://resources/Export_Sprites/" + tr("SCANLINESOFF"))
 		$"2D/filter/but".hide()
-		$"2D/filter/text".position = Vector2(209, 440)
+#		$"2D/filter/text".position = Vector2(209, 440)
 		$"../scanlines".hide()
-	print(LoadSingleton.ScanlinesEnabled)
 
 func LangSelection(index):
 	var locale : String = $Hud/LangSel.get_item_text(index)
 	LoadSingleton.Lang = $Hud/LangSel.selected
 	TranslationServer.set_locale(locale)
+	LoadTranslationGraphics()

@@ -1,3 +1,10 @@
-keys,en,ru,jp,cn
-DANGERU,dange_thread1_,dange_thread_ru_,dange_thread_jp_,dange_thread_cn_
-AE,augmented_eye_long_base_spr_,augmented_eye_long_base_spr_ru_,augmented_eye_long_base_spr_jp_,augmented_eye_long_base_spr_cn_
+keys,en,ru,cn,jp
+DANGERU,dange_thread1_,dange_thread_ru_,dange_thread_cn_,dange_thread_jp_
+AE,augmented_eye_long_base_spr_,augmented_eye_long_base_spr_ru_,augmented_eye_long_base_spr_cn_,augmented_eye_long_base_spr_jp_
+SETTINGSBG,configframe_spr_0.png,configframe_spr_ru_0.png,configframe_spr_cn_0.png,configframe_spr_jp_0.png
+SFX,sfx_txt_spr_0.png,sfx_txt_sprru_0.png,sfx_txt_sprcn_0.png,
+BGM,bgm_txt_spr_0.png,bgm_txt_sprru_0.png,bgm_txt_sprcn_0.png,
+FULLSCR,fullscreentxt_0.png,fullscreentxtru_0.png,fullscreentxtcn_0.png,fullscreentxtjp_0.png
+WINDOW,windowedtxt_0.png,windowedtxtru_0.png,windowedtxtcn_0.png,windowedtxtjp_0.png
+SCANLINESON,filteron_hovertxt_0.png,filteron_hoverru_0.png,filteron_hovercn_0.png,filteron_hoverjp_0.png
+SCANLINESOFF,filteroff_idletxt_0.png,filteroff_idleru_0.png,filteroff_idlecn_0.png,filteroff_idlejp_0.png

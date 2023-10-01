@@ -1,7 +1,7 @@
 [gd_scene load_steps=45 format=3 uid="uid://cgal16kb1tkke"]
 
 [ext_resource type="Script" path="res://resources/scenes/Settings.gd" id="1_dqmuc"]
-[ext_resource type="Texture2D" uid="uid://bja1qogqmt3yd" path="res://resources/Export_Sprites/configframe_spr_0.png" id="2_iynv0"]
+[ext_resource type="Texture2D" uid="uid://jvjyg15c7eh6" path="res://resources/Export_Sprites/configframe_spr_ru_0.png" id="2_wk3nn"]
 [ext_resource type="Texture2D" uid="uid://8pxm8w884ja8" path="res://resources/Export_Sprites/sfx_slide_spr_0.png" id="3_6lbig"]
 [ext_resource type="Texture2D" uid="uid://cvbpaiskhsw2v" path="res://resources/Export_Sprites/sfx_txt_spr_0.png" id="4_oycnp"]
 [ext_resource type="Texture2D" uid="uid://48204moi8xey" path="res://resources/Export_Sprites/bgm_slide_spr_0.png" id="5_xuvgv"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b73jkotpv2yd2" path="res://resources/Export_Sprites/slide_slider_spr_0.png" id="9_xssew"]
 [ext_resource type="Script" path="res://resources/scenes/sfx.gd" id="10_nuk73"]
 [ext_resource type="Texture2D" uid="uid://bsss8mgq3c761" path="res://resources/Export_Sprites/scanlinebutton_spr_0.png" id="10_piaad"]
-[ext_resource type="Texture2D" uid="uid://3d7slgtwh4c6" path="res://resources/Export_Sprites/filteron_hovertxt_0.png" id="11_fj151"]
+[ext_resource type="Texture2D" uid="uid://bvthtlvfxkwdk" path="res://resources/Export_Sprites/filteroff_idleru_0.png" id="11_lly62"]
 [ext_resource type="Script" path="res://resources/scenes/bgm.gd" id="11_qh1ad"]
 [ext_resource type="FontFile" uid="uid://dn502a8gblt4i" path="res://resources/fonts/VA-11 Hall-A 10px.ttf" id="15_cvnum"]
 
@@ -83,7 +83,7 @@ script = ExtResource("1_dqmuc")
 texture_filter = 1
 position = Vector2(258, 250)
 scale = Vector2(2, 2)
-texture = ExtResource("2_iynv0")
+texture = ExtResource("2_wk3nn")
 
 [node name="sfx_bg" type="Sprite2D" parent="2D"]
 texture_filter = 1
@@ -93,9 +93,10 @@ texture = ExtResource("3_6lbig")
 
 [node name="sfx_label" type="Sprite2D" parent="2D"]
 texture_filter = 1
-position = Vector2(110, 188)
+position = Vector2(78, 174)
 scale = Vector2(2, 2)
 texture = ExtResource("4_oycnp")
+centered = false
 
 [node name="bgm_bg" type="Sprite2D" parent="2D"]
 texture_filter = 1
@@ -105,9 +106,10 @@ texture = ExtResource("5_xuvgv")
 
 [node name="bgm_label" type="Sprite2D" parent="2D"]
 texture_filter = 1
-position = Vector2(109, 96)
+position = Vector2(78, 82)
 scale = Vector2(2, 2)
 texture = ExtResource("6_6c05k")
+centered = false
 
 [node name="fullscreen_on" type="Node2D" parent="2D"]
 visible = false
@@ -121,7 +123,9 @@ texture = ExtResource("7_o8krd")
 
 [node name="text" type="Sprite2D" parent="2D/fullscreen_on"]
 texture_filter = 1
+position = Vector2(-46.5, -5)
 texture = ExtResource("8_7wh0d")
+centered = false
 
 [node name="windowed" type="Node2D" parent="2D"]
 visible = false
@@ -134,9 +138,10 @@ texture = ExtResource("7_o8krd")
 
 [node name="text" type="Sprite2D" parent="2D/windowed"]
 texture_filter = 1
-position = Vector2(237, 393)
+position = Vector2(76, 380)
 scale = Vector2(2, 2)
 texture = ExtResource("9_osg1m")
+centered = false
 
 [node name="filter" type="Node2D" parent="2D"]
 
@@ -149,9 +154,12 @@ texture = ExtResource("10_piaad")
 
 [node name="text" type="Sprite2D" parent="2D/filter"]
 texture_filter = 1
-position = Vector2(204, 440)
+position = Vector2(76, 450)
 scale = Vector2(2, 2)
-texture = ExtResource("11_fj151")
+texture = ExtResource("11_lly62")
+centered = false
+offset = Vector2(0, -9)
+region_rect = Rect2(0, 0, 133, 10)
 
 [node name="Hud" type="Control" parent="."]
 layout_mode = 3
@@ -284,12 +292,16 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_t7p12")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_t7p12")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_t7p12")
 flat = true
-item_count = 2
+item_count = 4
 selected = 0
 popup/item_0/text = "en"
 popup/item_0/id = 0
 popup/item_1/text = "ru"
 popup/item_1/id = 1
+popup/item_2/text = "cn"
+popup/item_2/id = 2
+popup/item_3/text = "jp"
+popup/item_3/id = 3
 
 [node name="LangLbl" type="Label" parent="Hud"]
 texture_filter = 1

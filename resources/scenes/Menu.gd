@@ -45,10 +45,10 @@ func _process(delta):
 	time += delta * timeDirection
 	var t = time / moveDuration
 	if(btnsAnim):
-		ngBtn.position =  lerp(ngBtn.position, Vector2(302,557), t)
-		quitBtn.position = lerp(quitBtn.position, Vector2(904,559), t)
-		settingsBtn.position = lerp(settingsBtn.position, Vector2(702,557), t)
-		loadBtn.position =  lerp(loadBtn.position, Vector2(506,557), t)
+		ngBtn.position =  lerp(ngBtn.position, Vector2(304,558), t)
+		quitBtn.position = lerp(quitBtn.position, Vector2(890,558), t)
+		settingsBtn.position = lerp(settingsBtn.position, Vector2(656,558), t)
+		loadBtn.position =  lerp(loadBtn.position, Vector2(500,558), t)
 	if(settingsAnim):
 		settingsWin.scale = lerp(settingsWin.scale, Vector2(1, 1), t)
 	else:

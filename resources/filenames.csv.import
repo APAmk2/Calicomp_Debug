@@ -6,10 +6,10 @@ uid="uid://duo6buglcdimp"
 
 [deps]
 
-files=["res://resources/filenames.en.translation", "res://resources/filenames.ru.translation", "res://resources/filenames.jp.translation", "res://resources/filenames.cn.translation"]
+files=["res://resources/filenames.en.translation", "res://resources/filenames.ru.translation", "res://resources/filenames.cn.translation", "res://resources/filenames.jp.translation"]
 
 source_file="res://resources/filenames.csv"
-dest_files=["res://resources/filenames.en.translation", "res://resources/filenames.ru.translation", "res://resources/filenames.jp.translation", "res://resources/filenames.cn.translation"]
+dest_files=["res://resources/filenames.en.translation", "res://resources/filenames.ru.translation", "res://resources/filenames.cn.translation", "res://resources/filenames.jp.translation"]
 
 [params]
 
