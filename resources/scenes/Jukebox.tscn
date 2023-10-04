@@ -1,0 +1,641 @@
+[gd_scene load_steps=15 format=3 uid="uid://bty4lev3vifm4"]
+
+[ext_resource type="Script" path="res://resources/scenes/Jukebox.gd" id="1_448jk"]
+[ext_resource type="Texture2D" uid="uid://k8vgrty6dbsi" path="res://resources/Export_Sprites/new_jukeframe_0.png" id="1_fh7i1"]
+[ext_resource type="Texture2D" uid="uid://dd8hcil1c77jc" path="res://resources/Export_Sprites/musicslot_spr_0.png" id="2_av6gv"]
+[ext_resource type="Texture2D" uid="uid://ccga5le21y7xq" path="res://resources/Export_Sprites/playlistslot_spr_0.png" id="3_qla2r"]
+[ext_resource type="FontFile" uid="uid://bwo5ictu5m6hn" path="res://resources/fonts/VA-11 Hall-A 6px.ttf" id="4_3fute"]
+[ext_resource type="Texture2D" uid="uid://i03srkloc7ry" path="res://resources/Export_Sprites/shop_arrow_spr_0.png" id="5_tkqe5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_63g5y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6rbt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_43gu3"]
+texture = ExtResource("5_tkqe5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vgpce"]
+texture = ExtResource("5_tkqe5")
+modulate_color = Color(0.4, 0.4, 0.4, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tpr0g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tke22"]
+texture = ExtResource("5_tkqe5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2s3y8"]
+texture = ExtResource("5_tkqe5")
+modulate_color = Color(0.4, 0.4, 0.4, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqn2p"]
+
+[node name="Jukebox" type="Node2D"]
+script = ExtResource("1_448jk")
+
+[node name="2D" type="Node2D" parent="."]
+
+[node name="bg" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(640, 360)
+scale = Vector2(2, 2)
+texture = ExtResource("1_fh7i1")
+
+[node name="musicSlots" type="Node2D" parent="2D"]
+
+[node name="textTip" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(241, 101)
+scale = Vector2(2, 2)
+texture = ExtResource("2_av6gv")
+
+[node name="musicSlot1" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(241, 181)
+scale = Vector2(2, 2)
+texture = ExtResource("2_av6gv")
+
+[node name="musicSlot2" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(241, 241)
+scale = Vector2(2, 2)
+texture = ExtResource("2_av6gv")
+
+[node name="musicSlot3" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(241, 301)
+scale = Vector2(2, 2)
+texture = ExtResource("2_av6gv")
+
+[node name="musicSlot4" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(241, 361)
+scale = Vector2(2, 2)
+texture = ExtResource("2_av6gv")
+
+[node name="musicSlot5" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(241, 421)
+scale = Vector2(2, 2)
+texture = ExtResource("2_av6gv")
+
+[node name="playlistSlots" type="Node2D" parent="2D"]
+
+[node name="playlistSlot1" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(641, 105)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot2" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(641, 165)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot3" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(641, 225)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot4" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(641, 285)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot5" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(641, 345)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot6" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(641, 405)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot7" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(1041, 105)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot8" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(1041, 165)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot9" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(1041, 225)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot10" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(1041, 285)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot11" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(1041, 345)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="playlistSlot12" type="Sprite2D" parent="2D/playlistSlots"]
+texture_filter = 1
+position = Vector2(1041, 405)
+scale = Vector2(2, 2)
+texture = ExtResource("3_qla2r")
+
+[node name="Hud" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="textTip" type="Label" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 116.0
+offset_top = 88.0
+offset_right = 368.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0.235294, 0.517647, 0.811765, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "Please, select a song"
+
+[node name="musicListNames" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="musicName1" type="Label" parent="Hud/musicListNames"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 52.0
+offset_top = 168.0
+offset_right = 430.0
+offset_bottom = 204.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to VA-11 HALL-A"
+horizontal_alignment = 1
+
+[node name="musicName2" type="Label" parent="Hud/musicListNames"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 52.0
+offset_top = 228.0
+offset_right = 430.0
+offset_bottom = 264.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to VA-11 HALL-A"
+horizontal_alignment = 1
+
+[node name="musicName3" type="Label" parent="Hud/musicListNames"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 52.0
+offset_top = 288.0
+offset_right = 430.0
+offset_bottom = 324.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to VA-11 HALL-A"
+horizontal_alignment = 1
+
+[node name="musicName4" type="Label" parent="Hud/musicListNames"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 52.0
+offset_top = 348.0
+offset_right = 430.0
+offset_bottom = 384.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to VA-11 HALL-A"
+horizontal_alignment = 1
+
+[node name="musicName5" type="Label" parent="Hud/musicListNames"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 52.0
+offset_top = 408.0
+offset_right = 430.0
+offset_bottom = 444.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to VA-11 HALL-A"
+horizontal_alignment = 1
+
+[node name="musicSlotBtns" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="musicSlot1" type="Button" parent="Hud/musicSlotBtns"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 158.0
+offset_right = 430.0
+offset_bottom = 204.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_63g5y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p6rbt")
+flat = true
+
+[node name="musicSlot2" type="Button" parent="Hud/musicSlotBtns"]
+offset_left = 52.0
+offset_top = 218.0
+offset_right = 430.0
+offset_bottom = 264.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_63g5y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p6rbt")
+flat = true
+
+[node name="musicSlot3" type="Button" parent="Hud/musicSlotBtns"]
+offset_left = 52.0
+offset_top = 278.0
+offset_right = 430.0
+offset_bottom = 324.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_63g5y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p6rbt")
+flat = true
+
+[node name="musicSlot4" type="Button" parent="Hud/musicSlotBtns"]
+offset_left = 52.0
+offset_top = 338.0
+offset_right = 430.0
+offset_bottom = 384.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_63g5y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p6rbt")
+flat = true
+
+[node name="musicSlot5" type="Button" parent="Hud/musicSlotBtns"]
+offset_left = 52.0
+offset_top = 398.0
+offset_right = 430.0
+offset_bottom = 444.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_63g5y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p6rbt")
+flat = true
+
+[node name="PlaylistSlotBtns" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlaylistSlot1" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 452.0
+offset_top = 82.0
+offset_right = 830.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "1"
+flat = true
+
+[node name="PlaylistSlot2" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 452.0
+offset_top = 142.0
+offset_right = 830.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "2"
+flat = true
+
+[node name="PlaylistSlot3" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 452.0
+offset_top = 202.0
+offset_right = 830.0
+offset_bottom = 248.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "3"
+flat = true
+
+[node name="PlaylistSlot4" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 452.0
+offset_top = 262.0
+offset_right = 830.0
+offset_bottom = 308.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "4"
+flat = true
+
+[node name="PlaylistSlot5" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 452.0
+offset_top = 322.0
+offset_right = 830.0
+offset_bottom = 368.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "5"
+flat = true
+
+[node name="PlaylistSlot6" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 452.0
+offset_top = 382.0
+offset_right = 830.0
+offset_bottom = 428.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "6
+"
+flat = true
+
+[node name="PlaylistSlot7" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 852.0
+offset_top = 82.0
+offset_right = 1230.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "7"
+flat = true
+
+[node name="PlaylistSlot8" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 852.0
+offset_top = 142.0
+offset_right = 1230.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "8"
+flat = true
+
+[node name="PlaylistSlot9" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 852.0
+offset_top = 202.0
+offset_right = 1230.0
+offset_bottom = 248.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "9"
+flat = true
+
+[node name="PlaylistSlot10" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 852.0
+offset_top = 262.0
+offset_right = 1230.0
+offset_bottom = 308.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "10"
+flat = true
+
+[node name="PlaylistSlot11" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 852.0
+offset_top = 322.0
+offset_right = 1230.0
+offset_bottom = 368.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "11"
+flat = true
+
+[node name="PlaylistSlot12" type="Button" parent="Hud/PlaylistSlotBtns"]
+texture_filter = 1
+offset_left = 852.0
+offset_top = 382.0
+offset_right = 1230.0
+offset_bottom = 428.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "12"
+flat = true
+
+[node name="playlistNums" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="playlistNum1" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 464.0
+offset_top = 92.0
+offset_right = 504.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "1"
+
+[node name="playlistNum2" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 464.0
+offset_top = 152.0
+offset_right = 504.0
+offset_bottom = 181.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "2"
+
+[node name="playlistNum3" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 464.0
+offset_top = 212.0
+offset_right = 504.0
+offset_bottom = 241.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "3"
+
+[node name="playlistNum4" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 464.0
+offset_top = 272.0
+offset_right = 504.0
+offset_bottom = 301.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "4"
+
+[node name="playlistNum5" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 464.0
+offset_top = 332.0
+offset_right = 504.0
+offset_bottom = 361.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "5"
+
+[node name="playlistNum6" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 464.0
+offset_top = 392.0
+offset_right = 504.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "6"
+
+[node name="playlistNum7" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 864.0
+offset_top = 92.0
+offset_right = 904.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "7
+"
+
+[node name="playlistNum8" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 864.0
+offset_top = 152.0
+offset_right = 904.0
+offset_bottom = 181.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "8"
+
+[node name="playlistNum9" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 864.0
+offset_top = 212.0
+offset_right = 904.0
+offset_bottom = 241.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "9
+"
+
+[node name="playlistNum10" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 864.0
+offset_top = 272.0
+offset_right = 904.0
+offset_bottom = 301.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "10"
+
+[node name="playlistNum11" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 864.0
+offset_top = 332.0
+offset_right = 904.0
+offset_bottom = 361.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "11"
+
+[node name="playlistNum12" type="Label" parent="Hud/playlistNums"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 864.0
+offset_top = 392.0
+offset_right = 904.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(0.65098, 0.00784314, 0.235294, 1)
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "12
+"
+
+[node name="page" type="Label" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 226.0
+offset_top = 474.0
+offset_right = 274.0
+offset_bottom = 507.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
+text = "1/12"
+
+[node name="page_forward" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 386.0
+offset_top = 464.0
+offset_right = 409.0
+offset_bottom = 488.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_43gu3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_43gu3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_43gu3")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_vgpce")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tpr0g")
+
+[node name="page_backward" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 100.0
+offset_top = 512.0
+offset_right = 123.0
+offset_bottom = 536.0
+rotation = 3.14159
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_tke22")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tke22")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tke22")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2s3y8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uqn2p")
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+bus = &"BGM"
+
+[connection signal="pressed" from="Hud/musicSlotBtns/musicSlot1" to="." method="MusicBtnPressed" binds= [1]]
+[connection signal="pressed" from="Hud/musicSlotBtns/musicSlot2" to="." method="MusicBtnPressed" binds= [2]]
+[connection signal="pressed" from="Hud/musicSlotBtns/musicSlot3" to="." method="MusicBtnPressed" binds= [3]]
+[connection signal="pressed" from="Hud/musicSlotBtns/musicSlot4" to="." method="MusicBtnPressed" binds= [4]]
+[connection signal="pressed" from="Hud/musicSlotBtns/musicSlot5" to="." method="MusicBtnPressed" binds= [5]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot1" to="." method="PlaylistBtnPressed" binds= [1]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot2" to="." method="PlaylistBtnPressed" binds= [2]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot3" to="." method="PlaylistBtnPressed" binds= [3]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot4" to="." method="PlaylistBtnPressed" binds= [4]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot5" to="." method="PlaylistBtnPressed" binds= [5]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot6" to="." method="PlaylistBtnPressed" binds= [6]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot7" to="." method="PlaylistBtnPressed" binds= [7]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot8" to="." method="PlaylistBtnPressed" binds= [8]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot9" to="." method="PlaylistBtnPressed" binds= [9]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot10" to="." method="PlaylistBtnPressed" binds= [10]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot11" to="." method="PlaylistBtnPressed" binds= [11]]
+[connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot12" to="." method="PlaylistBtnPressed" binds= [12]]
+[connection signal="pressed" from="Hud/page_forward" to="." method="_on_page_forward_pressed"]
+[connection signal="pressed" from="Hud/page_backward" to="." method="_on_page_backward_pressed"]

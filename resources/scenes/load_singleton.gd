@@ -5,6 +5,7 @@ var SaveDay: Array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
 var SavePlace: Array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
 
 var readData: Array
+var musicData: Array
 var Money: float = 1
 var MoneyInBar: float
 var WPapers: int
@@ -15,6 +16,12 @@ var Place: String
 var ScanlinesEnabled: bool
 var ShopItems: Array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 var Lang: int
+
+func _ready():
+	var file = FileAccess.open("res://resources/musiclist.csv", FileAccess.READ)
+	while (!file.eof_reached()):
+		musicData.append(file.get_csv_line())
+	file.close()
 
 func Load(butNum, LoadAll):
 	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(butNum) + "].txt", FileAccess.READ)

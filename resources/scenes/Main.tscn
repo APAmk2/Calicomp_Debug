@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://ctolr6ddkdeph"]
+[gd_scene load_steps=77 format=3 uid="uid://ctolr6ddkdeph"]
 
 [ext_resource type="Script" path="res://resources/scenes/Main.gd" id="1_ggx0j"]
 [ext_resource type="Texture2D" uid="uid://ciq3ym05j00y0" path="res://resources/Export_Sprites/barground_0.png" id="2_e7mgr"]
@@ -308,6 +308,10 @@ animations = [{
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ifai1"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_06v7k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_30nxm"]
+
 [node name="Main" type="Node"]
 script = ExtResource("1_ggx0j")
 
@@ -435,8 +439,11 @@ offset_left = 1092.0
 offset_top = 573.0
 offset_right = 1164.0
 offset_bottom = 611.0
+theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
 theme_override_fonts/font = ExtResource("59_u6ca0")
 theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxEmpty_06v7k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_30nxm")
 text = "TITLELOAD"
 flat = true
 

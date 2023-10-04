@@ -141,6 +141,7 @@ text = "Page 1"
 
 [node name="2page" type="Button" parent="Hud/page_btns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 120.0
 offset_top = 20.0
 offset_right = 216.0
@@ -162,6 +163,7 @@ text = "Page 2"
 
 [node name="3page" type="Button" parent="Hud/page_btns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 228.0
 offset_top = 20.0
 offset_right = 324.0
@@ -183,6 +185,7 @@ text = "Page 3"
 
 [node name="4page" type="Button" parent="Hud/page_btns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 336.0
 offset_top = 20.0
 offset_right = 432.0
@@ -204,6 +207,7 @@ text = "Page 4"
 
 [node name="5page" type="Button" parent="Hud/page_btns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 444.0
 offset_top = 20.0
 offset_right = 540.0
@@ -225,6 +229,7 @@ text = "Page 5"
 
 [node name="6page" type="Button" parent="Hud/page_btns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 552.0
 offset_top = 20.0
 offset_right = 648.0
