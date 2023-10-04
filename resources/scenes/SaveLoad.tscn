@@ -374,7 +374,12 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_8fo5h")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_2kmwb")
 theme_override_styles/focus = SubResource("StyleBoxTexture_8fo5h")
 
-[node name="saveDate1" type="Label" parent="Hud"]
+[node name="Savedates" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="saveDate1" type="Label" parent="Hud/Savedates"]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -386,7 +391,7 @@ theme_override_fonts/font = ExtResource("24_eiolj")
 theme_override_font_sizes/font_size = 28
 horizontal_alignment = 2
 
-[node name="saveDate2" type="Label" parent="Hud"]
+[node name="saveDate2" type="Label" parent="Hud/Savedates"]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -398,7 +403,7 @@ theme_override_fonts/font = ExtResource("24_eiolj")
 theme_override_font_sizes/font_size = 28
 horizontal_alignment = 2
 
-[node name="saveDate3" type="Label" parent="Hud"]
+[node name="saveDate3" type="Label" parent="Hud/Savedates"]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -410,7 +415,7 @@ theme_override_fonts/font = ExtResource("24_eiolj")
 theme_override_font_sizes/font_size = 28
 horizontal_alignment = 2
 
-[node name="saveDate4" type="Label" parent="Hud"]
+[node name="saveDate4" type="Label" parent="Hud/Savedates"]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -422,7 +427,12 @@ theme_override_fonts/font = ExtResource("24_eiolj")
 theme_override_font_sizes/font_size = 28
 horizontal_alignment = 2
 
-[node name="saveDay1" type="Label" parent="Hud"]
+[node name="Savedays" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="saveDay1" type="Label" parent="Hud/Savedays"]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -433,7 +443,7 @@ offset_bottom = 193.0
 theme_override_fonts/font = ExtResource("24_eiolj")
 theme_override_font_sizes/font_size = 28
 
-[node name="saveDay2" type="Label" parent="Hud"]
+[node name="saveDay2" type="Label" parent="Hud/Savedays"]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -444,7 +454,7 @@ offset_bottom = 291.0
 theme_override_fonts/font = ExtResource("24_eiolj")
 theme_override_font_sizes/font_size = 28
 
-[node name="saveDay3" type="Label" parent="Hud"]
+[node name="saveDay3" type="Label" parent="Hud/Savedays"]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -455,7 +465,7 @@ offset_bottom = 389.0
 theme_override_fonts/font = ExtResource("24_eiolj")
 theme_override_font_sizes/font_size = 28
 
-[node name="saveDay4" type="Label" parent="Hud"]
+[node name="saveDay4" type="Label" parent="Hud/Savedays"]
 visible = false
 texture_filter = 1
 layout_mode = 0

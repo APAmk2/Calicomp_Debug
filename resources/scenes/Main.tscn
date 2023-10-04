@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://ctolr6ddkdeph"]
+[gd_scene load_steps=75 format=3 uid="uid://ctolr6ddkdeph"]
 
 [ext_resource type="Script" path="res://resources/scenes/Main.gd" id="1_ggx0j"]
 [ext_resource type="Texture2D" uid="uid://ciq3ym05j00y0" path="res://resources/Export_Sprites/barground_0.png" id="2_e7mgr"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://dj74a55sb3a7s" path="res://resources/Export_Sprites/yiik_channel_spr_2.png" id="39_b1657"]
 [ext_resource type="Script" path="res://resources/scenes/tv.gd" id="40_ger6p"]
 [ext_resource type="Texture2D" uid="uid://e8yis4xdgo12" path="res://resources/Export_Sprites/frame_sprite_0.png" id="41_2tlxg"]
+[ext_resource type="PackedScene" uid="uid://dokuclkg6ol4i" path="res://resources/scenes/loadBar.tscn" id="41_5vste"]
 [ext_resource type="Texture2D" uid="uid://ce7lplnllhnwn" path="res://resources/Export_Sprites/hack_spr_0.png" id="42_v2iae"]
 [ext_resource type="Texture2D" uid="uid://b8r0osje5qsmj" path="res://resources/Export_Sprites/hack_spr_1.png" id="43_opkgs"]
 [ext_resource type="Texture2D" uid="uid://b1tw6v2q3ejjo" path="res://resources/Export_Sprites/hack_spr_2.png" id="44_mj56s"]
@@ -333,6 +334,10 @@ animation = &"burrito"
 speed_scale = 3.0
 script = ExtResource("40_ger6p")
 
+[node name="LoadBar" parent="2D" instance=ExtResource("41_5vste")]
+visible = false
+position = Vector2(36, 40)
+
 [node name="HUD_back" type="Sprite2D" parent="2D"]
 texture_filter = 1
 position = Vector2(640, 360)
@@ -405,7 +410,7 @@ theme_override_fonts/font = ExtResource("59_u6ca0")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/hover = SubResource("StyleBoxEmpty_t7cd1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bokmv")
-text = "Settings"
+text = "TITLESETTINGS"
 flat = true
 
 [node name="ext_but" type="Button" parent="Hud"]
@@ -421,6 +426,18 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/hover = SubResource("StyleBoxEmpty_f8kp2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ifai1")
 text = "TITLEEXIT"
+flat = true
+
+[node name="loadBtn" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1092.0
+offset_top = 573.0
+offset_right = 1164.0
+offset_bottom = 611.0
+theme_override_fonts/font = ExtResource("59_u6ca0")
+theme_override_font_sizes/font_size = 28
+text = "TITLELOAD"
 flat = true
 
 [node name="money" type="Label" parent="Hud"]
@@ -463,3 +480,5 @@ texture = ExtResource("63_3ckat")
 [connection signal="pressed" from="Hud/sett_but" to="." method="SettingsBtnPressed"]
 [connection signal="pressed" from="Hud/sett_but" to="Settings" method="SettingsBtnPressed"]
 [connection signal="pressed" from="Hud/ext_but" to="Exit" method="_on_quit_but_pressed"]
+[connection signal="pressed" from="Hud/loadBtn" to="." method="LoadBtnPressed"]
+[connection signal="pressed" from="Hud/loadBtn" to="2D/LoadBar" method="LoadBarBtnPressed"]

@@ -1,8 +1,5 @@
 extends Node2D
 
-@onready var homescreen = $"2D/homescreen"
-@onready var page = $"2D/page"
-@onready var homebtns = $"Hud/home"
 @onready var slots = $"2D/slots"
 @onready var slot_btns = $"Hud/slot_btns"
 @onready var page_btns = $"Hud/page_btns"
@@ -18,8 +15,8 @@ func LoadSavesText():
 func LoadSavesInfo():
 	LoadSavesText()
 	for i in range (1, 5):
-		var dateText = get_node("Hud/saveDate" + str(i))
-		var dayNum = get_node("Hud/saveDay" + str(i))
+		var dateText = get_node("Hud/Savedates/saveDate" + str(i))
+		var dayNum = get_node("Hud/Savedays/saveDay" + str(i))
 		if(str(LoadSingleton.SaveDate[i + (4 * pages) - 1]).length() > 1):
 			dateText.text = str(LoadSingleton.SaveDate[i + (4 * pages) - 1])
 			dayNum.text = "Day " + str(int(LoadSingleton.SaveDay[i + (4 * pages) - 1])) + "- "
@@ -37,55 +34,63 @@ func LoadSavesInfo():
 func SaveBtnPressed():
 	pages = 0
 	saveLoadMode = 0
-	page.texture = load("res://resources/Export_Sprites/savepage_spr_0.png")
-	homescreen.hide()
-	homebtns.hide()
+	$"2D/page".texture = load("res://resources/Export_Sprites/savepage_spr_0.png")
+	$"2D/homescreen".hide()
+	$"Hud/home".hide()
 	slots.show()
 	slot_btns.show()
 	page_btns.show()
-	page.show()
+	$"2D/page".show()
 	$"Hud/base_btns/back_but".show()
 	LoadSavesInfo()
 
 func LoadBtnPressed():
 	pages = 0
 	saveLoadMode = 1
-	page.texture = load("res://resources/Export_Sprites/loadpage_spr_0.png")
-	homescreen.hide()
-	homebtns.hide()
+	$"2D/page".texture = load("res://resources/Export_Sprites/loadpage_spr_0.png")
+	$"2D/homescreen".hide()
+	$"Hud/home".hide()
 	slots.show()
 	slot_btns.show()
 	page_btns.show()
-	page.show()
+	$"2D/page".show()
 	$"Hud/base_btns/back_but".show()
+	LoadSavesInfo()
+
+func LoadBarBtnPressed():
+	pages = 0
+	saveLoadMode = 1
+	slots.show()
+	slot_btns.show()
+	page_btns.show()
 	LoadSavesInfo()
 
 func HomeBtnPressed():
 	pages = 0
-	page.hide()
+	$"2D/page".hide()
 	page_btns.hide()
 	slot_btns.hide()
 	slots.hide()
-	homescreen.show()
-	homebtns.show()
+	$"2D/homescreen".show()
+	$"Hud/home".show()
 	for i in range (1, 5):
-		var dateText = get_node("Hud/saveDate" + str(i))
-		var dayNum = get_node("Hud/saveDay" + str(i))
+		var dateText = get_node("Hud/Savedates/saveDate" + str(i))
+		var dayNum = get_node("Hud/Savedays/saveDay" + str(i))
 		dateText.hide()
 		dayNum.hide()
 	hide()
 
 func BackBtnPressed():
 	pages = 0
-	page.hide()
+	$"2D/page".hide()
 	page_btns.hide()
 	slot_btns.hide()
 	slots.hide()
-	homescreen.show()
-	homebtns.show()
+	$"2D/homescreen".show()
+	$"Hud/home".show()
 	for i in range (1, 5):
-		var dateText = get_node("Hud/saveDate" + str(i))
-		var dayNum = get_node("Hud/saveDay" + str(i))
+		var dateText = get_node("Hud/Savedates/saveDate" + str(i))
+		var dayNum = get_node("Hud/Savedays/saveDay" + str(i))
 		dateText.hide()
 		dayNum.hide()
 	if(!inMenu):

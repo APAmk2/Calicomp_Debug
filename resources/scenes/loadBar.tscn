@@ -1,0 +1,358 @@
+[gd_scene load_steps=11 format=3 uid="uid://dokuclkg6ol4i"]
+
+[ext_resource type="Script" path="res://resources/scenes/SaveLoad.gd" id="1_bi7qx"]
+[ext_resource type="Texture2D" uid="uid://bsacxblce6uu6" path="res://resources/Export_Sprites/recipe_bg_0.png" id="2_c3wwe"]
+[ext_resource type="Texture2D" uid="uid://cx7vsmbq6sigq" path="res://resources/Export_Sprites/recipe_window_0.png" id="3_tpaby"]
+[ext_resource type="Texture2D" uid="uid://dtsr8pgjhsj88" path="res://resources/Export_Sprites/saveslot_spr_0.png" id="4_0unx5"]
+[ext_resource type="FontFile" uid="uid://cewrh6mo8035n" path="res://resources/fonts/VA-11 Hall-A 6px Non-mono.ttf" id="5_a4obh"]
+[ext_resource type="FontFile" uid="uid://dn502a8gblt4i" path="res://resources/fonts/VA-11 Hall-A 10px.ttf" id="6_mhcw4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lu030"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pk1x6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qoycq"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8v37d"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="LoadBar" type="Node2D"]
+script = ExtResource("1_bi7qx")
+
+[node name="2D" type="Node2D" parent="."]
+
+[node name="bg" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(420, 252)
+scale = Vector2(2, 2)
+texture = ExtResource("2_c3wwe")
+
+[node name="window" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(333, 254)
+scale = Vector2(2, 2)
+texture = ExtResource("3_tpaby")
+
+[node name="slots" type="Node2D" parent="2D"]
+
+[node name="slot1" type="Sprite2D" parent="2D/slots"]
+texture_filter = 1
+position = Vector2(333, 108)
+scale = Vector2(2, 2)
+texture = ExtResource("4_0unx5")
+
+[node name="slot2" type="Sprite2D" parent="2D/slots"]
+texture_filter = 1
+position = Vector2(333, 208)
+scale = Vector2(2, 2)
+texture = ExtResource("4_0unx5")
+
+[node name="slot3" type="Sprite2D" parent="2D/slots"]
+texture_filter = 1
+position = Vector2(333, 308)
+scale = Vector2(2, 2)
+texture = ExtResource("4_0unx5")
+
+[node name="slot4" type="Sprite2D" parent="2D/slots"]
+texture_filter = 1
+position = Vector2(333, 408)
+scale = Vector2(2, 2)
+texture = ExtResource("4_0unx5")
+
+[node name="Hud" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="slot_btns" type="Control" parent="Hud"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="slot1" type="Button" parent="Hud/slot_btns"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 66.0
+offset_right = 520.0
+offset_bottom = 150.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lu030")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pk1x6")
+flat = true
+
+[node name="slot2" type="Button" parent="Hud/slot_btns"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 166.0
+offset_right = 520.0
+offset_bottom = 250.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lu030")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pk1x6")
+flat = true
+
+[node name="slot3" type="Button" parent="Hud/slot_btns"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 266.0
+offset_right = 520.0
+offset_bottom = 350.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lu030")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pk1x6")
+flat = true
+
+[node name="slot4" type="Button" parent="Hud/slot_btns"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 366.0
+offset_right = 520.0
+offset_bottom = 450.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lu030")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pk1x6")
+flat = true
+
+[node name="page_btns" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1page" type="Button" parent="Hud/page_btns"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 18.0
+offset_top = 20.0
+offset_right = 114.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_a4obh")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qoycq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8v37d")
+text = "Page 1"
+
+[node name="2page" type="Button" parent="Hud/page_btns"]
+texture_filter = 1
+offset_left = 120.0
+offset_top = 20.0
+offset_right = 216.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_a4obh")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qoycq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8v37d")
+text = "Page 2"
+
+[node name="3page" type="Button" parent="Hud/page_btns"]
+texture_filter = 1
+offset_left = 228.0
+offset_top = 20.0
+offset_right = 324.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_a4obh")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qoycq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8v37d")
+text = "Page 3"
+
+[node name="4page" type="Button" parent="Hud/page_btns"]
+texture_filter = 1
+offset_left = 336.0
+offset_top = 20.0
+offset_right = 432.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_a4obh")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qoycq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8v37d")
+text = "Page 4"
+
+[node name="5page" type="Button" parent="Hud/page_btns"]
+texture_filter = 1
+offset_left = 444.0
+offset_top = 20.0
+offset_right = 540.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_a4obh")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qoycq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8v37d")
+text = "Page 5"
+
+[node name="6page" type="Button" parent="Hud/page_btns"]
+texture_filter = 1
+offset_left = 552.0
+offset_top = 20.0
+offset_right = 648.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_a4obh")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qoycq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8v37d")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8v37d")
+text = "Page 6"
+
+[node name="Savedays" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="saveDay1" type="Label" parent="Hud/Savedays"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 152.0
+offset_top = 72.0
+offset_right = 448.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("6_mhcw4")
+theme_override_font_sizes/font_size = 28
+
+[node name="saveDay2" type="Label" parent="Hud/Savedays"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 152.0
+offset_top = 172.0
+offset_right = 448.0
+offset_bottom = 205.0
+theme_override_fonts/font = ExtResource("6_mhcw4")
+theme_override_font_sizes/font_size = 28
+
+[node name="saveDay3" type="Label" parent="Hud/Savedays"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 152.0
+offset_top = 272.0
+offset_right = 448.0
+offset_bottom = 305.0
+theme_override_fonts/font = ExtResource("6_mhcw4")
+theme_override_font_sizes/font_size = 28
+
+[node name="saveDay4" type="Label" parent="Hud/Savedays"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 152.0
+offset_top = 372.0
+offset_right = 448.0
+offset_bottom = 405.0
+theme_override_fonts/font = ExtResource("6_mhcw4")
+theme_override_font_sizes/font_size = 28
+
+[node name="Savedates" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="saveDate1" type="Label" parent="Hud/Savedates"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 216.0
+offset_top = 112.0
+offset_right = 512.0
+offset_bottom = 145.0
+theme_override_fonts/font = ExtResource("6_mhcw4")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 2
+
+[node name="saveDate2" type="Label" parent="Hud/Savedates"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 216.0
+offset_top = 212.0
+offset_right = 512.0
+offset_bottom = 245.0
+theme_override_fonts/font = ExtResource("6_mhcw4")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 2
+
+[node name="saveDate3" type="Label" parent="Hud/Savedates"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 216.0
+offset_top = 312.0
+offset_right = 512.0
+offset_bottom = 345.0
+theme_override_fonts/font = ExtResource("6_mhcw4")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 2
+
+[node name="saveDate4" type="Label" parent="Hud/Savedates"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 216.0
+offset_top = 412.0
+offset_right = 512.0
+offset_bottom = 445.0
+theme_override_fonts/font = ExtResource("6_mhcw4")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 2
+
+[connection signal="pressed" from="Hud/slot_btns/slot1" to="." method="SlotPressed" binds= [1]]
+[connection signal="pressed" from="Hud/slot_btns/slot2" to="." method="SlotPressed" binds= [2]]
+[connection signal="pressed" from="Hud/slot_btns/slot3" to="." method="SlotPressed" binds= [3]]
+[connection signal="pressed" from="Hud/slot_btns/slot4" to="." method="SlotPressed" binds= [4]]
+[connection signal="pressed" from="Hud/page_btns/1page" to="." method="PageBtnPressed" binds= [1]]
+[connection signal="pressed" from="Hud/page_btns/2page" to="." method="PageBtnPressed" binds= [2]]
+[connection signal="pressed" from="Hud/page_btns/3page" to="." method="PageBtnPressed" binds= [3]]
+[connection signal="pressed" from="Hud/page_btns/4page" to="." method="PageBtnPressed" binds= [4]]
+[connection signal="pressed" from="Hud/page_btns/5page" to="." method="PageBtnPressed" binds= [5]]
+[connection signal="pressed" from="Hud/page_btns/6page" to="." method="PageBtnPressed" binds= [6]]

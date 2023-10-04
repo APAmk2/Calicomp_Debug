@@ -42,3 +42,6 @@ func SettingsBtnPressed():
 		$settings.stream = load("res://resources/Exported_Sounds/audiogroup_default/logshow.ogg")
 		$settings.play()
 	$Settings.visible = !$Settings.visible
+
+func LoadBtnPressed():
+	$"2D/LoadBar".visible = !$"2D/LoadBar".visible
