@@ -3,11 +3,14 @@ extends Node
 var betaHud: bool = true
 var settingsAnim: bool = false
 
+var trackNum: int = 0
+
 var time = 0
 var timeDirection = 1
 var moveDuration = 0.25
 
 func _ready():
+	PlayMusic()
 	$"Hud/money".text = "$" + str(LoadSingleton.MoneyInBar)
 	if(LoadSingleton.ScanlinesEnabled):
 		$scanlines.show()
@@ -29,6 +32,19 @@ func _process(delta):
 		$Settings.scale = lerp($Settings.scale, Vector2(1, 1), t)
 	else:
 		$Settings.scale = lerp($Settings.scale, Vector2(1, 0.1), t)
+
+func FindTrackByName(string):
+	var findvar
+	for i in range (1, 60):
+		findvar = LoadSingleton.musicData[i][2].find(string)
+		if(findvar == 0):
+			return i
+
+func PlayMusic():
+	var filename = LoadSingleton.musicData[FindTrackByName(LoadSingleton.musicPlaylist[trackNum])][1]
+	$"BGM".stream = load("res://resources/Exported_Sounds/audiogroup_default/" + filename)
+	$"BGM".play()
+	trackNum += 1
 
 func SettingsBtnPressed():
 	if($Settings.visible):

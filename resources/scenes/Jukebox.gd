@@ -5,9 +5,6 @@ extends Node2D
 var maxPages: int = 12
 var curPage: int = 1
 
-var debug = false
-var Mus: Array = ["", "", "", "", "", "", "", "", "", "", "", ""]
-
 func _ready():
 	UpdateLabels()
 	UpdateBtns()
@@ -33,18 +30,23 @@ func UpdateBtns():
 
 func UpdatePlaylist():
 	for i in range (1, 13):
-		get_node("Hud/PlaylistSlotBtns/PlaylistSlot" + str(i)).text = Mus[i - 1]
+		get_node("Hud/PlaylistSlotBtns/PlaylistSlot" + str(i)).text = LoadSingleton.musicPlaylist[i - 1]
 
 func MusicBtnPressed(extra_arg_0):
 	var index = extra_arg_0 + 5 * (curPage - 1)
-	var firstNull = Mus.find("")
+	var firstNull = LoadSingleton.musicPlaylist.find("")
 	if (firstNull >= 0):
-		Mus[firstNull] = str(LoadSingleton.musicData[index][2])
+		LoadSingleton.musicPlaylist[firstNull] = str(LoadSingleton.musicData[index][2])
 		UpdatePlaylist()
+	if(LoadSingleton.musicPlaylist.find("") == -1):
+		$"Hud/tobar".disabled = false
 
 func PlaylistBtnPressed(extra_arg_0):
-	Mus[extra_arg_0 - 1] = ""
+	LoadSingleton.musicPlaylist[extra_arg_0 - 1] = ""
 	UpdatePlaylist()
+
+func TobarPressed():
+	get_tree().change_scene_to_file("res://resources/scenes/Main.tscn")
 
 func _on_page_forward_pressed():
 	if((curPage + 1) <= maxPages):

@@ -482,6 +482,8 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("63_3ckat")
 
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="Hud/ext_but2" to="Exit" method="_on_quit_but_pressed"]
 [connection signal="pressed" from="Hud/tv_but" to="2D/tv" method="_on_tv_but_pressed"]
 [connection signal="pressed" from="Hud/sett_but" to="." method="SettingsBtnPressed"]
@@ -489,3 +491,4 @@ texture = ExtResource("63_3ckat")
 [connection signal="pressed" from="Hud/ext_but" to="Exit" method="_on_quit_but_pressed"]
 [connection signal="pressed" from="Hud/loadBtn" to="." method="LoadBtnPressed"]
 [connection signal="pressed" from="Hud/loadBtn" to="2D/LoadBar" method="LoadBarBtnPressed"]
+[connection signal="finished" from="BGM" to="." method="PlayMusic"]

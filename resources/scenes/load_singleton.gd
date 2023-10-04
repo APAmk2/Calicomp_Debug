@@ -6,6 +6,7 @@ var SavePlace: Array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", 
 
 var readData: Array
 var musicData: Array
+var musicPlaylist: Array = ["", "", "", "", "", "", "", "", "", "", "", ""]
 var Money: float = 1
 var MoneyInBar: float
 var WPapers: int

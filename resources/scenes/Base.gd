@@ -57,7 +57,7 @@ func _process(delta):
 		$Settings.scale = lerp($Settings.scale, Vector2(1, 0.1), t)
 
 func ToWorkBtnUp():
-	get_tree().change_scene_to_file("res://resources/scenes/Main.tscn")
+	get_tree().change_scene_to_file("res://resources/scenes/Jukebox.tscn")
 
 func SettingsBtnPressed():
 	if($Settings.visible):

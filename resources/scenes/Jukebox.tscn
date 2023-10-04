@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bty4lev3vifm4"]
+[gd_scene load_steps=19 format=3 uid="uid://bty4lev3vifm4"]
 
 [ext_resource type="Script" path="res://resources/scenes/Jukebox.gd" id="1_448jk"]
 [ext_resource type="Texture2D" uid="uid://k8vgrty6dbsi" path="res://resources/Export_Sprites/new_jukeframe_0.png" id="1_fh7i1"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ccga5le21y7xq" path="res://resources/Export_Sprites/playlistslot_spr_0.png" id="3_qla2r"]
 [ext_resource type="FontFile" uid="uid://bwo5ictu5m6hn" path="res://resources/fonts/VA-11 Hall-A 6px.ttf" id="4_3fute"]
 [ext_resource type="Texture2D" uid="uid://i03srkloc7ry" path="res://resources/Export_Sprites/shop_arrow_spr_0.png" id="5_tkqe5"]
+[ext_resource type="Texture2D" uid="uid://cv1dbagl3alnt" path="res://resources/Export_Sprites/ready_juke_spr_0.png" id="7_8tm7h"]
+[ext_resource type="Texture2D" uid="uid://bnttjrbu4jhbf" path="res://resources/Export_Sprites/notready_juke_spr_0.png" id="8_gilqs"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_63g5y"]
 
@@ -28,6 +30,12 @@ texture = ExtResource("5_tkqe5")
 modulate_color = Color(0.4, 0.4, 0.4, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqn2p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7r3nk"]
+texture = ExtResource("7_8tm7h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bgkqv"]
+texture = ExtResource("8_gilqs")
 
 [node name="Jukebox" type="Node2D"]
 script = ExtResource("1_448jk")
@@ -617,6 +625,21 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_tke22")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_2s3y8")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_uqn2p")
 
+[node name="tobar" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 780.0
+offset_top = 450.0
+offset_right = 838.0
+offset_bottom = 482.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_7r3nk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7r3nk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7r3nk")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_bgkqv")
+theme_override_styles/focus = SubResource("StyleBoxTexture_7r3nk")
+disabled = true
+
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 bus = &"BGM"
 
@@ -639,3 +662,4 @@ bus = &"BGM"
 [connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot12" to="." method="PlaylistBtnPressed" binds= [12]]
 [connection signal="pressed" from="Hud/page_forward" to="." method="_on_page_forward_pressed"]
 [connection signal="pressed" from="Hud/page_backward" to="." method="_on_page_backward_pressed"]
+[connection signal="pressed" from="Hud/tobar" to="." method="TobarPressed"]
