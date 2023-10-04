@@ -58,6 +58,7 @@ func LoadTranslationGraphics():
 
 func _ready():
 	Load()
+	scanlines = LoadSingleton.ScanlinesEnabled
 	LoadTranslationGraphics()
 	if(fullscr):
 		$"2D/fullscreen_on".visible = true
@@ -67,14 +68,10 @@ func _ready():
 		$"2D/fullscreen_on".visible = false
 		$"2D/windowed".visible = true
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-	if(LoadSingleton.ScanlinesEnabled):
-		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteron_hovertxt_0.png")
+	if(scanlines):
 		$"2D/filter/but".show()
-#		$"2D/filter/text".position = Vector2(204, 440)
 	else:
-		$"2D/filter/text".texture = load("res://resources/Export_Sprites/filteroff_idletxt_0.png")
 		$"2D/filter/but".hide()
-#		$"2D/filter/text".position = Vector2(209, 440)
 	$Hud/LangSel.selected = LoadSingleton.Lang
 func FullscrBtnPressed():
 	fullscr = true
@@ -97,13 +94,11 @@ func ScanlinesBtnPressed():
 		LoadSingleton.ScanlinesEnabled = true
 		$"2D/filter/text".texture =  load("res://resources/Export_Sprites/" + tr("SCANLINESON"))
 		$"2D/filter/but".show()
-#		$"2D/filter/text".position = Vector2(204, 440)
 		$"../scanlines".show()
 	else:
 		LoadSingleton.ScanlinesEnabled = false
 		$"2D/filter/text".texture =  load("res://resources/Export_Sprites/" + tr("SCANLINESOFF"))
 		$"2D/filter/but".hide()
-#		$"2D/filter/text".position = Vector2(209, 440)
 		$"../scanlines".hide()
 
 func LangSelection(index):

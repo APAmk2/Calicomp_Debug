@@ -385,7 +385,7 @@ texture_filter = 1
 position = Vector2(323, 328)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_7emmw")
-animation = &"nanocamo"
+animation = &"music"
 
 [node name="Tablet_frame" type="Sprite2D" parent="2D"]
 texture_filter = 1

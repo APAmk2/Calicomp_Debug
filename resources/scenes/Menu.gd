@@ -15,6 +15,7 @@ extends Node
 var ngplus: bool = false
 var btnsAnim: bool = false
 var settingsAnim: bool = false
+var randRoll: int
 
 var time = 0
 var timeDirection = 1
@@ -23,7 +24,8 @@ var moveDuration = 0.25
 func _ready():
 	var random = RandomNumberGenerator.new()
 	random.randomize()
-	$"Hud/demonameTxt".text = tr("DEMONAME" + str(random.randi_range(1, 2))) + " " + ProjectSettings.get_setting("application/config/version")
+	randRoll = random.randi_range(1, 2)
+	$"Hud/demonameTxt".text = tr("DEMONAME" + str(randRoll)) + " " + ProjectSettings.get_setting("application/config/version")
 	if(LoadSingleton.ScanlinesEnabled):
 		scanlines.show()
 	else:
