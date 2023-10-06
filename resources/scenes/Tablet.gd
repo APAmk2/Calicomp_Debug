@@ -83,6 +83,10 @@ func show_elems():
 	nano_walls.hide()
 	nano_table.hide()
 	$"SaveLoad".hide()
+	$"MusicPlayer".hide()
+	if(!$"/root/Base/BGM".playing):
+		$"MusicPlayer/BGM".playing = false
+		$"/root/Base/BGM".playing = true
 
 func _on_ae_but_pressed():
 	app = "ae"
@@ -132,9 +136,9 @@ func _on_miki_but_pressed():
 func _on_music_but_pressed():
 	app = "music"
 	layer = 1
-	homepage.play(app)
 	hide_elems()
-	homepage.show()
+	$"/root/Base/BGM".playing = false
+	$"MusicPlayer".show()
 
 func _on_home_but_pressed():
 	show_elems()

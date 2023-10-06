@@ -68,6 +68,7 @@ func PlayMusic(mode):
 	$"BGM".play()
 	for i in range (1, 3):
 		get_node("Hud/miniJukebox/trackName" + str(i)).text = LoadSingleton.musicPlaylist[trackNum]
+	$"2D/miniJukebox".texture = load("res://resources/Export_Sprites/small_jukebox_spr_0.png")
 
 func PauseMusic():
 	$"BGM".stream_paused = !$"BGM".stream_paused

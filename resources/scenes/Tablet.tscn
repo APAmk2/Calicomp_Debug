@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://c8thi515lt4sv"]
+[gd_scene load_steps=111 format=3 uid="uid://c8thi515lt4sv"]
 
 [ext_resource type="Script" path="res://resources/scenes/Tablet.gd" id="1_85dw3"]
 [ext_resource type="Texture2D" uid="uid://c2aa4etsw8rgq" path="res://resources/Export_Sprites/tablet_hitbox_spr_0.png" id="2_gb5g3"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://ml2u71ysitsu" path="res://resources/scenes/SaveLoad.tscn" id="34_m0xtf"]
 [ext_resource type="AudioStream" uid="uid://ddss1behrta8k" path="res://resources/Exported_Sounds/audiogroup_default/cancel_sound.ogg" id="36_4x26x"]
 [ext_resource type="Texture2D" uid="uid://cvjxbilhctfxa" path="res://resources/Export_Sprites/candado_spr_0.png" id="36_x63kr"]
+[ext_resource type="PackedScene" uid="uid://hu7ld1diw2xr" path="res://resources/scenes/MusicPlayer.tscn" id="39_jvv26"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1rtoh"]
 animations = [{
@@ -798,6 +799,10 @@ position = Vector2(-316, -8)
 stream = ExtResource("36_4x26x")
 max_polyphony = 2
 bus = &"SFX"
+
+[node name="MusicPlayer" parent="." instance=ExtResource("39_jvv26")]
+visible = false
+position = Vector2(124, 68)
 
 [connection signal="value_changed" from="Hud/app_base/tablet_scroller" to="Hud/app_base/tablet_scroller" method="_on_value_changed"]
 [connection signal="pressed" from="Hud/app_base/app_but1" to="." method="app_btns" binds= [1]]

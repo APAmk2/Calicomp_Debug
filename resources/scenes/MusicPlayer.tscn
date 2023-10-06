@@ -1,0 +1,363 @@
+[gd_scene load_steps=37 format=3 uid="uid://hu7ld1diw2xr"]
+
+[ext_resource type="Script" path="res://MusicPlayer.gd" id="1_6orq0"]
+[ext_resource type="Texture2D" uid="uid://brpoxmq2y5ekj" path="res://resources/Export_Sprites/musichome_spr_0.png" id="2_nr01o"]
+[ext_resource type="Texture2D" uid="uid://dd8hcil1c77jc" path="res://resources/Export_Sprites/musicslot_spr_0.png" id="3_akia6"]
+[ext_resource type="FontFile" uid="uid://bwo5ictu5m6hn" path="res://resources/fonts/VA-11 Hall-A 6px.ttf" id="4_6u514"]
+[ext_resource type="Texture2D" uid="uid://i03srkloc7ry" path="res://resources/Export_Sprites/shop_arrow_spr_0.png" id="5_xy6ck"]
+[ext_resource type="Texture2D" uid="uid://p8rhm75ek1qk" path="res://resources/Export_Sprites/backmusic_spr_0.png" id="6_05gce"]
+[ext_resource type="Texture2D" uid="uid://bhc6dusrn4ldh" path="res://resources/Export_Sprites/nextmusic_spr_0.png" id="7_0mydt"]
+[ext_resource type="Texture2D" uid="uid://d3cnnxhedvg2x" path="res://resources/Export_Sprites/loop_spr_0.png" id="8_lv7xg"]
+[ext_resource type="Texture2D" uid="uid://raucw5othca" path="res://resources/Export_Sprites/shuffle_spr_0.png" id="9_ves4c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_us5qu"]
+texture = ExtResource("5_xy6ck")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ao5gs"]
+texture = ExtResource("5_xy6ck")
+modulate_color = Color(0.4, 0.4, 0.4, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rujxm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rbiw5"]
+texture = ExtResource("5_xy6ck")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ovic"]
+texture = ExtResource("5_xy6ck")
+modulate_color = Color(0.4, 0.4, 0.4, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bm6sj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3ju7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_52u2o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yg4up"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7qq4s"]
+texture = ExtResource("6_05gce")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h8kb2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_isrig"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cnciu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avd3t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qyl01"]
+texture = ExtResource("7_0mydt")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l17gi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7xbl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e10y5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lg7r8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2v75s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7q8x8"]
+texture = ExtResource("8_lv7xg")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xlmkv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a3fx4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mimmt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v27m2"]
+texture = ExtResource("9_ves4c")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_igy1f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ysbr"]
+
+[node name="MusicPlayer" type="Node2D"]
+script = ExtResource("1_6orq0")
+
+[node name="2D" type="Node2D" parent="."]
+
+[node name="bg" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(199, 260)
+scale = Vector2(2, 2)
+texture = ExtResource("2_nr01o")
+
+[node name="musicSlots" type="Node2D" parent="2D"]
+
+[node name="musicSlot1" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(199, 181)
+scale = Vector2(2, 2)
+texture = ExtResource("3_akia6")
+
+[node name="musicSlot2" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(199, 243)
+scale = Vector2(2, 2)
+texture = ExtResource("3_akia6")
+
+[node name="musicSlot3" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(199, 305)
+scale = Vector2(2, 2)
+texture = ExtResource("3_akia6")
+
+[node name="musicSlot4" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(199, 367)
+scale = Vector2(2, 2)
+texture = ExtResource("3_akia6")
+
+[node name="musicSlot5" type="Sprite2D" parent="2D/musicSlots"]
+texture_filter = 1
+position = Vector2(199, 429)
+scale = Vector2(2, 2)
+texture = ExtResource("3_akia6")
+
+[node name="Hud" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="textTip" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 74.0
+offset_top = 112.0
+offset_right = 326.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(0.235294, 0.517647, 0.811765, 1)
+theme_override_fonts/font = ExtResource("4_6u514")
+theme_override_font_sizes/font_size = 20
+text = "Please, select a song"
+
+[node name="page" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 172.0
+offset_top = 474.0
+offset_right = 220.0
+offset_bottom = 507.0
+theme_override_fonts/font = ExtResource("4_6u514")
+theme_override_font_sizes/font_size = 20
+text = "1/12"
+
+[node name="page_forward" type="Button" parent="Hud"]
+texture_filter = 1
+offset_left = 328.0
+offset_top = 468.0
+offset_right = 351.0
+offset_bottom = 492.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_us5qu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_us5qu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_us5qu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ao5gs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rujxm")
+
+[node name="page_backward" type="Button" parent="Hud"]
+texture_filter = 1
+offset_left = 68.0001
+offset_top = 516.0
+offset_right = 91.0001
+offset_bottom = 540.0
+rotation = 3.14159
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_rbiw5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rbiw5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rbiw5")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_5ovic")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bm6sj")
+
+[node name="musicSlotBtns" type="Control" parent="Hud"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="musicSlot1" type="Button" parent="Hud/musicSlotBtns"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.0
+offset_top = 158.0
+offset_right = 388.0
+offset_bottom = 204.0
+theme_override_fonts/font = ExtResource("4_6u514")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v3ju7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_52u2o")
+text = "Welcome to VA-11 HALL-A"
+flat = true
+
+[node name="musicSlot2" type="Button" parent="Hud/musicSlotBtns"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.0
+offset_top = 220.0
+offset_right = 388.0
+offset_bottom = 266.0
+theme_override_fonts/font = ExtResource("4_6u514")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v3ju7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_52u2o")
+text = "Welcome to VA-11 HALL-A"
+flat = true
+
+[node name="musicSlot3" type="Button" parent="Hud/musicSlotBtns"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.0
+offset_top = 282.0
+offset_right = 388.0
+offset_bottom = 328.0
+theme_override_fonts/font = ExtResource("4_6u514")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v3ju7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_52u2o")
+text = "Welcome to VA-11 HALL-A"
+flat = true
+
+[node name="musicSlot4" type="Button" parent="Hud/musicSlotBtns"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.0
+offset_top = 344.0
+offset_right = 388.0
+offset_bottom = 390.0
+theme_override_fonts/font = ExtResource("4_6u514")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v3ju7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_52u2o")
+text = "Welcome to VA-11 HALL-A"
+flat = true
+
+[node name="musicSlot5" type="Button" parent="Hud/musicSlotBtns"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.0
+offset_top = 406.0
+offset_right = 388.0
+offset_bottom = 452.0
+theme_override_fonts/font = ExtResource("4_6u514")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v3ju7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_52u2o")
+text = "Welcome to VA-11 HALL-A"
+flat = true
+
+[node name="miniJukebox" type="Control" parent="Hud"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="trackName2" type="Label" parent="Hud/miniJukebox"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 28.0
+offset_top = 92.0
+offset_right = 304.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.403922, 0.403922, 0.403922, 1)
+theme_override_fonts/font = ExtResource("4_6u514")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to VA-11 HALL-A"
+
+[node name="trackName1" type="Label" parent="Hud/miniJukebox"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 28.0
+offset_top = 90.0
+offset_right = 304.0
+offset_bottom = 119.0
+theme_override_fonts/font = ExtResource("4_6u514")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to VA-11 HALL-A"
+
+[node name="playBackward" type="Button" parent="Hud/miniJukebox"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 36.0
+offset_top = 52.0
+offset_right = 96.0
+offset_bottom = 78.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yg4up")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yg4up")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7qq4s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h8kb2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_isrig")
+
+[node name="playForward" type="Button" parent="Hud/miniJukebox"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 154.0
+offset_top = 52.0
+offset_right = 214.0
+offset_bottom = 78.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cnciu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_avd3t")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qyl01")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_l17gi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_isrig")
+
+[node name="playPause" type="Button" parent="Hud/miniJukebox"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 52.0
+offset_right = 138.0
+offset_bottom = 78.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d7xbl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e10y5")
+flat = true
+
+[node name="loop" type="Button" parent="Hud/miniJukebox"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 310.0
+offset_top = 50.0
+offset_right = 341.0
+offset_bottom = 65.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lg7r8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2v75s")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7q8x8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xlmkv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a3fx4")
+toggle_mode = true
+
+[node name="shuffle" type="Button" parent="Hud/miniJukebox"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 236.0
+offset_top = 44.0
+offset_right = 266.0
+offset_bottom = 65.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mimmt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mimmt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v27m2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_igy1f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ysbr")
+toggle_mode = true
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+bus = &"BGM"
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[connection signal="pressed" from="Hud/page_forward" to="." method="PageBtnsPressed" binds= [1]]
+[connection signal="pressed" from="Hud/page_backward" to="." method="PageBtnsPressed" binds= [0]]
+[connection signal="pressed" from="Hud/musicSlotBtns/musicSlot1" to="." method="MusicBtnPressed" binds= [1]]
+[connection signal="pressed" from="Hud/musicSlotBtns/musicSlot2" to="." method="MusicBtnPressed" binds= [2]]
+[connection signal="pressed" from="Hud/musicSlotBtns/musicSlot3" to="." method="MusicBtnPressed" binds= [3]]
+[connection signal="pressed" from="Hud/musicSlotBtns/musicSlot4" to="." method="MusicBtnPressed" binds= [4]]
+[connection signal="pressed" from="Hud/musicSlotBtns/musicSlot5" to="." method="MusicBtnPressed" binds= [5]]
+[connection signal="pressed" from="Hud/miniJukebox/playBackward" to="." method="PlayMusic" binds= [0]]
+[connection signal="pressed" from="Hud/miniJukebox/playForward" to="." method="PlayMusic" binds= [1]]
+[connection signal="pressed" from="Hud/miniJukebox/playPause" to="." method="PauseMusic"]
+[connection signal="finished" from="BGM" to="." method="PlayMusic" binds= [2]]
