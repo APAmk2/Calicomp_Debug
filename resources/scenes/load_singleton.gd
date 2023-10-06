@@ -49,12 +49,12 @@ func Load(butNum, LoadAll):
 		return false
 
 func LoadVars():
-		Money = float(readData[6])
-		MoneyInBar = float(readData[5])
-		WPapers = int(readData[206])
 		Day = int(readData[2])
-		Place = readData[8]
+		MoneyInBar = float(readData[5])
+		Money = float(readData[6])
 		DayStr = readData[7]
+		Place = readData[8]
+		ShopItems[20] = readData[158]
 		ShopItems[1] = readData[171]
 		ShopItems[2] = readData[172]
 		ShopItems[3] = readData[173]
@@ -68,13 +68,15 @@ func LoadVars():
 		ShopItems[11] = readData[182]
 		ShopItems[12] = readData[183]
 		ShopItems[13] = readData[184]
-		ShopItems[14] = readData[188]
-		ShopItems[15] = readData[238]
-		ShopItems[16] = readData[186]
-		ShopItems[17] = readData[240]
-		ShopItems[18] = readData[187]
 		ShopItems[19] = readData[185]
-		ShopItems[20] = readData[158]
+		ShopItems[16] = readData[186]
+		ShopItems[18] = readData[187]
+		ShopItems[14] = readData[188]
+		WPapers = int(readData[206])
+		for i in range (0, 12):
+			musicPlaylist[i] = readData[219 + i]
+		ShopItems[15] = readData[238]
+		ShopItems[17] = readData[240]
 
 func Save(butNum):
 	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(butNum) + "].txt", FileAccess.WRITE)
@@ -104,5 +106,7 @@ func Save(butNum):
 	readData[187] = ShopItems[18]
 	readData[185] = ShopItems[19]
 	readData[158] = ShopItems[20]
+	for i in range (0, 12):
+			readData[219 + i] = musicPlaylist[i] 
 	var saveData = PackedStringArray(readData)
 	file.store_csv_line(saveData, "\n")  

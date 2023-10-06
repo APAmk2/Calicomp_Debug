@@ -178,120 +178,79 @@ theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
 text = "Please, select a song"
 
-[node name="musicListNames" type="Control" parent="Hud"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="musicName1" type="Label" parent="Hud/musicListNames"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 52.0
-offset_top = 168.0
-offset_right = 430.0
-offset_bottom = 204.0
-theme_override_fonts/font = ExtResource("4_3fute")
-theme_override_font_sizes/font_size = 20
-text = "Welcome to VA-11 HALL-A"
-horizontal_alignment = 1
-
-[node name="musicName2" type="Label" parent="Hud/musicListNames"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 52.0
-offset_top = 228.0
-offset_right = 430.0
-offset_bottom = 264.0
-theme_override_fonts/font = ExtResource("4_3fute")
-theme_override_font_sizes/font_size = 20
-text = "Welcome to VA-11 HALL-A"
-horizontal_alignment = 1
-
-[node name="musicName3" type="Label" parent="Hud/musicListNames"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 52.0
-offset_top = 288.0
-offset_right = 430.0
-offset_bottom = 324.0
-theme_override_fonts/font = ExtResource("4_3fute")
-theme_override_font_sizes/font_size = 20
-text = "Welcome to VA-11 HALL-A"
-horizontal_alignment = 1
-
-[node name="musicName4" type="Label" parent="Hud/musicListNames"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 52.0
-offset_top = 348.0
-offset_right = 430.0
-offset_bottom = 384.0
-theme_override_fonts/font = ExtResource("4_3fute")
-theme_override_font_sizes/font_size = 20
-text = "Welcome to VA-11 HALL-A"
-horizontal_alignment = 1
-
-[node name="musicName5" type="Label" parent="Hud/musicListNames"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 52.0
-offset_top = 408.0
-offset_right = 430.0
-offset_bottom = 444.0
-theme_override_fonts/font = ExtResource("4_3fute")
-theme_override_font_sizes/font_size = 20
-text = "Welcome to VA-11 HALL-A"
-horizontal_alignment = 1
-
 [node name="musicSlotBtns" type="Control" parent="Hud"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="musicSlot1" type="Button" parent="Hud/musicSlotBtns"]
+texture_filter = 1
 layout_mode = 0
 offset_left = 52.0
 offset_top = 158.0
 offset_right = 430.0
 offset_bottom = 204.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/hover = SubResource("StyleBoxEmpty_63g5y")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_p6rbt")
+text = "Welcome to VA-11 HALL-A"
 flat = true
 
 [node name="musicSlot2" type="Button" parent="Hud/musicSlotBtns"]
+texture_filter = 1
+layout_mode = 0
 offset_left = 52.0
 offset_top = 218.0
 offset_right = 430.0
 offset_bottom = 264.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/hover = SubResource("StyleBoxEmpty_63g5y")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_p6rbt")
+text = "Welcome to VA-11 HALL-A"
 flat = true
 
 [node name="musicSlot3" type="Button" parent="Hud/musicSlotBtns"]
+texture_filter = 1
+layout_mode = 0
 offset_left = 52.0
 offset_top = 278.0
 offset_right = 430.0
 offset_bottom = 324.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/hover = SubResource("StyleBoxEmpty_63g5y")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_p6rbt")
+text = "Welcome to VA-11 HALL-A"
 flat = true
 
 [node name="musicSlot4" type="Button" parent="Hud/musicSlotBtns"]
+texture_filter = 1
+layout_mode = 0
 offset_left = 52.0
 offset_top = 338.0
 offset_right = 430.0
 offset_bottom = 384.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/hover = SubResource("StyleBoxEmpty_63g5y")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_p6rbt")
+text = "Welcome to VA-11 HALL-A"
 flat = true
 
 [node name="musicSlot5" type="Button" parent="Hud/musicSlotBtns"]
+texture_filter = 1
+layout_mode = 0
 offset_left = 52.0
 offset_top = 398.0
 offset_right = 430.0
 offset_bottom = 444.0
+theme_override_fonts/font = ExtResource("4_3fute")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/hover = SubResource("StyleBoxEmpty_63g5y")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_p6rbt")
+text = "Welcome to VA-11 HALL-A"
 flat = true
 
 [node name="PlaylistSlotBtns" type="Control" parent="Hud"]
@@ -308,128 +267,151 @@ offset_right = 830.0
 offset_bottom = 128.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "1"
 flat = true
 
 [node name="PlaylistSlot2" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 452.0
 offset_top = 142.0
 offset_right = 830.0
 offset_bottom = 188.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "2"
 flat = true
 
 [node name="PlaylistSlot3" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 452.0
 offset_top = 202.0
 offset_right = 830.0
 offset_bottom = 248.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "3"
 flat = true
 
 [node name="PlaylistSlot4" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 452.0
 offset_top = 262.0
 offset_right = 830.0
 offset_bottom = 308.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "4"
 flat = true
 
 [node name="PlaylistSlot5" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 452.0
 offset_top = 322.0
 offset_right = 830.0
 offset_bottom = 368.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "5"
 flat = true
 
 [node name="PlaylistSlot6" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 452.0
 offset_top = 382.0
 offset_right = 830.0
 offset_bottom = 428.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "6
 "
 flat = true
 
 [node name="PlaylistSlot7" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 852.0
 offset_top = 82.0
 offset_right = 1230.0
 offset_bottom = 128.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "7"
 flat = true
 
 [node name="PlaylistSlot8" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 852.0
 offset_top = 142.0
 offset_right = 1230.0
 offset_bottom = 188.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "8"
 flat = true
 
 [node name="PlaylistSlot9" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 852.0
 offset_top = 202.0
 offset_right = 1230.0
 offset_bottom = 248.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "9"
 flat = true
 
 [node name="PlaylistSlot10" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 852.0
 offset_top = 262.0
 offset_right = 1230.0
 offset_bottom = 308.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "10"
 flat = true
 
 [node name="PlaylistSlot11" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 852.0
 offset_top = 322.0
 offset_right = 1230.0
 offset_bottom = 368.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "11"
 flat = true
 
 [node name="PlaylistSlot12" type="Button" parent="Hud/PlaylistSlotBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 852.0
 offset_top = 382.0
 offset_right = 1230.0
 offset_bottom = 428.0
 theme_override_fonts/font = ExtResource("4_3fute")
 theme_override_font_sizes/font_size = 20
+button_mask = 2
 text = "12"
 flat = true
 
@@ -643,6 +625,9 @@ disabled = true
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 bus = &"BGM"
 
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
 [connection signal="pressed" from="Hud/musicSlotBtns/musicSlot1" to="." method="MusicBtnPressed" binds= [1]]
 [connection signal="pressed" from="Hud/musicSlotBtns/musicSlot2" to="." method="MusicBtnPressed" binds= [2]]
 [connection signal="pressed" from="Hud/musicSlotBtns/musicSlot3" to="." method="MusicBtnPressed" binds= [3]]
@@ -660,6 +645,6 @@ bus = &"BGM"
 [connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot10" to="." method="PlaylistBtnPressed" binds= [10]]
 [connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot11" to="." method="PlaylistBtnPressed" binds= [11]]
 [connection signal="pressed" from="Hud/PlaylistSlotBtns/PlaylistSlot12" to="." method="PlaylistBtnPressed" binds= [12]]
-[connection signal="pressed" from="Hud/page_forward" to="." method="_on_page_forward_pressed"]
-[connection signal="pressed" from="Hud/page_backward" to="." method="_on_page_backward_pressed"]
+[connection signal="pressed" from="Hud/page_forward" to="." method="PageBtnsPressed" binds= [true]]
+[connection signal="pressed" from="Hud/page_backward" to="." method="PageBtnsPressed" binds= [false]]
 [connection signal="pressed" from="Hud/tobar" to="." method="TobarPressed"]

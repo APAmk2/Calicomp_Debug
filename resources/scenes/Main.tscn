@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://ctolr6ddkdeph"]
+[gd_scene load_steps=104 format=3 uid="uid://ctolr6ddkdeph"]
 
 [ext_resource type="Script" path="res://resources/scenes/Main.gd" id="1_ggx0j"]
 [ext_resource type="Texture2D" uid="uid://ciq3ym05j00y0" path="res://resources/Export_Sprites/barground_0.png" id="2_e7mgr"]
@@ -59,11 +59,17 @@
 [ext_resource type="Texture2D" uid="uid://csl02ltsktdt7" path="res://resources/Export_Sprites/hack_spr_14.png" id="56_smd74"]
 [ext_resource type="Texture2D" uid="uid://dmvtlag2acj6y" path="res://resources/Export_Sprites/hack_spr_15.png" id="57_8qhbx"]
 [ext_resource type="Texture2D" uid="uid://hbif0cltr83d" path="res://resources/Export_Sprites/alt_frame_spr_0.png" id="58_73wdg"]
+[ext_resource type="Texture2D" uid="uid://bm0a3m8j7r7i0" path="res://resources/Export_Sprites/small_jukebox_spr_0.png" id="59_homd7"]
 [ext_resource type="FontFile" uid="uid://dn502a8gblt4i" path="res://resources/fonts/VA-11 Hall-A 10px.ttf" id="59_u6ca0"]
 [ext_resource type="PackedScene" uid="uid://cgal16kb1tkke" path="res://resources/scenes/Settings.tscn" id="60_2uuvt"]
 [ext_resource type="PackedScene" uid="uid://y6ta8woadhk7" path="res://resources/scenes/Exit.tscn" id="61_8wkjo"]
 [ext_resource type="PackedScene" uid="uid://bjvjbfxpjol58" path="res://resources/scenes/Calicomp.tscn" id="62_eru3g"]
+[ext_resource type="Texture2D" uid="uid://p8rhm75ek1qk" path="res://resources/Export_Sprites/backmusic_spr_0.png" id="62_mrcf0"]
+[ext_resource type="FontFile" uid="uid://bwo5ictu5m6hn" path="res://resources/fonts/VA-11 Hall-A 6px.ttf" id="62_s4srm"]
+[ext_resource type="Texture2D" uid="uid://d3cnnxhedvg2x" path="res://resources/Export_Sprites/loop_spr_0.png" id="62_wt0sa"]
+[ext_resource type="Texture2D" uid="uid://bhc6dusrn4ldh" path="res://resources/Export_Sprites/nextmusic_spr_0.png" id="63_2lqxh"]
 [ext_resource type="Texture2D" uid="uid://c1cwdehgtmuj3" path="res://resources/Export_Sprites/scanrines_0.png" id="63_3ckat"]
+[ext_resource type="Texture2D" uid="uid://raucw5othca" path="res://resources/Export_Sprites/shuffle_spr_0.png" id="65_8geb7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wnrh5"]
 animations = [{
@@ -312,6 +318,52 @@ animations = [{
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_30nxm"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sg6ew"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xwlfs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aq2g0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mo8yw"]
+texture = ExtResource("62_mrcf0")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jelhx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t5p08"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8lars"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j0qhc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ywigo"]
+texture = ExtResource("63_2lqxh")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1m8no"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4c5as"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4cuy1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f2mhm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aest4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ryfg"]
+texture = ExtResource("62_wt0sa")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d5ugt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_03u3e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o6n0u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbriu"]
+texture = ExtResource("65_8geb7")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5rnw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2jmww"]
+
 [node name="Main" type="Node"]
 script = ExtResource("1_ggx0j")
 
@@ -363,6 +415,13 @@ texture_filter = 1
 position = Vector2(640, 360)
 scale = Vector2(2, 2)
 texture = ExtResource("58_73wdg")
+
+[node name="miniJukebox" type="Sprite2D" parent="2D"]
+visible = false
+texture_filter = 1
+position = Vector2(1058, 117)
+scale = Vector2(2, 2)
+texture = ExtResource("59_homd7")
 
 [node name="Hud" type="Control" parent="."]
 layout_mode = 3
@@ -447,6 +506,21 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_30nxm")
 text = "TITLELOAD"
 flat = true
 
+[node name="jukeboxBtn" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 894.0
+offset_top = 627.0
+offset_right = 1014.0
+offset_bottom = 665.0
+theme_override_colors/font_pressed_color = Color(1, 0.733333, 0.192157, 1)
+theme_override_fonts/font = ExtResource("59_u6ca0")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sg6ew")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xwlfs")
+text = "Jukebox"
+flat = true
+
 [node name="money" type="Label" parent="Hud"]
 texture_filter = 1
 layout_mode = 0
@@ -457,6 +531,100 @@ offset_bottom = 225.0
 theme_override_fonts/font = ExtResource("59_u6ca0")
 theme_override_font_sizes/font_size = 28
 text = "$0"
+
+[node name="miniJukebox" type="Control" parent="Hud"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="trackName2" type="Label" parent="Hud/miniJukebox"]
+texture_filter = 1
+offset_left = 884.0
+offset_top = 150.0
+offset_right = 1160.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.403922, 0.403922, 0.403922, 1)
+theme_override_fonts/font = ExtResource("62_s4srm")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to VA-11 HALL-A"
+
+[node name="trackName1" type="Label" parent="Hud/miniJukebox"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 884.0
+offset_top = 148.0
+offset_right = 1160.0
+offset_bottom = 177.0
+theme_override_fonts/font = ExtResource("62_s4srm")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to VA-11 HALL-A"
+
+[node name="playBackward" type="Button" parent="Hud/miniJukebox"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 892.0
+offset_top = 110.0
+offset_right = 952.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aq2g0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_aq2g0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mo8yw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jelhx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t5p08")
+
+[node name="playForward" type="Button" parent="Hud/miniJukebox"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1010.0
+offset_top = 110.0
+offset_right = 1070.0
+offset_bottom = 136.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8lars")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_j0qhc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ywigo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1m8no")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t5p08")
+
+[node name="playPause" type="Button" parent="Hud/miniJukebox"]
+layout_mode = 0
+offset_left = 968.0
+offset_top = 110.0
+offset_right = 994.0
+offset_bottom = 136.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4c5as")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4cuy1")
+flat = true
+
+[node name="loop" type="Button" parent="Hud/miniJukebox"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1164.0
+offset_top = 108.0
+offset_right = 1195.0
+offset_bottom = 123.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f2mhm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_aest4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3ryfg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_d5ugt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_03u3e")
+toggle_mode = true
+
+[node name="shuffle" type="Button" parent="Hud/miniJukebox"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1090.0
+offset_top = 102.0
+offset_right = 1120.0
+offset_bottom = 123.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o6n0u")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_o6n0u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nbriu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x5rnw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2jmww")
+toggle_mode = true
 
 [node name="settings" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"
@@ -483,6 +651,7 @@ mouse_filter = 2
 texture = ExtResource("63_3ckat")
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
+bus = &"BGM"
 
 [connection signal="pressed" from="Hud/ext_but2" to="Exit" method="_on_quit_but_pressed"]
 [connection signal="pressed" from="Hud/tv_but" to="2D/tv" method="_on_tv_but_pressed"]
@@ -491,4 +660,8 @@ texture = ExtResource("63_3ckat")
 [connection signal="pressed" from="Hud/ext_but" to="Exit" method="_on_quit_but_pressed"]
 [connection signal="pressed" from="Hud/loadBtn" to="." method="LoadBtnPressed"]
 [connection signal="pressed" from="Hud/loadBtn" to="2D/LoadBar" method="LoadBarBtnPressed"]
-[connection signal="finished" from="BGM" to="." method="PlayMusic"]
+[connection signal="pressed" from="Hud/jukeboxBtn" to="." method="JukeboxBtnPressed"]
+[connection signal="pressed" from="Hud/miniJukebox/playBackward" to="." method="PlayMusic" binds= [0]]
+[connection signal="pressed" from="Hud/miniJukebox/playForward" to="." method="PlayMusic" binds= [1]]
+[connection signal="pressed" from="Hud/miniJukebox/playPause" to="." method="PauseMusic"]
+[connection signal="finished" from="BGM" to="." method="PlayMusic" binds= [2]]
