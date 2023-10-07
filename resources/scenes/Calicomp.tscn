@@ -1,8 +1,22 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjvjbfxpjol58"]
+[gd_scene load_steps=20 format=3 uid="uid://bjvjbfxpjol58"]
 
+[ext_resource type="Script" path="res://resources/scenes/Calicomp.gd" id="1_if2ta"]
 [ext_resource type="Texture2D" uid="uid://e8yis4xdgo12" path="res://resources/Export_Sprites/frame_sprite_0.png" id="1_m4vei"]
 [ext_resource type="Texture2D" uid="uid://nocfguatettv" path="res://resources/Export_Sprites/icesprite_0.png" id="2_d2udn"]
+[ext_resource type="Texture2D" uid="uid://cgkhrio6vs8ky" path="res://resources/Export_Sprites/karmotrine_0.png" id="3_m615e"]
 [ext_resource type="Texture2D" uid="uid://gwwaqxthpkq7" path="res://resources/Export_Sprites/agesprite_0.png" id="3_oboru"]
+[ext_resource type="Texture2D" uid="uid://1uwc8lli5meh" path="res://resources/Export_Sprites/shaker_spr_0.png" id="5_1xkbk"]
+[ext_resource type="Script" path="res://resources/scenes/igredient.gd" id="5_dqr1f"]
+[ext_resource type="Texture2D" uid="uid://byp85g0qnsdyt" path="res://resources/Export_Sprites/adelhyde_0.png" id="6_po6ln"]
+[ext_resource type="Texture2D" uid="uid://c7lrna0y5dpg3" path="res://resources/Export_Sprites/flanergide_0.png" id="7_tkivt"]
+[ext_resource type="Texture2D" uid="uid://djhx0cr1w4kx" path="res://resources/Export_Sprites/bronson_0.png" id="8_66g3s"]
+[ext_resource type="Texture2D" uid="uid://bkrumjwuyb13r" path="res://resources/Export_Sprites/delta_0.png" id="9_r8oas"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ofnpj"]
+size = Vector2(31, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8rkp"]
+size = Vector2(20, 38)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f125p"]
 texture = ExtResource("2_d2udn")
@@ -11,6 +25,8 @@ modulate_color = Color(0.466667, 0.466667, 0.466667, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3kbm8"]
 texture = ExtResource("2_d2udn")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ri3xn"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_07vg2"]
 texture = ExtResource("3_oboru")
 modulate_color = Color(0.466181, 0.466181, 0.466181, 1)
@@ -18,7 +34,10 @@ modulate_color = Color(0.466181, 0.466181, 0.466181, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shl7s"]
 texture = ExtResource("3_oboru")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o1o56"]
+
 [node name="Calicomp" type="Node"]
+script = ExtResource("1_if2ta")
 
 [node name="2D" type="Node2D" parent="."]
 
@@ -28,6 +47,87 @@ texture_filter = 1
 position = Vector2(640, 360)
 scale = Vector2(2, 2)
 texture = ExtResource("1_m4vei")
+
+[node name="shaker" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(1024, 454)
+scale = Vector2(2, 2)
+texture = ExtResource("5_1xkbk")
+
+[node name="Area2D" type="Area2D" parent="2D/shaker"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/shaker/Area2D"]
+shape = SubResource("RectangleShape2D_ofnpj")
+
+[node name="karmotrine" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(870, 300)
+scale = Vector2(2, 2)
+texture = ExtResource("3_m615e")
+script = ExtResource("5_dqr1f")
+igredient_name = "karmotrine"
+rest_pos = Vector2(870, 300)
+
+[node name="Area2D" type="Area2D" parent="2D/karmotrine"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/karmotrine/Area2D"]
+shape = SubResource("RectangleShape2D_a8rkp")
+
+[node name="adelhyde" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(1031, 300)
+scale = Vector2(2, 2)
+texture = ExtResource("6_po6ln")
+script = ExtResource("5_dqr1f")
+igredient_name = "adelhyde"
+rest_pos = Vector2(1031, 300)
+
+[node name="Area2D" type="Area2D" parent="2D/adelhyde"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/adelhyde/Area2D"]
+shape = SubResource("RectangleShape2D_a8rkp")
+
+[node name="flanerhyde" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(1177, 300)
+scale = Vector2(2, 2)
+texture = ExtResource("7_tkivt")
+script = ExtResource("5_dqr1f")
+igredient_name = "flanerhyde"
+rest_pos = Vector2(1177, 300)
+
+[node name="Area2D" type="Area2D" parent="2D/flanerhyde"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/flanerhyde/Area2D"]
+shape = SubResource("RectangleShape2D_a8rkp")
+
+[node name="bronson" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(870, 421)
+scale = Vector2(2, 2)
+texture = ExtResource("8_66g3s")
+script = ExtResource("5_dqr1f")
+igredient_name = "bronson"
+rest_pos = Vector2(870, 421)
+
+[node name="Area2D" type="Area2D" parent="2D/bronson"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/bronson/Area2D"]
+shape = SubResource("RectangleShape2D_a8rkp")
+
+[node name="delta" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(1176, 426)
+scale = Vector2(2, 2)
+texture = ExtResource("9_r8oas")
+script = ExtResource("5_dqr1f")
+igredient_name = "delta"
+rest_pos = Vector2(1176, 426)
+
+[node name="Area2D" type="Area2D" parent="2D/delta"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/delta/Area2D"]
+shape = SubResource("RectangleShape2D_a8rkp")
 
 [node name="Hud" type="Control" parent="."]
 layout_mode = 3
@@ -44,10 +144,10 @@ offset_right = 755.0
 offset_bottom = 313.0
 scale = Vector2(2, 2)
 theme_override_styles/normal = SubResource("StyleBoxTexture_f125p")
-theme_override_styles/hover = SubResource("StyleBoxTexture_3kbm8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f125p")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_3kbm8")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_f125p")
-theme_override_styles/focus = SubResource("StyleBoxTexture_f125p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ri3xn")
 toggle_mode = true
 
 [node name="age" type="Button" parent="Hud"]
@@ -59,8 +159,20 @@ offset_right = 757.0
 offset_bottom = 442.0
 scale = Vector2(2, 2)
 theme_override_styles/normal = SubResource("StyleBoxTexture_07vg2")
-theme_override_styles/hover = SubResource("StyleBoxTexture_shl7s")
+theme_override_styles/hover = SubResource("StyleBoxTexture_07vg2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_shl7s")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_07vg2")
-theme_override_styles/focus = SubResource("StyleBoxTexture_07vg2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o1o56")
 toggle_mode = true
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+
+[connection signal="area_entered" from="2D/shaker/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="2D/shaker/Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="input_event" from="2D/karmotrine/Area2D" to="2D/karmotrine" method="Grabbed"]
+[connection signal="input_event" from="2D/adelhyde/Area2D" to="2D/adelhyde" method="Grabbed"]
+[connection signal="input_event" from="2D/flanerhyde/Area2D" to="2D/flanerhyde" method="Grabbed"]
+[connection signal="input_event" from="2D/bronson/Area2D" to="2D/bronson" method="Grabbed"]
+[connection signal="input_event" from="2D/delta/Area2D" to="2D/delta" method="Grabbed"]
+[connection signal="pressed" from="Hud/ice" to="." method="EmitSound" binds= [true]]
+[connection signal="pressed" from="Hud/age" to="." method="EmitSound" binds= [false]]
