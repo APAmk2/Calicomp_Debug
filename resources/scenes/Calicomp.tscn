@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bjvjbfxpjol58"]
+[gd_scene load_steps=34 format=3 uid="uid://bjvjbfxpjol58"]
 
 [ext_resource type="Script" path="res://resources/scenes/Calicomp.gd" id="1_if2ta"]
 [ext_resource type="Texture2D" uid="uid://e8yis4xdgo12" path="res://resources/Export_Sprites/frame_sprite_0.png" id="1_m4vei"]
@@ -11,6 +11,20 @@
 [ext_resource type="Texture2D" uid="uid://c7lrna0y5dpg3" path="res://resources/Export_Sprites/flanergide_0.png" id="7_tkivt"]
 [ext_resource type="Texture2D" uid="uid://djhx0cr1w4kx" path="res://resources/Export_Sprites/bronson_0.png" id="8_66g3s"]
 [ext_resource type="Texture2D" uid="uid://bkrumjwuyb13r" path="res://resources/Export_Sprites/delta_0.png" id="9_r8oas"]
+[ext_resource type="Texture2D" uid="uid://fqehou5k5yc3" path="res://resources/Export_Sprites/marcodefault_0.png" id="10_vtl1n"]
+[ext_resource type="Texture2D" uid="uid://dxp4ojwi5umrb" path="res://resources/Export_Sprites/a_on_0.png" id="11_clww8"]
+[ext_resource type="FontFile" uid="uid://bwo5ictu5m6hn" path="res://resources/fonts/VA-11 Hall-A 6px.ttf" id="12_nm877"]
+[ext_resource type="Texture2D" uid="uid://d08h2n26u1cmc" path="res://resources/Export_Sprites/abig_on_0.png" id="12_uaufh"]
+[ext_resource type="Texture2D" uid="uid://bdeuc7b5axh6w" path="res://resources/Export_Sprites/b_on_0.png" id="13_vjury"]
+[ext_resource type="Texture2D" uid="uid://j8s50yob10d" path="res://resources/Export_Sprites/bbig_on_0.png" id="14_wv38v"]
+[ext_resource type="Texture2D" uid="uid://c7vmv7fh3gkih" path="res://resources/Export_Sprites/c_on_0.png" id="15_wx2gn"]
+[ext_resource type="Texture2D" uid="uid://c3o42gml4ncvk" path="res://resources/Export_Sprites/cbig_on_0.png" id="16_5du3u"]
+[ext_resource type="Texture2D" uid="uid://bnw0ldc1ja3ys" path="res://resources/Export_Sprites/d_on_0.png" id="17_xdi1r"]
+[ext_resource type="Texture2D" uid="uid://cpu5e0cbdqe37" path="res://resources/Export_Sprites/dbig_on_0.png" id="18_xkw2c"]
+[ext_resource type="Texture2D" uid="uid://bqsv0mp7y75ln" path="res://resources/Export_Sprites/e_on_0.png" id="19_dxorm"]
+[ext_resource type="Texture2D" uid="uid://cpm6olt6is4yw" path="res://resources/Export_Sprites/ebig_on_0.png" id="20_p6m7a"]
+[ext_resource type="Texture2D" uid="uid://bastcljexfb3q" path="res://resources/Export_Sprites/slot_n_0.png" id="21_2sbmr"]
+[ext_resource type="Texture2D" uid="uid://cibwi2j7gpm2j" path="res://resources/Export_Sprites/slot_b_0.png" id="22_nqht8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofnpj"]
 size = Vector2(31, 59)
@@ -50,7 +64,7 @@ texture = ExtResource("1_m4vei")
 
 [node name="shaker" type="Sprite2D" parent="2D"]
 texture_filter = 1
-position = Vector2(1024, 454)
+position = Vector2(1025, 437)
 scale = Vector2(2, 2)
 texture = ExtResource("5_1xkbk")
 
@@ -59,75 +73,935 @@ texture = ExtResource("5_1xkbk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2D/shaker/Area2D"]
 shape = SubResource("RectangleShape2D_ofnpj")
 
-[node name="karmotrine" type="Sprite2D" parent="2D"]
+[node name="igredients" type="Node2D" parent="2D"]
+
+[node name="adelhyde" type="Sprite2D" parent="2D/igredients"]
 texture_filter = 1
-position = Vector2(870, 300)
-scale = Vector2(2, 2)
-texture = ExtResource("3_m615e")
-script = ExtResource("5_dqr1f")
-igredient_name = "karmotrine"
-rest_pos = Vector2(870, 300)
-
-[node name="Area2D" type="Area2D" parent="2D/karmotrine"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/karmotrine/Area2D"]
-shape = SubResource("RectangleShape2D_a8rkp")
-
-[node name="adelhyde" type="Sprite2D" parent="2D"]
-texture_filter = 1
-position = Vector2(1031, 300)
+position = Vector2(830, 318)
 scale = Vector2(2, 2)
 texture = ExtResource("6_po6ln")
 script = ExtResource("5_dqr1f")
 igredient_name = "adelhyde"
-rest_pos = Vector2(1031, 300)
+rest_pos = Vector2(830, 318)
 
-[node name="Area2D" type="Area2D" parent="2D/adelhyde"]
+[node name="Area2D" type="Area2D" parent="2D/igredients/adelhyde"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/adelhyde/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/igredients/adelhyde/Area2D"]
 shape = SubResource("RectangleShape2D_a8rkp")
 
-[node name="flanerhyde" type="Sprite2D" parent="2D"]
+[node name="bronson" type="Sprite2D" parent="2D/igredients"]
 texture_filter = 1
-position = Vector2(1177, 300)
-scale = Vector2(2, 2)
-texture = ExtResource("7_tkivt")
-script = ExtResource("5_dqr1f")
-igredient_name = "flanerhyde"
-rest_pos = Vector2(1177, 300)
-
-[node name="Area2D" type="Area2D" parent="2D/flanerhyde"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/flanerhyde/Area2D"]
-shape = SubResource("RectangleShape2D_a8rkp")
-
-[node name="bronson" type="Sprite2D" parent="2D"]
-texture_filter = 1
-position = Vector2(870, 421)
+position = Vector2(980, 318)
 scale = Vector2(2, 2)
 texture = ExtResource("8_66g3s")
 script = ExtResource("5_dqr1f")
 igredient_name = "bronson"
-rest_pos = Vector2(870, 421)
+rest_pos = Vector2(980, 318)
 
-[node name="Area2D" type="Area2D" parent="2D/bronson"]
+[node name="Area2D" type="Area2D" parent="2D/igredients/bronson"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/bronson/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/igredients/bronson/Area2D"]
 shape = SubResource("RectangleShape2D_a8rkp")
 
-[node name="delta" type="Sprite2D" parent="2D"]
+[node name="delta" type="Sprite2D" parent="2D/igredients"]
 texture_filter = 1
-position = Vector2(1176, 426)
+position = Vector2(1130, 318)
 scale = Vector2(2, 2)
 texture = ExtResource("9_r8oas")
 script = ExtResource("5_dqr1f")
 igredient_name = "delta"
-rest_pos = Vector2(1176, 426)
+rest_pos = Vector2(1130, 318)
 
-[node name="Area2D" type="Area2D" parent="2D/delta"]
+[node name="Area2D" type="Area2D" parent="2D/igredients/delta"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/delta/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/igredients/delta/Area2D"]
 shape = SubResource("RectangleShape2D_a8rkp")
+
+[node name="flanergide" type="Sprite2D" parent="2D/igredients"]
+texture_filter = 1
+position = Vector2(830, 438)
+scale = Vector2(2, 2)
+texture = ExtResource("7_tkivt")
+script = ExtResource("5_dqr1f")
+igredient_name = "flanergide"
+rest_pos = Vector2(830, 438)
+
+[node name="Area2D" type="Area2D" parent="2D/igredients/flanergide"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/igredients/flanergide/Area2D"]
+shape = SubResource("RectangleShape2D_a8rkp")
+
+[node name="karmotrine" type="Sprite2D" parent="2D/igredients"]
+texture_filter = 1
+position = Vector2(1130, 438)
+scale = Vector2(2, 2)
+texture = ExtResource("3_m615e")
+script = ExtResource("5_dqr1f")
+igredient_name = "karmotrine"
+rest_pos = Vector2(1130, 438)
+
+[node name="Area2D" type="Area2D" parent="2D/igredients/karmotrine"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2D/igredients/karmotrine/Area2D"]
+shape = SubResource("RectangleShape2D_a8rkp")
+
+[node name="nameFrame" type="Sprite2D" parent="2D"]
+texture_filter = 1
+position = Vector2(1026, 519)
+scale = Vector2(2, 2)
+texture = ExtResource("10_vtl1n")
+
+[node name="adelhyde" type="Node2D" parent="2D"]
+
+[node name="slot1" type="Sprite2D" parent="2D/adelhyde"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(864, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("11_clww8")
+
+[node name="slot2" type="Sprite2D" parent="2D/adelhyde"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(882, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("11_clww8")
+
+[node name="slot3" type="Sprite2D" parent="2D/adelhyde"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(900, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("11_clww8")
+
+[node name="slot4" type="Sprite2D" parent="2D/adelhyde"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(918, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("11_clww8")
+
+[node name="slot5" type="Sprite2D" parent="2D/adelhyde"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(936, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("11_clww8")
+
+[node name="slot6" type="Sprite2D" parent="2D/adelhyde"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(864, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("11_clww8")
+
+[node name="slot7" type="Sprite2D" parent="2D/adelhyde"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(882, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("11_clww8")
+
+[node name="slot8" type="Sprite2D" parent="2D/adelhyde"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(900, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("11_clww8")
+
+[node name="slot9" type="Sprite2D" parent="2D/adelhyde"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(918, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("11_clww8")
+
+[node name="slot10" type="Sprite2D" parent="2D/adelhyde"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(936, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("11_clww8")
+
+[node name="slot11" type="Sprite2D" parent="2D/adelhyde"]
+visible = false
+texture_filter = 1
+position = Vector2(864, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("12_uaufh")
+
+[node name="slot12" type="Sprite2D" parent="2D/adelhyde"]
+visible = false
+texture_filter = 1
+position = Vector2(882, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("12_uaufh")
+
+[node name="slot13" type="Sprite2D" parent="2D/adelhyde"]
+visible = false
+texture_filter = 1
+position = Vector2(900, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("12_uaufh")
+
+[node name="slot14" type="Sprite2D" parent="2D/adelhyde"]
+visible = false
+texture_filter = 1
+position = Vector2(918, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("12_uaufh")
+
+[node name="slot15" type="Sprite2D" parent="2D/adelhyde"]
+visible = false
+texture_filter = 1
+position = Vector2(936, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("12_uaufh")
+
+[node name="slot16" type="Sprite2D" parent="2D/adelhyde"]
+visible = false
+texture_filter = 1
+position = Vector2(864, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("12_uaufh")
+
+[node name="slot17" type="Sprite2D" parent="2D/adelhyde"]
+visible = false
+texture_filter = 1
+position = Vector2(882, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("12_uaufh")
+
+[node name="slot18" type="Sprite2D" parent="2D/adelhyde"]
+visible = false
+texture_filter = 1
+position = Vector2(900, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("12_uaufh")
+
+[node name="slot19" type="Sprite2D" parent="2D/adelhyde"]
+visible = false
+texture_filter = 1
+position = Vector2(918, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("12_uaufh")
+
+[node name="slot20" type="Sprite2D" parent="2D/adelhyde"]
+visible = false
+texture_filter = 1
+position = Vector2(936, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("12_uaufh")
+
+[node name="bronson" type="Node2D" parent="2D"]
+
+[node name="slot1" type="Sprite2D" parent="2D/bronson"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1013, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("13_vjury")
+
+[node name="slot2" type="Sprite2D" parent="2D/bronson"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1031, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("13_vjury")
+
+[node name="slot3" type="Sprite2D" parent="2D/bronson"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1049, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("13_vjury")
+
+[node name="slot4" type="Sprite2D" parent="2D/bronson"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1067, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("13_vjury")
+
+[node name="slot5" type="Sprite2D" parent="2D/bronson"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1085, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("13_vjury")
+
+[node name="slot6" type="Sprite2D" parent="2D/bronson"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1013, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("13_vjury")
+
+[node name="slot7" type="Sprite2D" parent="2D/bronson"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1031, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("13_vjury")
+
+[node name="slot8" type="Sprite2D" parent="2D/bronson"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1049, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("13_vjury")
+
+[node name="slot9" type="Sprite2D" parent="2D/bronson"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1067, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("13_vjury")
+
+[node name="slot10" type="Sprite2D" parent="2D/bronson"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1085, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("13_vjury")
+
+[node name="slot11" type="Sprite2D" parent="2D/bronson"]
+visible = false
+texture_filter = 1
+position = Vector2(1013, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("14_wv38v")
+
+[node name="slot12" type="Sprite2D" parent="2D/bronson"]
+visible = false
+texture_filter = 1
+position = Vector2(1031, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("14_wv38v")
+
+[node name="slot13" type="Sprite2D" parent="2D/bronson"]
+visible = false
+texture_filter = 1
+position = Vector2(1049, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("14_wv38v")
+
+[node name="slot14" type="Sprite2D" parent="2D/bronson"]
+visible = false
+texture_filter = 1
+position = Vector2(1067, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("14_wv38v")
+
+[node name="slot15" type="Sprite2D" parent="2D/bronson"]
+visible = false
+texture_filter = 1
+position = Vector2(1085, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("14_wv38v")
+
+[node name="slot16" type="Sprite2D" parent="2D/bronson"]
+visible = false
+texture_filter = 1
+position = Vector2(1013, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("14_wv38v")
+
+[node name="slot17" type="Sprite2D" parent="2D/bronson"]
+visible = false
+texture_filter = 1
+position = Vector2(1031, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("14_wv38v")
+
+[node name="slot18" type="Sprite2D" parent="2D/bronson"]
+visible = false
+texture_filter = 1
+position = Vector2(1049, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("14_wv38v")
+
+[node name="slot19" type="Sprite2D" parent="2D/bronson"]
+visible = false
+texture_filter = 1
+position = Vector2(1067, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("14_wv38v")
+
+[node name="slot20" type="Sprite2D" parent="2D/bronson"]
+visible = false
+texture_filter = 1
+position = Vector2(1085, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("14_wv38v")
+
+[node name="delta" type="Node2D" parent="2D"]
+
+[node name="slot1" type="Sprite2D" parent="2D/delta"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1164, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wx2gn")
+
+[node name="slot2" type="Sprite2D" parent="2D/delta"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1182, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wx2gn")
+
+[node name="slot3" type="Sprite2D" parent="2D/delta"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1200, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wx2gn")
+
+[node name="slot4" type="Sprite2D" parent="2D/delta"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1218, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wx2gn")
+
+[node name="slot5" type="Sprite2D" parent="2D/delta"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1236, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wx2gn")
+
+[node name="slot6" type="Sprite2D" parent="2D/delta"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1164, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wx2gn")
+
+[node name="slot7" type="Sprite2D" parent="2D/delta"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1182, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wx2gn")
+
+[node name="slot8" type="Sprite2D" parent="2D/delta"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1200, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wx2gn")
+
+[node name="slot9" type="Sprite2D" parent="2D/delta"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1218, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wx2gn")
+
+[node name="slot10" type="Sprite2D" parent="2D/delta"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1236, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("15_wx2gn")
+
+[node name="slot11" type="Sprite2D" parent="2D/delta"]
+visible = false
+texture_filter = 1
+position = Vector2(1164, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("16_5du3u")
+
+[node name="slot12" type="Sprite2D" parent="2D/delta"]
+visible = false
+texture_filter = 1
+position = Vector2(1182, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("16_5du3u")
+
+[node name="slot13" type="Sprite2D" parent="2D/delta"]
+visible = false
+texture_filter = 1
+position = Vector2(1200, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("16_5du3u")
+
+[node name="slot14" type="Sprite2D" parent="2D/delta"]
+visible = false
+texture_filter = 1
+position = Vector2(1218, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("16_5du3u")
+
+[node name="slot15" type="Sprite2D" parent="2D/delta"]
+visible = false
+texture_filter = 1
+position = Vector2(1236, 297)
+scale = Vector2(2, 2)
+texture = ExtResource("16_5du3u")
+
+[node name="slot16" type="Sprite2D" parent="2D/delta"]
+visible = false
+texture_filter = 1
+position = Vector2(1164, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("16_5du3u")
+
+[node name="slot17" type="Sprite2D" parent="2D/delta"]
+visible = false
+texture_filter = 1
+position = Vector2(1182, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("16_5du3u")
+
+[node name="slot18" type="Sprite2D" parent="2D/delta"]
+visible = false
+texture_filter = 1
+position = Vector2(1200, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("16_5du3u")
+
+[node name="slot19" type="Sprite2D" parent="2D/delta"]
+visible = false
+texture_filter = 1
+position = Vector2(1218, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("16_5du3u")
+
+[node name="slot20" type="Sprite2D" parent="2D/delta"]
+visible = false
+texture_filter = 1
+position = Vector2(1236, 333)
+scale = Vector2(2, 2)
+texture = ExtResource("16_5du3u")
+
+[node name="flanergide" type="Node2D" parent="2D"]
+
+[node name="slot1" type="Sprite2D" parent="2D/flanergide"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(864, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("17_xdi1r")
+
+[node name="slot2" type="Sprite2D" parent="2D/flanergide"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(882, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("17_xdi1r")
+
+[node name="slot3" type="Sprite2D" parent="2D/flanergide"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(900, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("17_xdi1r")
+
+[node name="slot4" type="Sprite2D" parent="2D/flanergide"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(918, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("17_xdi1r")
+
+[node name="slot5" type="Sprite2D" parent="2D/flanergide"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(936, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("17_xdi1r")
+
+[node name="slot6" type="Sprite2D" parent="2D/flanergide"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(864, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("17_xdi1r")
+
+[node name="slot7" type="Sprite2D" parent="2D/flanergide"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(882, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("17_xdi1r")
+
+[node name="slot8" type="Sprite2D" parent="2D/flanergide"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(900, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("17_xdi1r")
+
+[node name="slot9" type="Sprite2D" parent="2D/flanergide"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(918, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("17_xdi1r")
+
+[node name="slot10" type="Sprite2D" parent="2D/flanergide"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(936, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("17_xdi1r")
+
+[node name="slot11" type="Sprite2D" parent="2D/flanergide"]
+visible = false
+texture_filter = 1
+position = Vector2(864, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("18_xkw2c")
+
+[node name="slot12" type="Sprite2D" parent="2D/flanergide"]
+visible = false
+texture_filter = 1
+position = Vector2(882, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("18_xkw2c")
+
+[node name="slot13" type="Sprite2D" parent="2D/flanergide"]
+visible = false
+texture_filter = 1
+position = Vector2(900, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("18_xkw2c")
+
+[node name="slot14" type="Sprite2D" parent="2D/flanergide"]
+visible = false
+texture_filter = 1
+position = Vector2(918, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("18_xkw2c")
+
+[node name="slot15" type="Sprite2D" parent="2D/flanergide"]
+visible = false
+texture_filter = 1
+position = Vector2(936, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("18_xkw2c")
+
+[node name="slot16" type="Sprite2D" parent="2D/flanergide"]
+visible = false
+texture_filter = 1
+position = Vector2(864, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("18_xkw2c")
+
+[node name="slot17" type="Sprite2D" parent="2D/flanergide"]
+visible = false
+texture_filter = 1
+position = Vector2(882, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("18_xkw2c")
+
+[node name="slot18" type="Sprite2D" parent="2D/flanergide"]
+visible = false
+texture_filter = 1
+position = Vector2(900, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("18_xkw2c")
+
+[node name="slot19" type="Sprite2D" parent="2D/flanergide"]
+visible = false
+texture_filter = 1
+position = Vector2(918, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("18_xkw2c")
+
+[node name="slot20" type="Sprite2D" parent="2D/flanergide"]
+visible = false
+texture_filter = 1
+position = Vector2(936, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("18_xkw2c")
+
+[node name="karmotrine" type="Node2D" parent="2D"]
+
+[node name="slot1" type="Sprite2D" parent="2D/karmotrine"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1164, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("19_dxorm")
+
+[node name="slot2" type="Sprite2D" parent="2D/karmotrine"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1182, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("19_dxorm")
+
+[node name="slot3" type="Sprite2D" parent="2D/karmotrine"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1200, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("19_dxorm")
+
+[node name="slot4" type="Sprite2D" parent="2D/karmotrine"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1218, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("19_dxorm")
+
+[node name="slot5" type="Sprite2D" parent="2D/karmotrine"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1236, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("19_dxorm")
+
+[node name="slot6" type="Sprite2D" parent="2D/karmotrine"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1164, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("19_dxorm")
+
+[node name="slot7" type="Sprite2D" parent="2D/karmotrine"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1182, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("19_dxorm")
+
+[node name="slot8" type="Sprite2D" parent="2D/karmotrine"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1200, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("19_dxorm")
+
+[node name="slot9" type="Sprite2D" parent="2D/karmotrine"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1218, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("19_dxorm")
+
+[node name="slot10" type="Sprite2D" parent="2D/karmotrine"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture_filter = 1
+position = Vector2(1236, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("19_dxorm")
+
+[node name="slot11" type="Sprite2D" parent="2D/karmotrine"]
+visible = false
+texture_filter = 1
+position = Vector2(1164, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("20_p6m7a")
+
+[node name="slot12" type="Sprite2D" parent="2D/karmotrine"]
+visible = false
+texture_filter = 1
+position = Vector2(1182, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("20_p6m7a")
+
+[node name="slot13" type="Sprite2D" parent="2D/karmotrine"]
+visible = false
+texture_filter = 1
+position = Vector2(1200, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("20_p6m7a")
+
+[node name="slot14" type="Sprite2D" parent="2D/karmotrine"]
+visible = false
+texture_filter = 1
+position = Vector2(1218, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("20_p6m7a")
+
+[node name="slot15" type="Sprite2D" parent="2D/karmotrine"]
+visible = false
+texture_filter = 1
+position = Vector2(1236, 417)
+scale = Vector2(2, 2)
+texture = ExtResource("20_p6m7a")
+
+[node name="slot16" type="Sprite2D" parent="2D/karmotrine"]
+visible = false
+texture_filter = 1
+position = Vector2(1164, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("20_p6m7a")
+
+[node name="slot17" type="Sprite2D" parent="2D/karmotrine"]
+visible = false
+texture_filter = 1
+position = Vector2(1182, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("20_p6m7a")
+
+[node name="slot18" type="Sprite2D" parent="2D/karmotrine"]
+visible = false
+texture_filter = 1
+position = Vector2(1200, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("20_p6m7a")
+
+[node name="slot19" type="Sprite2D" parent="2D/karmotrine"]
+visible = false
+texture_filter = 1
+position = Vector2(1218, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("20_p6m7a")
+
+[node name="slot20" type="Sprite2D" parent="2D/karmotrine"]
+visible = false
+texture_filter = 1
+position = Vector2(1236, 453)
+scale = Vector2(2, 2)
+texture = ExtResource("20_p6m7a")
+
+[node name="totalIngs" type="Node2D" parent="2D"]
+
+[node name="slot1" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(982, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("21_2sbmr")
+
+[node name="slot2" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1004, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("21_2sbmr")
+
+[node name="slot3" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1026, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("21_2sbmr")
+
+[node name="slot4" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1048, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("21_2sbmr")
+
+[node name="slot5" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1070, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("21_2sbmr")
+
+[node name="slot6" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(982, 525)
+scale = Vector2(2, 2)
+texture = ExtResource("21_2sbmr")
+
+[node name="slot7" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1004, 525)
+scale = Vector2(2, 2)
+texture = ExtResource("21_2sbmr")
+
+[node name="slot8" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1026, 525)
+scale = Vector2(2, 2)
+texture = ExtResource("21_2sbmr")
+
+[node name="slot9" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1048, 525)
+scale = Vector2(2, 2)
+texture = ExtResource("21_2sbmr")
+
+[node name="slot10" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1070, 525)
+scale = Vector2(2, 2)
+texture = ExtResource("21_2sbmr")
+
+[node name="slot11" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(982, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("22_nqht8")
+
+[node name="slot12" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1004, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("22_nqht8")
+
+[node name="slot13" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1026, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("22_nqht8")
+
+[node name="slot14" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1048, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("22_nqht8")
+
+[node name="slot15" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1070, 513)
+scale = Vector2(2, 2)
+texture = ExtResource("22_nqht8")
+
+[node name="slot16" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(982, 525)
+scale = Vector2(2, 2)
+texture = ExtResource("22_nqht8")
+
+[node name="slot17" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1004, 525)
+scale = Vector2(2, 2)
+texture = ExtResource("22_nqht8")
+
+[node name="slot18" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1026, 525)
+scale = Vector2(2, 2)
+texture = ExtResource("22_nqht8")
+
+[node name="slot19" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1048, 525)
+scale = Vector2(2, 2)
+texture = ExtResource("22_nqht8")
+
+[node name="slot20" type="Sprite2D" parent="2D/totalIngs"]
+visible = false
+texture_filter = 1
+position = Vector2(1070, 525)
+scale = Vector2(2, 2)
+texture = ExtResource("22_nqht8")
 
 [node name="Hud" type="Control" parent="."]
 layout_mode = 3
@@ -165,14 +1039,85 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_07vg2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_o1o56")
 toggle_mode = true
 
+[node name="adelhydeLabel" type="Label" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 808.0
+offset_top = 248.0
+offset_right = 904.0
+offset_bottom = 277.0
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 20
+text = "Adelhyde"
+
+[node name="bronsonLabel" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 960.0
+offset_top = 248.0
+offset_right = 1092.0
+offset_bottom = 277.0
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 20
+text = "Bronson Ext"
+
+[node name="deltaLabel" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 1110.0
+offset_top = 248.0
+offset_right = 1218.0
+offset_bottom = 277.0
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 20
+text = "Pwd Delta"
+
+[node name="flanergideLabel" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 810.0
+offset_top = 368.0
+offset_right = 930.0
+offset_bottom = 397.0
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 20
+text = "Flanergide"
+
+[node name="karmotrineLabel" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 1110.0
+offset_top = 368.0
+offset_right = 1230.0
+offset_bottom = 397.0
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 20
+text = "Karmotrine"
+
+[node name="iceLabel" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 738.0
+offset_top = 250.0
+offset_right = 858.0
+offset_bottom = 279.0
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 20
+text = "Ice"
+
+[node name="ageLabel" type="Label" parent="Hud"]
+texture_filter = 1
+offset_left = 740.0
+offset_top = 370.0
+offset_right = 860.0
+offset_bottom = 399.0
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 20
+text = "Age"
+
 [node name="sfx" type="AudioStreamPlayer" parent="."]
 
 [connection signal="area_entered" from="2D/shaker/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="2D/shaker/Area2D" to="." method="_on_area_2d_area_exited"]
-[connection signal="input_event" from="2D/karmotrine/Area2D" to="2D/karmotrine" method="Grabbed"]
-[connection signal="input_event" from="2D/adelhyde/Area2D" to="2D/adelhyde" method="Grabbed"]
-[connection signal="input_event" from="2D/flanerhyde/Area2D" to="2D/flanerhyde" method="Grabbed"]
-[connection signal="input_event" from="2D/bronson/Area2D" to="2D/bronson" method="Grabbed"]
-[connection signal="input_event" from="2D/delta/Area2D" to="2D/delta" method="Grabbed"]
+[connection signal="input_event" from="2D/igredients/adelhyde/Area2D" to="2D/igredients/adelhyde" method="Grabbed"]
+[connection signal="input_event" from="2D/igredients/bronson/Area2D" to="2D/igredients/bronson" method="Grabbed"]
+[connection signal="input_event" from="2D/igredients/delta/Area2D" to="2D/igredients/delta" method="Grabbed"]
+[connection signal="input_event" from="2D/igredients/flanergide/Area2D" to="2D/igredients/flanergide" method="Grabbed"]
+[connection signal="input_event" from="2D/igredients/karmotrine/Area2D" to="2D/igredients/karmotrine" method="Grabbed"]
 [connection signal="pressed" from="Hud/ice" to="." method="EmitSound" binds= [true]]
 [connection signal="pressed" from="Hud/age" to="." method="EmitSound" binds= [false]]
