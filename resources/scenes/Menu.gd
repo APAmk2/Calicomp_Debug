@@ -70,8 +70,11 @@ func PressanyBtnPressed():
 	$"Hud/demonameTxt".show()
 	engineVer.show()
 
-func NgBtnUp():
+func NgPressanyBtnPressed():
 	get_tree().change_scene_to_file("res://resources/scenes/Base.tscn")
+
+func NgBtnPressed():
+	$"2D/sitandplay".visible = !$"2D/sitandplay".visible 
 
 func SettingsBtnPressed():
 	if(settingsWin.visible):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bk6fuogykdbnt"]
+[gd_scene load_steps=33 format=3 uid="uid://bk6fuogykdbnt"]
 
 [ext_resource type="Script" path="res://resources/scenes/Menu.gd" id="1_5u51q"]
 [ext_resource type="Texture2D" uid="uid://72xtjijcs0rk" path="res://resources/Export_Sprites/jilltitle_spr_0.png" id="2_wf7k6"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://yr62qnka61rj" path="res://resources/Export_Sprites/jilltitle_ngplus_spr_3.png" id="9_el7fp"]
 [ext_resource type="Texture2D" uid="uid://bcurrij1u6c0q" path="res://resources/Export_Sprites/intrologo2_0.png" id="10_5ijj7"]
 [ext_resource type="FontFile" uid="uid://bwo5ictu5m6hn" path="res://resources/fonts/VA-11 Hall-A 6px.ttf" id="11_24a6p"]
+[ext_resource type="Texture2D" uid="uid://b44ek8eqfp7od" path="res://resources/Export_Sprites/roompopup_spr_0.png" id="11_od6k1"]
 [ext_resource type="FontFile" uid="uid://dn502a8gblt4i" path="res://resources/fonts/VA-11 Hall-A 10px.ttf" id="12_lil77"]
 [ext_resource type="AudioStream" uid="uid://cg8xq5vuhq486" path="res://resources/Exported_Sounds/audiogroup_default/hopes_and_dreams_city_ed.ogg" id="13_0ktdx"]
 [ext_resource type="Texture2D" uid="uid://c1cwdehgtmuj3" path="res://resources/Export_Sprites/scanrines_0.png" id="13_2sjme"]
@@ -56,6 +57,10 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_410l6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tmhcv"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q61cm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25icw"]
@@ -94,6 +99,71 @@ texture_filter = 1
 position = Vector2(641, 404)
 scale = Vector2(2, 2)
 texture = ExtResource("10_5ijj7")
+
+[node name="sitandplay" type="Node2D" parent="2D"]
+visible = false
+
+[node name="bg" type="Sprite2D" parent="2D/sitandplay"]
+texture_filter = 1
+position = Vector2(640, 360)
+scale = Vector2(2, 2)
+texture = ExtResource("11_od6k1")
+
+[node name="ng_pressanyBtn" type="Button" parent="2D/sitandplay"]
+offset_left = 296.0
+offset_top = 156.0
+offset_right = 984.0
+offset_bottom = 564.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_410l6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tmhcv")
+flat = true
+
+[node name="thanks" type="Label" parent="2D/sitandplay"]
+texture_filter = 1
+offset_left = 358.0
+offset_top = 214.0
+offset_right = 914.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("12_lil77")
+theme_override_font_sizes/font_size = 28
+text = "Thank you for playing VA-11 Hall-A!"
+
+[node name="grabSnacks" type="RichTextLabel" parent="2D/sitandplay"]
+texture_filter = 1
+offset_left = 349.0
+offset_top = 304.0
+offset_right = 927.0
+offset_bottom = 417.0
+theme_override_fonts/normal_font = ExtResource("12_lil77")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[center]This game is best played getting comfortable. Grab some drinks, some snacks, and enjoy!"
+autowrap_mode = 2
+
+[node name="sitNRelax" type="RichTextLabel" parent="2D/sitandplay"]
+texture_filter = 1
+offset_left = 311.0
+offset_top = 434.0
+offset_right = 970.0
+offset_bottom = 511.0
+theme_override_colors/default_color = Color(0.235294, 0.517647, 0.811765, 1)
+theme_override_fonts/normal_font = ExtResource("12_lil77")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[center]So sit back and relax. We hope you have a good time!"
+autowrap_mode = 2
+
+[node name="clicktocontinue" type="Label" parent="2D/sitandplay"]
+texture_filter = 1
+offset_left = 498.0
+offset_top = 532.0
+offset_right = 786.0
+offset_bottom = 565.0
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_fonts/font = ExtResource("12_lil77")
+theme_override_font_sizes/font_size = 28
+text = "Click to continue."
 
 [node name="Hud" type="Control" parent="."]
 layout_mode = 3
@@ -254,8 +324,9 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("13_2sjme")
 
+[connection signal="pressed" from="2D/sitandplay/ng_pressanyBtn" to="." method="NgPressanyBtnPressed"]
 [connection signal="pressed" from="Hud/pressanyBtn" to="." method="PressanyBtnPressed"]
-[connection signal="button_up" from="Hud/ngBtn" to="." method="NgBtnUp"]
+[connection signal="pressed" from="Hud/ngBtn" to="." method="NgBtnPressed"]
 [connection signal="pressed" from="Hud/loadBtn" to="SaveLoad" method="MenuLoadBtnPressed"]
 [connection signal="pressed" from="Hud/settingsBtn" to="." method="SettingsBtnPressed"]
 [connection signal="pressed" from="Hud/settingsBtn" to="Settings" method="SettingsBtnPressed"]

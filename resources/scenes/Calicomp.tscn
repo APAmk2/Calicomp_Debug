@@ -1052,6 +1052,7 @@ text = "Adelhyde"
 
 [node name="bronsonLabel" type="Label" parent="Hud"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 960.0
 offset_top = 248.0
 offset_right = 1092.0
@@ -1062,6 +1063,7 @@ text = "Bronson Ext"
 
 [node name="deltaLabel" type="Label" parent="Hud"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 1110.0
 offset_top = 248.0
 offset_right = 1218.0
@@ -1072,6 +1074,7 @@ text = "Pwd Delta"
 
 [node name="flanergideLabel" type="Label" parent="Hud"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 810.0
 offset_top = 368.0
 offset_right = 930.0
@@ -1082,6 +1085,7 @@ text = "Flanergide"
 
 [node name="karmotrineLabel" type="Label" parent="Hud"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 1110.0
 offset_top = 368.0
 offset_right = 1230.0
@@ -1092,6 +1096,7 @@ text = "Karmotrine"
 
 [node name="iceLabel" type="Label" parent="Hud"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 738.0
 offset_top = 250.0
 offset_right = 858.0
@@ -1102,6 +1107,7 @@ text = "Ice"
 
 [node name="ageLabel" type="Label" parent="Hud"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 740.0
 offset_top = 370.0
 offset_right = 860.0
