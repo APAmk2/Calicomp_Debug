@@ -21,53 +21,38 @@ func _physics_process(delta):
 			$"../../../sfx".play()
 			match igredient_name:
 				"karmotrine":
-					$"../../..".karmotrine += 1
-					for i in range(1, $"../../..".karmotrine + 1):
-						if(i <= 10):
-							get_node("../../karmotrine/slot" + str(i)).modulate = "ffffff"
-						else:
-							get_node("../../karmotrine/slot" + str(i)).visible = true
-					print($"../../..".karmotrine)
+					if($"../../../Hud/slot1Btn".button_pressed):
+						$"../../..".drink_a[4] += 1
+					else:
+						$"../../..".drink_b[4] += 1
+					$"../../..".CalcVis()
 				"adelhyde":
-					$"../../..".adelhyde += 1
-					for i in range(1, $"../../..".adelhyde + 1):
-						if(i <= 10):
-							get_node("../../adelhyde/slot" + str(i)).modulate = "ffffff"
-						else:
-							get_node("../../adelhyde/slot" + str(i)).visible = true
-					print($"../../..".adelhyde)
+					if($"../../../Hud/slot1Btn".button_pressed):
+						$"../../..".drink_a[0] += 1
+					else:
+						$"../../..".drink_b[0] += 1
+					$"../../..".CalcVis()
 				"flanergide":
-					$"../../..".flanergide += 1
-					for i in range(1, $"../../..".flanergide + 1):
-						if(i <= 10):
-							get_node("../../flanergide/slot" + str(i)).modulate = "ffffff"
-						else:
-							get_node("../../flanergide/slot" + str(i)).visible = true
-					print($"../../..".flanergide)
+					if($"../../../Hud/slot1Btn".button_pressed):
+						$"../../..".drink_a[3] += 1
+					else:
+						$"../../..".drink_b[3] += 1
+					$"../../..".CalcVis()
 				"bronson":
-					$"../../..".bronson += 1
-					for i in range(1, $"../../..".bronson + 1):
-						if(i <= 10):
-							get_node("../../bronson/slot" + str(i)).modulate = "ffffff"
-						else:
-							get_node("../../bronson/slot" + str(i)).visible = true
-					print($"../../..".bronson)
+					if($"../../../Hud/slot1Btn".button_pressed):
+						$"../../..".drink_a[1] += 1
+					else:
+						$"../../..".drink_b[1] += 1
+					$"../../..".CalcVis()
 				"delta":
-					$"../../..".delta += 1
-					for i in range(1, $"../../..".delta + 1):
-						if(i <= 10):
-							get_node("../../delta/slot" + str(i)).modulate = "ffffff"
-						else:
-							get_node("../../delta/slot" + str(i)).visible = true
-						print($"../../..".delta)
-			for i in range(1, $"../../..".GetTotalIgredientsNum() + 1):
-				if(i > 0):
-					get_node("../../totalIngs/slot" + str(i)).visible = true
+					if($"../../../Hud/slot1Btn".button_pressed):
+						$"../../..".drink_a[2] += 1
+					else:
+						$"../../..".drink_b[2] += 1
+					$"../../..".CalcVis()
 					
 		global_position = rest_pos
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			dragging = false
-
-

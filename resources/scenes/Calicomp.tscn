@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bjvjbfxpjol58"]
+[gd_scene load_steps=47 format=3 uid="uid://bjvjbfxpjol58"]
 
 [ext_resource type="Script" path="res://resources/scenes/Calicomp.gd" id="1_if2ta"]
 [ext_resource type="Texture2D" uid="uid://e8yis4xdgo12" path="res://resources/Export_Sprites/frame_sprite_0.png" id="1_m4vei"]
@@ -25,6 +25,12 @@
 [ext_resource type="Texture2D" uid="uid://cpm6olt6is4yw" path="res://resources/Export_Sprites/ebig_on_0.png" id="20_p6m7a"]
 [ext_resource type="Texture2D" uid="uid://bastcljexfb3q" path="res://resources/Export_Sprites/slot_n_0.png" id="21_2sbmr"]
 [ext_resource type="Texture2D" uid="uid://cibwi2j7gpm2j" path="res://resources/Export_Sprites/slot_b_0.png" id="22_nqht8"]
+[ext_resource type="Texture2D" uid="uid://dn3efxbf226f0" path="res://resources/Export_Sprites/resetsprite_0.png" id="26_706fg"]
+[ext_resource type="Texture2D" uid="uid://copkx1ncaqvyx" path="res://resources/Export_Sprites/resetsprite_hover_0.png" id="27_v5j4d"]
+[ext_resource type="Texture2D" uid="uid://bxx24pb3phfrf" path="res://resources/Export_Sprites/slotsprite_0.png" id="28_cnc2e"]
+[ext_resource type="Texture2D" uid="uid://1riliymhvn3v" path="res://resources/Export_Sprites/slotsprite_hover_0.png" id="29_jtsqp"]
+[ext_resource type="Texture2D" uid="uid://wkhv8r2n5lto" path="res://resources/Export_Sprites/slotout_0.png" id="30_g1h5a"]
+[ext_resource type="ButtonGroup" uid="uid://by767v5kk8rfi" path="res://resources/scenes/CalicompSlotBtnGroup.tres" id="31_ctpnc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofnpj"]
 size = Vector2(31, 59)
@@ -50,13 +56,32 @@ texture = ExtResource("3_oboru")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o1o56"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ut48"]
+texture = ExtResource("26_706fg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1sedp"]
+texture = ExtResource("27_v5j4d")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mid4q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_os7tv"]
+texture = ExtResource("28_cnc2e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hc7c3"]
+texture = ExtResource("29_jtsqp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epbr2"]
+texture = ExtResource("30_g1h5a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yrww6"]
+texture = ExtResource("30_g1h5a")
+
 [node name="Calicomp" type="Node"]
 script = ExtResource("1_if2ta")
 
 [node name="2D" type="Node2D" parent="."]
 
 [node name="HUD_back" type="Sprite2D" parent="2D"]
-visible = false
 texture_filter = 1
 position = Vector2(640, 360)
 scale = Vector2(2, 2)
@@ -1116,6 +1141,100 @@ theme_override_fonts/font = ExtResource("12_nm877")
 theme_override_font_sizes/font_size = 20
 text = "Age"
 
+[node name="resetBtn" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 806.0
+offset_top = 488.0
+offset_right = 874.0
+offset_bottom = 511.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_8ut48")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8ut48")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1sedp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mid4q")
+text = "Reset"
+
+[node name="slot1Btn" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 961.0
+offset_top = 190.0
+offset_right = 1029.0
+offset_bottom = 213.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_os7tv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_os7tv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hc7c3")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_epbr2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mid4q")
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("31_ctpnc")
+text = "Slot 1"
+
+[node name="slot2Btn" type="Button" parent="Hud"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1109.0
+offset_top = 190.0
+offset_right = 1177.0
+offset_bottom = 213.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_os7tv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_os7tv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hc7c3")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_yrww6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mid4q")
+toggle_mode = true
+button_group = ExtResource("31_ctpnc")
+text = "Slot 2"
+
+[node name="mixBtn" type="Button" parent="Hud"]
+texture_filter = 1
+offset_left = 1108.0
+offset_top = 488.0
+offset_right = 1176.0
+offset_bottom = 511.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_8ut48")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8ut48")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1sedp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mid4q")
+text = "Mix"
+
 [node name="sfx" type="AudioStreamPlayer" parent="."]
 
 [connection signal="area_entered" from="2D/shaker/Area2D" to="." method="_on_area_2d_area_entered"]
@@ -1127,3 +1246,9 @@ text = "Age"
 [connection signal="input_event" from="2D/igredients/karmotrine/Area2D" to="2D/igredients/karmotrine" method="Grabbed"]
 [connection signal="pressed" from="Hud/ice" to="." method="EmitSound" binds= [true]]
 [connection signal="pressed" from="Hud/age" to="." method="EmitSound" binds= [false]]
+[connection signal="button_down" from="Hud/resetBtn" to="." method="ResetBtnDN"]
+[connection signal="button_up" from="Hud/resetBtn" to="." method="ResetBtnUp"]
+[connection signal="toggled" from="Hud/slot1Btn" to="." method="SlotBtnPressed"]
+[connection signal="toggled" from="Hud/slot2Btn" to="." method="SlotBtnPressed"]
+[connection signal="button_down" from="Hud/mixBtn" to="." method="ResetBtnDN"]
+[connection signal="button_up" from="Hud/mixBtn" to="." method="ResetBtnUp"]
