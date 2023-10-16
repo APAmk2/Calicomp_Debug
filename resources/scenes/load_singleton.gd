@@ -6,6 +6,7 @@ var SavePlace: Array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", 
 
 var readData: Array
 var musicData: Array
+var RecipeData: Array
 var musicPlaylist: Array = ["", "", "", "", "", "", "", "", "", "", "", ""]
 var Money: float = 1
 var MoneyInBar: float
@@ -22,6 +23,10 @@ func _ready():
 	var file = FileAccess.open("res://resources/musiclist.csv", FileAccess.READ)
 	while (!file.eof_reached()):
 		musicData.append(file.get_csv_line())
+	file.close()
+	file = FileAccess.open("res://resources/drinktionary.csv", FileAccess.READ)
+	while (!file.eof_reached()):
+		RecipeData.append(file.get_csv_line())
 	file.close()
 
 func Load(butNum, LoadAll):

@@ -7,7 +7,7 @@ var dragging = false
 var inShaker = false
 
 func Grabbed(viewport, event, shape_idx):
-	if (Input.is_action_just_pressed("LMB") && $"../../..".GetTotalIgredientsNum() < 20):
+	if (Input.is_action_just_pressed("LMB") && $"../../..".GetTotalIgredientsNum() < 20 && !$"../../..".GetDrinkInCurrSlot()):
 		dragging = true
 
 func _physics_process(delta):
@@ -25,31 +25,31 @@ func _physics_process(delta):
 						$"../../..".drink_a[4] += 1
 					else:
 						$"../../..".drink_b[4] += 1
-					$"../../..".CalcVis()
+					$"../../..".CalcVis(false)
 				"adelhyde":
 					if($"../../../Hud/slot1Btn".button_pressed):
 						$"../../..".drink_a[0] += 1
 					else:
 						$"../../..".drink_b[0] += 1
-					$"../../..".CalcVis()
+					$"../../..".CalcVis(false)
 				"flanergide":
 					if($"../../../Hud/slot1Btn".button_pressed):
 						$"../../..".drink_a[3] += 1
 					else:
 						$"../../..".drink_b[3] += 1
-					$"../../..".CalcVis()
+					$"../../..".CalcVis(false)
 				"bronson":
 					if($"../../../Hud/slot1Btn".button_pressed):
 						$"../../..".drink_a[1] += 1
 					else:
 						$"../../..".drink_b[1] += 1
-					$"../../..".CalcVis()
+					$"../../..".CalcVis(false)
 				"delta":
 					if($"../../../Hud/slot1Btn".button_pressed):
 						$"../../..".drink_a[2] += 1
 					else:
 						$"../../..".drink_b[2] += 1
-					$"../../..".CalcVis()
+					$"../../..".CalcVis(false)
 					
 		global_position = rest_pos
 func _input(event):

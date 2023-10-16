@@ -1,0 +1,5 @@
+keys,picname,recipe
+badtouch,badtouch_spr_0.png,0 2 2 2 4 0 0 1
+beer,beer_spr_0.png,1 2 1 2 4 0 0 0
+bleedjane,bleeding_jane_spr_0.png,0 1 3 3 0 1 0 0
+bloomlight,bloom_light_spr_0.png,4 0 1 2 3 0 1 1

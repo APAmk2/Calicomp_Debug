@@ -82,6 +82,7 @@ script = ExtResource("1_if2ta")
 [node name="2D" type="Node2D" parent="."]
 
 [node name="HUD_back" type="Sprite2D" parent="2D"]
+visible = false
 texture_filter = 1
 position = Vector2(640, 360)
 scale = Vector2(2, 2)
@@ -1216,6 +1217,7 @@ text = "Slot 2"
 
 [node name="mixBtn" type="Button" parent="Hud"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 1108.0
 offset_top = 488.0
 offset_right = 1176.0
@@ -1235,6 +1237,18 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_1sedp")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mid4q")
 text = "Mix"
 
+[node name="drinkName" type="Label" parent="Hud"]
+texture_filter = 1
+clip_contents = true
+layout_mode = 0
+offset_left = 968.0
+offset_top = 504.0
+offset_right = 1090.0
+offset_bottom = 534.0
+theme_override_fonts/font = ExtResource("12_nm877")
+theme_override_font_sizes/font_size = 20
+clip_text = true
+
 [node name="sfx" type="AudioStreamPlayer" parent="."]
 
 [connection signal="area_entered" from="2D/shaker/Area2D" to="." method="_on_area_2d_area_entered"]
@@ -1250,5 +1264,4 @@ text = "Mix"
 [connection signal="button_up" from="Hud/resetBtn" to="." method="ResetBtnUp"]
 [connection signal="toggled" from="Hud/slot1Btn" to="." method="SlotBtnPressed"]
 [connection signal="toggled" from="Hud/slot2Btn" to="." method="SlotBtnPressed"]
-[connection signal="button_down" from="Hud/mixBtn" to="." method="ResetBtnDN"]
-[connection signal="button_up" from="Hud/mixBtn" to="." method="ResetBtnUp"]
+[connection signal="pressed" from="Hud/mixBtn" to="." method="MixBtnPressed"]
