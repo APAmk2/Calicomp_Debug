@@ -25,14 +25,20 @@ func btn(extra_arg_0):
 			$"Hud/funds".text = tr("FUNDS") + str(LoadSingleton.Money)
 			$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/glassserve.ogg")
 			$"sfx".play()
+			UpdateShop()
 
 func _ready():
 	page_display.text = str(curPage) + "/" + str(maxPages)
 	$"Hud/funds".text = tr("FUNDS") + str(LoadSingleton.Money)
+	UpdateShop()
 
-func _process(_delta):
+func UpdateShop():
 	for i in range (1, 11):
 		get_node("Hud/items_btns/item" + str(i)).text = "SHOPNAME" + str(i + 10 * (curPage - 1))
+		if( int(LoadSingleton.ShopItems[i + 10 * (curPage - 1)]) == 1):
+			get_node("Hud/soldLabels/sold" + str(i)).visible = true
+		else:
+			get_node("Hud/soldLabels/sold" + str(i)).visible = false
 	if(curPage == 1):
 		$"Hud/page_backward".disabled = true
 	else:
@@ -45,11 +51,13 @@ func _process(_delta):
 func _on_page_forward_pressed():
 	if((curPage + 1) <= maxPages):
 		curPage += 1
+		UpdateShop()
 	page_display.text = str(curPage) + "/" + str(maxPages)
 
 func _on_page_backward_pressed():
 	if((curPage - 1) > 0):
 		curPage -= 1
+		UpdateShop()
 	page_display.text = str(curPage) + "/" + str(maxPages)
 
 func _on_return_pressed():

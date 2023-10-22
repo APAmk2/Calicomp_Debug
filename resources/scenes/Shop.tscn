@@ -438,6 +438,132 @@ text = "item10"
 alignment = 0
 clip_text = true
 
+[node name="soldLabels" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="sold1" type="Label" parent="Hud/soldLabels"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 1098.0
+offset_top = 86.0
+offset_right = 1174.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "SOLD!"
+
+[node name="sold2" type="Label" parent="Hud/soldLabels"]
+visible = false
+texture_filter = 1
+offset_left = 1098.0
+offset_top = 136.0
+offset_right = 1174.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "SOLD!"
+
+[node name="sold3" type="Label" parent="Hud/soldLabels"]
+visible = false
+texture_filter = 1
+offset_left = 1098.0
+offset_top = 186.0
+offset_right = 1174.0
+offset_bottom = 219.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "SOLD!"
+
+[node name="sold4" type="Label" parent="Hud/soldLabels"]
+visible = false
+texture_filter = 1
+offset_left = 1098.0
+offset_top = 236.0
+offset_right = 1174.0
+offset_bottom = 269.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "SOLD!"
+
+[node name="sold5" type="Label" parent="Hud/soldLabels"]
+visible = false
+texture_filter = 1
+offset_left = 1098.0
+offset_top = 286.0
+offset_right = 1174.0
+offset_bottom = 319.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "SOLD!"
+
+[node name="sold6" type="Label" parent="Hud/soldLabels"]
+visible = false
+texture_filter = 1
+offset_left = 1098.0
+offset_top = 336.0
+offset_right = 1174.0
+offset_bottom = 369.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "SOLD!"
+
+[node name="sold7" type="Label" parent="Hud/soldLabels"]
+visible = false
+texture_filter = 1
+offset_left = 1098.0
+offset_top = 386.0
+offset_right = 1174.0
+offset_bottom = 419.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "SOLD!"
+
+[node name="sold8" type="Label" parent="Hud/soldLabels"]
+visible = false
+texture_filter = 1
+offset_left = 1098.0
+offset_top = 436.0
+offset_right = 1174.0
+offset_bottom = 469.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "SOLD!"
+
+[node name="sold9" type="Label" parent="Hud/soldLabels"]
+visible = false
+texture_filter = 1
+offset_left = 1098.0
+offset_top = 486.0
+offset_right = 1174.0
+offset_bottom = 519.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "SOLD!"
+
+[node name="sold10" type="Label" parent="Hud/soldLabels"]
+visible = false
+texture_filter = 1
+offset_left = 1098.0
+offset_top = 536.0
+offset_right = 1174.0
+offset_bottom = 569.0
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0.513726, 1)
+theme_override_fonts/font = ExtResource("6_dqlm8")
+theme_override_font_sizes/font_size = 28
+text = "SOLD!"
+
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_cstyu")
 autoplay = true

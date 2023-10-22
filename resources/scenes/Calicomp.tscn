@@ -102,6 +102,7 @@ shape = SubResource("RectangleShape2D_ofnpj")
 [node name="igredients" type="Node2D" parent="2D"]
 
 [node name="adelhyde" type="Sprite2D" parent="2D/igredients"]
+top_level = true
 texture_filter = 1
 position = Vector2(830, 318)
 scale = Vector2(2, 2)
@@ -116,6 +117,7 @@ rest_pos = Vector2(830, 318)
 shape = SubResource("RectangleShape2D_a8rkp")
 
 [node name="bronson" type="Sprite2D" parent="2D/igredients"]
+top_level = true
 texture_filter = 1
 position = Vector2(980, 318)
 scale = Vector2(2, 2)
@@ -130,6 +132,7 @@ rest_pos = Vector2(980, 318)
 shape = SubResource("RectangleShape2D_a8rkp")
 
 [node name="delta" type="Sprite2D" parent="2D/igredients"]
+top_level = true
 texture_filter = 1
 position = Vector2(1130, 318)
 scale = Vector2(2, 2)
@@ -144,6 +147,7 @@ rest_pos = Vector2(1130, 318)
 shape = SubResource("RectangleShape2D_a8rkp")
 
 [node name="flanergide" type="Sprite2D" parent="2D/igredients"]
+top_level = true
 texture_filter = 1
 position = Vector2(830, 438)
 scale = Vector2(2, 2)
@@ -158,6 +162,7 @@ rest_pos = Vector2(830, 438)
 shape = SubResource("RectangleShape2D_a8rkp")
 
 [node name="karmotrine" type="Sprite2D" parent="2D/igredients"]
+top_level = true
 texture_filter = 1
 position = Vector2(1130, 438)
 scale = Vector2(2, 2)

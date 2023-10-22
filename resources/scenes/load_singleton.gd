@@ -11,7 +11,7 @@ var musicPlaylist: Array = ["", "", "", "", "", "", "", "", "", "", "", ""]
 var Money: float = 1
 var MoneyInBar: float
 var WPapers: int
-var HaveWalls: Array
+var HaveWalls: Array = [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 var Day: int = 1
 var DayStr: String
 var Place: String

@@ -22,15 +22,16 @@ var app: String = "none"
 var aeReaded: bool = 0
 var dangeReaded: bool = 0
 var mikiReaded: bool = 0
-var wPaperIndex: int = 0
 var TabletUnlockTime: int = 1.5
+var nanoChoice: int
 var dangeThreadsIndex: Array = ["", "3", "2", "1", "6", "5", "4", "7", "6", "5", "10", "9", "8", "3", "2", "1", "13", "12", "11", "14", "13", "12", "15", "14", "13", "16", "15", "14", "17", "16", "15", "18", "17", "16", "18", "17", "16", "19", "18", "17", "20", "19", "18", "21", "20", "19", "22", "21", "20", "22", "21", "20", "23", "22", "21"]
-var wPaperNames: Array = ["", "", "", "gray", "blue", "cream", "red", "pink", "black", "gray", "white", "green", "orange", "reddish", "red_lines", "leopard", "anime", "miki", "game", "doge"]
+var WallPrices: Array = [200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 500, 500, 900, 1500, 1500, 10000]
+var wPaperNames: Array = ["gray", "blue", "cream", "red", "pink", "black", "gray", "white", "green", "orange", "reddish", "red_lines", "leopard", "anime", "miki", "game", "doge"]
 var tableNames: Array = ["leopard", "bullet", "red_lines", "default"]
 
 func _ready():
 	hide_elems()
-	$"/root/Base/2D/room/room_walls".play(wPaperNames[LoadSingleton.WPapers - 1 + 4])
+	$"/root/Base/2D/room/room_walls".play(wPaperNames[LoadSingleton.WPapers])
 	if(!LoadSingleton.DayStr.is_empty()):
 		$"Hud/home/day".text = LoadSingleton.DayStr
 	if(LoadSingleton.Day >= 2):
@@ -87,6 +88,7 @@ func show_elems():
 	if(!$"/root/Base/BGM".playing):
 		$"MusicPlayer/BGM".playing = false
 		$"/root/Base/BGM".playing = true
+	$Hud/nanocamo/nanoApplyBtns.visible = false
 
 func _on_ae_but_pressed():
 	app = "ae"
@@ -182,6 +184,7 @@ func _on_back_but_pressed():
 					nano_1page.hide()
 					homepage.show()
 					nano_home_btns.show()
+					$Hud/nanocamo/nanoApplyBtns.visible = false
 	layer -= 1
 
 func app_btns(extra_arg_0):
@@ -203,18 +206,34 @@ func app_btns(extra_arg_0):
 	page.show()
 	tablet_scroller.show()
 
+func nanoUpdPage():
+	for i in range (1, 5):
+		if( int(LoadSingleton.HaveWalls[i + 4 * (pages - 1)]) == 1 && LoadSingleton.WPapers != i + 4 * (pages - 1)):
+			get_node("Hud/nanocamo/nanoApplyBtns/apply" + str(i)).text = "Apply"
+		else:
+			get_node("Hud/nanocamo/nanoApplyBtns/apply" + str(i)).text = "Set"
+		if( int(LoadSingleton.HaveWalls[i + 4 * (pages - 1)]) != 1):
+			get_node("Hud/nanocamo/nanoApplyBtns/apply" + str(i)).text = "$" + str(WallPrices[i + 4 * (pages - 1)])
+
 func nano_btns(extra_arg_0):
 	if(!nanoTableMode):
 		page.texture = load("res://resources/Export_Sprites/nanobase_walls_spr_" + str( extra_arg_0 ) + ".png")
 	pages = extra_arg_0
+	nanoUpdPage()
 
 func nano_setwall(extra_arg_0):
 	if(nanoTableMode):
-		$"/root/Base/2D/room/interior/kotatsu".play(tableNames[extra_arg_0])
+		$"/root/Base/2D/room/interior/kotatsu".play(tableNames[extra_arg_0 - 1])
 	else:
-		$"/root/Base/2D/room/room_walls".play(wPaperNames[extra_arg_0 + 4 * pages])
-		wPaperIndex = extra_arg_0 + 4 * pages
-
+		if(int(LoadSingleton.HaveWalls[extra_arg_0 + 4 * (pages - 1)]) == 1):
+			$"/root/Base/2D/room/room_walls".play(wPaperNames[extra_arg_0 + 4 * (pages - 1)])
+			LoadSingleton.WPapers = extra_arg_0 + 4 * (pages - 1)
+		elif(LoadSingleton.Money - WallPrices[extra_arg_0 + 4 * (pages - 1)] >= 0 && extra_arg_0 + 4 * (pages - 1) != nanoChoice):
+			nanoChoice = extra_arg_0 + 4 * (pages - 1)
+		elif(LoadSingleton.Money - WallPrices[extra_arg_0 + 4 * (pages - 1)] >= 0 && extra_arg_0 + 4 * (pages - 1) == nanoChoice):
+			LoadSingleton.Money - WallPrices[extra_arg_0 + 4 * (pages - 1)]
+			LoadSingleton.HaveWalls[extra_arg_0 + 4 * (pages - 1)] = 1
+		nanoUpdPage()
 func _on_nano_about_but_pressed():
 	page.texture = load("res://resources/Export_Sprites/nanobase_walls_spr_5.png")
 	layer = 2
@@ -240,6 +259,8 @@ func _on_nano_cust_but_pressed():
 	nano_choice.show()
 	nano_walls.show()
 	nano_table.show()
+	nanoUpdPage()
+	$Hud/nanocamo/nanoApplyBtns.visible = true
 
 func _on_walls_but_pressed():
 	page.texture = load("res://resources/Export_Sprites/nanobase_walls_spr_1.png")
