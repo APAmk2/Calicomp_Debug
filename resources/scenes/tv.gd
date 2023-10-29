@@ -23,3 +23,7 @@ func _on_tv_but_pressed():
 	play(channelList[channel])
 	await get_tree().create_timer(1.0).timeout
 	screen.hide()
+
+func SetChannel(chNum):
+	channel = chNum
+	play(channelList[channel])

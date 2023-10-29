@@ -1,26 +1,26 @@
-keys,picname,recipe
-badtouch,badtouch_spr_0.png,0 2 2 2 4 0 0 1
-beer,beer_spr_0.png,1 2 1 2 4 0 0 0
-bleedjane,bleeding_jane_spr_0.png,0 1 3 3 0 1 0 0
-bloomlight,bloom_light_spr_0.png,4 0 1 2 3 0 1 1
-,,
-brandtini,brandtini_spr_0.png,6 0 3 0 1 0 1 0
-cobalt,cobalt_velvet_spr_0.png,2 0 0 3 5 0 0 1
-,,
-moai,flaming_moai_spr_0.png,1 1 2 3 5 0 0 0
-,,
-fridgeweav,fringe_weaver_spr_0.png,1 0 0 0 9 0 1 0
-water,beer_spr_0.png,1 1 1 1 0 0 1 0
-griztemp,grizzly_temple_spr_0.png,3 3 3 0 1 1 0 0
-,,
-marsblast,marsblast_spr_0.png,0 6 1 4 2 1 0 0
-mercblast,mercuryblast_spr_0.png,1 1 3 3 2 1 0 1
-moonblast,moonblast_spr_0.png,6 0 1 1 2 1 0 1
-pianoman,piano_man_spr_0.png,2 3 5 5 3 0 0 1
-pianowoman,piano_woman_spr_0.png,5 5 2 3 3 0 1 0
-piledriver,piledriver_spr_0.png,0 3 0 3 4 0 0 0
-,,
-,,
-,,
-suplex,suplex_spr_0.png,0 4 0 3 3 0 0 1
-zenstar,zen_star_spr_0.png,4 4 4 4 4 0 0 1
+keys,picname,recipe,flavour,type,sec type
+badtouch,badtouch_spr_0.png,0 2 2 2 4 0 0 1,sour,classy,vintage
+beer,beer_spr_0.png,1 2 1 2 4 0 0 0,bubby,classic,vintage
+bleedjane,bleeding_jane_spr_0.png,0 1 3 3 0 1 0 0,spicy,classic,sobering
+bloomlight,bloom_light_spr_0.png,4 0 1 2 3 0 1 1,spicy,promo,bland
+bluefairy,blue_fairy_spr_0.png,4 0 0 1 -1 0 1 0,sweet,girly,soft
+brandtini,brandtini_spr_0.png,6 0 3 0 1 0 1 0,sweet,classy,happy
+cobalt,cobalt_velvet_spr_0.png,2 0 0 3 5 0 0 1,bubby,classy,burning
+crevspike,crevice_spike_spr_0.png,0 0 2 4 -1 1 0 0,sour,manly,sobering
+moai,flaming_moai_spr_0.png,1 1 2 3 5 0 0 0,sour,classy,
+flufdream,fluffy_dream_spr_0.png,3 0 3 0 -1 0 1 0,sour,girly,soft
+fridgeweav,fringe_weaver_spr_0.png,1 0 0 0 9 0 1 0,bubby,classy,strong
+water,beer_spr_0.png,1 1 1 1 0 0 1 0,bubby,classic,bland
+griztemp,grizzly_temple_spr_0.png,3 3 3 0 1 1 0 0,bitter,promo,bland
+gutpunch,gut_punch_spr_0.png,0 5 0 1 -1 0 1 0,bitter,manly,strong
+marsblast,marsblast_spr_0.png,0 6 1 4 2 1 0 0,spicy,manly,strong
+mercblast,mercuryblast_spr_0.png,1 1 3 3 2 1 0 1,sour,classy,burning
+moonblast,moonblast_spr_0.png,6 0 1 1 2 1 0 1,sweet,girly,happy
+pianoman,piano_man_spr_0.png,2 3 5 5 3 0 0 1,sour,promo,strong
+pianowoman,piano_woman_spr_0.png,5 5 2 3 3 0 1 0,sweet,promo,happy
+piledriver,piledriver_spr_0.png,0 3 0 3 4 0 0 0,bitter,manly,burning
+sparkstar,sparkle_star_spr_0.png,2 0 1 0 -1 0 1 0,sweet,girly,happy
+sugrush,sugar_sush_spr_0.png,2 0 1 0 -1 0 0 0,sweet,girly,happy
+suncloud,sunshine_cloud_spr_0.png,2 2 0 0 -1 1 0 1,bitter,girly,soft
+suplex,suplex_spr_0.png,0 4 0 3 3 0 0 1,bitter,manly,burning
+zenstar,zen_star_spr_0.png,4 4 4 4 4 0 0 1,sour,promo,bland

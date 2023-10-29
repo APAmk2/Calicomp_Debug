@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bjvjbfxpjol58"]
+[gd_scene load_steps=50 format=3 uid="uid://bjvjbfxpjol58"]
 
 [ext_resource type="Script" path="res://resources/scenes/Calicomp.gd" id="1_if2ta"]
 [ext_resource type="Texture2D" uid="uid://e8yis4xdgo12" path="res://resources/Export_Sprites/frame_sprite_0.png" id="1_m4vei"]
@@ -34,6 +34,44 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ofnpj"]
 size = Vector2(31, 59)
+
+[sub_resource type="Animation" id="Animation_45n6c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("2D/shaker:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_g2nxc"]
+resource_name = "shaker_shake"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("2D/shaker:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.261799, 0.0, 0.261799, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c862m"]
+_data = {
+"RESET": SubResource("Animation_45n6c"),
+"shaker_shake": SubResource("Animation_g2nxc")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a8rkp"]
 size = Vector2(20, 38)
@@ -99,6 +137,14 @@ texture = ExtResource("5_1xkbk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2D/shaker/Area2D"]
 shape = SubResource("RectangleShape2D_ofnpj")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="2D/shaker"]
+root_node = NodePath("../../..")
+reset_on_save = false
+speed_scale = 2.0
+libraries = {
+"": SubResource("AnimationLibrary_c862m")
+}
+
 [node name="igredients" type="Node2D" parent="2D"]
 
 [node name="adelhyde" type="Sprite2D" parent="2D/igredients"]
@@ -108,7 +154,6 @@ position = Vector2(830, 318)
 scale = Vector2(2, 2)
 texture = ExtResource("6_po6ln")
 script = ExtResource("5_dqr1f")
-igredient_name = "adelhyde"
 rest_pos = Vector2(830, 318)
 
 [node name="Area2D" type="Area2D" parent="2D/igredients/adelhyde"]
@@ -123,7 +168,7 @@ position = Vector2(980, 318)
 scale = Vector2(2, 2)
 texture = ExtResource("8_66g3s")
 script = ExtResource("5_dqr1f")
-igredient_name = "bronson"
+ingNum = 1
 rest_pos = Vector2(980, 318)
 
 [node name="Area2D" type="Area2D" parent="2D/igredients/bronson"]
@@ -138,7 +183,7 @@ position = Vector2(1130, 318)
 scale = Vector2(2, 2)
 texture = ExtResource("9_r8oas")
 script = ExtResource("5_dqr1f")
-igredient_name = "delta"
+ingNum = 2
 rest_pos = Vector2(1130, 318)
 
 [node name="Area2D" type="Area2D" parent="2D/igredients/delta"]
@@ -153,7 +198,7 @@ position = Vector2(830, 438)
 scale = Vector2(2, 2)
 texture = ExtResource("7_tkivt")
 script = ExtResource("5_dqr1f")
-igredient_name = "flanergide"
+ingNum = 3
 rest_pos = Vector2(830, 438)
 
 [node name="Area2D" type="Area2D" parent="2D/igredients/flanergide"]
@@ -168,7 +213,7 @@ position = Vector2(1130, 438)
 scale = Vector2(2, 2)
 texture = ExtResource("3_m615e")
 script = ExtResource("5_dqr1f")
-igredient_name = "karmotrine"
+ingNum = 4
 rest_pos = Vector2(1130, 438)
 
 [node name="Area2D" type="Area2D" parent="2D/igredients/karmotrine"]
@@ -1254,6 +1299,14 @@ theme_override_fonts/font = ExtResource("12_nm877")
 theme_override_font_sizes/font_size = 20
 clip_text = true
 
+[node name="serveDrinks" type="Button" parent="Hud"]
+layout_mode = 0
+offset_left = 994.0
+offset_top = 378.0
+offset_right = 1056.0
+offset_bottom = 496.0
+flat = true
+
 [node name="sfx" type="AudioStreamPlayer" parent="."]
 
 [connection signal="area_entered" from="2D/shaker/Area2D" to="." method="_on_area_2d_area_entered"]
@@ -1270,3 +1323,4 @@ clip_text = true
 [connection signal="toggled" from="Hud/slot1Btn" to="." method="SlotBtnPressed"]
 [connection signal="toggled" from="Hud/slot2Btn" to="." method="SlotBtnPressed"]
 [connection signal="pressed" from="Hud/mixBtn" to="." method="MixBtnPressed"]
+[connection signal="pressed" from="Hud/serveDrinks" to="." method="ServeBtnPressed"]

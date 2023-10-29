@@ -459,6 +459,7 @@ text = "SOLD!"
 [node name="sold2" type="Label" parent="Hud/soldLabels"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 1098.0
 offset_top = 136.0
 offset_right = 1174.0
@@ -471,6 +472,7 @@ text = "SOLD!"
 [node name="sold3" type="Label" parent="Hud/soldLabels"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 1098.0
 offset_top = 186.0
 offset_right = 1174.0
@@ -483,6 +485,7 @@ text = "SOLD!"
 [node name="sold4" type="Label" parent="Hud/soldLabels"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 1098.0
 offset_top = 236.0
 offset_right = 1174.0
@@ -495,6 +498,7 @@ text = "SOLD!"
 [node name="sold5" type="Label" parent="Hud/soldLabels"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 1098.0
 offset_top = 286.0
 offset_right = 1174.0
@@ -507,6 +511,7 @@ text = "SOLD!"
 [node name="sold6" type="Label" parent="Hud/soldLabels"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 1098.0
 offset_top = 336.0
 offset_right = 1174.0
@@ -519,6 +524,7 @@ text = "SOLD!"
 [node name="sold7" type="Label" parent="Hud/soldLabels"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 1098.0
 offset_top = 386.0
 offset_right = 1174.0
@@ -531,6 +537,7 @@ text = "SOLD!"
 [node name="sold8" type="Label" parent="Hud/soldLabels"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 1098.0
 offset_top = 436.0
 offset_right = 1174.0
@@ -543,6 +550,7 @@ text = "SOLD!"
 [node name="sold9" type="Label" parent="Hud/soldLabels"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 1098.0
 offset_top = 486.0
 offset_right = 1174.0
@@ -555,6 +563,7 @@ text = "SOLD!"
 [node name="sold10" type="Label" parent="Hud/soldLabels"]
 visible = false
 texture_filter = 1
+layout_mode = 0
 offset_left = 1098.0
 offset_top = 536.0
 offset_right = 1174.0

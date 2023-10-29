@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=3 uid="uid://ctolr6ddkdeph"]
+[gd_scene load_steps=109 format=3 uid="uid://ctolr6ddkdeph"]
 
 [ext_resource type="Script" path="res://resources/scenes/Main.gd" id="1_ggx0j"]
 [ext_resource type="Texture2D" uid="uid://ciq3ym05j00y0" path="res://resources/Export_Sprites/barground_0.png" id="2_e7mgr"]
@@ -70,6 +70,11 @@
 [ext_resource type="Texture2D" uid="uid://bhc6dusrn4ldh" path="res://resources/Export_Sprites/nextmusic_spr_0.png" id="63_2lqxh"]
 [ext_resource type="Texture2D" uid="uid://c1cwdehgtmuj3" path="res://resources/Export_Sprites/scanrines_0.png" id="63_3ckat"]
 [ext_resource type="Texture2D" uid="uid://raucw5othca" path="res://resources/Export_Sprites/shuffle_spr_0.png" id="65_8geb7"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="70_hjpfn"]
+[ext_resource type="Texture2D" uid="uid://b3o0qc4fijln7" path="res://resources/Export_Sprites/cursor_next_0.png" id="71_6uidf"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="71_dcyd4"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="72_ixkeu"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="73_usyyv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wnrh5"]
 animations = [{
@@ -627,6 +632,69 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_x5rnw")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2jmww")
 toggle_mode = true
 
+[node name="dialogSubsys" type="Control" parent="Hud"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogicNode_DialogText" type="RichTextLabel" parent="Hud/dialogSubsys"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 44.0
+offset_top = 562.0
+offset_right = 858.0
+offset_bottom = 682.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("59_u6ca0")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+script = ExtResource("71_dcyd4")
+start_hidden = false
+
+[node name="DialogicNode_PortraitContainer" type="Control" parent="Hud/dialogSubsys"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 38.0
+offset_top = 54.0
+offset_right = 696.0
+offset_bottom = 536.0
+mouse_filter = 2
+script = ExtResource("72_ixkeu")
+position_index = 1
+
+[node name="DialogicNode_NameLabel" type="Label" parent="Hud/dialogSubsys"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -222.0
+offset_top = 467.0
+offset_right = -27.0
+offset_bottom = 497.0
+theme_override_fonts/font = ExtResource("59_u6ca0")
+theme_override_font_sizes/font_size = 28
+clip_text = true
+script = ExtResource("73_usyyv")
+
+[node name="DNextIndicator" type="Control" parent="Hud/dialogSubsys"]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 850.0
+offset_top = 674.0
+offset_right = 858.0
+offset_bottom = 682.0
+script = ExtResource("70_hjpfn")
+animation = 2
+texture = ExtResource("71_6uidf")
+
+[node name="dialogContinue" type="Button" parent="Hud/dialogSubsys"]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 552.0
+offset_right = 858.0
+offset_bottom = 682.0
+flat = true
+
 [node name="settings" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"
 
@@ -665,4 +733,7 @@ bus = &"BGM"
 [connection signal="pressed" from="Hud/miniJukebox/playBackward" to="." method="PlayMusic" binds= [0]]
 [connection signal="pressed" from="Hud/miniJukebox/playForward" to="." method="PlayMusic" binds= [1]]
 [connection signal="pressed" from="Hud/miniJukebox/playPause" to="." method="PauseMusic"]
+[connection signal="started_revealing_text" from="Hud/dialogSubsys/DialogicNode_DialogText" to="." method="_on_dialogic_node_dialog_text_started_revealing_text"]
+[connection signal="button_down" from="Hud/dialogSubsys/dialogContinue" to="." method="DialogContinuePressed"]
+[connection signal="button_up" from="Hud/dialogSubsys/dialogContinue" to="." method="DialogContinueReleased"]
 [connection signal="finished" from="BGM" to="." method="PlayMusic" binds= [2]]

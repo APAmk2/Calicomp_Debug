@@ -14,7 +14,7 @@ func Load():
 				break
 			else:
 				readData.append(check)
-		if(int(readData[0]) == 1):
+		if(int(readData[0]) == 1):	
 			fullscr = true
 		else:
 			fullscr = false

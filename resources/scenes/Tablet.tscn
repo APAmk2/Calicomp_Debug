@@ -799,6 +799,7 @@ text = "Set"
 
 [node name="apply2" type="Label" parent="Hud/nanocamo/nanoApplyBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 142.0
 offset_top = 230.0
 offset_right = 190.0
@@ -809,6 +810,7 @@ text = "Set"
 
 [node name="apply3" type="Label" parent="Hud/nanocamo/nanoApplyBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 142.0
 offset_top = 330.0
 offset_right = 190.0
@@ -819,6 +821,7 @@ text = "Set"
 
 [node name="apply4" type="Label" parent="Hud/nanocamo/nanoApplyBtns"]
 texture_filter = 1
+layout_mode = 0
 offset_left = 142.0
 offset_top = 430.0
 offset_right = 190.0

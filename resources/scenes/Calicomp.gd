@@ -5,22 +5,8 @@ var drink_b: Array = [0, 0, 0, 0, 0]
 var drink_a_name: String
 var drink_b_name: String
 var MixStarted: bool = false
+var LongMix: bool = false
 var ingName: Array = ["adelhyde", "bronson", "delta", "flanergide", "karmotrine"]
-
-var time = 0
-var timeDirection = 1
-var moveDuration = 10
-
-func _process(delta):
-	if (time > moveDuration or time < 0):
-		timeDirection *= -1
-
-	time += delta * timeDirection
-	var t = time / moveDuration
-	if(MixStarted && $"2D/shaker".rotation_degrees > -15.0):
-		$"2D/shaker".rotation_degrees = lerp($"2D/shaker".rotation_degrees, -15.0, t)
-	elif(MixStarted && $"2D/shaker".rotation_degrees < 15.0):
-		$"2D/shaker".rotation_degrees = lerp($"2D/shaker".rotation_degrees, 15.0, t)
 
 func _input(event):
 	if Input.is_action_just_pressed("decreaseAldehyde"):
@@ -153,8 +139,7 @@ func EmitSound(mode):
 			$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/ageadd.ogg")
 			$"sfx".play()
 
-func ResetBtnDN():
-	$"Hud/resetBtn".position += Vector2(0, 2)
+func Reset():
 	if($Hud/slot1Btn.button_pressed):
 		drink_a = [0, 0, 0, 0, 0]
 		drink_a_name = ""
@@ -162,6 +147,10 @@ func ResetBtnDN():
 		drink_b = [0, 0, 0, 0, 0]
 		drink_b_name = ""
 	CalcVis(true)
+
+func ResetBtnDN():
+	$"Hud/resetBtn".position += Vector2(0, 2)
+	Reset()
 
 func ResetBtnUp():
 	$"Hud/resetBtn".position -= Vector2(0, 2)
@@ -174,7 +163,10 @@ func GenerateSearchStr(Ings):
 	var str: String
 	for i in Ings.size():
 		str += str(Ings[i]) + " "
-	str += str(0) + " "
+	if(LongMix):
+		str += str(1) + " "
+	else:
+		str += str(0) + " "
 	if ($Hud/age.button_pressed):
 		str += str(1) + " "
 	else:
@@ -185,43 +177,76 @@ func GenerateSearchStr(Ings):
 		str += str(0)
 	return str
 
-var Ings: Array
+var Ings: Array = [0, 0, 0, 0, 0]
 var SearchStr: String
+var KarmoSearchStr: String
+var SearchArr: Array
 
 func MixBtnPressed():
 	MixStarted = !MixStarted
 	if(GetTotalIgredientsNum() < 1 && MixStarted):
 		return
 	if(MixStarted):
+		$"2D/shaker/AnimationPlayer".speed_scale = 2.0
+		$"2D/shaker".texture = load("res://resources/Export_Sprites/shaker_spr_0.png")
+		LongMix = false
 		if($"Hud/slot1Btn".button_pressed):
 			Ings = drink_a
 		elif($"Hud/slot2Btn".button_pressed):
 			Ings = drink_b
-		SearchStr = GenerateSearchStr(Ings)
+		$"2D/shaker/AnimationPlayer".play("shaker_shake")
+		
+		await get_tree().create_timer(4.0).timeout
+		$"2D/shaker/AnimationPlayer".speed_scale = 4.0
+		LongMix = true
 	else:
-		if(FindDrinkRecipe(SearchStr, 2) != 0):
+		SearchStr = GenerateSearchStr(Ings)
+		Dialogic.VAR.KarmoLvl = Ings[4]
+		Ings[4] = -1
+		KarmoSearchStr = GenerateSearchStr(Ings)
+		SearchArr = [SearchStr, KarmoSearchStr]
+		var isDrink: bool = false
+		
+		for i in range (0, 2):
+			if(FindDrinkRecipe(SearchArr[i], 2) == 0): continue
+			
 			if($Hud/slot1Btn.button_pressed):
-				drink_a_name = LoadSingleton.RecipeData[FindDrinkRecipe(SearchStr, 2)][0]
+				drink_a_name = LoadSingleton.RecipeData[FindDrinkRecipe(SearchArr[i], 2)][0]
 			elif($Hud/slot2Btn.button_pressed):
-				drink_b_name = LoadSingleton.RecipeData[FindDrinkRecipe(SearchStr, 2)][0]
-			$"2D/shaker".texture = load("res://resources/Export_Sprites/" + str(LoadSingleton.RecipeData[FindDrinkRecipe(SearchStr, 2)][1]))
-			$"Hud/drinkName".text = LoadSingleton.RecipeData[FindDrinkRecipe(SearchStr, 2)][0]
-		else:
+				drink_b_name = LoadSingleton.RecipeData[FindDrinkRecipe(SearchArr[i], 2)][0]
+			$"2D/shaker".texture = load("res://resources/Export_Sprites/" + str(LoadSingleton.RecipeData[FindDrinkRecipe(SearchArr[i], 2)][1]))
+			$"Hud/drinkName".text = LoadSingleton.RecipeData[FindDrinkRecipe(SearchArr[i], 2)][0]
+			isDrink = true
+		if(!isDrink):
 			$"2D/shaker".texture = load("res://resources/Export_Sprites/glitchbottle_0.png")
 			$"Hud/drinkName".text = "Днищеговнище"
+	$"2D/shaker/AnimationPlayer".play("RESET")
 	CalcVis(false)
 		
-	print(SearchStr)
-	print(drink_a_name)
-	print(drink_b_name)
+	print("SearchStr is: " + SearchStr)
+	print("KarmoStr is: " + KarmoSearchStr)
+	print("drink slots is : " + drink_a_name + " " + drink_b_name)
+	for i in range (0, 2):
+		print(SearchArr[i])
 	print(MixStarted)
 
 func FindDrinkRecipe(string, mode):
 	var findvar
-	for i in range (1, 27):
+	for i in range (1, 26):
 		findvar = LoadSingleton.RecipeData[i][mode].find(string)
-		if(findvar == -1 && i == 26):
+		if(findvar == -1 && i == 25):
 			return 0
 		if(findvar == 0):
 			return i
 
+func ServeBtnPressed():
+	if(!drink_a_name.is_empty() || !drink_b_name.is_empty()):
+		if($Hud/slot1Btn.button_pressed):
+			Dialogic.VAR.drink = drink_a_name
+			Dialogic.VAR.drinktype = LoadSingleton.RecipeData[FindDrinkRecipe(drink_a_name, 0)][3]
+		elif($Hud/slot2Btn.button_pressed):
+			Dialogic.VAR.drink = drink_b_name
+			Dialogic.VAR.drinktype = LoadSingleton.RecipeData[FindDrinkRecipe(drink_b_name, 0)][3]
+		print("dialogic var is: " + Dialogic.VAR.drink + " " + Dialogic.VAR.drinktype)
+		Reset()
+		Dialogic.paused = false

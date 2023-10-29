@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var igredient_name: String
+@export var ingNum: int
 @export var rest_pos: Vector2
 
 var dragging = false
@@ -19,38 +19,11 @@ func _physics_process(delta):
 		if(inShaker):
 			$"../../../sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/addingredient.ogg")
 			$"../../../sfx".play()
-			match igredient_name:
-				"karmotrine":
-					if($"../../../Hud/slot1Btn".button_pressed):
-						$"../../..".drink_a[4] += 1
-					else:
-						$"../../..".drink_b[4] += 1
-					$"../../..".CalcVis(false)
-				"adelhyde":
-					if($"../../../Hud/slot1Btn".button_pressed):
-						$"../../..".drink_a[0] += 1
-					else:
-						$"../../..".drink_b[0] += 1
-					$"../../..".CalcVis(false)
-				"flanergide":
-					if($"../../../Hud/slot1Btn".button_pressed):
-						$"../../..".drink_a[3] += 1
-					else:
-						$"../../..".drink_b[3] += 1
-					$"../../..".CalcVis(false)
-				"bronson":
-					if($"../../../Hud/slot1Btn".button_pressed):
-						$"../../..".drink_a[1] += 1
-					else:
-						$"../../..".drink_b[1] += 1
-					$"../../..".CalcVis(false)
-				"delta":
-					if($"../../../Hud/slot1Btn".button_pressed):
-						$"../../..".drink_a[2] += 1
-					else:
-						$"../../..".drink_b[2] += 1
-					$"../../..".CalcVis(false)
-					
+			if($"../../../Hud/slot1Btn".button_pressed):
+				$"../../..".drink_a[ingNum] += 1
+			else:
+				$"../../..".drink_b[ingNum] += 1
+			$"../../..".CalcVis(false)
 		global_position = rest_pos
 func _input(event):
 	if event is InputEventMouseButton:

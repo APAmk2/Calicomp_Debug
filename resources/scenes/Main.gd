@@ -13,6 +13,7 @@ var moveDuration = 0.25
 func _ready():
 	PlayMusic(3)
 	$"Hud/money".text = "$" + str(LoadSingleton.MoneyInBar)
+	Dialogic.start_timeline("demo2")
 	if(LoadSingleton.ScanlinesEnabled):
 		$scanlines.show()
 	else:
@@ -96,3 +97,7 @@ func LoadBtnPressed():
 func JukeboxBtnPressed():
 	$"2D/miniJukebox".visible = !$"2D/miniJukebox".visible
 	$"Hud/miniJukebox".visible = !$"Hud/miniJukebox".visible
+
+func _on_dialogic_node_dialog_text_started_revealing_text():
+	var color = $Hud/dialogSubsys/DialogicNode_NameLabel.get("self_modulate")
+	$Hud/dialogSubsys/DialogicNode_DialogText.text = $Hud/dialogSubsys/DialogicNode_DialogText.text.insert(0, str(("[color=#%s]%s: [/color]") % [str(color.to_html(false)), $Hud/dialogSubsys/DialogicNode_NameLabel.text]))
