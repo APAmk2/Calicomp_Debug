@@ -195,7 +195,6 @@ func MixBtnPressed():
 		elif($"Hud/slot2Btn".button_pressed):
 			Ings = drink_b
 		$"2D/shaker/AnimationPlayer".play("shaker_shake")
-		
 		await get_tree().create_timer(4.0).timeout
 		$"2D/shaker/AnimationPlayer".speed_scale = 4.0
 		LongMix = true
@@ -215,20 +214,13 @@ func MixBtnPressed():
 			elif($Hud/slot2Btn.button_pressed):
 				drink_b_name = LoadSingleton.RecipeData[FindDrinkRecipe(SearchArr[i], 2)][0]
 			$"2D/shaker".texture = load("res://resources/Export_Sprites/" + str(LoadSingleton.RecipeData[FindDrinkRecipe(SearchArr[i], 2)][1]))
-			$"Hud/drinkName".text = LoadSingleton.RecipeData[FindDrinkRecipe(SearchArr[i], 2)][0]
+			$"Hud/drinkName".text = tr(LoadSingleton.RecipeData[FindDrinkRecipe(SearchArr[i], 2)][0])
 			isDrink = true
 		if(!isDrink):
 			$"2D/shaker".texture = load("res://resources/Export_Sprites/glitchbottle_0.png")
-			$"Hud/drinkName".text = "Днищеговнище"
-	$"2D/shaker/AnimationPlayer".play("RESET")
+			$"Hud/drinkName".text = "#y#bb="
+		$"2D/shaker/AnimationPlayer".play("RESET")
 	CalcVis(false)
-		
-	print("SearchStr is: " + SearchStr)
-	print("KarmoStr is: " + KarmoSearchStr)
-	print("drink slots is : " + drink_a_name + " " + drink_b_name)
-	for i in range (0, 2):
-		print(SearchArr[i])
-	print(MixStarted)
 
 func FindDrinkRecipe(string, mode):
 	var findvar
@@ -241,12 +233,16 @@ func FindDrinkRecipe(string, mode):
 
 func ServeBtnPressed():
 	if(!drink_a_name.is_empty() || !drink_b_name.is_empty()):
+		Dialogic.VAR.drink1 = drink_a_name
+		Dialogic.VAR.drink2 = drink_b_name
 		if($Hud/slot1Btn.button_pressed):
-			Dialogic.VAR.drink = drink_a_name
-			Dialogic.VAR.drinktype = LoadSingleton.RecipeData[FindDrinkRecipe(drink_a_name, 0)][3]
+			Dialogic.VAR.drinkflavour = LoadSingleton.RecipeData[FindDrinkRecipe(drink_a_name, 0)][3]
+			Dialogic.VAR.drinktype1 = LoadSingleton.RecipeData[FindDrinkRecipe(drink_a_name, 0)][4]
+			Dialogic.VAR.drinktype2 = LoadSingleton.RecipeData[FindDrinkRecipe(drink_a_name, 0)][5]
 		elif($Hud/slot2Btn.button_pressed):
-			Dialogic.VAR.drink = drink_b_name
-			Dialogic.VAR.drinktype = LoadSingleton.RecipeData[FindDrinkRecipe(drink_b_name, 0)][3]
-		print("dialogic var is: " + Dialogic.VAR.drink + " " + Dialogic.VAR.drinktype)
+			Dialogic.VAR.drinkflavour = LoadSingleton.RecipeData[FindDrinkRecipe(drink_b_name, 0)][3]
+			Dialogic.VAR.drinktype1 = LoadSingleton.RecipeData[FindDrinkRecipe(drink_b_name, 0)][4]
+			Dialogic.VAR.drinktype2 = LoadSingleton.RecipeData[FindDrinkRecipe(drink_b_name, 0)][5]
+		print("dialogic var is:%s %s %s %s %s" % [Dialogic.VAR.drink1, Dialogic.VAR.drinkflavour, Dialogic.VAR.KarmoLvl, Dialogic.VAR.drinktype1, Dialogic.VAR.drinktype2])
 		Reset()
 		Dialogic.paused = false

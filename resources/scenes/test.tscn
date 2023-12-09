@@ -1,0 +1,46 @@
+[gd_scene load_steps=12 format=3 uid="uid://cyq24w1kj5xhk"]
+
+[ext_resource type="Texture2D" uid="uid://rmbqkf2323d3" path="res://resources/Export_Sprites/test1_new_0.png" id="1_gde88"]
+[ext_resource type="Texture2D" uid="uid://cr1pbix4kvjlv" path="res://resources/Export_Sprites/test1_new_1.png" id="2_b37tb"]
+[ext_resource type="Texture2D" uid="uid://bgr6ev8ytlaqx" path="res://resources/Export_Sprites/test1_new_2.png" id="3_uh7id"]
+[ext_resource type="Texture2D" uid="uid://l0ibkbwhyxmd" path="res://resources/Export_Sprites/test1_new_3.png" id="4_tlfr4"]
+[ext_resource type="Texture2D" uid="uid://0kh2sfiq13f5" path="res://resources/Export_Sprites/test1_new_4.png" id="5_ef2iw"]
+[ext_resource type="Texture2D" uid="uid://crrbtov1x7gnm" path="res://resources/Export_Sprites/test1_new_5.png" id="6_37y6f"]
+[ext_resource type="Texture2D" uid="uid://banvim30pxl61" path="res://resources/Export_Sprites/test1_new_6.png" id="7_0ampn"]
+[ext_resource type="Texture2D" uid="uid://boget7h4s7uue" path="res://resources/Export_Sprites/test1_new_7.png" id="8_lyuxs"]
+[ext_resource type="Texture2D" uid="uid://blsx6lu5dwp6w" path="res://resources/Export_Sprites/test1_new_8.png" id="9_0jwcu"]
+[ext_resource type="Texture2D" uid="uid://b00hvsw1qosn" path="res://resources/Export_Sprites/test1_new_9.png" id="10_7c1hp"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_w3i6a"]
+frames = 10
+one_shot = true
+frame_0/texture = ExtResource("1_gde88")
+frame_0/duration = 0.12
+frame_1/texture = ExtResource("2_b37tb")
+frame_1/duration = 0.12
+frame_2/texture = ExtResource("3_uh7id")
+frame_2/duration = 0.12
+frame_3/texture = ExtResource("4_tlfr4")
+frame_3/duration = 0.12
+frame_4/texture = ExtResource("5_ef2iw")
+frame_4/duration = 0.12
+frame_5/texture = ExtResource("6_37y6f")
+frame_5/duration = 0.12
+frame_6/texture = ExtResource("7_0ampn")
+frame_6/duration = 0.12
+frame_7/texture = ExtResource("8_lyuxs")
+frame_7/duration = 0.12
+frame_8/texture = ExtResource("9_0jwcu")
+frame_8/duration = 0.12
+frame_9/texture = ExtResource("10_7c1hp")
+frame_9/duration = 0.12
+
+[node name="Node" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 640.0
+offset_bottom = 360.0
+scale = Vector2(2, 2)
+texture = SubResource("AnimatedTexture_w3i6a")
+stretch_mode = 1

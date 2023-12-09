@@ -8,7 +8,7 @@ var curPage: int = 1
 func _ready():
 	UpdateJukebox()
 	UpdatePlaylist()
-	if(LoadSingleton.musicPlaylist.find("") == -1):
+	if(GlobalVars.songnames.find("") == -1):
 		$"Hud/tobar".disabled = false
 	if(betaHud):
 		$"2D/bg".texture = load("res://resources/Export_Sprites/alt_new_jukeframe_0.png")
@@ -31,24 +31,24 @@ func UpdateJukebox():
 
 func UpdatePlaylist():
 	for i in range (1, 13):
-		get_node("Hud/PlaylistSlotBtns/PlaylistSlot" + str(i)).text = LoadSingleton.musicPlaylist[i - 1]
+		get_node("Hud/PlaylistSlotBtns/PlaylistSlot" + str(i)).text = GlobalVars.songnames[i - 1]
 
 func MusicBtnPressed(extra_arg_0):
 	var index = extra_arg_0 + 5 * (curPage - 1)
-	var firstNull = LoadSingleton.musicPlaylist.find("")
+	var firstNull = GlobalVars.songnames.find("")
 	if (firstNull >= 0):
-		LoadSingleton.musicPlaylist[firstNull] = str(LoadSingleton.musicData[index][2])
+		GlobalVars.songnames[firstNull] = str(LoadSingleton.musicData[index][2])
 		UpdatePlaylist()
 		$"SFX".stream = load("res://resources/Exported_Sounds/audiogroup_default/jukeselect.ogg")
 		$"SFX".play()
-	if(LoadSingleton.musicPlaylist.find("") == -1):
+	if(GlobalVars.songnames.find("") == -1):
 		$"Hud/tobar".disabled = false
 
 func PlaylistBtnPressed(extra_arg_0):
-	LoadSingleton.musicPlaylist[extra_arg_0 - 1] = ""
+	GlobalVars.songnames[extra_arg_0 - 1] = ""
 	$"SFX".stream = load("res://resources/Exported_Sounds/audiogroup_default/prompt.ogg")
 	$"SFX".play()
-	if(LoadSingleton.musicPlaylist.find("") != -1):
+	if(GlobalVars.songnames.find("") != -1):
 		$"Hud/tobar".disabled = true
 	UpdatePlaylist()
 

@@ -7,43 +7,43 @@ var timeDirection = 1
 var moveDuration = 0.25
 
 func _ready():
-	if(int(LoadSingleton.ShopItems[1]) == 1):
+	if(int(GlobalVars.shopitems[1]) == 1):
 		$"2D/room/interior/clay_homes".show()
-	if(int(LoadSingleton.ShopItems[2]) == 1):
+	if(int(GlobalVars.shopitems[2]) == 1):
 		$"2D/room/interior/maneki".show()
-	if(int(LoadSingleton.ShopItems[3]) == 1):
+	if(int(GlobalVars.shopitems[3]) == 1):
 		$"2D/room/interior/miki_pos".show()
-	if(int(LoadSingleton.ShopItems[4]) == 1):
+	if(int(GlobalVars.shopitems[4]) == 1):
 		$"2D/room/interior/cutesy_pos".show()
-	if(int(LoadSingleton.ShopItems[5]) == 1):
+	if(int(GlobalVars.shopitems[5]) == 1):
 		$"2D/room/interior/books".show()
-	if(int(LoadSingleton.ShopItems[6]) == 1):
+	if(int(GlobalVars.shopitems[6]) == 1):
 		$"2D/room/interior/daruma".show()
-	if(int(LoadSingleton.ShopItems[7]) == 1):
+	if(int(GlobalVars.shopitems[7]) == 1):
 		$"2D/room/interior/figure".show()
-	if(int(LoadSingleton.ShopItems[8]) == 1):
+	if(int(GlobalVars.shopitems[8]) == 1):
 		$"2D/room/interior/movie".show()
-	if(int(LoadSingleton.ShopItems[9]) == 1):
+	if(int(GlobalVars.shopitems[9]) == 1):
 		$"2D/room/interior/xmas".show()
-	if(int(LoadSingleton.ShopItems[10]) == 1):
+	if(int(GlobalVars.shopitems[10]) == 1):
 		$"2D/room/interior/rom".show()
-	if(int(LoadSingleton.ShopItems[11]) == 1):
+	if(int(GlobalVars.shopitems[11]) == 1):
 		$"2D/room/interior/crt".show()
-	if(int(LoadSingleton.ShopItems[12]) == 1):
+	if(int(GlobalVars.shopitems[12]) == 1):
 		$"2D/room/interior/cyclone".show()
-	if(int(LoadSingleton.ShopItems[13]) == 1):
+	if(int(GlobalVars.shopitems[13]) == 1):
 		$"2D/room/interior/plant".show()
-	if(int(LoadSingleton.ShopItems[16]) == 1):
+	if(int(GlobalVars.shopitems[16]) == 1):
 		$"2D/room/interior/beer".show()
-	if(int(LoadSingleton.ShopItems[15]) == 1):
+	if(int(GlobalVars.shopitems[15]) == 1):
 		$"2D/room/interior/banner".show()
-	if(int(LoadSingleton.ShopItems[14]) == 1):
+	if(int(GlobalVars.shopitems[14]) == 1):
 		$"2D/room/interior/lamp".show()
 	if(LoadSingleton.ScanlinesEnabled):
 		$scanlines.show()
 	else:
 		$scanlines.hide()
-	$"Hud/funds".text = tr("FUNDS") + str(LoadSingleton.Money)
+	$"Hud/funds".text = tr("FUNDS") + str(GlobalVars.jillwallet)
 
 func _process(delta):
 	if (time > moveDuration or time < 0):

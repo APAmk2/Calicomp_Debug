@@ -1,7 +1,7 @@
 {
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
-"color": Color(0.380392, 0.494118, 0.909804, 1),
+"color": Color(0.235294, 1, 0, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
@@ -9,22 +9,22 @@
 },
 "default_portrait": "default",
 "description": "",
-"display_name": "Jill",
+"display_name": "Betty",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
 "default": {
 "export_overrides": {
-"image": "\"res://resources/Export_Sprites/jill_spr_0.png\""
+"image": "\"\""
 },
+"ignore_char_scale": false,
 "image": "",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": "",
-"sound_mood": ""
+"scene": "res://resources/scenes/betty.tscn"
 }
 },
-"scale": 2.0
+"scale": 1.0
 }

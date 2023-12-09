@@ -31,22 +31,22 @@ var tableNames: Array = ["leopard", "bullet", "red_lines", "default"]
 
 func _ready():
 	hide_elems()
-	$"/root/Base/2D/room/room_walls".play(wPaperNames[LoadSingleton.WPapers])
-	if(!LoadSingleton.DayStr.is_empty()):
-		$"Hud/home/day".text = LoadSingleton.DayStr
-	if(LoadSingleton.Day >= 2):
+	$"/root/Base/2D/room/room_walls".play(wPaperNames[GlobalVars.wallstype])
+	if(!GlobalVars.datestring.is_empty()):
+		$"Hud/home/day".text = GlobalVars.datestring
+	if(GlobalVars.cur_day >= 2):
 		if(!dangeReaded):
 			$"2D/home/dangeru".play("alert")
 		else:
 			$"2D/home/dangeru".play("installed")
 		$"Hud/home/dr_but".disabled = false
-	if(LoadSingleton.Day >= 3):
+	if(GlobalVars.cur_day >= 3):
 		if(!mikiReaded):
 			$"2D/home/mikiapp".play("alert")
 		else:
 			$"2D/home/mikiapp".play("installed")
 		$"Hud/home/miki_but".disabled = false
-	if(LoadSingleton.Day >= 5):
+	if(GlobalVars.cur_day >= 5):
 		$"2D/home/nanocamo".play("nanocamo")
 		$"Hud/home/nanocamo_but".disabled = false
 
@@ -100,10 +100,10 @@ func _on_ae_but_pressed():
 	homepage.show()
 	for i in range (1, 4):
 		var btn = get_node("Hud/app_base/app_but" + str(i))
-		if(i + 3 * (LoadSingleton.Day - 1) <= 15):
-			btn.text = "NEWS" + str(i + 3 * (LoadSingleton.Day - 1))
-		if(i + 3 * (LoadSingleton.Day - 1) > 15):
-			btn.text = "NEWS" + str(i + 3 * (LoadSingleton.Day - 1) + 3)
+		if(i + 3 * (GlobalVars.cur_day - 1) <= 15):
+			btn.text = "NEWS" + str(i + 3 * (GlobalVars.cur_day - 1))
+		if(i + 3 * (GlobalVars.cur_day - 1) > 15):
+			btn.text = "NEWS" + str(i + 3 * (GlobalVars.cur_day - 1) + 3)
 		btn.set("theme_override_colors/font_color",Color(0,0,0))
 		btn.show()
 
@@ -117,7 +117,7 @@ func _on_dr_but_pressed():
 	homepage.show()
 	for i in range (1, 4):
 		var btn = get_node("Hud/app_base/app_but" + str(i))
-		btn.text = "THREADNAME" + dangeThreadsIndex[3 * (LoadSingleton.Day - 2) + i]
+		btn.text = "THREADNAME" + dangeThreadsIndex[3 * (GlobalVars.cur_day - 2) + i]
 		btn.set("theme_override_colors/font_color",Color(255,255,255))
 		btn.show()
 
@@ -188,15 +188,15 @@ func _on_back_but_pressed():
 	layer -= 1
 
 func app_btns(extra_arg_0):
-	if(app == "ae" && (extra_arg_0 + 3 * (LoadSingleton.Day - 1)) <= 15):
-		page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(extra_arg_0 + 3 * (LoadSingleton.Day - 1)) + ".png")
+	if(app == "ae" && (extra_arg_0 + 3 * (GlobalVars.cur_day - 1)) <= 15):
+		page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(extra_arg_0 + 3 * (GlobalVars.cur_day - 1)) + ".png")
 	else:
-		if(app == "ae" && (extra_arg_0 + 3 * (LoadSingleton.Day - 1)) > 15):
-			page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(extra_arg_0 + 3 * (LoadSingleton.Day - 1) + 3) + ".png")
+		if(app == "ae" && (extra_arg_0 + 3 * (GlobalVars.cur_day - 1)) > 15):
+			page.texture = load("res://resources/Export_Sprites/augmented_eye_long_base_spr_" + str(extra_arg_0 + 3 * (GlobalVars.cur_day - 1) + 3) + ".png")
 	if(app == "dange"):
-		page.texture = load("res://resources/Export_Sprites/" + tr("DANGERU") + dangeThreadsIndex[3 * (LoadSingleton.Day - 2) + extra_arg_0 ] + ".png")
+		page.texture = load("res://resources/Export_Sprites/" + tr("DANGERU") + dangeThreadsIndex[3 * (GlobalVars.cur_day - 2) + extra_arg_0 ] + ".png")
 	if(app == "miki"):
-		page.texture = load("res://resources/Export_Sprites/miki_entry_" + str(1 + LoadSingleton.Day + extra_arg_0 ) + ".png")
+		page.texture = load("res://resources/Export_Sprites/miki_entry_" + str(1 + GlobalVars.cur_day + extra_arg_0 ) + ".png")
 	layer = 2
 	tablet_scroller.max_value = page.texture.get_height() - 260
 	homepage.hide()
@@ -208,11 +208,11 @@ func app_btns(extra_arg_0):
 
 func nanoUpdPage():
 	for i in range (1, 5):
-		if( int(LoadSingleton.HaveWalls[i + 4 * (pages - 1)]) == 1 && LoadSingleton.WPapers != i + 4 * (pages - 1)):
+		if( int(GlobalVars.walls[i + 4 * (pages - 1)]) == 1 && GlobalVars.wallstype != i + 4 * (pages - 1)):
 			get_node("Hud/nanocamo/nanoApplyBtns/apply" + str(i)).text = "Apply"
 		else:
 			get_node("Hud/nanocamo/nanoApplyBtns/apply" + str(i)).text = "Set"
-		if( int(LoadSingleton.HaveWalls[i + 4 * (pages - 1)]) != 1):
+		if( int(GlobalVars.walls[i + 4 * (pages - 1)]) != 1):
 			get_node("Hud/nanocamo/nanoApplyBtns/apply" + str(i)).text = "$" + str(WallPrices[i + 4 * (pages - 1)])
 
 func nano_btns(extra_arg_0):
@@ -225,14 +225,14 @@ func nano_setwall(extra_arg_0):
 	if(nanoTableMode):
 		$"/root/Base/2D/room/interior/kotatsu".play(tableNames[extra_arg_0 - 1])
 	else:
-		if(int(LoadSingleton.HaveWalls[extra_arg_0 + 4 * (pages - 1)]) == 1):
+		if(int(GlobalVars.walls[extra_arg_0 + 4 * (pages - 1)]) == 1):
 			$"/root/Base/2D/room/room_walls".play(wPaperNames[extra_arg_0 + 4 * (pages - 1)])
-			LoadSingleton.WPapers = extra_arg_0 + 4 * (pages - 1)
-		elif(LoadSingleton.Money - WallPrices[extra_arg_0 + 4 * (pages - 1)] >= 0 && extra_arg_0 + 4 * (pages - 1) != nanoChoice):
+			GlobalVars.wallstype = extra_arg_0 + 4 * (pages - 1)
+		elif(GlobalVars.jillwallet - WallPrices[extra_arg_0 + 4 * (pages - 1)] >= 0 && extra_arg_0 + 4 * (pages - 1) != nanoChoice):
 			nanoChoice = extra_arg_0 + 4 * (pages - 1)
-		elif(LoadSingleton.Money - WallPrices[extra_arg_0 + 4 * (pages - 1)] >= 0 && extra_arg_0 + 4 * (pages - 1) == nanoChoice):
-			LoadSingleton.Money - WallPrices[extra_arg_0 + 4 * (pages - 1)]
-			LoadSingleton.HaveWalls[extra_arg_0 + 4 * (pages - 1)] = 1
+		elif(GlobalVars.jillwallet - WallPrices[extra_arg_0 + 4 * (pages - 1)] >= 0 && extra_arg_0 + 4 * (pages - 1) == nanoChoice):
+			GlobalVars.jillwallet - WallPrices[extra_arg_0 + 4 * (pages - 1)]
+			GlobalVars.walls[extra_arg_0 + 4 * (pages - 1)] = 1
 		nanoUpdPage()
 func _on_nano_about_but_pressed():
 	page.texture = load("res://resources/Export_Sprites/nanobase_walls_spr_5.png")

@@ -1,784 +1,878 @@
 jill: ...
-jill: *зевает*
-jill: (Эх, вообще никого...)
+jill: *yawn*
+jill (default): *sigh* (Man, such a slow night...)
 jill: ...
-jill: (Ну, по крайней мере, псов тоже нет.)
+jill: (At least I'm not serving dogs.)
 jill: ...
-jill: (И вот тут они должны появиться, словно в дешёвой комедии.)
-jill: (...Видимо, не в этот раз.)
-jill: (К слову о псах... Где Джила черти носят?)
+jill: (Normally, this would be where a dog shows up like a cheap punchline.)
+
+[wait time="1.0"]
+
+jill: (...I guess not.)
+jill: (Speaking of dogs, I wonder where the hell's Gil?)
+
 join dana 1
-dana: Скучаешь?
+[wait time="0.666667"]
+
+dana: Bored?
+jill: WAAAAAH!!
 jill: ...
-jill: А-А-А-А-А!!
-dana: Прости, разбудила?
-jill: Я-я не спала. Мои глаза были открыты!
-dana: Ты ведь училась в колледже? Значит должна понимать, что открытые глаза ещё ничего не значат.
-dana: Не волнуйся, я тебя не виню. Давненько не было таких нудных вечеров.
-dana: Кажется, в последний раз такое было ещё до того, как ты начала тут работать.
-jill: Правда?
-dana: Угу, ещё при Роберте.
-jill: А кто это?
-dana: Он был первым работником у нас. В один прекрасный день этот дуралей купил «зелье левитации» и сиганул с крыши.
-jill: О как...
-dana: ...и как оказалось, то зелье сработало.
-jill: ...Что, прости?
-dana: Он стал подниматься всё выше и выше... а вот опуститься уже не мог.
-dana: Потом его тело обнаружили размазанным по носу самолёта, летевшего в Каньеванию.
-dana: Но не суть...
-jill: (Взяла и так непринуждённо сменила тему.)
-dana: Тогда у нас не было ни единого клиента. Даже узнать дорогу никто не заходил. Как вдруг заявляется один паренёк.
-dana: По виду сразу было понятно, что он несовершеннолетний. Но мне было ужасноскучно, поэтому я не стала его выгонять.
-dana: Намешала ему бескармотриновый коктейль. Сама понимаешь, одно дело – обслужить, и совсем другое – налить спиртное.
-dana: Но когда пришло время оплатить счёт, до него дошло, что денег у него не хватает.
-dana: И тогда он напялил футболку на голову, завопил, что он привидение, и попытался слинять!
-dana: Ну, я ему и вломила так, что он буквальновылетел отсюда. И крикнула ему вслед, чтопривидения не должны чувствовать боль.
+dana: Sorry, did I wake you up?
+jill: I-I wasn't sleeping. My eyes were open!
+dana: You went to college, right? You know having your eyes open means nothing.
+dana: Don't worry, I don't blame you. It's been a really long time since we've had such a slow night.
+dana: In fact, I think the last time we had a night this slow was before you started working here.
+jill: Really?
+dana: Yeah, it happened when Robert was still working here.
+jill: Who?
+dana: My first employee. The poor idiot bought a "levitation potion" and threw himself off a building.
+jill: Oh...
+dana: ...as it turned out, the potion actually worked.
+jill: ...come again?
+dana: He started rising in the air... and couldn't stop.
+dana: They later found his body smeared across the nose of a commercial flight that was on its way to Kanjevania.
+dana: But anyway...
+jill: (Should you really dismiss that so easily?)
+dana: We didn't have a single client that night. Not even a lost soul asking for directions. But then, suddenly, a kid shows up.
+dana: He was obviously underage, but I was bored, so I decided to let him order something.
+dana: I gave him one Karmotrine-free drink. I mean, even if I was letting him order, I wasn't about to give alcohol to an underaged boy.
+dana: And then, when the time came for him to pay his tab... he realized he didn't have enough money.
+dana: He then yanked his shirt over his head, started screaming he's a ghost, and tried to escape!
+dana: So, I kicked him so hard that he flew out of the bar, and told him ghosts shouldn't feel pain!
 jill: ...
-jill: ...Босс, ты что, правда ударила малолетнего пацана?
-dana: Да конечно же нет! Просто предупредила на будущее и заставила вымыть пару тарелок.
-dana: Как ты вообще могла подумать, что я могу ударить невинное юное дитя? Ты ранишь меня в самое сердце! 
-dana: Так или иначе... не унывай. Рано или поздно кто-нибудь да заявится.
-jill: Очень надеюсь на это.
-jill: ...мину-у-у-уточку, я тут кое-что вспомнила. Разве в зарплатном листе Джил не записан как Роберт?
-dana: ...не-е-е-е-е-е-е-е-е-е-е... *кхм*
+jill: ...Boss, did you really kick an underage kid?
+dana: Of course not! I just gave him a warning and made him wash a couple of dishes.
+dana: The fact that you even thought for a moment that I would kick a young, innocent child hurts me to no end, you know?
+dana: Anyway, just... keep it up. Someone will show up sooner or later.
+jill: I sure hope so.
+jill: ...hoooooooold on. Come to think of it. Aren't Gil's checks made out to "Robert"?
+dana: ...noooooooooooooooooo... *cough*
+
 leave dana
-jill: *вздыхает* Ну, хотя бы пару минут убили...
+[wait time="0.666667"]
+
+jill: *sigh* Well, at least that story killed a couple of minutes...
 jill: ...
-jill: ...Так... Даже не знаю... перебрать бокалы, что ли.
+jill: ...I think I'll... I don't know... sort the glasses here or something.
 jill: ...
-jill: (...Хм, у нас есть бокал в виде шляпы?)
-???: Эм... Есть кто-нибудь?
-jill: А! Прошу прощения! Я сей~[SHAKE:] АЙ, БЛИН!
+jill: ...(Huh, we had a fedora-shaped glass?)
+Um... Anybody here?
+jill: Ah! Sorry! I'll be right the - OUCH.
+
 join anna 1
-???: В-всё в порядке?
-jill: Я в порядке, да.
-jill: Добро пожаловать в «Вальгаллу», что будете... заказывать... эм...
-???: Что-то не так?
-jill: А вам точно уже можно пить?
-???: Учитывая, что мне точно уже можно есть, не вижу проблем с питьём.
-jill: Ты же понимаешь, что я не это имела в виду.
-???: Да, да. Я достаточно взрослая, чтобы пить спиртное. Вообще говоря, мне не так давно двадцать один стукнуло.
-jill: ...
-[SHOW:185,glitch_control]
-???: Всё ещё не веришь? Доказать?
-jill: (Я, наверное, недосыпаю последнее время, что ли.)
-jill: (Ощущение... как будто это всё уже происходило.)
-jill: ...не волнуйся, не надо.
-jill: Что тебе налить?
-???: Я, пожалуй, буду «Сахарный прилив».
-jill: Хорошо. Сейчас.
-set {Dialogic.paused} = true
+[wait time="0.666667"]
 
-if {drink} == "sugrush":
+A-Are you okay?
+jill: I'm fine, yeah.
+jill: Welcome to Valhalla, what can I get... you... um...
+Something wrong?
+jill: Are you sure you're old enough to drink?
+Well, seeing how I'm old enough to eat solid food, I'm gonna guess that drinking won't be a problem.
+jill: You know that's not what I meant.
+Yeah, yeah. I'm old enough to drink. I turned 21 not too long ago, actually.
+jill: ...
+
+185,glitch_control]
+[wait time="1.0"]
+
+Still don't believe me? What do you need me to give you?
+jill: (I must be sleep-deprived or something.)
+jill: (What's this... deja vu feeling though?)
+jill: ...it's fine, don't worry.
+jill: What can I get you?
+I feel like having a Sugar Rush.
+jill: Sure. Coming right up.
+
+set {Dialogic.paused} = true
+if {drink1} == "srush":
 	if {KarmoLvl} >= 1:
-		jill: Пожалуйста.
-		???: Спасибо!
-		???: Ага, то, что нужно.
+		jill: Here you go.
+		Thanks!
+		Yup, this is the stuff.
+		set {GlobalVars.anna[0]} = "srushalcohol"
 	else:
-		jill: Держи.
-		???: Спасибо!
-		???: Погоди-и-и-ка, в нём же нет алкоголя, так ведь?
-		jill: Ага.
-		???: Всё-таки думаешь, что я несовершеннолетняя?
-		jill: Ага.
-		???: Скажу тебе, что я уже достаточно взрослая, чтобы забеременеть.
-		jill: Да... Жаль, что здесь это не имеет значения.
-		???: Пфф!
-		???: С другой стороны, это даже хорошо.
-		???: Брр... то есть... не надо меня недооценивать!
+		jill: Here.
+		Thanks!
+		Hoooold on, this doesn't have any alcohol, does it?
+		jill: Nope.
+		You really think I'm underaged, don't you?
+		jill: Yup.
+		I'll have you know I'm old enough to get pregnant.
+		jill: That's... sadly not relevant here.
+		Ugh!
+		On second thought, this is actually good.
+		Err... I mean... Don't underestimate me!
+		set {GlobalVars.anna} = "srush"
 else:
 	if {KarmoLvl} >= 1:
-		jill: Наслаждайся.
-		???: Спасибо!
-		???: Эм... это же совсем не то.
-		???: *нюхает* Но, раз с него тоже можно опьянеть, то сойдет. Наверное.
+		jill: Enjoy.
+		Thanks!
+		Um... this isn't a Sugar Rush.
+		*sniff* But it'll get me drunk, so it's fine I guess.
+		set {GlobalVars.anna} = "otheralcohol"
 	else:
-		jill: На здоровье.
-		???: Спасибо!
-		???: Эм... это же не «Прилив».
-		???: Даже не пахнет как что-то, от чего я бы начала нести всякую забавную чепуху!
-		???: Думаешь, я несовершеннолетняя, да?
-		jill: Ага.
-		???: Аргх!
-if {KarmoLvl} >= 1:
-	???: Знаешь... а я ведь могла всё это время врать.
+		jill: Enjoy.
+		Thanks!
+		Um... this isn't a Sugar Rush.
+		It doesn't even smell like it'll make me say funny things!
+		You think I'm underaged, don't you?
+		jill: Yup.
+		Ugh!
+		set {GlobalVars.anna} = "other"
+if {GlobalVars.anna[0]} == "srushalcohol":
+	You know... I could've been lying through my teeth.
 	jill: ...
-	???: Я могла оказаться мелкой врушкой. А ты бы тогда продала спиртное ребёнку.
-	???: Каково бы тебе тогда было?
-	jill: Подумаешь...
-	???: «Подумаешь»?
-	jill: Не верю я в сказочки про непьющих подростков. Я встречала шестнадцатилетних, которые заливали глотку куда жёстче, чем я.
-	jill: Ограничивать их от алкоголя необходимо, да. Но сделай его запретным плодом...
-	jill: И, в общем... только усилишь тягу.
-	jill: Блин, да бьюсь об заклад, что дай детям его попробовать, у них желание пить пропадёт моментально.
-	???: То есть ты не против того, чтобы наливать несовершеннолетним спиртное?
-	jill: Против, но если бы вдруг налила, то вряд ли бы стала хвататься за голову и биться в истерике.
-	???: Р-разве тебя за это никак бы не наказали?
-	jill: Ну, во-первых, сначала надо открыто признать, что ты заказала спиртное. И после этого проблемы начнутся уже у тебя. 
-	???: ...вот как.
-	jill: Так что? Ты пришла сюда с целью втянуть меня в неприятности?
-	???: Нет! Просто хотела добиться какой-нибудь реакции. Но ты так спокойно ко всему этому отнеслась!
-	jill: ...и зачем тебе это?
-	???: Не знаю. Лицо у тебя такое, что хочется над тобой поиздеваться немного.
-	jill: (Будто снова в школу попала, ей-богу.)
+	I could be an underaged liar. You could've sold alcoholic drinks to an underage kid.
+	How would that make you feel ?
+	jill: Meh...
+	"Meh"?
+	jill: I don't believe in the myth that kids don't drink alcohol. I've met 16 year olds that drink a lot more than I do.
+	jill: Limiting the alcohol they can get is necessary, but if you make it look like a forbidden pleasure...
+	jill: Well... you will only make them crave it more.
+	jill: Hell, I bet if you gave kids alcohol, they'd start swearing off of it earlier.
+	So you're fine with giving drinks to underaged kids?
+	jill: No, but if that were to happen, I wouldn't get my panties in a bunch.
+	W-Wouldn't you get punished for doing that?
+	jill: You'd have to admit publicly that you ordered alcohol first. And that would bring you a different array of problems.
+	...oh.
+	jill: Did you come here looking to get me in trouble?
+	No! I just wanted a reaction out of you but you're taking it all too calmly!
+	jill: ...why?
+	I don't know. Your face makes me wanna tease you.
+	jill: (I suddenly feel like I'm back in high school.)
 else:
-	???: Ты правда считаешь, что я выгляжу так молодо?
-	jill: Да, считаю... но не настолько, чтобы принять за несовершеннолетнюю. 
-	???: Тогда почему ты не дала мне спиртное?!
-	jill: Лицо у тебя такое. Захотелось поглумиться над тобой.
-	???: Поглумиться над клиентом? И всегда ты так?
-	jill: Только если я достаточно уверена, что они нормально это воспримут.
-	jill: И всё-таки, что тебя злит в том, что мне кажется, что ты слишком молодо выглядишь?
-	???: Н-ну, это...
-	jill: Я это к чему. Малолетки – единственные, кто не хочет, чтобы их принимали за... малолеток.
-	jill: Но, по правде говоря, ты всё равно выглядишь старше, чем 95% наших завсегдатаев.
-	???: П-получается, что ты наливала тем, кто выглядит лет на тринадцать, что ли?
-	jill: Ага.
-	???: Э-э?
+	Do you really think I look that young?
+	jill: I do... but not young enough to be considered underaged.
+	Then, why won't you give me alcohol?!
+	jill: Because I wanted to mess with you.
+	Mess with a client? Do you usually do that?
+	jill: Only if it looks like they might take it in their stride.
+	jill: Still, why are you so angry at the idea I might think you look young?
+	T-That's...
+	jill: I mean, the only people who don't like being mistaken for someone younger... are young people.
+	jill: But to be fair, you still look older than 95% of our regulars.
+	T-That would mean you've served drinks to people who look like they're 13 years old or something.
+	jill: Yup.
+	E-Eh?
 
-jill: Ладно, сделаем проще. Паспорт свой покажи, пожалуйста.
-???: Конечно, сейчас.
-[SHOW:185,anna_id]
+jill: Alright, let's get this out of the way. Please show me your ID.
+Sure.
+
+join annaid 1
+
 jill: ...
-jill: Похоже, всё в порядке, мисс Анна... Грам?
-jill: (Анна Грам... Где я могла уже слышать это имя?)
-anna:Ну, давай. Придумай шутку, которую бы я ещё не слышала.
-jill: Я... вежливо откажусь.
-anna: Да нет, я серьезно. Давай. Все вечно думают, что это слишком легко, поэтому даже не пытаются.
-jill: ...и всё же я вежливо откажусь.
-anna: Зануда!
-anna: Что ж, и как же вас зовут, мисс бармен?
-jill: Меня?
-anna: Моё имя ты узнала. Я теперь вправе узнать твоё.
-jill: Разумно. Меня зовут Джилл.
-anna: И всё?
-jill: Просто... Джилл.
-anna: Да, я поняла, но полностью-то как?
-jill: Просто зови меня Джилл.
-anna: Ладно, для себя я представлю, что Джилл – это от Джоанна Игнасия Лоурен Лоан.
-anna: Даже, пожалуй, сокращу до Джо.
-jill: Ради бога.
-anna: Скажи, Джо, тут всегда так безлюдно?
-jill: (Джо, значит...)
-jill: Ну, сегодня никого не было. То есть СОВСЕМ никого.
-jill: Вообще, я рада, что ты пришла. Мне уже становилось просто адски скучно.
-jill: В смысле, не то чтобы обычно от посетителей было не продохнуть. Но сегодня даже для нас как-то безлюдно.
-anna: Надо понимать, это не очень-то популярное место?
-jill: У нас есть постоянные клиенты, но всё же мы не на главной улице стоим.
-anna: Но всё-таки мне тут нравится. Тут уютно... Не знаю, здесь я чувствую себя в безопасности.
-jill: Странно. В смысле, я тоже ощущаю подобное. Но обычно у людей это место создает диаметрально противоположное впечатление.
-jill: Однако, глупо их судить за это. Всё-таки район здесь далеко не самый спокойный.
-anna: А жаль. Мне очень нравится то, каким уединённым кажется это место.
-anna: Здесь не слышно городского шума. Это так приятно.
-anna: Но, возможно, всё от того, что мне доводилось быть отрезанной от внешнего мира. Может, это всего лишь ностальгия.
-jill: Ностальгия, значит...
-anna: Кстати, хотела узнать...
-anna: Почему ты не попросила показать паспорт, когда я зашла сюда? Ты ведь что-то подозревала?
-jill: Ну... во-первых, мне было скучно.
-anna: Заметно.
-jill: А во-вторых, я чувствовала, что всё на самом деле в порядке.
-anna: Эм... как это?
-jill: К нам нередко заглядывают детишки,думая, что смогут заказать выпивку. Но они ведут себя неестественно: слишком дёрганые.
-jill: Безусловно, таким я никогда не наливаю. Они сами не понимают, с чем связываются.
-anna: А если приходят более уверенные в себе, но всё равно несовершеннолетние?
-jill: Если они, по крайней мере, выглядят достаточно взрослыми, то, думаю, я переживу эту свою оплошность.
-jill: Конечно, если я узнаю, что передо мной ещё ребенок, то ничего он не получит. Но ведь любого можно обмануть.
-anna: То есть, я... вела себя достаточно естесственно?
-jill: Ага.
-anna: Ясненько.
-anna: Слушай, Джо, раз вопрос о том, что я легально могу пить, снят, не нальёшь мне ещё чего-нибудь?
-jill: Что будешь?
-anna: Хм... что-нибудь сладкое.
-jill: Сладкое? Разумеется.
+jill: Seems everything's in order, Miss Anna... Graem?
+jill: (Anna Graem... where have I heard that name before?)
+
+leave annaid
+[wait time="0.333333"]
+
+anna: Go ahead. Just try to make a joke I haven't heard yet.
+jill: I'll... politely refuse.
+anna: No, I'm serious. Go ahead. People think it's "too easy" so they never make jokes about my name.
+jill: ...I'm still going to politely refuse.
+anna: You're no fun!
+anna: So. What's your name, Miss Bartender?
+jill: My name?
+anna: You saw my name. I have the right to know yours.
+jill: Fair enough. I'm Jill.
+anna: Jill what?
+jill: Just... Jill.
+anna: Yeah, but what's your full name?
+jill: Just call me Jill.
+anna: Fine, I'll just pretend Jill is a way of saying your name is actually Johanna Ignacia Laurent Loan.
+anna: Actually, I'll shorten it to Jo.
+jill: Whatever floats your boat.
+anna: Say, Jo, this place looks awfully desolate.
+jill: (Jo, she says...)
+jill: It's been a slow day. A really, REALLY slow day.
+jill: I'm actually glad you showed up. I was growing bored as hell.
+jill: I mean, it's not like we're always bustling with activity, but this is unusual even for here.
+anna: So, I take it this isn't a popular place then?
+jill: We have our regulars, but we're not like the bars in the main street.
+anna: Still, I like this place. It's comfy and... I don't know, it makes me feel safe.
+jill: Weird. I mean, I feel that way too, but this place usually gives off the opposite impression.
+jill: Can't blame them though, this isn't exactly the best part of the city.
+anna: That's a shame. I really like how isolated this place feels.
+anna: You can't hear the sounds of the city in here. It's nice.
+anna: But then again, you could say I have some experience with isolated places. So, it might just be nostalgia.
+jill: Nostalgia, huh...
+anna: Speaking of coming in here...
+anna: Now that I think about it, you didn't ask for my ID when I first came in. Why didn't you do it if you were so suspicious?
+jill: Well... firstly, I was bored.
+anna: Figures.
+jill: And second, I felt like you were of legal age.
+anna: Um... how?
+jill: We've had a lot of kids come in thinking they could get away with ordering a drink, but they're too nervous or jumpy.
+jill: I don't usually give drinks to kids like that. They don't know what they're dealing with.
+anna: What if they're not like that but still underage?
+jill: If they at least look like they're above legal age, I would be able to live with myself I guess.
+jill: I won't give them anything if I know they're still kids. But hey, I'm bound to be fooled sometime.
+anna: So I'm guessing I wasn't... jumpy?
+jill: Yup.
+anna: I see.
+anna: Hey Jo, now that you know I can drink legally, can I get another one?
+jill: What do you want?
+anna: Hm... give me something sweet.
+jill: Sweet? Sure.
+
+set {Dialogic.paused} = true
+if {drinkflavour} == "sweet":
+	if {KarmoLvl} >= 1:
+		jill: One sweet drink.
+		anna: Thanks!
+		anna: You know, if all drinks were like this, I'd be afraid of turning into an alcoholic.
+		jill: Please don't joke about that.
+		anna: How can you say that? You're a bartender!
+		jill: A bartender doesn't want her clients to become alcoholics.
+		jill: Just like how personal trainers don't want their trainees to turn into steroid junkies.
+		anna: Oh, yeah. I guess you're right.
+		anna: Still, this one's really nice.
+else:
+5][RES\:]jill\: Here you go.
+anna: *sniff* This doesn't smell like my dad's breath on Sunday morning.
+anna: Did you give me something without alcohol?
+jill: I did.
+anna: I'll let you know I'm old enough to use a bra, so don't you dare underestimate me!
+jill: That's... not relevant here.
+anna: ...maybe for you.
+jill: ...?
+else:
+5][RES\:]jill\: Here.
+anna: ...
+anna: Jo, I think this drink went bad.
+jill: No, it didn't.
+anna: You sure? It tastes like butt.
+jill: I thought an adult like you would be able to stomach something like this.
+anna: So you intentionally gave me the wrong drink? Why? To mess with me?
+jill: ...yup.
+anna: You're mean!
+else:
+5][RES\:]jill\: Here you go.
+anna: Heheh... it feels funny on the tongue.
+anna: It's the first time I've tasted something so ...bubbly.
+jill: You've never had a bubbly drink? Not even a can of soda?
+anna: I was a really fragile person up until recently. Things like bubbly drinks were out of the question.
+jill: Oh...
+anna: You got the order wrong, but I actually like it! Are there even bubblier drinks?
+jill: I... don't think so.
+anna: It's fine. I'll get a soda later or something.
+else:
+5][RES\:]jill\: Alright. Here.
+anna: Hey, this is nice!
+jill: (Eh?)
+anna: Sure, it could be a little sweeter, but I'm not complaining.
+jill: (...is she a bird or something? That should've been spicy.)
+else:
+5]anna\: Do you normally do that, Jo? Give people the wrong orders?
+jill: Sorry, I'm... a bit out of it.
+anna: Don't worry. I won't complain. I'm in a good mood.
+anna: Still, why mess up like that?
+jill: Do you want me to get you another drink?
+anna: Nah, leave it like that...
+anna: ...still, I can't help but wonder...
+jill: If I told you I like to mess with my clients just to get a rise out of them, would you call it a day?
+anna: Yes, yes I would.
+jill: *sigh*
+anna: No sighing! I'm the one in the right here.
+jill: ...
+anna: And no sighing even harder because I said that.
+jill: (...dammit.)
+else:
+5]anna\: Hey Jo, do you drink?
+jill: I suppose, yeah. It'd be weird for a bartender not to drink, you know?
+anna: I don't know, I've met dentists with bad teeth. Bartenders who don't drink totally would make sense.
+jill: That's silly. It'd be like a vegan chef running a BBQ restaurant.
+anna: You think?
+jill: Yeah, I mean... It's not a matter of whether you can eat or drink whatever it is that you're making.
+jill: It's more like, "Why do it if you don't like it?"
+anna: Huh... yeah, I guess that's true.
+anna: A dentist might have bad teeth, but he could still like working in dentistry. But why bother bartending if you don't like alcohol?
+jill: See?
+else:
+5]anna\: ...
+anna: Hm...
+jill: Something wrong?
+anna: I just noticed you haven't said my name yet.
+jill: I haven't... what?
+anna: Aside from when you read my ID out loud, you haven't said my name!
+anna: Meanwhile, I've called out yours like a gazillion times now.
+jill: (The wrong name, though.)
+jill: Well... I haven't had the need to say your name.
+anna: Come on, humor me. Say my name.
+jill: ...why?
+anna: Say my name! Say. My. Name. Say my naaaaaaaaaaaaaaaaaaaame!
+jill: *sigh*
+jill: Anna.
+anna: One more time.
+jill: Anna.
+anna: Yes! Now one more time!
+185,glitch_control]
+[wait time="1.0"]
+jill: ...Nana.
+jill: ...
+jill: (It happened again. Maybe I need glasses?)
+jill: (And there's that feeling again. Did I see someone glitch out in the past?)
+anna: Oh, come on!
+jill: Why did you want me to say your name?
+anna: I like hearing people call me by name.
+anna: It feels personal and... fuzzy.
+jill: Yeah, but asking people to say your name like that is a bit...
+anna: Quirky?
+jill: Creepy.
+anna: I don't know about that.
+anna: There was this certain someone who would wake me up in the morning saying my name.
+anna: Your name is important. Once you know someone's name, the gap between that person and you disappears.
+anna: Once you give names to things, you start seeing them as important members of the family.
+anna: So what if it's creepy? It's still nice!
+jill: (Stop calling me Jo and use my name then!)
+jill: Say Anna, can I ask you something?
+anna: You called me by name so, sure!
+jill: About your arm...
+anna: What about it? Oh yeah, I'm lacking one. Did saying the word "creepy" remind you of its absence?
+jill: Actually, I've been wanting to ask about it since you came in.
+anna: At least be uncomfortable for a second! I'm trying to get a rise out of you. Sheesh...
+anna: So, what is it? How did I lose it?
+jill: If it's not too personal.
+anna: It isn't. I'm actually proud of the tale.
+jill: Eh... why?
+anna: You're looking at a proud survivor of Nanomachine Rejection!
+jill: Really? I thought that was something doctors detected while a fetus is still in the womb.
+anna: Yes and no.
+anna: There's actually two types of Nanomachine Rejection Syndrome.
+anna: The first one is the most "common." They usually detect it while you're still a fetus.
+anna: That's when they turn you into a Cat Boomer.
+anna: The other one can sometimes appear in your teenage years. It's incredibly rare, but it's still possible.
+jill: So that arm...
+anna: Nanomachine Rejection basically causes your body to attack itself.
+anna: Tissues start ripping apart, your organs malfunction...
+anna: I was lucky. In the end, all I lost was an arm and a handful of toes.
+anna: Get it? A handful, because I lost five.
+jill: ...
+anna: *ahem* A-Anyway...
+anna: I have a prosthetic arm, but it's in maintenance right now.
+jill: Ah, I see.
+anna: It's a bit weird to be without it. I still feel like it's there.
+anna: Just a couple of hours ago, I tried to grab something and I just stood there, thinking that arm was doing something.
+anna: But anyways. Mind getting me another drink? We can keep talking about my stump after that.
+jill: Umm... riiiiight.
+jill: What do you want?
+anna: Let's try something... classy.
+anna: It's weird being in a bar and not asking for a fancy drink.
+jill: Alright.
 set {Dialogic.paused} = true
 
-if {drinktype} == "sweet":
-	if {KarmoLvl} >= 1:
-		jill: Один сладкий коктейль.
-		anna: Спасибо!
-		anna: Знаешь, если бы все напитки были такими, боюсь, я бы спилась.
-		jill: Не шути так, пожалуйста.
-		anna: Почему тебя это смущает? Ты же бармен!
-		jill: Ни один бармен не хочет, чтобы его клиенты становились алкоголиками.
-		jill: Так же, как и личные тренеры в спортзалах не хотят, чтобы их подопечные подсаживались на стероиды.
-		anna: Да, думаю, ты права.
-		anna: Но как же всё-таки вкусно!
-	else:
-		jill: Держи.
-		anna: *нюхает* Что-то запах у него совсем не похож на папин воскресный перегар.
-		anna: Без алкоголя намешала?
-		jill: Именно так.
-		anna: Я уже вовсю лифон ношу, так что не смей меня недооценивать!
-		jill: Как-то я... не вижу связи.
-		anna: ...твои проблемы.
-		jill: ?..
+case "classy"\:
+5][RES\:]jill\: Here.
+anna: This looks expensive, alright. I'm starting to have second thoughts right now.
+jill: Just drink it.
 else:
-	if {drinktype} == " ":
-		jill: Держи.
-		anna: ...
-		anna: Джо, мне кажется, с этим коктейлем что-то не так.
-		jill: Да нормально всё.
-		anna: Ты уверена? На вкус как жопа.
-		jill: Мне показалось, что у такого взрослого человека, как ты, не будет с ним особых проблем.
-		anna: Так значит, ты специально налила не то, что я просила? Но почему? Чтобы поглумиться?
-		jill: ...ага.
-		anna: Ты злая!
-	elif {drinktype} == "bubby":
-		jill: Прошу.
-		anna: Хе-хе-хе... какое забавное ощущение на языке.
-		anna: Впервые пробую что-то такое... такое шипучее.
-		jill: Ты никогда не пила игристых напитков? Даже газировку?
-		anna: До недавнего времени у меня было плохо со здоровьем. О шипучках даже речи не могло быть.
-		jill: Ясно...
-		anna: На самом деле, хоть ты и налила не то, мне очень нравится! А есть ещё что-то более шипучее?
-		jill: Не... думаю.
-		anna: Ладно. Потом куплю себе какую-нибудь газировку.
-	elif {drinktype} == "spicy":
-		jill: Так. Пожалуйста.
-		anna: Ой, как классно!
-		jill: (Чего?)
-		anna: Конечно, могло бы быть и слаще, но чего жаловаться. 
-		jill: (...Она что, птица, что ли? Он же острый, вроде как.)
-	else:
-		anna: Джо, ты всегда так? Наливаешь не то, что тебя просят?
-		jill: Извини, что-то я... сама не своя сегодня.
-		anna: Не беспокойся. Жалобную книгу просить не буду. У меня хорошее настроение.
-		anna: И всё же, как ты дошла до такой жизни?
-		jill: Налить тебе что-нибудь другое?
-		anna: Не, и так сойдет...
-		anna: ...но всё же. Никак не могу выкинуть из головы...
-		jill: Если я скажу, что мне просто интересна реакция посетителей на мои издевательства, ты успокоишься?
-		anna: Да, успокоюсь.
-		jill: *вздох*
-		anna: Отставить вздохи! И вообще это я сейчас должна вздыхать.
-		jill: ...
-		anna: И ещё более глубокие вздохи от того, что я это сказала, отставить тем более!
-		jill: (...да чтоб тебя.)
-anna: Слушай, Джо, а ты сама-то пьёшь?
-jill: Ну, да. Было бы странно, если бы бармен не пил, не находишь?
-anna: Не знаю, я видела зубных врачей с плохими зубами. Так что бармен-трезвенник не кажется мне чем-то из ряда вон выходящим.
-jill: Да ну, это глупость. Это как если бы шеф-повар веган открыл стейк-хаус.
-anna: Думаешь?
-jill: Ну да. То есть... дело даже не в том, можешь ли ты есть или пить то, что готовишь.
-jill: Тут, скорее, «зачем делать то, что тебе не нравится?».
-anna: А... да, верно, наверное.
-anna: Врачу может нравиться его дело, хоть зубы у него самого и плохие. Но зачем идти в бармены, если не переносишь алкоголь? 
-jill: Вот видишь.
+5][RES\:]jill\: Here you go.
 anna: ...
-anna: Хм...
-jill: Что-то не так?
-anna: Я только сейчас поняла, что ты ещё ни разу не обратилась ко мне по имени.
-jill: Я не... что?
-anna: Кроме момента, когда вслух прочитала имя в паспорте, ты ни разу его больше не произнесла!
-anna: В то же время твоё я назвала тучу раз.
-jill: (Ага, причём неверное.)
-jill: Ну... у меня нужды не было его произносить.
-anna: Ну же. Повесели меня. Скажи моё имя.
-jill: ...зачем?
-anna: Скажи моё имя! Скажи. Моё. Имя. Скажи моё иииииииииииииииииимя!
-jill: *вздох*
-jill: Анна.
-anna: И ещё раз.
-jill: Анна.
-anna: Отлично! Ещё разок!
-[SHOW:185,glitch_control]
-jill: ...На-на...
+jill: Something wrong?
+anna: This has no alcohol in it.
+anna: Jo, why would I come to a bar and not get something alcoholic?
+jill: To ask for directions, to hide from the cops, to use the bathroom, to use the phone, to try mugging us and get beaten by my boss...
+jill: To sit because your leg hurts, to ask what's the capital of Ghana, to challenge my boss to a children's card game...
+jill: To ask for information, to start an illegal chess ring, to hide a newly bought inflatable doll from your wife...
+anna: Did all of this happen in real life?
+jill: I could go on for hours.
+anna: L-Leave it at that.
+case "girly"\:
+5][RES\:]jill\: Here ya go.
+anna: This doesn't look expensive.
+anna: ...on second thought, that's a good thing.
+anna: Cheers!
+case "classic"\:
+5][RES\:]jill\: Enjoy.
+anna: This looks nice. In a... retro way, I guess.
+anna: But not classy, that's for sure.
+anna: Actually, it's not half bad.
+case "manly"\:
+5][RES\:]jill\: Aaaand served.
+anna: ...
+jill: What?
+anna: I have this feeling you're messing with me.
+anna: Is it because I'm looking to get a reaction out of you?
+jill: Maybe.
+if (global.anna1 == "fail" && global.anna2 == "fail"):
+5]anna\: ...
+jill: Something wrong?
+anna: Yeah, I'm just not feeling all that comfortable anymore.
+jill: Why?
+anna: How can I feel comfortable if you serve me drinks I don't like?
+anna: I'd understand if you got the order wrong and I still liked it, but that's not the case here.
+anna: So yeah, I'm gonna leave right now. Better luck next time.
+leave 
+[wait time="0.666667"]
+
+jill: *sigh* That can't be good.
+else:
+5]anna\: Heheh... I'm starting to feel dizzy. That's nice.
+jill: It is?
+anna: Of course! I spent so much time in hospitals and whatnot. But now, I'm just... living my life, you know?
+anna: I wanna feel the good and the bad. No more being forced to sit quietly in a quarantine room.
+jill: Yeah, I can get that.
+jill: Wait... Quarantine?
+anna: Type 2 Nanomachine Rejection patients are put in special chambers free from the nanomachine particles in the air.
+anna: That prevents them from being assimilated, and aggravating their whole situation.
+anna: To be fair, not all of my memories of that chamber are bad.
+anna: I mean, I did spend three, four years in one of those places.
+jill: Really? That long?
+anna: Well, I didn't go for the genetic-level treatment. So, it was longer... and a lot less expensive.
+anna: I'm not going to complain, though. I'm alive thanks to all that.
+anna: And I left with so many fond memories too.
+jill: So that's what you meant with the whole "feeling nostalgic in isolated places" thing.
+anna: Yup.
+anna: ...
+jill: Are you alright?
+anna: Y-Yeah... I'm fine. Just dizzy.
+else:
+5]anna\: So, any questions about my stump, Jo?
+jill: Not about your stump, actually. What is the treatment for Nanomachine Rejection Syndrome like?
+anna: Well. The purpose of it is to provide your body a certain degree of immunity to the nanomachines so it stops attacking itself.
+anna: But too much of that, and you end up with Tokyo Flu.
+jill: Tokyo Flu...
+jill: That's that super-flu that people can only avoid with the help of nanomachines, right?
+anna: That's the one.
+jill: I've always wondered why they called it Tokyo Flu.
+anna: If I remember correctly, it's because one of the first cases happened in Tokyo. Some have called it "Anime Flu" too.
+jill: Huh...
+jill: It's ironic how the technology they use to keep tabs on you also strengthens your immune system.
+anna: Not that it strengthened me against the needles I had to face on a daily basis, that's for sure. But anyways...
+anna: Nanomachine Rejection Syndrome is, in some ways, like an allergy. A genetic-level treatment rewrites that part so you can call it a day.
+anna: But we couldn't afford that so we went for the long route.
+anna: The long route consists of a concentrated serum that makes about 1 square centimeter of your body immune to rejection.
+anna: But the serum also makes your body go nuts at times too. I lost my arm while they were treating it.
+anna: So they have to carefully monitor the treatment to ensure it doesn't kill you in your sleep.
+anna: Oh yeah, did I mention that the serum burns? Because it burns like the flames of hell itself.
+jill: Damn...
+jill: D-Did I strike a nerve with that question?
+anna: Oh no, I'm not concerned about it but... can you really blame me for getting riled up about it?
+anna: And don't get me started about having my eyes treated.
+jill: Yeah... I won't, don't worry.
+else:
+5]anna\: ...
+anna: Hey Jo... if I ordered two drinks, would you be willing to share one with me?
+jill: Come again?
+anna: To be honest, talking about the treatment and all that made me feel a bit lonely.
+anna: Sorry if it's not something you can do, but I had to ask.
+jill: It's not something I normally do, but...
+jill: Eh, what the hell. Sure.
+anna: Really?! Yay!
+anna: Alright then. I want a Piano Man and a Piano Woman.
+jill: On it.
+set {Dialogic.paused} = true
+
+if (global.bevid_a == "pman" && global.bevid_b == "pwman"):
+5][RES\:]jill\: Two drinks.
+anna: Which one do you want? Do you prefer the man or the woman?
+jill: I'm fine with either, really.
+anna: Okay... I'll pick the woman then.
+else:
+5][RES\:]jill\: Two drinks served.
+anna: These are too rough for me.
+jill: How do you know if you won't give them a chance?
+anna: I'd know if I wanted to give them a chance... and I really don't.
+anna: *sigh* But I'll take them. If only so I can drink with you.
+else:
+5][RES\:]jill\: Here you go.
+anna: So, do you like women?
+jill: I found out in college I'm fine with either.
+anna: Are we talking about the same thing here?
+jill: I... don't know.
+else:
+5][RES\:]jill\: Here.
+anna: I... uh...
+anna: Whatever, as long as I'm having a drink with someone...
+else:
+5]anna\: Cheers!
+185,glitch_control]
+[wait time="1.0"]
 jill: ...
-jill: (Вот опять. Может, мне уже к врачу обратиться?)
-jill: (И снова ощущение, будто я уже видела раньше, как кого-то так же глючит.)
-anna: Ох, ну тебя!
-jill: Почему ты хотела, чтобы я его произнесла?
-anna: Я люблю, когда люди обращаются ко мне по имени.
-anna: Это так лично... и одновременно так загадочно.
-jill: Да, но чтобы вот так заставлять его произносить – это несколько...
-anna: Чудно?
-jill: Жутко.
-anna: Ну не знаю.
-anna: В моей жизни был кое-кто, кто будил меня по утрам, обращаясь ко мне по имени...
-anna: Имя ведь так важно. Когда ты знаешь, как кого-то зовут, расстояние между вами исчезает вмиг.
-anna: Или дай имена каким-то вещам, и ты начнёшь их воспринимать как членов семьи.
-anna: Ну и что такого, если это может показаться жутковатым? Но ведь приятно же!
-jill: (Тогда прекрати называть меня Джо и зови по имени!)
-jill: Слушай, Анна, могу я тебя спросить кое о чём?
-anna: Конечно, ты же назвала меня по имени!
-jill: Насчёт твоей руки...
-anna: А что такое? А, да, у меня же нет одной. Это после слова «жутко» тебя передёрнуло?
-jill: В общем-то, я хотела спросить про неё с самого начала.
-anna: Вот жеж... хоть на секунду-то можно тебя заставить почувствовать себя неуютно? Я тут стараюсь, стараюсь...
-anna: Так что насчёт руки? Хочешь узнать, как я её лишилась? 
-jill: Если это не что-то слишком личное.
-anna: Да нет. Вообще-то я даже горжусь этой историей. 
-jill: Э-э... почему?
-anna: Перед тобой гордо восседает человек, переживший отторжение наномашин!
-jill: Правда? Мне казалось, что его обнаруживают ещё в состоянии зародыша.
-anna: И да, и нет.
-anna: На самом деле существует две разновидности синдрома отторжения.
-anna: Первый и самый распространенный – его как раз обычно обнаруживают у зародышей. 
-anna: Тогда их и превращают в котобумеров.
-anna: Другой тип может проявиться в подростковые годы. Такое случается очень редко, но всё же случается.
-jill: Значит, твоя рука...
-anna: Грубо говоря, синдром заставляет твоё тело атаковать само себя.
-anna: Ткани начинают рваться, органы – отказывать...
-anna: Мне ещё повезло. В итоге мне лишь отрезали руку и раскулачило ступню.
-anna: Раскулачило ступню, дошло, да? Типа я осталась без пальцев на ней.
+jill: (Alright, this is getting weird.)
+anna: I said...
+anna: Cheeeeeeeeeeeeeeers!
+jill: Oh... Cheers.
+anna: Yeah!
+anna: ...
+anna: ...*sigh*
+jill: Are you okay?
+if (global.drunklevel_a > 12):
+5]anna\: Yeah, I guess I'm fine.
+anna: I'm just dizzy... and sad.
+jill: Sad?
+anna: I miss Lanette.
+jill: Lanette? Who?
+anna: She and I were the only patients with Nanomachine Rejection Syndrome in the hospital.
+anna: We... We were together every day.
+anna: When it was time to eat, she was there.
+anna: During visiting hours, she was there.
+anna: Whenever I slept, whenever I cried, whenever I laughed... she was always there.
+anna: When I lost my arm, she told me I could have hers as compensation, that I could use it however I wanted.
+jill: What happened to her?
+anna: ...Tokyo Flu.
+anna: Something went wrong with her immune system and the flu started kicking in.
+anna: They tried to rush part of her treatment to reduce the symptoms, but it only made the nanomachines go wild.
+anna: It eventually got to her brain and...
+anna: ...
+jill: ...I see. Sorry to hear that.
+anna: The worst part is that if they left her as she'd been, I might have been able to spend an extra year or so with her.
+anna: ...but all that work only got her killed sooner. I didn't even get a chance to say goodbye. She just... vanished.
+jill: That's tough.
+anna: I miss her every day, you know?
+anna: I say I want to forget her but the truth is that... I just want this pain to go away.
+anna: It's been two years and I still feel the pain. Every second is just a second without her.
+anna: It can get so... lonely.
+anna: ...
+anna: Sorry, am I making you uncomfortable, Jo?
+jill: You're not, don't worry.
+anna: Still. Sorry about that, I'm just...
+anna: We had so many plans about what we'd do after we left.
+anna: We were so close to being together without the pesky Nanomachine Rejection and...
+anna: It's not fair, you know? Why do I get to be here while she doesn't?
+anna: I try to enjoy life as much as I can. Enjoy it for the both of us... but it doesn't seem enough.
+anna: What do you think?
+jill: What do I think? Um...
+jill: Well... I think about my grandpa.
+anna: Your grandpa?
+jill: He was a... harsh guy. Really sincere, but not one to mess with platitudes.
+jill: It's not like he had a lot of enemies, but many people were cautious around him.
+jill: But once he died, I never heard a single bad comment about him. Not even from those who used to badmouth him every now and then.
+anna: Really?
+jill: Well, the "best" thing about death is that after you die, all the wrongs you ever committed feel meaningless.
+jill: Really makes you think about how petty some things can be.
+anna: ...yeah.
+jill: On second thought, that doesn't have much to do with what you said, does it?
+jill: But what I'm trying to say here is\: Don't try so hard. Just... live, you know? Be grateful you have that chance.
+jill: I know what you're feeling right now, but you'll get better. Eventually, all you'll remember is the happy moments.
+anna: I hope so.
+anna: Sounds like you and your grandpa were close.
+jill: He was my best friend. Losing him was quite the blow.
+anna: Do you have any regrets in regards to him?
+jill: I guess not.
+jill: I mean, it's not like I had a dramatic goodbye or anything like that. He died in a hospital bed while I was at home.
+jill: But... I don't know. I never had a heated discussion with him, so I don't have that problem.
+jill: Sure, there's always a bit of "I wish I could've told him this" but that's bound to happen, regardless of who you're talking about.
+jill: Did you leave Lanette after a fight or something?
+anna: No! Of course not.
+jill: Then you're luckier than most people.
+anna: ...oh.
+jill: What I mean is... whenever you feel depressed, remember that she left your life while both of you were on good terms.
+jill: Whenever you feel down, just try to hold onto that.
+anna: Yeah, I can try that!
+anna: Heh, that cheered me up a bit somehow. Thanks.
+jill: Anytime.
+anna: I should be leaving now. Thanks for such a lovely night, Jo.
+jill: If you feel lonely again, just come back.
+anna: I will!
+leave 
+[wait time="0.666667"]
+
+else:
+5]anna\: Hey Jo, why do you think bad things happen?
+jill: That's a sudden question. How so?
+anna: If there's a god, why do you think bad things happen?
+jill: Are you in a contemplative mood or something?
+anna: Kinda.
+jill: Huh...
+jill: I remember a conversation in college where a classmate said we give god too much flak.
+anna: How so?
+jill: Well, let's imagine a place where virtually nothing bad happens.
+jill: If an experience doesn't one-up the last "good" thing you enjoyed, you'll feel like it was a bad one.
+jill: Even if you lived in a place where every good thing was one-upped by an even better good, past events would seem bad.
+anna: Um... eh?
+jill: Well... let's say you have chocolate.
+anna: I like chocolate.
+jill: Everyone does.
+anna: My mom doesn't.
+jill: Then she's a rare case.
+anna: She also doesn't like pizza.
+jill: ...is she even human? Err.. sorry. I mean...
+jill: Dammit... where was I?
+anna: Chocolate.
+jill: Right.
+jill: If you only got good chocolate, a slightly less good chocolate would taste awful.
+anna: Yeah, I can see that.
+jill: And if you only got chocolates that tasted better each time...
+jill: ...then the chocolates you ate in the past would worsen in memory.
+anna: Oooooh, yeah. Now I get it.
+jill: So yeah, sometimes bad is just a matter of contrast.
+anna: That still doesn't justify why bad things like death happen.
+jill: Hm...
+jill: I don't know. Maybe, we're just too concerned with smaller plans to look at the bigger picture.
+jill: Maybe that death will trigger something else in the future.
+jill: If there's reincarnation, maybe that person's needed somewhere else.
+jill: Maybe, the world works in an entirely different way and we're limited by human reasoning.
+jill: I don't know. I'm just a bartender. If there's someone to ask about the metaphysical nature of death, it's not me.
+anna: *sigh*
+anna: Sometimes, I think god is just a dick.
+anna: Giving me a disease, allowing me to survive it but depriving me of my special someone...
+anna: Eh... um... do you need context for all of that? The special someone I mean.
+jill: I'll connect the dots eventually. Keep talking, you're obviously venting some stuff there.
+anna: Oh... alright then.
+anna: It's like god's... I don't know. It's like he's some edgy writer who likes having his characters suffer.
+anna: I take solace in that reasoning because then I start expecting bad things.
+jill: What if you're looking at it from the wrong angle?
+anna: How so?
+jill: Main characters usually have this tragic backstory that we never really see in the beginning.
+jill: Something that helps them move on, that gives them motivation to power through the plot.
+jill: Maybe, you're not living the girth of your story yet. Maybe, this is your backstory getting set.
+jill: Who knows what the future holds for you?
+anna: Heh...
+anna: That'd be nice. It's at least better than my old outlook.
+anna: Yeah. I like it a lot. I'm going to start thinking that way now.
+anna: Today, my origin story ends and my actual narrative begins!
+jill: That's the spirit.
+anna: Thanks Jo, I feel a bit better.
+jill: I'll be here if you need an ear.
+anna: Glad to know that.
+anna: I have to leave. Bye Jo!
+
+leave 
+[wait time="0.666667"]
+jill: Please come again.
+anna: I will!
+leave 
+[wait time="0.666667"]
+
+else:
+5]jill\: Well, that was an entertaining diversion.
+join dana 1
+
+[wait time="1.0"]
+jill: Ah. Boss. What happened?
+dana: I... came to ask you that.
+jill: Eh?
+dana: You just spent an hour talking to yourself.
+jill: No, I didn't. There was a girl called Anna here.
+dana: There was nobody here.
+dana: I was actually coming to tell you we're gonna close for tonight and there you were, chatting with the thin air.
+dana: A spirited talk too.
+jill: T-That can't be! She paid for her drinks!
+dana: The registry says the money came from your account.
+jill: B-But all the drinks I served her...
+dana: You mean the liquid that someone who is definitely not going to be me has to clean off the floor?
+jill: But I...
+dana: Jill, you're worrying me. Are you okay?
+dana: The last thing I need is another employee who talks to herself.
+jill: Yeah, I'm fine. I just...
 jill: ...
-anna: *кхм* Н-ну так вот...
-anna: У меня есть искуственная рука, но сейчас она на техобслуживании.
-jill: А, ясно.
-anna: Странно, конечно, без неё. Я прямо чувствую, будто она на месте.
-anna: Буквально пару часов назад пыталась взять ей кое-что. Я была полностью уверена, что делаю что-то этой рукой. 
-anna: Но неважно. Не против, если я ещё закажу? И потом мы можем продолжить разговор о моей культяпке.
-jill: Эмм... окееей.
-jill: Что будешь пить?
-anna: Давай попробуем что-нибудь... изысканное.
-anna: Ведь было бы странно оказаться в баре и не заказать что-нибудь этакое.
-jill: Уже на подходе.[E:17]
-
-
-
-[V:5][RES:]jill: Прошу.
-anna: Выглядит довольно дорого. Меня уже начинают терзать сомнения.
-jill: Просто попробуй.[E:18]
-[V:5][RES:]jill: Держи.
-anna: ...
-jill: Что-то не так?
-anna: В нём нет алкоголя.
-anna: Джо, вот скажи, зачем мне приходить в бар, если не за спиртным?
-jill: Спросить дорогу, скрыться от полиции,сходить в туалет, позвонить, попытатьсяограбить нас и огрести от моего босса... 
-jill: Посидеть, потому что ногу свело,спросить название столицы Ганы, броситьвызов Боссу в детскую карточную игру...
-jill: Допросить, организовать нелегальную шахматную лигу, спрятать новенькую надувную куклу от жены...
-anna: И прямо всё это уже случалось?
-jill: Часами могу перечислять.
-anna: Л-ладно, оставь это дело.[E:19]
-
-[V:5][RES:]jill: Прошу...
-anna: Какое-то оно не совсем изысканное.
-anna: ...с другой стороны, вполне себе неплохо.
-anna: До дна![E:20]
-
-[V:5][RES:]jill: Наслаждайся.
-anna: Выглядит неплохо. Только... старомодно, скорее.
-anna: Но уж точно не изысканно.
-anna: На самом деле, не так уж плохо.[E:21]
-
-[V:5][RES:]jill: И-и-и подано.
-anna: ...
-jill: Что?
-anna: И почему мне кажется, что ты глумишься надо мной?
-anna: Может, потому что я весь вечер пытаюсь хоть какую-то реакцию выжать из тебя? 
-jill: Может.[E:22]
-
-[V:5]anna: ...
-jill: Что-то не так?
-anna: Да, что-то у меня настроение испортилось.
-jill: Почему?
-anna: А как оно может быть хорошим, если ты наливаешь мне всякую гадость?
-anna: Я бы ещё поняла, если бы ты там что-то напутала, а мне бы всё равно понравилось. Но это не тот случай. 
-anna: Так что да, пойду-ка я. Успехов в будущем. [XS:anhide,1]
-jill: *вздох* Плохо дело.[E:23]
-
-[V:5]anna: Хе-хе-хе... голова начала плыть. Приятно.
-jill: Приятно?
-anna: А то! Я столько времени провела в больницах и всём таком. Знаешь, теперь я просто могу... жить своей жизнью.
-anna: Хочу чувствовать хорошее, чувствовать плохое. А не чтобы меня заставляли тихонечко сидеть в карантинной комнатушке. 
-jill: Да, я тебя понимаю.
-jill: Подожди-ка... в карантине?
-anna: Пациенты со вторым видом отторжения помещаются в специальные палаты, в которых нет наномашинных частиц в воздухе.
-anna: Чтобы пациенты не могли их вдохнуть, усугубив тем самым своё положение.
-anna: Но, должна признать, о том месте у меня остались не только плохие воспоминания.
-anna: То есть, конечно же, я там целых три или четыре года провела.
-jill: Правда? Так долго?
-anna: Ну, мне не стали проводить лечение на генном уровне, поэтому это заняло больше времени... а стоило намного меньше.
-anna: Но грех жаловаться. Я всё-таки выжила благодаря всему этому.
-anna: Плюс, у меня осталось достаточно приятных воспоминаний. 
-jill: Так вот что ты имела в виду под ностальгией по безлюдным местам?
-anna: Угу.
-anna: ...
-jill: Ты в порядке?
-anna: Д-да... всё хорошо. Только голова немного кружится.[E:24]
-
-[V:5]anna: Так что, Джо, хочешь что-нибудь узнать о моём обрубке?
-jill: На самом деле, не о нём. А как лечат синдром отторжения?
-anna: Ну, идея в том, чтобы выработатьдостаточный иммунитет к наномашинам, чтобы организм перестал атаковать себя.
-anna: Но если переборщить с этим, то получишь токийский грипп.
-jill: Токийский грипп... 
-jill: Это тот самый супер-грипп, от которого люди как раз и спасаются наномашинами, да?
-anna: Он самый.
-jill: Мне всегда было интересно, почему он «токийский».
-anna: Если я правильно помню, один из первыхслучаев заражения случился в Токио. Некоторыеего даже называли «Анимешной заразой».
-jill: Хм...
-jill: Какая ирония. Технология, созданная, чтобы следить за тобой, ещё и укрепляет иммунную систему.
-anna: Зато вот менее чувствительным к ежедневному «иглоукалыванию» она точно не делает. Но, как бы то ни было...
-anna: В каком-то смысле синдром похож на аллергию. При лечении на генном уровне тебе просто исправляют участок ДНК.
-anna: Но мы не могли себе её позволить,поэтому пришлось пойти длинной дорогой.
-anna: Которая заключается в введениисыворотки, делающей за одно введение околоодного кубического сантиметра тела иммунным.
-anna: Но от этой сыворотки организм иногда съезжает с катушек. Собственно, руки я лишилась, когда в неё кололи.
-anna: Так что врачи должны очень вниманительноследить за курсом лечения, чтобы бытьуверенными, что терапия не убьет тебя во сне.
-anna: Ах да, я говорила, что сыворотка жжёт? Жжёт как огни из преисподней.
-jill: Чёрт побери...
-jill: Я-я затронула больную тему?
-anna: Нет-нет, не в этом дело... просто... сложно не расстроиться, вспомниная это.
-anna: И даже не спрашивай, как мне глаза лечили.
-jill: Да... не стану, не беспокойся.[E:25]
-[V:5]anna: ...
-anna: Слушай, Джо... если я закажу два напитка, ты выпьешь со мной?
-jill: Что, прости?
-anna: Честно говоря, от всех этих разговоров про лечение и всё такое, мне стало немного одиноко.
-anna: Прости, если тебе это запрещено, но я должна была спросить.
-jill: Это, определённо, не то, что я обычно практикую, но...
-jill: А, какого чёрта. Почему бы нет.
-anna: Правда?! Ура!
-anna: Отлично, тогда я хочу «Пианиста» и «Пианистку».
-jill: На подходе.[E:26]
-[V:5][RES:]jill: Два коктейля.
-anna: Какой хочешь? Предпочитаешь мужчин или женщин?
-jill: На самом деле, меня устраивает любой вариант.
-anna: Ну, ладно... Тогда я выбираю женщину.[E:27]
-[V:5][RES:]jill: Прошу, два напитка.
-anna: Эти для меня слишком круты.
-jill: Откуда ты знаешь, ты ведь их ещё не попробовала?
-anna: Я бы узнала, если бы вообще хотела его пробовать...
-anna: Эх, ладно, выпью, но только если ты выпьешь со мной.[E:28]
-[V:5][RES:]jill: Пожалуйста.
-anna: Так тебе нравится женщины?
-jill: После колледжа я поняла, что мне заходят оба варианта.
-anna: А мы вообще о чём говорим?
-jill: Я... не знаю.[E:29]
-[V:5][RES:]jill: Пожалуйста.
-anna: Я... эм...
-anna: Ай, сойдёт, раз есть возможность выпить с кем-то...[E:30]
-[V:5]anna: Будем здоровы!
-[SHOW:185,glitch_control]jill: ...
-jill: (Так, ладно, это уже странно.)
-anna: Я сказала...
-anna: Будем здоро-о-о-о-овы!
-jill: А, да... Будем.
-anna: О, да!
-anna: ...
-anna: ...эх...
-jill: Ты в порядке?[E:31]
-[V:5]anna: Да, наверное, в порядке.
-anna: Просто голова кружится... и мне грустно.
-jill: Грустно?
-anna: Я скучаю по Ланетт.
-jill: Ланетт? Кто это?
-anna: Мы были единственными пациентами с синдромом отторжения в той больнице.
-anna: Мы... мы были вместе каждый день.
-anna: Когда приходило время обеда, она была рядом.
-anna: В часы посещений она была рядом. 
-anna: Когда я спала, когда плакала, когда смеялась... она всегда была рядом.
-anna: Когда я лишилась руки, она мне предложила свою. «Пользуйся на здоровье», – сказала.
-jill: И что с ней случилось?
-anna: ...Токийский грипп.
-anna: Что-то пошло не так с её иммунитетом и проявился грипп. 
-anna: Врачи попытались ускорить процедуру лечения, чтобы сбить симптомы, но это только возбудило наномашины.
-anna: В конце концов был поражен её мозг и...
-anna: ...
-jill: ...Понятно. Мне очень жаль.
-anna: И хуже всего то, что оставь они её как есть, я бы смогла провести с ней ещё год или даже больше. 
-anna: ...но все их попытки привели только к тому, что она умерла раньше. Я даже не смогла попрощаться. Её просто... не стало.
-jill: Это тяжело, да.
-anna: Знаешь, я так по ней скучаю. Каждый день.
-anna: Говорю, что хочу забыть о ней, но правда в том... Я просто хочу, чтобы боль ушла.
-anna: Два года уже прошло, а мне всё ещё больно. Каждая секунда – всего лишь секунда без неё.
-anna: Одиночество порой становится просто... невыносимо.
-anna: ...
-anna: Извини, Джо, наверное, я заставляю тебя чувствовать себя неуютно?
-jill: Нет, не заставляешь. Не волнуйся об этом.
-anna: И всё же извини меня. Просто я...
-anna: У нас было столько планов о том, что будем делать, когда выйдем из больницы.
-anna: Мы были так близки к тому, чтобы быть вместе и без всех этих мерзких синдромов...
-anna: Нечестно всё это. Почему я здесь, а она нет?
-anna: Я пытаюсь наслаждаться жизнью по полной. За нас обеих... но, видимо, этого мало.
-anna: А о чём думаешь ты?
-jill: Думаю? Хм...
-jill: Ну... я думаю о своём дедушке.
-anna: Дедушке?
-jill: Он был... довольно чёрствый мужик. Очень искренний, но совсем не щепетильный.
-jill: Не то чтобы у него было много врагов, но много кто рядом с ним вёл себя настороженно.
-jill: Но когда он умер, я не слышала ни одногоплохого слова о нём. Даже от тех, кто в своёвремя поливал его грязью налево и направо.
-anna: Неужели?
-jill: Ну, «лучшее» в смерти – то, что когда ты умрёшь, всё плохое, что ты наделал за свою жизнь, станет казаться бессмысленным. 
-jill: Заставляет задуматься о том, насколько незначительным всё может быть.
-anna: ...пожалуй.
-jill: Хотя, если подумать, это никак не относится к тому, что рассказала ты.
-jill: Я вот что хочу сказать: не стоитпереусердствовать. Знаешь... просто живи. Будьблагодарна, что тебе выпала такая возможность.
-jill: Я понимаю, что ты сейчас чувствуешь.Тебе ещё станет лучше. И настанет момент,когда ты будешь вспоминать только хорошее.
-anna: Надеюсь.
-anna: Похоже, что вы с дедушкой были очень близки.
-jill: Он был моим лучшим другом. А его утрата была для меня очень сильным потрясением.
-anna: А ты о чем-нибудь жалеешь, когда думаешь о нём?
-jill: Пожалуй, нет.
-jill: В смысле, у нас не было никакого драматичного прощания. Он умер на больничной койке, пока я была дома.
-jill: Но... не знаю. Мы никогда не ругались, так что ничего такого у меня нет. 
-jill: Естественно, всегда бывает вот это«хотела бы я ему про это рассказать», но этослучается само по себе. Неважно, о ком речь.
-jill: Вы с Ланетт поссорились перед её смертью?
-anna: Нет! Конечно же нет.
-jill: Тогда тебе повезло больше, чем большинству людей.
-anna: ...да уж.
-jill: Ну то есть... когда ты будешь чувствовать себя подавленной, просто вспомни, что вы расстались друзьями.
-jill: Хватайся за эту мысль, когда будешь чувствовать, что идёшь ко дну.
-anna: Да, можно попробовать!
-anna: Хех, каким-то образом это меня даже подбодрило. Спасибо.
-jill: Обращайся.
-anna: Мне пора. Джо, спасибо за такой прекрасный вечер.
-jill: Почувствуешь себя снова одинокой – приходи.
-anna: Обязательно![XS:anhide,1][E:32]
-[V:5]anna: Эй, Джо, как думаешь, почему плохие вещи случаются?
-jill: Внезапный вопрос. К чему это ты?
-anna: Как ты думаешь, если бог существует, то почему плохое все равно происходит?
-jill: Философское настроение нахлынуло?
-anna: Типа того.
-jill: Хм...
-jill: Мне вспоминается один разговор, ещё в колледже. Тогда мой одногруппник сказал, что мы слишком много хотим от бога.
-anna: Как это?
-jill: Ну, представь себе мир, в котором вообще ничего плохого не происходит.
-jill: Но тогда ты начнешь считать плохим то, что не будет лучше, чем в прошлый раз. 
-jill: А если ты живёшь в таком мире, вкотором каждый раз всё становится только лучше,то ты уже начнёшь прошлое считать плохим.
-anna: Хм... чего?
-jill: Ну... скажем, вот есть у тебя шоколадка.
-anna: Люблю шоколадки.
-jill: Все любят.
-anna: Кроме моей мамы.
-jill: Тогда она – редкий случай.
-anna: И пиццу она тоже не любит.
-jill: ...Она вообще человек? Эм... прости. Я в том смысле...
-jill: Чёрт... о чем я говорила?
-anna: О шоколаде.
-jill: Точно.
-jill: Если есть только хороший шоколад, то чуточку похуже на вкус будет казаться отвратительным.
-anna: Ага. Могу себе представить.
-jill: А если с каждым новым разом он будет становиться всё вкуснее...
-jill: ...то все прошлые шоколадки начнут казаться ужасными. 
-anna: О-о-о, точно. Теперь понимаю.
-jill: Так что вот. Иногда плохое – это всего лишь вопрос восприятия.
-anna: Всё равно это не оправдывает плохие вещи. Ту же смерть, например.
-jill: Хм...
-jill: Не знаю. Возможно, мы просто слишком озабочены мелочами, чтобы видеть картину целиком.
-jill: Может быть, смерть повлечёт за собой что-то важное в будущем.
-jill: Или, если реинкарнация существует, то это может означать, что эта личность понадобилась где-то в другом месте.
-jill: Может, мир вообще существует не так, как мы думаем, а люди просто не могут этого понять своим ограниченным разумом.
-jill: Не знаю. Я всего лишь бармен. Если уж кого и спрашивать о метафизической природе смерти, так уж точно не меня.
-anna: *вздох*
-anna: Иногда мне кажется, что бог – просто засранец.
-anna: Наградил тяжелой болезнью, позволил выжить, но отнял особенного для меня человека...
-anna: Эм... м... рассказать? В смысле, про «особенного»?
-jill: Я пойму по ходу дела. Ты продолжай, тебе определённо нужно выпустить пар.
-anna: О... ну хорошо.
-anna: Такое чувство, что бог... не знаю, как будто эдакий эпатажный писатель, которому нравится мучить своих персонажей.
-anna: Я нахожу своё утешение в этой версии, потому что в противном случае начинаю ожидать от жизни только худшего.
-jill: А что, если ты смотришь на это не с того ракурса?
-anna: Как это?
-jill: Обычно у главных героев есть какая-то трагическая предыстория, о которой мы с самого начала не знаем.
-jill: Что-то такое, что позволяет им двигаться вперёд, даёт стимул продираться сквозь сюжет.
-jill: Возможно, твой сюжет ещё даже не начался. Может, ты просто ещё проживаешь свою предысторию.
-jill: Кто знает, что ждёт тебя в будущем?
-anna: Хех...
-anna: Было бы неплохо. Всяко лучше, чем моя прошлая точка зрения.
-anna: Да. Мне определённо нравится. Теперь буду думать именно так.
-anna: Сегодня кончается введение и начинается первая глава моей жизни!
-jill: Вот это правильный настрой.
-anna: Спасибо, Джо. Теперь я чувствую себя чуть лучше.
-jill: Я всегда здесь, если тебе нужно будет выговориться.
-anna: Рада это слышать.
-anna: Ну, мне пора. Пока, Джо!
-[XS:anhide,1]jill: Приходи к нам ещё.
-anna: Обязательно![XS:anhide,1][E:33]
-[V:5]jill: Что ж, занятно провели время.
-[SHOW:185,sprite_dana][XS:danaface,worry]jill: А, это ты, Босс. Что-то не так?
-dana: Я... как раз хотела спросить у тебя то же самое.
-jill: Эм?
-dana: Ты целый час проговорила сама с собой.
-jill: Нет. У нас был посетитель. Её звали Анна.
-dana: Здесь никого не было.
-dana: Вообще, я шла сказать тебе, что мы закрываемся. И вот ты такая стоишь и болтаешь с пустотой.
-dana: Очень так задушевно причем.
-jill: Н-не может быть такого! Она же платила за выпивку!
-dana: Касса говорит, что деньги шли с твоего счёта.
-jill: Н-но все коктейли, которые я подала...
-dana: Под коктейлями ты подразумеваешь вот эту лужу на полу, которую кому-то – и уж точно не мне – придётся убирать?
-jill: Но я ведь...
-dana: Джилл, ты меня беспокоишь. С тобой точно всё хорошо? 
-dana: Не хватало мне только очередного сотрудника, который бы говорил сам с собой.
-jill: Да в порядке я, просто...
+jill: Are you sure there wasn't anyone else here?
+dana: I even checked the security cameras. You were here by yourself this whole while.
 jill: ...
-jill: Здесь точно больше никого не было?
-dana: Я даже камеры проверила. Всё это время ты была тут одна. 
+dana: Maybe you're tired. You probably were just sleep-talking really intensely or something.
+jill: Yeah, maybe...
+dana: Come on. I'll drive you home. Maybe you just need a rest.
+jill: ...yeah.
+jill: (What the hell just happened?!)[ECHO\:]
+else:
+5]join dana 1
+
+[wait time="1.0"]
+dana: Hey Jill, are you okay?
+jill: Hm? Yeah, I'm fine.
+dana: If you say so...
+dana: Let's call it a day and close early.
+jill: Yeah, that's for the best.
+else:
+5]anna\: No offense Jo, but I'm leaving.
+anna: I'm not staying somewhere where people treat me like a kid.
+anna: Oh and... won't get my orders right either.
+anna: So... that! Bye.
+leave 
+[wait time="0.666667"]
+
+jill: Riiiiiiiiiiiight. Please come again.
+jill: (That was a bummer.)
+jill: (I guess I'll ask Boss if we can close early today.)
+join  1
+
+[wait time="1.0"]
+Kept you waiting, huh?
 jill: ...
-dana: Может, ты устала. Наверное, просто очень оживлённо говорила во сне.
-jill: Да, может...
-dana: Пойдём. Я подброшу тебя домой. Возможно, тебе всего лишь надо хорошенько отдохнуть.
-jill: ...угу.
-jill: (Блин, да что же это было?!)[E:34]
-[V:5][SHOW:185,sprite_dana]dana: Эй, Джилл, ты в порядке?
-jill: Хм? Да, всё хорошо.
-dana: Что ж, раз так...
-dana: Давай закончим на сегодня и закроемся пораньше.
-jill: Да, отлично.[E:35]
-[V:5]anna: Без обид, Джо, но я ухожу.
-anna: Нет никакого желания оставаться там, где со мной как с ребёнком обращаются.
-anna: Да и... где не могут даже налить, что прошу.
-anna: Так что... вот! Пока.[XS:anhide,1]
-jill: О-о-о-окей. Приходи к нам ещё.
-jill: (Ну что за нафиг?)
-jill: (Думаю, спрошу у Босса, не можем ли мы сегодня закрыться пораньше.)
-[SHOW:185,sprite_nacho]???: Заждались меня, а?
+jill: Sorry, we're closing.
+Hey, watch your voice! You're speaking to the great Nacho Tumbleweed Jr.!
+jill: I don't care if you're Aleister Crowley. We're. Still. Closing.
+Oh...
+Can't I at least get a drink?
+jill: No.
+A small one?
+jill: Closing.
+A glass of water?
+dana: GIVE THE DOG HIS FUCKING DRINK!
+jill: Fiiiiiiiiiiiiiiiiiiiiiine.
+Wait, so you're not Dana?
+jill: No, she's in her office. I'm Jo-... JILL!! I'm Jill.
+Oh, sorry. My depth perception is a bit off, so I confused you with her.
+jill: I don't think depth perception has anything to do with this situation.
+jill: What do you want?
+Give me a Fringe Weaver.
+jill: Alright.
+set {Dialogic.paused} = true
+
+if (global.bevid_a == "fweaver"):
+5][RES\:]jill\: Here you go.
+Everything in order, let's continue the mission.
+else:
+5][RES\:]jill\: Here.
+A bit off, but the mission can go on. No. It WILL go on.
+jill: Right...
+else:
+5][RES\:]jill\: Here you are.
+This is wrong! This is all wrong!!
+Find me an extraction point! Abort mission! Abort!
+jill: Calm down, it's just a drink.
+else:
+5]Nacho\: Say Miss, you look bummed out. Are you sad?
+jill: Hm? No, I'm just... bored.
+I was sad once. Now, I wear an eyepatch because of that.
+jill: Why an eyepatch?
+It makes me look menacing and sad.
+jill: (No, it doesn't.)
+Besides, how can you be sad with me here?
+jill: I told you I'm not sad.
+That's not what your face tells me.
+jill: You thought I was my boss. I wouldn't trust your sight if I were you.
+Hey! I have great eyesight. I can see perfectly fine.
+As long as things are yellow, blue or gray...
+...or aren't too far away.
+...or aren't on the side my eyepatch is on.
+But aside from that, my eyesight is perfect, Dana.
+jill: I'm not Dana! I'm Jo-... Jill! Don't you have, like, a great sense of smell or something?
+Yeah, but you smell just like her.
+Come to think of it, why's that?
+jill: Um... uh...
+jill: D-Do you want any other drink?
+Yeah, let's go with a Gut Punch.
+jill: Sure.
+set {Dialogic.paused} = true
+
+if (global.bevid_a == "gpunch"):
+5][RES\:]jill\: Here.
+To survive in the battlefield, you need GUTS.
+jill: Have you been in a battlefield?
+LIFE is a battlefield.
+jill: I don't know, I've heard it's actually a dream for the wise... or was it a game for fools?
+else:
+5][RES\:]jill\: Here you go.
+If I can live with one eye, I guess I can live with this half-assed Gut Punch.
+jill: Do you really lack an eye?
+...if I can live with only one eye UNCOVERED, I guess I can...
+jill: Yeah, yeah.
+else:
+5][RES\:]jill\: Here you are.
+...we failed. WE FAILED BIG TIME. GAME OVER MAN.
+Wait, you were the one who failed. Nevermind.
 jill: ...
-jill: Извините, мы закрываемся.
-???: Эй, следи за языком! Ты разговариваешь с великим Начо Тотошкой-младшим!
-jill: Да хоть с Алистером Кроули. Всё равно. Мы. Закрываемся.
-nacho: Ну-у...
-nacho: Можно мне хотя бы выпить чего-нибудь?
-jill: Нет.
-nacho: Маленький коктейльчик?
-jill: Закрываемся.
-nacho: Стакан воды?
-dana: НАЛЕЙ УЖЕ ПСУ ЕГО ЁБАНЫЙ КОКТЕЙЛЬ!
-jill: Ла-а-а-а-адно.
-nacho: Подождите, вы не Дана?
-jill: Нет, она у себя в кабинете. Я Джо... ДЖИЛЛ! Меня зовут Джилл!
-nacho: А, извиняюсь. У меня немного плоховато с восприятием объёма объектов, потому и перепутал вас с ней.
-jill: Не думаю, что тут дело в восприятии форм.
-jill: Что будете заказывать?
-nacho: Налейте мне «Бон Развязон».
-jill: Хорошо.[E:36]
-[V:5][RES:]jill: Пожалуйста.
-nacho: Всё идет хорошо, продолжаем выполнение операции.[E:37]
-[V:5][RES:]jill: Прошу.
-nacho: Есть некоторые помехи, но операция может продолжаться. Нет. Она БУДЕТ продолжаться.
-jill: Как скажешь...[E:38]
-[V:5][RES:]jill: Прошу.
-nacho: Всё не так! Это всё неправильно!!
-nacho: Запрашиваю координаты точки отхода! Отмена операции! Повторяю, отмена операции!
-jill: Успокойтесь, это же просто коктейль.[E:39]
-[V:5]nacho: Мисс, вы выглядите так себе. Вам грустно?
-jill: Хм? Нет, мне просто... скучно.
-nacho: Мне тоже однажды было грустно. Как результат, я стал носить эту повязку.
-jill: Почему именно повязку?
-nacho: С ней я выгляжу опасным и печальным.
-jill: (Да не особо, если честно.)
-nacho: И, к тому же, как вы можете печалиться, когда я рядом?
-jill: Говорю же, я не печалюсь.
-nacho: Ваше лицо говорит обратное.
-jill: Вы меня с Боссом спутали. После этого я бы на зрение точно не полагалась.
-nacho: Эй! У меня отличное зрение. Я всё отлично вижу.
-nacho: Покуда вещи жёлтые, синие или серые...
-nacho: ...или не очень далеко.
-nacho: ...или они не со стороны повязки.
-nacho: Но в остальном у меня идеальное зрение, Дана.
-jill: Не Дана я! Меня зовут Джо... Джилл! Разве у вас там не должно быть отличное обоняние и всё такое?
-nacho: Да, но вы пахнете точно как она.
-nacho: Кстати, с чего это вдруг?
-jill: Эм... а...
-jill: Е-ещё что-нибудь желаете?
-nacho: Да, дайте мне «Удар по печени».
-jill: Конечно.[E:40]
-[V:5][RES:]jill: Прошу.
-nacho: На войне нужно иметь стальные яйца и здоровую печень. Если вы понимаете, о чём я.
-jill: А вы были на войне?
-nacho: Вся ЖИЗНЬ – это война.
-jill: Не знаю. Вообще, я слышала, что это «сон для мудрых»... или там было «игра для глупых»?[E:41]
-[V:5][RES:]jill: Прошу.
-nacho: Что ж, если смог жить с одним глазом, то и этот недоудар по печени переживу.
-jill: У вас правда нет одного глаза?
-nacho: ...Если могу жить с одним ОТКРЫТЫМ глазом, то и...
-jill: Да-да.[E:42]
-[V:5][RES:]jill: Прошу.
-nacho: ...Мы облажались. ПО-КРУПНОМУ ОБЛАЖАЛИСЬ. ИГРА ОКОНЧЕНА.
-nacho: Так, стоп, это же вы облажались. Тогда ладно.
-jill: ...[E:43]
-[V:5][SHOW:100,sprite_dana]dana: Простите, что заставила ждать. Приводила свой стол в порядок.
-dana: Оставила «Стейк Буррито» в одном из ящиков и... он то ли взорвался, то ли ещё что.
-dana: Весь вечер чистить пришлось.
-dana: Ладно, пойдём.
-jill: Куда идёте?
-dana: Покерец. Мы двое и тот корги в гавайке собираемся дома у Лоуренса.
-jill: Лоуренса?
-dana: Торговый автомат, друг Дороти. Думаю, ты слышала о нём.
-jill: А, да.
-jill: (Так, стоп. То есть я вынуждена ютиться в какой-то квартирке, а у торгового автомата есть целый ДОМ?!)
-dana: К сожалению, мест больше нет. Но как ты смотришь на то, чтобы пойти с нами в следующий раз?
-jill: Я пас.
-dana: Предложение всё равно остаётся в силе.
-dana: Так, давай закрываться и пойдем.
-jill: Конечно.
-nacho: ВПЕРЁД! К БОГАТСТВУ И СЛАВЕ!
-dana: Да, пожалуйста, убавь громкость своего переводчика.
-nacho: Я не могу дотянуться.
-dana: Джилл, будь так любезна.
-jill: ...Ох ты жеж...
-jill: (Хех, если так подумать... собака ВСЁ-ТАКИ ПОЯВИЛАСЬ в этот раз.)[E:44]
-[V:5][RES:]jill: Пожалуйста.
-???: Вот это шедевр... абстракционизма.
-???: Может, ты забыла сделать сам напиток?
-jill: ...[E:45]
-[V:5]???: Осуждать не стану, скажу только, что ты совсем не умеешь производить хорошее первое впечатление.
-???: Но, на самом деле, кто бы говорил.
-???: Был у меня период в школе, когда я орала «ОГУРЦЫ» в лицо тем, кто мне нравился.
-???: Так что до конца года все меня называли «Каппой».
-jill: (На самом деле, довольно находчиво.)[E:46]
-[V:5][RES:]jill: Пожалуйста.
-anna: Выглядит... интересно.
-anna: «Интересно» от слова «жутко».
-anna: Оно же не взорвётся мне прямо в лицо, да?
-jill: Нет.
-anna: Уверена? Оно как будто... дрожит.[E:47]
-[V:5]anna: Эй, вот из любопытства, что самое плохое, может произойти, если выпить какую-нибудь дрянь?
-jill: Ну, давай посмотрим...
-jill: Бесплодие, временная слепота, припадки,химические ожоги, спонтанное самовозгорание, безумие, грибковые заболевания ног.
-anna: Зачем тогда люди вообще ходят пить по таким местам?!
-jill: Есть те, кто даже растворитель пьёт, чтобы улететь. У нас он просто ЛЕГАЛЬНЫЙ.
-jill: Ну и, по правде говоря, 60% нашегообучения посвящена тому, как не убить себя иликого-то ещё во время приготовления коктейлей.
-anna: А остальные 40%?
-jill: Методический курс и самозащита.
-anna: О как...[E:48]
-[RES:][V:5]jill: Пожалуйста.
-anna: Джо, не знаю в какой вселенной это может считаться шикарным, но уж точно не в нашей.
-anna: В смысле, оно же светится ко всему прочему!
-jill: Не волнуйся. Пить можно.
-jill: (По крайней мере, точно не убьёт.)
-anna: Я... пожалуй, не стану.[E:49]
-anna: Пс, Джо.
-anna: Эй, посмотри сюда.
-[ANNA:]anna: БУ!
-[SHOW:185,sprite_anna]anna: Ну как, эффектное появление?
-anna: ...
-anna: Ну же, Джо, соберись! Ты ведь должна производить хорошее впечатление на посетителей.
-anna: Да, я знаю, что ты обслужила стаю корги в смокингах на тех выходных, и что бар рано или поздно закроют.
-anna: ...и да, я признаю, что мой маленький розыгрыш был слегка через край.
-anna: Но не забывай, что жизнь – это на 90% то, как ты на неё смотришь. Так что подбери нюни и взгляни на светлую сторону!
-anna: Я вообще не знаю, где эта самая светлая сторона, но ты-то её точно найдёшь.
-anna: В любом случае, тебе непременно надо посмотреть, что в том конверте, который ты только что получила.
-anna: До скорого![XS:ph,-1][E:50]
-jill: !..
-jill: Ох... *зевок* это просто сон.
-jill: (Хм? Там под дверью что-то лежит.)[XS:ph,-3][E:51]
-anna: Пс-с-с.
-anna: Эй, посмотри сюда.
-[SHOW:185,sprite_anna]anna: БУ!
-anna: ...
-anna: Э? А почему по телеку меня не показали?
-anna: Видимо, шутки, повторённые больше двух раз, теряют свою остроту.
-anna: Но это неважно. Спасибо, что играешь снова!
-anna: И не волнуйся, тебя никто не будетвинить за твои поступки в предыдущемпрохождении. Всё начнётся с чистого листа.
-anna: Ну... или почти чистого.
-anna: У Джо будут все её деньги, что остались у неё к концу прошлой игры.
-anna: У неё также останутся все её покупочки и прочие мелочи.
-anna: И это означает, что, в теории, она можетбыть подпольным миллионером, но всё равноостанется на этой тухлой работе бармена.
-anna: ...
-anna: ...Ну, «приостановку неверия» не зря умные дяди придумали, да?
-anna: Но счета всё равно будут приходить по расписанию, так что будь внимательнее.
-anna: Ты уже все концовки открыл? Если нет, то вот пара советов:
-anna: Сохранить квартиру или лишить Джо крыши над головой – уже простейшее разветвление сюжета.
-anna: Ещё две концовки будут доступны, если ты на отлично обслужишь пышную душечку и ушастую милочку.
-anna: Для одной из них требуется долготерпение в разговорах с надутым претенциозным павлином.
-anna: А другая концовка случится, если ты угадаешь желания грудастой рободивы.
-anna: Кстати о титьках. Концовку другой полногрудой девицы – блондиночки – ты получишь, если не будешь совсем мудаком.
-anna: А с Бекки всё должно быть совсем просто, если ты запоминаешь, что она говорит.
-anna: Итого шесть различных концовок. Собери их все!
-anna: Ладно, прости за всю эту болтовню. Представим, что её не было.
-anna: ИГРА НАЧАЛАСЬ![XS:ph,-1][E:52]
-jill: !..
+else:
+5]join dana 2
+
+[wait time="1.0"]
+dana: Sorry about the wait. I was sorting my desk.
+dana: I left a Steak Burrito in one of the drawers and it... blew up or something.
+dana: I spent all night cleaning it.
+dana: Anyways, let's go.
+jill: Where are you going?
+dana: Poker night. The two of us and the Hawaiian-shirted Shiba are meeting at Lawrence's house.
+jill: Lawrence?
+dana: Dorothy's vending machine friend. I believe you've heard about him?
+jill: Oh yeah.
+jill: (Wait, I'm stuck in an apartment and the vending machine gets a HOUSE?!)
+dana: Sadly we're full for the night, but would you like in on the next poker night?
+jill: I'll pass.
+dana: The offer will remain open.
+dana: Anyways, let's close this place for the night and leave.
+jill: Sure.
+ONWARDS! TO OUR GLORY!
+dana: Oh yeah, please turn down the volume on your translator.
+Can't reach it.
+dana: Jill, please.
+jill: *sigh*
+jill: (Huh, now that I think about it... a dog DID show up this time.)
+if (global.kind_a == "ingredient" || global.kind_a == "fail"):
+5][RES\:]jill\: Here.
+Man, this is some... abstract stuff here.
+Maybe you forgot the drink?
 jill: ...
-jill: ...Так, всё. Больше никакой лапши в бульоне из текилы перед сиестой.
-jill: И что ты тут так усердно жуёшь, Лунка? Письмо?[XS:ph,-3][E:53]
+else:
+5]???\: I don't wanna judge you, but I will say you're not very good with the whole first impressions thing.
+Then again, I'm not one to talk, really.
+There was this one time in middle school where I shouted "CUCUMBERS" in front of the person I liked.
+I became "Kappa Girl" what was left of the year.
+jill: (That's a pretty smart nickname, actually.)
+if (global.kind_a == "ingredient" || global.kind_a == "fail"):
+5][RES\:]jill\: Here you go.
+anna: This is... interesting.
+anna: And by interesting I mean creepy.
+anna: This won't blow up on my face, right?
+jill: No.
+anna: You sure? It looks like it's... pulsing.
+else:
+5]anna\: Hey, just out curiosity, what's the worse that could happen with a bad drink?
+jill: Well, let's see...
+jill: Sterility, temporary blindness, chemical burns, dementia, spontaneous combustion, seizures, athlete's foot.
+anna: Then why do people come and drink stuff in these bars?!
+jill: There's people that drink paint thinner to get high, we just provide LEGAL drinkable paint thinner.
+jill: And to be fair, 60% of our training is to know what to avoid in order to not kill someone or ourselves when mixing.
+anna: What's the other 40%?
+jill: Procedures and self-defense.
+anna: Oh...
+if (global.kind_a == "ingredient" || global.kind_a == "fail"):
+][V\:5]jill\: Here.
+anna: Jo, I don't know in what context this could be considered classy, but I'm sure it's not in human context
+anna: I mean, it's glowing and all!
+jill: Don't worry, it's safe.
+jill: (It won't kill you at the very least.)
+anna: I'll... pass.
+else:
+anna: Pssst.
+anna: Hey, over here.
+]anna\: BOO!
+join anna 1
+anna: How's that for an entrance?
+anna: ...
+anna: Come on Jo, look sharp! The game's starting and the player needs a good first impression of its main character.
+anna: I know you served a bunch of tuxedo-clad Corgis over the weekend and the bar will eventually close.
+anna: ...and I'll admit my little prank on you might've gone a bit overboard.
+anna: But remember, life is 90% how you take it! Stay focused and look at the brighter side of things.
+anna: I have no idea what the brighter side is, but you should totally find it.
+anna: In any case, you should totally check that parcel you just got.
+anna: See ya!
+else:
+jill: ...!
+jill: Oh... *yawn* just a dream.
+jill: (Hm? There's something near the door.)
+if (global.ngplus_flag == 1):
+anna: Pssst.
+anna: Hey, over here.
+join anna 1
+anna: Boo!
+anna: ...
+anna: Hm? Why didn't I show up on the TV?
+anna: Gags get old if you repeat them too much, you know?
+anna: But no matter. Thank you for playing again!
+anna: Don't worry, you won't be punished for choices made in past playthroughs. This is a fresh new beginning.
+anna: Um... almost fresh, at least.
+anna: Jo will have all the money she had at the end of last time.
+anna: She'll keep everything she bought or unlocked too.
+anna: That means she can potentially be a millionaire but remain the same poor bartender.
+anna: ...
+anna: ...well, suspension of disbelief exists for a reason, right?
+anna: Oh, but debts will still show up, so be careful.
+anna: Did you get all of the endings yet? Here's a couple of tips.
+anna: Leaving Jo homeless or not is the first step towards at least one of them.
+anna: There's two of them that rely on being a top bartender to the buff sweetheart and the cat-eared beauty.
+anna: Of those two, one needs you to be patient with the pompous buffoon.
+anna: The other one needs you to serve the busty 'droid what she wants.
+anna: The other busty girl, the blonde one. You should get hers as long as you're not an asshole.
+anna: And Becky's should be easy as long as you remember what she says.
+anna: Six different endings, can you get them all?
+anna: Sorry for all the chatter. Let's pretend this never happened.
+anna: GAME START!
+if (global.ngplus_flag == 1):
+jill: ...!
+jill: ...
+jill: ...that's it. No more tequila-seasoned ramen before the afternoon nap.
+jill: And what the hell are you chewing on, Fore? Is that a letter?
+if (!instance_exists(out_to_gameover)):

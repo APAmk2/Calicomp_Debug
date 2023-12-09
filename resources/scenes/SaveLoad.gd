@@ -111,10 +111,10 @@ func SaveloadBtnPressed():
 func SlotPressed(extra_arg_0):
 	if(saveLoadMode == 1):
 		if(LoadSingleton.Load(extra_arg_0 + 4 * pages, true)):
-			if(LoadSingleton.Place == "apt"):
+			if(GlobalVars.dayphase == "apt"):
 				get_tree().change_scene_to_file("res://resources/scenes/Base.tscn")
 			else: 
-				if(LoadSingleton.Place == "break"):
+				if(GlobalVars.dayphase == "break"):
 					get_tree().change_scene_to_file("res://resources/scenes/Main.tscn")
 	else:
 		LoadSingleton.Save(extra_arg_0 + 4 * pages)

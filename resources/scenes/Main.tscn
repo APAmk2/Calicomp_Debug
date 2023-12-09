@@ -637,7 +637,8 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="DialogicNode_DialogText" type="RichTextLabel" parent="Hud/dialogSubsys"]
+[node name="dialog_text" type="RichTextLabel" parent="Hud/dialogSubsys"]
+unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 0
 offset_left = 44.0
@@ -655,13 +656,40 @@ start_hidden = false
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
-offset_left = 38.0
+offset_left = -89.0
 offset_top = 54.0
-offset_right = 696.0
+offset_right = 569.0
+offset_bottom = 536.0
+mouse_filter = 2
+script = ExtResource("72_ixkeu")
+position_index = 2
+size_mode = 0
+
+[node name="DialogicNode_PortraitContainer2" type="Control" parent="Hud/dialogSubsys"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 41.0
+offset_top = 54.0
+offset_right = 699.0
 offset_bottom = 536.0
 mouse_filter = 2
 script = ExtResource("72_ixkeu")
 position_index = 1
+size_mode = 0
+
+[node name="DialogicNode_PortraitContainer3" type="Control" parent="Hud/dialogSubsys"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 201.0
+offset_top = 54.0
+offset_right = 859.0
+offset_bottom = 536.0
+mouse_filter = 2
+script = ExtResource("72_ixkeu")
+position_index = 3
+size_mode = 0
 
 [node name="DialogicNode_NameLabel" type="Label" parent="Hud/dialogSubsys"]
 texture_filter = 1
@@ -733,7 +761,7 @@ bus = &"BGM"
 [connection signal="pressed" from="Hud/miniJukebox/playBackward" to="." method="PlayMusic" binds= [0]]
 [connection signal="pressed" from="Hud/miniJukebox/playForward" to="." method="PlayMusic" binds= [1]]
 [connection signal="pressed" from="Hud/miniJukebox/playPause" to="." method="PauseMusic"]
-[connection signal="started_revealing_text" from="Hud/dialogSubsys/DialogicNode_DialogText" to="." method="_on_dialogic_node_dialog_text_started_revealing_text"]
+[connection signal="started_revealing_text" from="Hud/dialogSubsys/dialog_text" to="." method="_on_dialogic_node_dialog_text_started_revealing_text"]
 [connection signal="button_down" from="Hud/dialogSubsys/dialogContinue" to="." method="DialogContinuePressed"]
 [connection signal="button_up" from="Hud/dialogSubsys/dialogContinue" to="." method="DialogContinueReleased"]
 [connection signal="finished" from="BGM" to="." method="PlayMusic" binds= [2]]

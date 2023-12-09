@@ -71,6 +71,7 @@ func PressanyBtnPressed():
 	engineVer.show()
 
 func NgPressanyBtnPressed():
+	GlobalVars.ResetAllVars()
 	get_tree().change_scene_to_file("res://resources/scenes/Base.tscn")
 
 func NgBtnPressed():

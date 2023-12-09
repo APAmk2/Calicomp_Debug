@@ -11,31 +11,37 @@ config_version=5
 [application]
 
 config/name="Va-11 Hall-a"
+config/version="1.0.0"
 run/main_scene="res://resources/scenes/Menu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="VA_11_Hall_A"
-config/features=PackedStringArray("4.1")
+config/features=PackedStringArray("4.2")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://icon.png"
 config/windows_native_icon="res://1.ico"
-config/version="1.0.0"
 
 [autoload]
 
 DiscordSDKLoader="*res://addons/discord-sdk-gd/nodes/core_updater.gd"
 LoadSingleton="*res://resources/scenes/load_singleton.gd"
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+GlobalVars="*res://resources/scenes/global_vars_singleton.gd"
 
 [dialogic]
 
 glossary/default_case_sensitive=true
 variables={
-"KarmoLvl": "",
-"drink": "",
-"drinktype": ""
+"KarmoLvl": "0",
+"drink1": "",
+"drink2": "",
+"drinkflavour": "",
+"drinktype1": "",
+"drinktype2": "",
+"drunkLvl": "0",
+"falseDrinks": "0"
 }
 text/letter_speed=0.01
 text/skippable=true
@@ -169,7 +175,7 @@ decreaseKarmotrine={
 [internationalization]
 
 locale/translation_remaps={}
-locale/translations=PackedStringArray("res://resources/strings.en.translation", "res://resources/strings.ru.translation", "res://resources/filenames.ru.translation", "res://resources/filenames.en.translation", "res://resources/filenames.jp.translation", "res://resources/filenames.cn.translation")
+locale/translations=PackedStringArray("res://resources/strings.en.translation", "res://resources/strings.ru.translation", "res://resources/filenames.ru.translation", "res://resources/filenames.en.translation", "res://resources/filenames.jp.translation", "res://resources/filenames.cn.translation", "res://resources/drinkstrings.en.translation", "res://resources/drinkstrings.ru.translation")
 locale/test="en"
 
 [physics]

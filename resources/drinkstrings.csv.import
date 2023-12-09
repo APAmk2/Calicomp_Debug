@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dmbgsoqmmki2m"
+
+[deps]
+
+files=["res://resources/drinkstrings.en.translation", "res://resources/drinkstrings.ru.translation"]
+
+source_file="res://resources/drinkstrings.csv"
+dest_files=["res://resources/drinkstrings.en.translation", "res://resources/drinkstrings.ru.translation"]
+
+[params]
+
+compress=true
+delimiter=0

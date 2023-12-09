@@ -7,16 +7,7 @@ var SavePlace: Array = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", 
 var readData: Array
 var musicData: Array
 var RecipeData: Array
-var musicPlaylist: Array = ["", "", "", "", "", "", "", "", "", "", "", ""]
-var Money: float = 1
-var MoneyInBar: float
-var WPapers: int
-var HaveWalls: Array = [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-var Day: int = 1
-var DayStr: String
-var Place: String
 var ScanlinesEnabled: bool
-var ShopItems: Array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 var Lang: int
 
 func _ready():
@@ -54,64 +45,64 @@ func Load(butNum, LoadAll):
 		return false
 
 func LoadVars():
-		Day = int(readData[2])
-		MoneyInBar = float(readData[5])
-		Money = float(readData[6])
-		DayStr = readData[7]
-		Place = readData[8]
-		ShopItems[20] = readData[158]
-		ShopItems[1] = readData[171]
-		ShopItems[2] = readData[172]
-		ShopItems[3] = readData[173]
-		ShopItems[4] = readData[175]
-		ShopItems[5] = readData[176]
-		ShopItems[6] = readData[177]
-		ShopItems[7] = readData[178]
-		ShopItems[8] = readData[179]
-		ShopItems[9] = readData[180]
-		ShopItems[10] = readData[181]
-		ShopItems[11] = readData[182]
-		ShopItems[12] = readData[183]
-		ShopItems[13] = readData[184]
-		ShopItems[19] = readData[185]
-		ShopItems[16] = readData[186]
-		ShopItems[18] = readData[187]
-		ShopItems[14] = readData[188]
-		WPapers = int(readData[206])
+		GlobalVars.cur_day = int(readData[2])
+		GlobalVars.barscore = float(readData[5])
+		GlobalVars.jillwallet = float(readData[6])
+		GlobalVars.datestring = readData[7]
+		GlobalVars.dayphase = readData[8]
+		GlobalVars.shopitems[20] = readData[158]
+		GlobalVars.shopitems[1] = readData[171]
+		GlobalVars.shopitems[2] = readData[172]
+		GlobalVars.shopitems[3] = readData[173]
+		GlobalVars.shopitems[4] = readData[175]
+		GlobalVars.shopitems[5] = readData[176]
+		GlobalVars.shopitems[6] = readData[177]
+		GlobalVars.shopitems[7] = readData[178]
+		GlobalVars.shopitems[8] = readData[179]
+		GlobalVars.shopitems[9] = readData[180]
+		GlobalVars.shopitems[10] = readData[181]
+		GlobalVars.shopitems[11] = readData[182]
+		GlobalVars.shopitems[12] = readData[183]
+		GlobalVars.shopitems[13] = readData[184]
+		GlobalVars.shopitems[19] = readData[185]
+		GlobalVars.shopitems[16] = readData[186]
+		GlobalVars.shopitems[18] = readData[187]
+		GlobalVars.shopitems[14] = readData[188]
+		GlobalVars.wallstype = int(readData[206])
 		for i in range (0, 12):
-			musicPlaylist[i] = readData[219 + i]
-		ShopItems[15] = readData[238]
-		ShopItems[17] = readData[240]
+			GlobalVars.songnames[i] = readData[219 + i]
+		GlobalVars.shopitems[15] = readData[238]
+		GlobalVars.shopitems[17] = readData[240]
 
 func Save(butNum):
 	var file = FileAccess.open("user://saves/Record of Waifu Wars[" + str(butNum) + "].txt", FileAccess.WRITE)
-	readData[2] = str(Day)
-	readData[5] = str(MoneyInBar)
-	readData[6] = str(Money)
-	readData[7] = DayStr
-	readData[8] = Place
-	readData[206] = str(WPapers)
-	readData[171] = ShopItems[1]
-	readData[172] = ShopItems[2]
-	readData[173] = ShopItems[3]
-	readData[175] = ShopItems[4]
-	readData[176] = ShopItems[5]
-	readData[177] = ShopItems[6]
-	readData[178] = ShopItems[7]
-	readData[179] = ShopItems[8]
-	readData[180] = ShopItems[9]
-	readData[181] = ShopItems[10]
-	readData[182] = ShopItems[11]
-	readData[183] = ShopItems[12]
-	readData[184] = ShopItems[13]
-	readData[188] = ShopItems[14]
-	readData[238] = ShopItems[15]
-	readData[186] = ShopItems[16]
-	readData[240] = ShopItems[17]
-	readData[187] = ShopItems[18]
-	readData[185] = ShopItems[19]
-	readData[158] = ShopItems[20]
+	readData[2] = str(GlobalVars.cur_day)
+	readData[5] = str(GlobalVars.barscore)
+	readData[6] = str(GlobalVars.jillwallet)
+	readData[7] = GlobalVars.datestring
+	readData[8] = GlobalVars.dayphase
+	readData[206] = str(GlobalVars.wallstype)
+	readData[171] = GlobalVars.shopitems[1]
+	readData[172] = GlobalVars.shopitems[2]
+	readData[173] = GlobalVars.shopitems[3]
+	readData[175] = GlobalVars.shopitems[4]
+	readData[176] = GlobalVars.shopitems[5]
+	readData[177] = GlobalVars.shopitems[6]
+	readData[178] = GlobalVars.shopitems[7]
+	readData[179] = GlobalVars.shopitems[8]
+	readData[180] = GlobalVars.shopitems[9]
+	readData[181] = GlobalVars.shopitems[10]
+	readData[182] = GlobalVars.shopitems[11]
+	readData[183] = GlobalVars.shopitems[12]
+	readData[184] = GlobalVars.shopitems[13]
+	readData[188] = GlobalVars.shopitems[14]
+	readData[238] = GlobalVars.shopitems[15]
+	readData[186] = GlobalVars.shopitems[16]
+	readData[240] = GlobalVars.shopitems[17]
+	readData[187] = GlobalVars.shopitems[18]
+	readData[185] = GlobalVars.shopitems[19]
+	readData[158] = GlobalVars.shopitems[20]
 	for i in range (0, 12):
-			readData[219 + i] = musicPlaylist[i] 
+		readData[219 + i] = GlobalVars.songnames[i] 
 	var saveData = PackedStringArray(readData)
 	file.store_csv_line(saveData, "\n")  

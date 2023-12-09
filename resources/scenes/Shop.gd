@@ -8,7 +8,7 @@ var itemChoice: int
 var pricelist: Array = [0, 500, 550, 300, 300, 350, 450, 350, 250, 1350, 2350, 1500, 800, 600, 500, 300, 1000, 300, 900, 600, 900]
 
 func btn(extra_arg_0):
-	if(LoadSingleton.Money - int(pricelist[extra_arg_0 + 10 * (curPage - 1)]) < 0 || int(LoadSingleton.ShopItems[extra_arg_0 + 10 * (curPage - 1)]) == 1):
+	if(GlobalVars.jillwallet - int(pricelist[extra_arg_0 + 10 * (curPage - 1)]) < 0 || int(GlobalVars.shopitems[extra_arg_0 + 10 * (curPage - 1)]) == 1):
 		pass;
 	else:
 		if(itemChoice != extra_arg_0 + 10 * (curPage - 1)):
@@ -20,22 +20,22 @@ func btn(extra_arg_0):
 			pass
 		else:
 			$"Hud/description".text = "Good Choice..."
-			LoadSingleton.ShopItems[extra_arg_0 + 10 * (curPage - 1)] = 1
-			LoadSingleton.Money -= int(pricelist[extra_arg_0 + 10 * (curPage - 1)])
-			$"Hud/funds".text = tr("FUNDS") + str(LoadSingleton.Money)
+			GlobalVars.shopitems[extra_arg_0 + 10 * (curPage - 1)] = 1
+			GlobalVars.jillwallet -= int(pricelist[extra_arg_0 + 10 * (curPage - 1)])
+			$"Hud/funds".text = tr("FUNDS") + str(GlobalVars.jillwallet)
 			$"sfx".stream = load("res://resources/Exported_Sounds/audiogroup_default/glassserve.ogg")
 			$"sfx".play()
 			UpdateShop()
 
 func _ready():
 	page_display.text = str(curPage) + "/" + str(maxPages)
-	$"Hud/funds".text = tr("FUNDS") + str(LoadSingleton.Money)
+	$"Hud/funds".text = tr("FUNDS") + str(GlobalVars.jillwallet)
 	UpdateShop()
 
 func UpdateShop():
 	for i in range (1, 11):
 		get_node("Hud/items_btns/item" + str(i)).text = "SHOPNAME" + str(i + 10 * (curPage - 1))
-		if( int(LoadSingleton.ShopItems[i + 10 * (curPage - 1)]) == 1):
+		if( int(GlobalVars.shopitems[i + 10 * (curPage - 1)]) == 1):
 			get_node("Hud/soldLabels/sold" + str(i)).visible = true
 		else:
 			get_node("Hud/soldLabels/sold" + str(i)).visible = false

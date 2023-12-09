@@ -12,7 +12,7 @@ var moveDuration = 0.25
 
 func _ready():
 	PlayMusic(3)
-	$"Hud/money".text = "$" + str(LoadSingleton.MoneyInBar)
+	$"Hud/money".text = "$" + str(GlobalVars.barscore)
 	Dialogic.start_timeline("demo2")
 	if(LoadSingleton.ScanlinesEnabled):
 		$scanlines.show()
@@ -64,11 +64,11 @@ func PlayMusic(mode):
 	trackNum = clamp(trackNum, 0, 11)
 	if(prevTrackNum == trackNum && !$"Hud/miniJukebox/loop".button_pressed):
 		return
-	var filename = LoadSingleton.musicData[FindTrackByName(LoadSingleton.musicPlaylist[trackNum])][1]
+	var filename = LoadSingleton.musicData[FindTrackByName(GlobalVars.songnames[trackNum])][1]
 	$"BGM".stream = load("res://resources/Exported_Sounds/audiogroup_default/" + filename)
 	$"BGM".play()
 	for i in range (1, 3):
-		get_node("Hud/miniJukebox/trackName" + str(i)).text = LoadSingleton.musicPlaylist[trackNum]
+		get_node("Hud/miniJukebox/trackName" + str(i)).text = GlobalVars.songnames[trackNum]
 	$"2D/miniJukebox".texture = load("res://resources/Export_Sprites/small_jukebox_spr_0.png")
 
 func PauseMusic():
@@ -100,4 +100,4 @@ func JukeboxBtnPressed():
 
 func _on_dialogic_node_dialog_text_started_revealing_text():
 	var color = $Hud/dialogSubsys/DialogicNode_NameLabel.get("self_modulate")
-	$Hud/dialogSubsys/DialogicNode_DialogText.text = $Hud/dialogSubsys/DialogicNode_DialogText.text.insert(0, str(("[color=#%s]%s: [/color]") % [str(color.to_html(false)), $Hud/dialogSubsys/DialogicNode_NameLabel.text]))
+	$Hud/dialogSubsys/dialog_text.text = $Hud/dialogSubsys/dialog_text.text.insert(0, str(("[color=#%s]%s: [/color]") % [str(color.to_html(false)), $Hud/dialogSubsys/DialogicNode_NameLabel.text]))
